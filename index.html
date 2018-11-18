@@ -19,6 +19,9 @@
         <link href="https://fonts.googleapis.com/css?family=Lato:900|Neuton:200,700&amp;subset=latin-ext" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <style>
+            div{
+                box-sizing: border-box;
+            }
             body{
             margin:0;
             padding:0;
@@ -34,11 +37,39 @@
             margin: auto;
             /* background-color: red; */
         }
+        .logo{
+            background-image: url("logo10.png");
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            padding-top: 28.67%;
+            max-height: -webkit-fill-available;
+        }
+        .logo-content{
+            position: relative;
+            max-width: 412px;
+            height: inherit;
+        }
+        .menu{
+            width: 100%;
+            height: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
         </style>
         <body>
             <div class="main">
-<h1>WorthShoot.com</h1>
-<h2>Servicii foto, video</h2>
+                <div class="menu">
+                    <div class="logo-content">
+                        <div class="logo"></div>
+                    </div>
+                </div>
 <h3>Ne asiguram de calitatea amintirilor tale !!</h3>
 <h4>Deschidem in curand !!</h4>
 <p>Programari pe pagiana de <a href="https://www.facebook.com/pg/worthshoot/photos/?tab=album&album_id=547548865693245">Facebook</a>.</p>

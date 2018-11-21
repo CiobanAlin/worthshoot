@@ -63,6 +63,15 @@
             justify-content: center;
             align-items: center;
         }
+/* copyToClipboard */
+#copyToClipboard{
+background-color: transparent;
+    border: transparent 2px solid;
+    user-select: none;
+}
+#copyToClipboard:disabled{
+color: inherit;
+}
         </style>
         <body>
             <div class="main">
@@ -74,6 +83,19 @@
 <h3>Ne asiguram de calitatea amintirilor tale !!</h3>
 <h4>Deschidem in curand !!</h4>
 <p>Programari pe pagiana de <a href="https://www.facebook.com/pg/worthshoot/photos/?tab=album&album_id=547548865693245">Facebook</a>.</p>
+                
+<input type="text" value="soalenaxlyx@yahoo.com" id="copyToClipboard" disabled>
+<button onclick="copyToClipboard()">Copy email</button>
+<script>
+function copyToClipboard() {
+  var copyText = document.getElementById("copyToClipboard");
+  copyText.select();
+  document.execCommand("copy");
+}
+</script>
+
+                
+                
 </div>
 </body>
 </html>

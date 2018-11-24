@@ -659,11 +659,18 @@
                 </div>
                 <div class="titlu">Data:</div>
                 <div>
-                    <div>Durata aproximativa</div>
+                    <input id="datePicker" type="date" name="bday" max="2025-01-01">
+                </div>
+                <div>
+                    <div>Durata aproximativa: </div>
+                        <input type="number" id="tentacles" name="tentacles" min="1" max="72"> ore
                 </div>
                 <div class="titlu">Pret:</div>
                 <div>
                     <div>(x/h + x + transport + mancare)</div>
+                </div>
+                <div>
+                    <input type="submit" value="Submit" disabled>
                 </div>
                 <div>Va multumim pentru completarea formularului!</div>
                 <div>Veti fi contactat in cel mai scurt timp posibil de catre un reprezentant.</div>
@@ -677,6 +684,17 @@
                 <a href="https://www.facebook.com/pg/worthshoot/photos/?tab=album&album_id=547548865693245">Facebook</a>
                 sau la numarul de telefon: 0747332638.</div>
         </div>
+        <!-- datepicker -->
+        <script>
+            //         Date.prototype.toDateInputValue = (function() {
+            //     var local = new Date(this);
+            //     local.setMinutes(this.getMinutes() - this.getTimezoneOffset());
+            //     return local.toJSON().slice(0,10);
+            //     // target
+            //     document.getElementById('datePicker').value = new Date().toDateInputValue();
+            // });
+            document.getElementById('datePicker').valueAsDate = new Date();
+        </script>
     </body>
 
 </html>

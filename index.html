@@ -24,12 +24,6 @@
             font-size: 100px;
         }
 
-        @media screen and (max-width:800px) {
-            html {
-                font-size: 75px;
-            }
-        }
-
         body {
             margin: 0;
             padding: 0;
@@ -233,6 +227,10 @@
             text-align: left;
         }
 
+        .form>div>div {
+            text-align: center;
+        }
+
         .titlu {
             padding: 30px 10px 10px !important;
         }
@@ -373,7 +371,7 @@
             position: relative;
             padding-left: 35px;
             cursor: pointer;
-            font-size: 22px;
+            /* font-size: 22px; */
             -webkit-user-select: none;
             -moz-user-select: none;
             -ms-user-select: none;
@@ -441,7 +439,30 @@
             transform: rotate(45deg);
         }
 
+        /* input */
+
+        input {
+            background-color: rgba(249, 249, 249, 0.9);
+            height: 15px;
+            border: 0;
+            padding: 5px;
+            color: rgba(38, 38, 38, 1);
+        }
+
+        input:hover {
+            background-color: #CCC4C0;
+        }
+
         /* mobile */
+
+        @media screen and (max-width:800px) {
+            html {
+                font-size: 75px;
+            }
+            .checkmark {
+                top: 5px;
+            }
+        }
 
         @media screen and (max-width: 650px) {
             .form-parent {
@@ -474,6 +495,7 @@
             .h1 {
                 font-size: 0.25rem;
             }
+
             .titlu {
                 padding: 20px 10px 10px !important;
             }
@@ -663,17 +685,25 @@
                 </div>
                 <div>
                     <div>Durata aproximativa: </div>
-                        <input type="number" id="tentacles" name="tentacles" min="1" max="72"> ore
+                    <div>
+                        <input id="ore" type="number" name="tentacles" min="1" max="72">&nbsp; ore
+                    </div>
                 </div>
-                <div class="titlu">Pret:</div>
+                <!-- <div class="titlu">Pret:</div> -->
                 <div>
-                    <div>(x/h + x + transport + mancare)</div>
+                    <div>Valoare aproximativa: </div>
+                    <div>(
+                        <span id="pret">x</span>lei + transport + mancare )
+                    </div>
                 </div>
                 <div>
-                    <input type="submit" value="Submit" disabled>
+                    Pagina web in constructie !!
                 </div>
-                <div>Va multumim pentru completarea formularului!</div>
-                <div>Veti fi contactat in cel mai scurt timp posibil de catre un reprezentant.</div>
+                <!-- <div>
+                    <input type="submit" value="Trimite" disabled>
+                </div> -->
+                <!-- <div>Va multumim pentru completarea formularului!</div>
+                <div>Veti fi contactat in cel mai scurt timp posibil de catre un reprezentant.</div> -->
             </div>
         </div>
         <!-- <h3>Ne asiguram de calitatea amintirilor tale !!</h3> -->
@@ -694,6 +724,12 @@
             //     document.getElementById('datePicker').value = new Date().toDateInputValue();
             // });
             document.getElementById('datePicker').valueAsDate = new Date();
+            var ore = document.getElementById("ore");
+            ore.addEventListener('change', calculeazaPret);
+            function calculeazaPret() {
+                document.getElementById("pret").innerHTML = ore.value * 130;
+            };
+
         </script>
     </body>
 

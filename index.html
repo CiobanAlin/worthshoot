@@ -222,7 +222,8 @@
             padding: 10px;
         }
 
-        .form>div>div {
+        .form>div>div,
+        .form>div>label>div {
             font-family: 'Neuton', serif;
             color: #CCC4C0;
             /* Normal 20 */
@@ -238,7 +239,8 @@
         }
 
         /* culori */
-        .evidentiat{
+
+        .evidentiat {
             color: #E0E0E0;
         }
 
@@ -277,6 +279,7 @@
         }
 
         /* galerie */
+
         .gallery {
             padding: 10px;
         }
@@ -355,6 +358,83 @@
             margin: 4px;
         }
 
+        /* checkbox */
+
+        /* The container */
+
+        .container {
+            display: block;
+            position: relative;
+            padding-left: 35px;
+            cursor: pointer;
+            font-size: 22px;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+        /* Hide the browser's default checkbox */
+
+        .container input {
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+            height: 0;
+            width: 0;
+        }
+
+        /* Create a custom checkbox */
+
+        .checkmark {
+            position: absolute;
+            top: 10px;
+            left: 0;
+            height: 25px;
+            width: 25px;
+            background-color: rgba(249, 249, 249, 0.9);
+        }
+
+        /* On mouse-over, add a grey background color */
+
+        .container:hover input~.checkmark {
+            background-color: #CCC4C0;
+        }
+
+        /* When the checkbox is checked, add a blue background */
+
+        .container input:checked~.checkmark {
+            background-color: rgba(249, 249, 249, 0.9);
+        }
+
+        /* Create the checkmark/indicator (hidden when not checked) */
+
+        .checkmark:after {
+            content: "";
+            position: absolute;
+            display: none;
+        }
+
+        /* Show the checkmark when checked */
+
+        .container input:checked~.checkmark:after {
+            display: block;
+        }
+
+        /* Style the checkmark/indicator */
+
+        .container .checkmark:after {
+            left: 9px;
+            top: 5px;
+            width: 5px;
+            height: 10px;
+            border: solid rgba(38, 38, 38, 1);
+            border-width: 0 3px 3px 0;
+            -webkit-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+        }
+
         /* mobile */
 
         @media screen and (max-width: 650px) {
@@ -391,122 +471,131 @@
         }
     </style>
 
-<body>
-    <div class="content menu-parent">
-        <div class="menu">
-            <div class="menu-instructions">
-                <h5>Programari pe pagiana de
-                    <a href="https://www.facebook.com/pg/worthshoot/photos/?tab=album&album_id=547548865693245">Facebook</a>
-                </h5>
-                <h5>Sau urmand instructiunile de mai jos</h5>
-            </div>
-            <div class="image-parent logo-parent">
-                <div class="image logo"></div>
+    <body>
+        <div class="content menu-parent">
+            <div class="menu">
+                <div class="menu-instructions">
+                    <h5>Programari pe pagiana de
+                        <a href="https://www.facebook.com/pg/worthshoot/photos/?tab=album&album_id=547548865693245">Facebook</a>
+                    </h5>
+                    <h5>Sau urmand instructiunile de mai jos</h5>
+                </div>
+                <div class="image-parent logo-parent">
+                    <div class="image logo"></div>
+                </div>
             </div>
         </div>
-    </div>
-    <!-- <div>
+        <!-- <div>
                     <div class="image-parent">
                         <div class="image logo"></div>
                     </div> 
                 </div>   -->
-    <div class="announcement">
-        <h1>Pagina web in constructie !!</h1>
-    </div>
-    <div class="content form-parent">
-        <div class="gallery">
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
+        <div class="announcement">
+            <h1>Pagina web in constructie !!</h1>
         </div>
+        <div class="content form-parent">
+            <div class="gallery">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
 
-        <div class="form">
+            <div class="form">
 
-            <div>Nivel calitate SERVICIU
-                <br> Incepand de la:</div>
-            <div>
-                <div class="basic">Basic</div>
-                <div>&nbsp;&nbsp;&nbsp;
-                    <span class="evidentiat">140lei</span> 
-                    eveniment ' scurt '
+                <div>Nivel calitate SERVICIU
+                    <br> Incepand de la:</div>
+                <div>
+                    <label class="container">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+
+                        <div class="basic">Basic</div>
+                        <div>&nbsp;&nbsp;&nbsp;
+                            <span class="evidentiat">140lei</span>
+                            eveniment ' scurt '
+                        </div>
+                        <div>&nbsp;&nbsp;&nbsp;&nbsp; [1xfoto/video]
+                        </div>
+                        <div class="notita">&nbsp; *pana la 1.770lei
+                        </div>
+                    </label>
                 </div>
-                <div>&nbsp;&nbsp;&nbsp;&nbsp;
-                    [1xfoto/video]
+                <div>
+                    <label class="container">
+                        <input type="checkbox" checked="checked">
+                        <span class="checkmark"></span>
+                        <div class="avantaj">Avantaj</div>
+                        <div>&nbsp;&nbsp;&nbsp;
+                            <span class="evidentiat">260lei</span>
+                            eveniment ' scurt '
+                        </div>
+                        <div>&nbsp;&nbsp;&nbsp;&nbsp; [1xfoto/video + asistent]</div>
+                        <div class="notita">&nbsp; *pana la 3.280lei
+                        </div>
+                    </label>
                 </div>
-                <div class="notita">&nbsp;
-                    *pana la 1.770lei
+                <div>
+                    <label class="container">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                        <div class="lux">Lux</div>
+                        <div>&nbsp;&nbsp;&nbsp;
+                            <span class="evidentiat">800lei</span>
+                            eveniment ' scurt '
+                        </div>
+                        <div>&nbsp;&nbsp;&nbsp;&nbsp; [1xfoto/video + asistent]</div>
+                        <div class="notita">&nbsp; *pana la 10.090lei
+                        </div>
+                    </label>
                 </div>
-                <br>
-                <div class="avantaj">Avantaj</div>
-                <div>&nbsp;&nbsp;&nbsp;
-                    <span class="evidentiat">260lei</span> 
-                    eveniment ' scurt ' 
+                <div>
+                    <h2>Alege</h2>
                 </div>
-                <div>&nbsp;&nbsp;&nbsp;&nbsp;
-                    [1xfoto/video + asistent]</div>
-                <div class="notita">&nbsp;
-                    *pana la 3.280lei
+                <div>Un serviciu:</div>
+                <div>
+                    <div>Corporate</div>
+                    <div>Sedinta foto</div>
+                    <div>Botez</div>
+                    <div>Taierede mot</div>
+                    <div>Majorat</div>
+                    <div>Cununie civila</div>
+                    <div>Nunta</div>
+                    <div>Alte evenimente..</div>
                 </div>
-                <br>
-                <div class="lux">Lux</div>
-                <div>&nbsp;&nbsp;&nbsp;
-                    <span class="evidentiat">800lei</span> 
-                    eveniment ' scurt '
+                <div>Echipare:</div>
+                <div>
+                    <div>Foto</div>
+                    <div>Video</div>
+                    <div>Drona</div>
                 </div>
-                <div>&nbsp;&nbsp;&nbsp;&nbsp;
-                    [1xfoto/video + asistent]</div>
-                <div class="notita">&nbsp;
-                    *pana la 10.090lei
+                <div>Tip serviciu:</div>
+                <div>
+                    <div>Basic</div>
+                    <div>Personalizat</div>
                 </div>
+                <div>Data:</div>
+                <div>
+                    <div>Durata aproximativa</div>
+                </div>
+                <div>Pret:</div>
+                <div>
+                    <div>(x/h + x + transport + mancare)</div>
+                </div>
+                <div>Va multumim pentru completarea formularului!</div>
+                <div>Veti fi contactat in cel mai scurt timp posibil de catre un reprezentant.</div>
             </div>
-            <div>
-                <h2>Alege</h2>
-            </div>
-            <div>Un serviciu:</div>
-            <div>
-                <div>Corporate</div>
-                <div>Sedinta foto</div>
-                <div>Botez</div>
-                <div>Taierede mot</div>
-                <div>Majorat</div>
-                <div>Cununie civila</div>
-                <div>Nunta</div>
-                <div>Alte evenimente..</div>
-            </div>
-            <div>Echipare:</div>
-            <div>
-                <div>Foto</div>
-                <div>Video</div>
-                <div>Drona</div>
-            </div>
-            <div>Tip serviciu:</div>
-            <div>
-                <div>Basic</div>
-                <div>Personalizat</div>
-            </div>
-            <div>Data:</div>
-            <div>
-                <div>Durata aproximativa</div>
-            </div>
-            <div>Pret:</div>
-            <div>
-                <div>(x/h + x + transport + mancare)</div>
-            </div>
-            <div>Va multumim pentru completarea formularului!</div>
-            <div>Veti fi contactat in cel mai scurt timp posibil de catre un reprezentant.</div>
         </div>
-    </div>
-    <!-- <h3>Ne asiguram de calitatea amintirilor tale !!</h3> -->
+        <!-- <h3>Ne asiguram de calitatea amintirilor tale !!</h3> -->
 
-    </div>
-    <div class="footer">
-        <div>!! Pentru urgente, va rugam sa ne contactati pe pagina de
-            <a href="https://www.facebook.com/pg/worthshoot/photos/?tab=album&album_id=547548865693245">Facebook</a>
-            sau la numarul de telefon: 0747332638.</div>
-    </div>
-</body>
+        </div>
+        <div class="footer">
+            <div>!! Pentru urgente, va rugam sa ne contactati pe pagina de
+                <a href="https://www.facebook.com/pg/worthshoot/photos/?tab=album&album_id=547548865693245">Facebook</a>
+                sau la numarul de telefon: 0747332638.</div>
+        </div>
+    </body>
 
 </html>

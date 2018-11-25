@@ -18,7 +18,10 @@
     <!-- <script src="./Index_files/jquery-3.2.1.min.js.download"></script> -->
 
     <link href="https://fonts.googleapis.com/css?family=Lato:900|Neuton:200,300,400,700,800&amp;subset=latin-ext" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+    <!-- form -->
+    <!-- <script src="https://smtpjs.com/v2/smtp.js"> -->
+    </script>
     <style>
         html {
             font-size: 100px;
@@ -105,10 +108,13 @@
             font-size: 11.25px;
         }
 
-        button {
+        button,
+        /* input[type=submit][disabled=disabled] */
+
+        input[type=submit] {
             background: transparent;
-            /* border: 2px solid rgba(249, 249, 249, 0.9); */
-            border: 2px solid rgba(38, 38, 38, 0.9);
+            border: 2px solid rgba(249, 249, 249, 0.9);
+            /* border: 2px solid rgba(38, 38, 38, 0.9); */
             transition: color 170ms ease-in-out, border-color 170ms ease-in-out;
             letter-spacing: .2em;
             font-weight: 500;
@@ -127,13 +133,17 @@
             transition-timing-function: ease-in-out, ease-in-out;
             /* color: rgba(249, 249, 249, 0.9); */
             margin: 10px;
-            box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12);
+            /* box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12); */
+            box-shadow: 0 1px 5px 0 rgba(249, 249, 249, 0.2), 0 2px 2px 0 rgba(249, 249, 249, 0.14), 0 3px 1px -2px rgba(249, 249, 249, 0.12);
+            color: rgba(249, 249, 249, 0.9);
         }
 
-        button:hover {
+        button:hover,
+        input[type=submit]:hover {
             border: transparent solid 2px;
             font-weight: bold;
             box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0), 0 2px 2px 0 rgba(0, 0, 0, 0), 0 3px 1px -2px rgba(0, 0, 0, 0);
+            background: transparent;
         }
 
         .content>div {
@@ -353,6 +363,7 @@
             justify-content: center;
             align-items: center;
             text-align: center;
+            flex-flow: column;
         }
 
         .footer>div {
@@ -441,7 +452,7 @@
 
         /* input */
 
-        input {
+        input:not(input[type=submit]) {
             background-color: rgba(249, 249, 249, 0.9);
             height: 15px;
             border: 0;
@@ -451,6 +462,14 @@
 
         input:hover {
             background-color: #CCC4C0;
+        }
+
+        input[type=number]::-webkit-inner-spin-button,
+        input[type=number]::-webkit-outer-spin-button,
+        input[type=date]::-webkit-inner-spin-button,
+        input[type=date]::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
         }
 
         /* mobile */
@@ -502,39 +521,39 @@
         }
     </style>
 
-    <body>
-        <div class="content menu-parent">
-            <div class="menu">
-                <div class="menu-instructions">
-                    <h5>Programari pe pagina de
-                        <a href="https://www.facebook.com/pg/worthshoot/photos/?tab=album&album_id=547548865693245">Facebook</a>
-                    </h5>
-                    <h5>Sau completand formularul de mai jos</h5>
-                    <!-- urmand instructiunile -->
-                </div>
-                <div class="image-parent logo-parent">
-                    <div class="image logo"></div>
-                </div>
+<body>
+    <div class="content menu-parent">
+        <div class="menu">
+            <div class="menu-instructions">
+                <h5>Programari pe pagina de
+                    <a href="https://www.facebook.com/pg/worthshoot/photos/?tab=album&album_id=547548865693245">Facebook</a>
+                </h5>
+                <h5>Sau completand formularul de mai jos</h5>
+                <!-- urmand instructiunile -->
+            </div>
+            <div class="image-parent logo-parent">
+                <div class="image logo"></div>
             </div>
         </div>
-        <!-- <div>
+    </div>
+    <!-- <div>
                     <div class="image-parent">
                         <div class="image logo"></div>
                     </div> 
                 </div>   -->
-        <div class="announcement">
-            <h1>Pagina web in constructie !!</h1>
+    <div class="announcement">
+        <h1>Pagina web in constructie !!</h1>
+    </div>
+    <div class="content form-parent">
+        <div class="gallery">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
         </div>
-        <div class="content form-parent">
-            <div class="gallery">
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-            </div>
-
+        <form id="gform" method="POST" class="gform" data-email="worthshootsite@gmail.com" action="https://script.google.com/macros/s/AKfycbxHJr7gmuBSAAgDiKsTcYDTt2sTxA9SbQUKhNfrjQKoElY5RRg/exec">
             <div class="form">
 
                 <div>Nivel calitate SERVICIU
@@ -684,12 +703,14 @@
                 </div>
                 <div class="titlu">Data:</div>
                 <div>
-                    <input id="datePicker" type="date" name="data" max="2025-01-01">
+                    <input id="datePicker" type="date" name="data" oninput="if(this.value>max){ this.value= max;}if(this.value<min){ this.value= min;}"
+                        required>
                 </div>
                 <div>
                     <div>Durata aproximativa: </div>
                     <div>
-                        <input id="ore" type="number" name="ore" min="1" max="72" placeholder="x">&nbsp; ore
+                        <input id="ore" type="number" name="ore" min="1" max="72" placeholder="x" oninput="if(this.value>72){ this.value= 72;}if(this.value<1){ this.value= 1;}"
+                            required>&nbsp; ore
                     </div>
                 </div>
                 <!-- <div class="titlu">Pret:</div> -->
@@ -702,152 +723,341 @@
                 <div>
                     Pagina web in constructie !!
                 </div>
-                <!-- <div>
-                    <input type="submit" value="Trimite" disabled>
+                <div class="titlu">Nume intreg:</div>
+                <div>
+                    <!-- pattern="[a-zA-Z]{5,}" -->
+                    <input type="text" name="numeIntreg" oninput="this.value = this.value.replace(/[^a-zA-Z ]/g, '');"
+                        required>
+                    <!-- this.value = this.value.replace(/(\..*)\./g, '$1'); -->
+                </div>
+                <div class="titlu">Numar telefon:</div>
+                <div>
+                    <input type="number" name="numar" pattern="[0-9]*" required>
+                </div>
+                <!-- <div class="titlu">Locatie:</div>
+                <div>
+                    <input id="datePicker" type="date" name="data" max="2025-01-01">
+                </div>
+                <div class="titlu">Locatie:</div>
+                <div>
+                    <input id="datePicker" type="date" name="data" max="2025-01-01">
                 </div> -->
-                <!-- <div>Va multumim pentru completarea formularului!</div>
-                <div>Veti fi contactat in cel mai scurt timp posibil de catre un reprezentant.</div> -->
+                <div>
+                    <!-- <input type="submit" name="submit" value="Trimite"> -->
+                    <button class="button-success ">
+                        Trimite
+                    </button>
+                </div>
             </div>
-        </div>
-        <!-- <h3>Ne asiguram de calitatea amintirilor tale !!</h3> -->
+        </form>
+    </div>
+    <!-- <h3>Ne asiguram de calitatea amintirilor tale !!</h3> -->
 
+    </div>
+    <div class="footer">
+        <div id="thankyou_message" style="display:none;">
+            Va multumim pentru completarea formularului!
+            <br><br>
+            Veti fi contactat in cel mai scurt timp posibil de catre un reprezentant.
         </div>
-        <div class="footer">
-            <div>!! Pentru urgente, va rugam sa ne contactati pe pagina de
-                <a href="https://www.facebook.com/pg/worthshoot/photos/?tab=album&album_id=547548865693245">Facebook</a>
-                sau la numarul de telefon: 0747332638.</div>
-        </div>
-        <!-- datepicker -->
-        <script>
-            //         Date.prototype.toDateInputValue = (function() {
-            //     var local = new Date(this);
-            //     local.setMinutes(this.getMinutes() - this.getTimezoneOffset());
-            //     return local.toJSON().slice(0,10);
-            //     // target
-            //     document.getElementById('datePicker').value = new Date().toDateInputValue();
-            // });
-            var twoDaysNext = new Date();
-            twoDaysNext.setDate(twoDaysNext.getDate() + 2);
-            document.getElementById('datePicker').valueAsDate = twoDaysNext;
-            document.getElementById('datePicker').min = new Date().getFullYear()+"-"+(new Date().getMonth()+1)+"-" + (new Date().getDate()+2);
-            // pret
-            var pret = 0;
-            var foto = 0;
-            var video = 0;
-            var drona = 0;
-            var inputs = document.getElementsByTagName('input');
-            for (var i = 0; i < inputs.length; i++) {
-                inputs[i].addEventListener('change', calculeazaPret);
-            }
-            function calculeazaPret() {
-                // calitate
-                if (this.name == "avantaj") {
-                    document.getElementsByName('basic')[0].checked = false;
-                    document.getElementsByName('avantaj')[0].checked = true;
+        <div>!! Pentru urgente, va rugam sa ne contactati pe pagina de
+            <a href="https://www.facebook.com/pg/worthshoot/photos/?tab=album&album_id=547548865693245">Facebook</a>
+            sau la numarul de telefon: 0747332638.</div>
+    </div>
+    <!-- datepicker -->
+    <script>
+        //         Date.prototype.toDateInputValue = (function() {
+        //     var local = new Date(this);
+        //     local.setMinutes(this.getMinutes() - this.getTimezoneOffset());
+        //     return local.toJSON().slice(0,10);
+        //     // target
+        //     document.getElementById('datePicker').value = new Date().toDateInputValue();
+        // });
+        var twoDaysNext = new Date();
+        twoDaysNext.setDate(twoDaysNext.getDate() + 2);
+        document.getElementById('datePicker').valueAsDate = twoDaysNext;
+        document.getElementById('datePicker').min = new Date().getFullYear() + "-" + (new Date().getMonth() + 1) + "-" +
+            (new Date().getDate() + 2);
+        document.getElementById('datePicker').max = (new Date().getFullYear() + 4) + "-" + (new Date().getMonth() + 1) +
+            "-" + (new Date().getDate() + 2);
+        // pret
+        var pret = 0;
+        var foto = 0;
+        var video = 0;
+        var drona = 0;
+        var inputs = document.getElementsByTagName('input');
+        for (var i = 0; i < inputs.length; i++) {
+            inputs[i].addEventListener('change', calculeazaPret);
+        }
+
+        function calculeazaPret() {
+            // nume
+            // function nume() 
+            // {  
+            // var x=document.getElementsByName('numeIntreg')[0].name.value;
+            //     return /^[A-z ]+$/.test(x);
+            // }
+            // console.log(nume());
+            // telefon
+            // function telefon() 
+            // {  
+            // var x=document.getElementsByName('numeIntreg')[0].name.value;  
+            // return /[^0-9.]/.test(x);
+            // }
+            // console.log(telefon());
+            // calitate
+            if (this.name == "avantaj") {
+                document.getElementsByName('basic')[0].checked = false;
+                document.getElementsByName('avantaj')[0].checked = true;
+                document.getElementsByName('lux')[0].checked = false;
+            } else {
+                if (this.name == "basic") {
+                    document.getElementsByName('basic')[0].checked = true;
+                    document.getElementsByName('avantaj')[0].checked = false;
                     document.getElementsByName('lux')[0].checked = false;
                 } else {
-                    if (this.name == "basic") {
-                        document.getElementsByName('basic')[0].checked = true;
+                    if (this.name == "lux") {
+                        document.getElementsByName('basic')[0].checked = false;
                         document.getElementsByName('avantaj')[0].checked = false;
-                        document.getElementsByName('lux')[0].checked = false;
-                    } else {
-                        if (this.name == "lux") {
-                            document.getElementsByName('basic')[0].checked = false;
-                            document.getElementsByName('avantaj')[0].checked = false;
-                            document.getElementsByName('lux')[0].checked = true;
-                        } else { }
+                        document.getElementsByName('lux')[0].checked = true;
+                    } else {}
+                }
+            }
+            // serviciu
+            if (this.name == "serviciu[]") {
+                var inputs = document.getElementsByTagName("input");
+                for (var i = 0; i < inputs.length; i++) {
+                    if (inputs[i].checked && inputs[i].name == "serviciu[]") {
+                        inputs[i].checked = !inputs[i].checked;
                     }
                 }
-                // serviciu
-                if (this.name == "serviciu[]") {
-                    var inputs = document.getElementsByTagName("input");
-                    for (var i = 0; i < inputs.length; i++) {
-                        if (inputs[i].checked && inputs[i].name == "serviciu[]") {
-                            inputs[i].checked = !inputs[i].checked;
-                        }
+                this.checked = true;
+            }
+            // tip
+            if (this.name == "tip[]") {
+                var inputs = document.getElementsByTagName("input");
+                for (var i = 0; i < inputs.length; i++) {
+                    if (inputs[i].checked && inputs[i].name == "tip[]") {
+                        inputs[i].checked = !inputs[i].checked;
                     }
-                    this.checked = true;
                 }
-                // tip
-                if (this.name == "tip[]") {
-                    var inputs = document.getElementsByTagName("input");
-                    for (var i = 0; i < inputs.length; i++) {
-                        if (inputs[i].checked && inputs[i].name == "tip[]") {
-                            inputs[i].checked = !inputs[i].checked;
-                        }
-                    }
-                    this.checked = true;
-                }
+                this.checked = true;
+            }
 
-                // pret 
-                if (document.getElementsByName('avantaj')[0].checked) {
-                    pret = 130;
-                    // document.getElementsByName('basic')[0].checked = false;
-                    // document.getElementsByName('lux')[0].checked = false;
-                }
-                if (document.getElementsByName('basic')[0].checked) {
-                    pret = 70;
-                    // document.getElementsByName('avantaj')[0].checked = false;
-                    // document.getElementsByName('lux')[0].checked = false;
-                }
-                if (document.getElementsByName('lux')[0].checked) {
-                    pret = 300;
-                    // document.getElementsByName('avantaj')[0].checked = false;
-                    // document.getElementsByName('basic')[0].checked = false;
-                }
+            // pret 
+            if (document.getElementsByName('avantaj')[0].checked) {
+                pret = 130;
+                // document.getElementsByName('basic')[0].checked = false;
+                // document.getElementsByName('lux')[0].checked = false;
+            }
+            if (document.getElementsByName('basic')[0].checked) {
+                pret = 70;
+                // document.getElementsByName('avantaj')[0].checked = false;
+                // document.getElementsByName('lux')[0].checked = false;
+            }
+            if (document.getElementsByName('lux')[0].checked) {
+                pret = 300;
+                // document.getElementsByName('avantaj')[0].checked = false;
+                // document.getElementsByName('basic')[0].checked = false;
+            }
 
-                // ore
-                var ore = document.getElementById("ore").value;
-                // serviciu
-                // foto
-                if (document.getElementsByName('foto')[0].checked) {
-                    foto = 1;
-                    if (document.getElementsByName('video')[0].checked) {
-                        video = 0.6;
-                        if (document.getElementsByName('drona')[0].checked) {
-                            drona = 0.2;
-                        } else { drona = 0; }
+            // ore
+            var ore = document.getElementById("ore").value;
+            // serviciu
+            // foto
+            if (document.getElementsByName('foto')[0].checked) {
+                foto = 1;
+                if (document.getElementsByName('video')[0].checked) {
+                    video = 0.6;
+                    if (document.getElementsByName('drona')[0].checked) {
+                        drona = 0.2;
                     } else {
-                        video = 0;
-                        if (document.getElementsByName('drona')[0].checked) {
-                            drona = 0.4;
-                        } else { drona = 0; }
+                        drona = 0;
+                    }
+                } else {
+                    video = 0;
+                    if (document.getElementsByName('drona')[0].checked) {
+                        drona = 0.4;
+                    } else {
+                        drona = 0;
+                    }
+                }
+                // console.log(foto, video, drona);
+            } else {
+                foto = 0;
+                // video
+                if (document.getElementsByName('video')[0].checked) {
+                    video = 1;
+                    if (document.getElementsByName('drona')[0].checked) {
+                        drona = 0.4;
+                    } else {
+                        drona = 0;
                     }
                     // console.log(foto, video, drona);
                 } else {
-                    foto = 0;
-                    // video
-                    if (document.getElementsByName('video')[0].checked) {
-                        video = 1;
-                        if (document.getElementsByName('drona')[0].checked) {
-                            drona = 0.4;
-                        } else { drona = 0; }
+                    video = 0;
+                    // drona
+                    if (document.getElementsByName('drona')[0].checked) {
+                        drona = 1;
                         // console.log(foto, video, drona);
                     } else {
-                        video = 0;
-                        // drona
-                        if (document.getElementsByName('drona')[0].checked) {
-                            drona = 1;
-                            // console.log(foto, video, drona);
-                        } else { drona = 0; }
+                        drona = 0;
                     }
                 }
-                // verificare
-                if (foto == 0 && video == 0 && drona == 0) {
-                    pret = 0;
-                }
-                if (ore == 0) {
-                    pret = 0;
-                }
-                // total
-                if (pret == 0) {
-                    document.getElementById("pret").innerHTML = "x";
+            }
+            // verificare
+            if (foto == 0 && video == 0 && drona == 0) {
+                pret = 0;
+            }
+            if (ore == 0) {
+                pret = 0;
+            }
+            // total
+            if (pret == 0) {
+                document.getElementById("pret").innerHTML = "x";
+            } else {
+                document.getElementById("pret").innerHTML = ore * pret * (foto + video + drona) + pret;
+            }
+        };
+    </script>
+    <!-- // form -->
+    <!-- https://cdn.rawgit.com/dwyl/learn-to-send-email-via-google-script-html-no-server/master/form-submission-handler.js -->
+    <!-- https://github.com/dwyl/learn-to-send-email-via-google-script-html-no-server/blob/master/form-submission-handler.js -->
+    <script data-cfasync="false" type="text/javascript">
+        (function () {
+            function validEmail(email) {
+                var re = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
+                return re.test(email);
+            }
+
+            function validateHuman(honeypot) {
+                if (honeypot) { //if hidden form filled up
+                    // console.log("Robot Detected!");
+                    return true;
                 } else {
-                    document.getElementById("pret").innerHTML = ore * pret * (foto + video + drona) + pret;
+                    // console.log("Welcome Human!");
+                }
+            }
+
+            // get all data in form and return object
+            function getFormData(form) {
+                var elements = form.elements;
+
+                var fields = Object.keys(elements).filter(function (k) {
+                    return (elements[k].name !== "honeypot");
+                }).map(function (k) {
+                    if (elements[k].name !== undefined) {
+                        return elements[k].name;
+                        // special case for Edge's html collection
+                    } else if (elements[k].length > 0) {
+                        return elements[k].item(0).name;
+                    }
+                }).filter(function (item, pos, self) {
+                    return self.indexOf(item) == pos && item;
+                });
+
+                var formData = {};
+                fields.forEach(function (name) {
+                    var element = elements[name];
+
+                    // singular form elements just have one value
+                    formData[name] = element.value;
+
+                    // when our element has multiple items, get their values
+                    if (element.length) {
+                        var data = [];
+                        for (var i = 0; i < element.length; i++) {
+                            var item = element.item(i);
+                            if (item.checked || item.selected) {
+                                data.push(item.value);
+                            }
+                        }
+                        formData[name] = data.join(', ');
+                    }
+                });
+
+                // add form-specific values into the data
+                formData.formDataNameOrder = JSON.stringify(fields);
+                formData.formGoogleSheetName = form.dataset.sheet || "responses"; // default sheet name
+                formData.formGoogleSendEmail = form.dataset.email || ""; // no email by default
+
+                // console.log(formData);
+                return formData;
+            }
+
+            function handleFormSubmit(event) { // handles form submit without any jquery
+                event.preventDefault(); // we are submitting via xhr below
+                var form = event.target;
+                var data = getFormData(form); // get the values submitted in the form
+
+                /* OPTION: Remove this comment to enable SPAM prevention, see README.md
+                if (validateHuman(data.honeypot)) {  //if form is filled, form will not be submitted
+                  return false;
+                }
+                */
+
+                if (data.email && !validEmail(data.email)) { // if email is not valid show error
+                    var invalidEmail = form.querySelector(".email-invalid");
+                    if (invalidEmail) {
+                        invalidEmail.style.display = "block";
+                        return false;
+                    }
+                } else {
+                    disableAllButtons(form);
+                    var url = form.action;
+                    var xhr = new XMLHttpRequest();
+                    xhr.open('POST', url);
+                    // xhr.withCredentials = true;
+                    xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+                    xhr.onreadystatechange = function () {
+                        // console.log(xhr.status, xhr.statusText);
+                        // console.log(xhr.responseText);
+                        // var formElements = form.querySelector(".form-elements")
+                        // if (formElements) {
+                        //     // formElements.style.display = "none"; // hide form
+
+                        // }
+                        // var thankYouMessage = form.querySelector(".thankyou_message");
+                        // if (thankYouMessage) {
+                        //     // thankYouMessage.style.display = "block";
+                        //     document.getElementById("thankyou_message").style.display = "block"; // show thankYouMessage
+                        //     // Trimis
+                        //     document.getElementById("gform").style.display = "none"; // hide form
+                        //     // gform
+                        // }
+                        // thankYouMessage.style.display = "block";
+                        document.getElementById("thankyou_message").style.display = "block"; // show thankYouMessage
+                        // Trimis
+                        document.getElementById("gform").style.display = "none"; // hide form
+                        // gform
+                        return;
+                    };
+                    // url encode form data for sending as post data
+                    var encoded = Object.keys(data).map(function (k) {
+                        return encodeURIComponent(k) + "=" + encodeURIComponent(data[k]);
+                    }).join('&');
+                    xhr.send(encoded);
+                }
+            }
+
+            function loaded() {
+                // console.log("Contact form submission handler loaded successfully.");
+                // bind to the submit event of our form
+                var forms = document.querySelectorAll("form.gform");
+                for (var i = 0; i < forms.length; i++) {
+                    forms[i].addEventListener("submit", handleFormSubmit, false);
                 }
             };
+            document.addEventListener("DOMContentLoaded", loaded, false);
 
-        </script>
-    </body>
+            function disableAllButtons(form) {
+                var buttons = form.querySelectorAll("button");
+                for (var i = 0; i < buttons.length; i++) {
+                    buttons[i].disabled = true;
+                }
+            }
+        })();
+    </script>
+</body>
 
 </html>

@@ -463,7 +463,7 @@
 
         /* input */
 
-        input:not(input[type=submit]) {
+        input:not([type=submit]) {
             background-color: rgba(249, 249, 249, 0.9);
             height: 15px;
             border: 0;
@@ -566,7 +566,7 @@
                     <br> Incepand de la:</div>
                 <div>
                     <label class="container">
-                        <input name="basic" type="checkbox">
+                        <input name="CBa" type="checkbox">
                         <span class="checkmark"></span>
 
                         <div class="basic">Basic</div>
@@ -583,7 +583,7 @@
                 </div>
                 <div>
                     <label class="container">
-                        <input name="avantaj" type="checkbox" checked="checked">
+                        <input name="CAv" type="checkbox" checked="checked">
                         <span class="checkmark"></span>
                         <div class="avantaj">Avantaj</div>
                         <div>&nbsp;&nbsp;&nbsp;
@@ -598,7 +598,7 @@
                 </div>
                 <div>
                     <label class="container">
-                        <input name="lux" type="checkbox">
+                        <input name="CLu" type="checkbox">
                         <span class="checkmark"></span>
                         <div class="lux">Lux</div>
                         <div>&nbsp;&nbsp;&nbsp;
@@ -616,56 +616,56 @@
                 <div>Un serviciu:</div>
                 <div>
                     <label class="container">
-                        <input name="serviciu[]" type="checkbox">
+                        <input class="serviciuJs" name="SCo" type="checkbox">
                         <span class="checkmark"></span>
                         <div>Corporate</div>
                     </label>
                 </div>
                 <div>
                     <label class="container">
-                        <input name="serviciu[]" type="checkbox">
+                        <input class="serviciuJs" name="SSf" type="checkbox">
                         <span class="checkmark"></span>
                         <div>Sedinta foto</div>
                     </label>
                 </div>
                 <div>
                     <label class="container">
-                        <input name="serviciu[]" type="checkbox">
+                        <input class="serviciuJs" name="SBo" type="checkbox">
                         <span class="checkmark"></span>
                         <div>Botez</div>
                     </label>
                 </div>
                 <div>
                     <label class="container">
-                        <input name="serviciu[]" type="checkbox">
+                        <input class="serviciuJs" name="STm" type="checkbox">
                         <span class="checkmark"></span>
                         <div>Taiere de mot</div>
                     </label>
                 </div>
                 <div>
                     <label class="container">
-                        <input name="serviciu[]" type="checkbox">
+                        <input class="serviciuJs" name="SMa" type="checkbox">
                         <span class="checkmark"></span>
                         <div>Majorat</div>
                     </label>
                 </div>
                 <div>
                     <label class="container">
-                        <input name="serviciu[]" type="checkbox">
+                        <input class="serviciuJs" name="SCc" type="checkbox">
                         <span class="checkmark"></span>
                         <div>Cununie civila</div>
                     </label>
                 </div>
                 <div>
                     <label class="container">
-                        <input name="serviciu[]" type="checkbox">
+                        <input class="serviciuJs" name="SNu" type="checkbox">
                         <span class="checkmark"></span>
                         <div>Nunta</div>
                     </label>
                 </div>
                 <div>
                     <label class="container">
-                        <input name="serviciu[]" type="checkbox">
+                        <input class="serviciuJs" name="SAe" type="checkbox">
                         <span class="checkmark"></span>
                         <div>Alt eveniment..</div>
                     </label>
@@ -673,21 +673,21 @@
                 <div class="titlu">Echipare:</div>
                 <div>
                     <label class="container">
-                        <input name="foto" type="checkbox">
+                        <input name="EFo" type="checkbox">
                         <span class="checkmark"></span>
                         <div>Foto</div>
                     </label>
                 </div>
                 <div>
                     <label class="container">
-                        <input name="video" type="checkbox">
+                        <input name="EVi" type="checkbox">
                         <span class="checkmark"></span>
                         <div>Video</div>
                     </label>
                 </div>
                 <div>
                     <label class="container">
-                        <input name="drona" type="checkbox">
+                        <input name="EDr" type="checkbox">
                         <span class="checkmark"></span>
                         <div>Drona</div>
                     </label>
@@ -695,28 +695,28 @@
                 <div class="titlu">Tip serviciu:</div>
                 <div>
                     <label class="container">
-                        <input name="tip[]" type="checkbox" checked="checked">
+                        <input class="tipJs" name="TBa" type="checkbox" checked="checked">
                         <span class="checkmark"></span>
                         <div>Basic</div>
                     </label>
                 </div>
                 <div>
                     <label class="container">
-                        <input name="tip[]" type="checkbox">
+                        <input class="tipJs" name="TPe" type="checkbox">
                         <span class="checkmark"></span>
                         <div>Personalizat</div>
                     </label>
                 </div>
                 <div class="titlu">Data:</div>
                 <div>
-                    <input id="datePicker" type="number" title="Introduceti zz.ll.aaaa" name="data" pattern="[0-9 -.]*" 
-                        required>
+                    <input id="datePicker" type="date" oninput="if(this.value>max){ this.value= max;}if(this.value<min){this.value= min;}" name="Dat" required>
+                        <!-- type="text" title="Introduceti zz.ll.aaaa" pattern="[0-9-.]*"  -->
                         <!-- oninput="if(this.value>max){ this.value= max;}if(this.value<min){ this.value= min;}" -->
                 </div>
                 <div>
                     <div>Durata aproximativa: </div>
                     <div>
-                        <input id="ore" type="number" name="ore" min="1" max="72" placeholder="x" oninput="if(this.value>72){ this.value= 72;}if(this.value<1){ this.value='';}"
+                        <input id="ore" type="number" name="Ore" min="1" max="72" placeholder="x" oninput="if(this.value>72){ this.value= 72;}if(this.value<1){ this.value='';}"
                             required>&nbsp; ore
                     </div>
                 </div>
@@ -733,13 +733,13 @@
                 <div class="titlu">Nume intreg:</div>
                 <div>
                     <!-- pattern="[a-zA-Z]{5,}" -->
-                    <input type="text" name="numeIntreg" oninput="this.value = this.value.replace(/[^a-zA-Z -]/g, '');"
+                    <input type="text" name="nIn" oninput="this.value = this.value.replace(/[^a-zA-Z -]/g, '');"
                         required>
                     <!-- this.value = this.value.replace(/(\..*)\./g, '$1'); -->
                 </div>
                 <div class="titlu">Numar telefon:</div>
                 <div>
-                    <input type="number" name="numar" pattern="[0-9 -]*" required>
+                    <input type="number" name="nTe" pattern="[0-9-]*" required>
                 </div>
                 <div>
                     <button class="button-success ">
@@ -776,6 +776,7 @@
         var foto = 0;
         var video = 0;
         var drona = 0;
+        var ore = 0;
         var inputs = document.getElementsByTagName('input');
         for (var i = 0; i < inputs.length; i++) {
             inputs[i].addEventListener('change', calculeazaPret);
@@ -783,76 +784,78 @@
 
         function calculeazaPret() {
             // calitate
-            if (this.name == "avantaj") {
-                document.getElementsByName('basic')[0].checked = false;
-                document.getElementsByName('avantaj')[0].checked = true;
-                document.getElementsByName('lux')[0].checked = false;
+            if (this.name == "CAv") {
+                document.getElementsByName('CBa')[0].checked = false;
+                document.getElementsByName('CAv')[0].checked = true;
+                document.getElementsByName('CLu')[0].checked = false;
             } else {
-                if (this.name == "basic") {
-                    document.getElementsByName('basic')[0].checked = true;
-                    document.getElementsByName('avantaj')[0].checked = false;
-                    document.getElementsByName('lux')[0].checked = false;
+                if (this.name == "CBa") {
+                    document.getElementsByName('CBa')[0].checked = true;
+                    document.getElementsByName('CAv')[0].checked = false;
+                    document.getElementsByName('CLu')[0].checked = false;
                 } else {
-                    if (this.name == "lux") {
-                        document.getElementsByName('basic')[0].checked = false;
-                        document.getElementsByName('avantaj')[0].checked = false;
-                        document.getElementsByName('lux')[0].checked = true;
+                    if (this.name == "CLu") {
+                        document.getElementsByName('CBa')[0].checked = false;
+                        document.getElementsByName('CAv')[0].checked = false;
+                        document.getElementsByName('CLu')[0].checked = true;
                     } else {}
                 }
             }
             // serviciu
-            if (this.name == "serviciu[]") {
-                var inputs = document.getElementsByTagName("input");
+            if (this.className == "serviciuJs") {
+                var inputs = document.getElementsByClassName("serviciuJs");
                 for (var i = 0; i < inputs.length; i++) {
-                    if (inputs[i].checked && inputs[i].name == "serviciu[]") {
-                        inputs[i].checked = !inputs[i].checked;
-                    }
+                    inputs[i].checked = false;
+                    // if (inputs[i].checked && inputs[i].className == "serviciuJs") {
+                    //     inputs[i].checked = !inputs[i].checked;
+                    // }
                 }
                 this.checked = true;
             }
             // tip
-            if (this.name == "tip[]") {
-                var inputs = document.getElementsByTagName("input");
+            if (this.className == "tipJs") {
+                var inputs = document.getElementsByClassName("tipJs");
                 for (var i = 0; i < inputs.length; i++) {
-                    if (inputs[i].checked && inputs[i].name == "tip[]") {
-                        inputs[i].checked = !inputs[i].checked;
-                    }
+                    inputs[i].checked = false;
+                    // if (inputs[i].checked && inputs[i].className == "tipJs") {
+                    //     // inputs[i].checked = !inputs[i].checked;
+                    // }
                 }
                 this.checked = true;
             }
             // pret 
-            if (document.getElementsByName('avantaj')[0].checked) {
+            if (document.getElementsByName('CAv')[0].checked) {
                 pret = 130;
-                document.getElementsByName('basic')[0].checked = false;
-                document.getElementsByName('lux')[0].checked = false;
+                document.getElementsByName('CBa')[0].checked = false;
+                document.getElementsByName('CLu')[0].checked = false;
             }
-            if (document.getElementsByName('basic')[0].checked) {
+            if (document.getElementsByName('CBa')[0].checked) {
                 pret = 70;
-                document.getElementsByName('avantaj')[0].checked = false;
-                document.getElementsByName('lux')[0].checked = false;
+                document.getElementsByName('CAv')[0].checked = false;
+                document.getElementsByName('CLu')[0].checked = false;
             }
-            if (document.getElementsByName('lux')[0].checked) {
+            if (document.getElementsByName('CLu')[0].checked) {
                 pret = 300;
-                document.getElementsByName('avantaj')[0].checked = false;
-                document.getElementsByName('basic')[0].checked = false;
+                document.getElementsByName('CAv')[0].checked = false;
+                document.getElementsByName('CBa')[0].checked = false;
             }
 
             // ore
-            var ore = document.getElementById("ore").value;
+            ore = document.getElementById("ore").value;
             // serviciu
             // foto
-            if (document.getElementsByName('foto')[0].checked) {
+            if (document.getElementsByName('EFo')[0].checked) {
                 foto = 1;
-                if (document.getElementsByName('video')[0].checked) {
+                if (document.getElementsByName('EVi')[0].checked) {
                     video = 0.6;
-                    if (document.getElementsByName('drona')[0].checked) {
+                    if (document.getElementsByName('EDr')[0].checked) {
                         drona = 0.2;
                     } else {
                         drona = 0;
                     }
                 } else {
                     video = 0;
-                    if (document.getElementsByName('drona')[0].checked) {
+                    if (document.getElementsByName('EDr')[0].checked) {
                         drona = 0.4;
                     } else {
                         drona = 0;
@@ -862,9 +865,9 @@
             } else {
                 foto = 0;
                 // video
-                if (document.getElementsByName('video')[0].checked) {
+                if (document.getElementsByName('EVi')[0].checked) {
                     video = 1;
-                    if (document.getElementsByName('drona')[0].checked) {
+                    if (document.getElementsByName('EDr')[0].checked) {
                         drona = 0.4;
                     } else {
                         drona = 0;
@@ -873,7 +876,7 @@
                 } else {
                     video = 0;
                     // drona
-                    if (document.getElementsByName('drona')[0].checked) {
+                    if (document.getElementsByName('EDr')[0].checked) {
                         drona = 1;
                         // console.log(foto, video, drona);
                     } else {
@@ -899,10 +902,10 @@
     <!-- // form -->
     <script data-cfasync="false" type="text/javascript">
         (function () {
-            function validEmail(email) {
-                var re = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
-                return re.test(email);
-            }
+            // function validEmail(email) {
+            //     var re = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
+            //     return re.test(email);
+            // }
 
             function validateHuman(honeypot) {
                 if (honeypot) { //if hidden form filled up
@@ -935,19 +938,32 @@
                     var element = elements[name];
 
                     // singular form elements just have one value
-                    formData[name] = element.value;
-
-                    // when our element has multiple items, get their values
-                    if (element.length) {
-                        var data = [];
-                        for (var i = 0; i < element.length; i++) {
-                            var item = element.item(i);
-                            if (item.checked || item.selected) {
-                                data.push(item.value);
-                            }
-                        }
-                        formData[name] = data.join(', ');
+                    if(element.checked==false){
+                        if(element.value=="on"){
+                            formData[name] = element.value = "-";
+                        }else{
+                            formData[name] = element.value;
+                        }  
                     }
+                    if(element.checked==true){
+                        formData[name] = element.value = "x";
+                    }
+                    // formData[name] = element.value;
+                    // console.log(element.checked);
+                    // wtf??
+                    // when our element has multiple items, get their values
+                    // if (element.length) {
+                    //     var data = [];
+                    //     for (var i = 0; i < element.length; i++) {
+                    //         var item = element.item(i);
+                    //         if (itemchecked = true) {
+                    //             // data.push(item.value);
+                    //             console.log(item.value);
+                    //             // || item.selected
+                    //         }
+                    //     }
+                    //     formData[name] = data.join(', ');
+                    // }
                 });
 
                 // add form-specific values into the data
@@ -1007,6 +1023,7 @@
                 }
             };
             document.addEventListener("DOMContentLoaded", loaded, false);
+            // redirect block
 
             function disableAllButtons(form) {
                 var buttons = form.querySelectorAll("button");

@@ -709,13 +709,14 @@
                 </div>
                 <div class="titlu">Data:</div>
                 <div>
-                    <input id="datePicker" type="date" name="data" oninput="if(this.value>max){ this.value= max;}if(this.value<min){ this.value= min;}"
+                    <input id="datePicker" type="number" title="Introduceti zz.ll.aaaa" name="data" pattern="[0-9 -.]*" 
                         required>
+                        <!-- oninput="if(this.value>max){ this.value= max;}if(this.value<min){ this.value= min;}" -->
                 </div>
                 <div>
                     <div>Durata aproximativa: </div>
                     <div>
-                        <input id="ore" type="number" name="ore" min="1" max="72" placeholder="x" oninput="if(this.value>72){ this.value= 72;}if(this.value<1){ this.value= 1;}"
+                        <input id="ore" type="number" name="ore" min="1" max="72" placeholder="x" oninput="if(this.value>72){ this.value= 72;}if(this.value<1){ this.value='';}"
                             required>&nbsp; ore
                     </div>
                 </div>
@@ -738,7 +739,7 @@
                 </div>
                 <div class="titlu">Numar telefon:</div>
                 <div>
-                    <input type="number" name="numar" pattern="[0-9]*" required>
+                    <input type="number" name="numar" pattern="[0-9 -]*" required>
                 </div>
                 <div>
                     <button class="button-success ">

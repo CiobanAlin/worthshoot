@@ -541,7 +541,7 @@
                     <br> Incepand de la:</div>
                 <div>
                     <label class="container">
-                        <input type="checkbox">
+                        <input name="basic" type="checkbox">
                         <span class="checkmark"></span>
 
                         <div class="basic">Basic</div>
@@ -551,15 +551,14 @@
                         </div>
                         <!-- <div>&nbsp;&nbsp;&nbsp;&nbsp; [1xfoto/video]
                         </div> -->
-                        <div class="notita">&nbsp; *pana la 
-                            2.870lei
-                                <!-- 1.770 -->
+                        <div class="notita">&nbsp; *pana la 2.870lei
+                            <!-- 1.770 -->
                         </div>
                     </label>
                 </div>
                 <div>
                     <label class="container">
-                        <input type="checkbox" checked="checked">
+                        <input name="avantaj" type="checkbox" checked="checked">
                         <span class="checkmark"></span>
                         <div class="avantaj">Avantaj</div>
                         <div>&nbsp;&nbsp;&nbsp;
@@ -568,13 +567,13 @@
                         </div>
                         <!-- <div>&nbsp;&nbsp;&nbsp;&nbsp; [1xfoto/video + asistent]</div> -->
                         <div class="notita">&nbsp; *pana la 5.280lei
-                                <!-- 3.280 -->
+                            <!-- 3.280 -->
                         </div>
                     </label>
                 </div>
                 <div>
                     <label class="container">
-                        <input type="checkbox">
+                        <input name="lux" type="checkbox">
                         <span class="checkmark"></span>
                         <div class="lux">Lux</div>
                         <div>&nbsp;&nbsp;&nbsp;
@@ -592,56 +591,56 @@
                 <div>Un serviciu:</div>
                 <div>
                     <label class="container">
-                        <input type="checkbox">
+                        <input name="serviciu[]" type="checkbox">
                         <span class="checkmark"></span>
                         <div>Corporate</div>
                     </label>
                 </div>
                 <div>
                     <label class="container">
-                        <input type="checkbox">
+                        <input name="serviciu[]" type="checkbox">
                         <span class="checkmark"></span>
                         <div>Sedinta foto</div>
                     </label>
                 </div>
                 <div>
                     <label class="container">
-                        <input type="checkbox">
+                        <input name="serviciu[]" type="checkbox">
                         <span class="checkmark"></span>
                         <div>Botez</div>
                     </label>
                 </div>
                 <div>
                     <label class="container">
-                        <input type="checkbox">
+                        <input name="serviciu[]" type="checkbox">
                         <span class="checkmark"></span>
                         <div>Taiere de mot</div>
                     </label>
                 </div>
                 <div>
                     <label class="container">
-                        <input type="checkbox">
+                        <input name="serviciu[]" type="checkbox">
                         <span class="checkmark"></span>
                         <div>Majorat</div>
                     </label>
                 </div>
                 <div>
                     <label class="container">
-                        <input type="checkbox">
+                        <input name="serviciu[]" type="checkbox">
                         <span class="checkmark"></span>
                         <div>Cununie civila</div>
                     </label>
                 </div>
                 <div>
                     <label class="container">
-                        <input type="checkbox">
+                        <input name="serviciu[]" type="checkbox">
                         <span class="checkmark"></span>
                         <div>Nunta</div>
                     </label>
                 </div>
                 <div>
                     <label class="container">
-                        <input type="checkbox">
+                        <input name="serviciu[]" type="checkbox">
                         <span class="checkmark"></span>
                         <div>Alt eveniment..</div>
                     </label>
@@ -649,21 +648,21 @@
                 <div class="titlu">Echipare:</div>
                 <div>
                     <label class="container">
-                        <input type="checkbox">
+                        <input name="foto" type="checkbox">
                         <span class="checkmark"></span>
                         <div>Foto</div>
                     </label>
                 </div>
                 <div>
                     <label class="container">
-                        <input type="checkbox">
+                        <input name="video" type="checkbox">
                         <span class="checkmark"></span>
                         <div>Video</div>
                     </label>
                 </div>
                 <div>
                     <label class="container">
-                        <input type="checkbox">
+                        <input name="drona" type="checkbox">
                         <span class="checkmark"></span>
                         <div>Drona</div>
                     </label>
@@ -671,26 +670,26 @@
                 <div class="titlu">Tip serviciu:</div>
                 <div>
                     <label class="container">
-                        <input type="checkbox" checked="checked">
+                        <input name="tip[]" type="checkbox" checked="checked">
                         <span class="checkmark"></span>
                         <div>Basic</div>
                     </label>
                 </div>
                 <div>
                     <label class="container">
-                        <input type="checkbox">
+                        <input name="tip[]" type="checkbox">
                         <span class="checkmark"></span>
                         <div>Personalizat</div>
                     </label>
                 </div>
                 <div class="titlu">Data:</div>
                 <div>
-                    <input id="datePicker" type="date" name="bday" max="2025-01-01">
+                    <input id="datePicker" type="date" name="data" max="2025-01-01">
                 </div>
                 <div>
                     <div>Durata aproximativa: </div>
                     <div>
-                        <input id="ore" type="number" name="tentacles" min="1" max="72">&nbsp; ore
+                        <input id="ore" type="number" name="ore" min="1" max="72" placeholder="x">&nbsp; ore
                     </div>
                 </div>
                 <!-- <div class="titlu">Pret:</div> -->
@@ -727,11 +726,125 @@
             //     // target
             //     document.getElementById('datePicker').value = new Date().toDateInputValue();
             // });
-            document.getElementById('datePicker').valueAsDate = new Date();
-            var ore = document.getElementById("ore");
-            ore.addEventListener('change', calculeazaPret);
+            var twoDaysNext = new Date();
+            twoDaysNext.setDate(twoDaysNext.getDate() + 2);
+            document.getElementById('datePicker').valueAsDate = twoDaysNext;
+            document.getElementById('datePicker').min = new Date().getFullYear()+"-"+(new Date().getMonth()+1)+"-" + (new Date().getDate()+2);
+            // pret
+            var pret = 0;
+            var foto = 0;
+            var video = 0;
+            var drona = 0;
+            var inputs = document.getElementsByTagName('input');
+            for (var i = 0; i < inputs.length; i++) {
+                inputs[i].addEventListener('change', calculeazaPret);
+            }
             function calculeazaPret() {
-                document.getElementById("pret").innerHTML = ore.value * 130;
+                // calitate
+                if (this.name == "avantaj") {
+                    document.getElementsByName('basic')[0].checked = false;
+                    document.getElementsByName('avantaj')[0].checked = true;
+                    document.getElementsByName('lux')[0].checked = false;
+                } else {
+                    if (this.name == "basic") {
+                        document.getElementsByName('basic')[0].checked = true;
+                        document.getElementsByName('avantaj')[0].checked = false;
+                        document.getElementsByName('lux')[0].checked = false;
+                    } else {
+                        if (this.name == "lux") {
+                            document.getElementsByName('basic')[0].checked = false;
+                            document.getElementsByName('avantaj')[0].checked = false;
+                            document.getElementsByName('lux')[0].checked = true;
+                        } else { }
+                    }
+                }
+                // serviciu
+                if (this.name == "serviciu[]") {
+                    var inputs = document.getElementsByTagName("input");
+                    for (var i = 0; i < inputs.length; i++) {
+                        if (inputs[i].checked && inputs[i].name == "serviciu[]") {
+                            inputs[i].checked = !inputs[i].checked;
+                        }
+                    }
+                    this.checked = true;
+                }
+                // tip
+                if (this.name == "tip[]") {
+                    var inputs = document.getElementsByTagName("input");
+                    for (var i = 0; i < inputs.length; i++) {
+                        if (inputs[i].checked && inputs[i].name == "tip[]") {
+                            inputs[i].checked = !inputs[i].checked;
+                        }
+                    }
+                    this.checked = true;
+                }
+
+                // pret 
+                if (document.getElementsByName('avantaj')[0].checked) {
+                    pret = 130;
+                    // document.getElementsByName('basic')[0].checked = false;
+                    // document.getElementsByName('lux')[0].checked = false;
+                }
+                if (document.getElementsByName('basic')[0].checked) {
+                    pret = 70;
+                    // document.getElementsByName('avantaj')[0].checked = false;
+                    // document.getElementsByName('lux')[0].checked = false;
+                }
+                if (document.getElementsByName('lux')[0].checked) {
+                    pret = 300;
+                    // document.getElementsByName('avantaj')[0].checked = false;
+                    // document.getElementsByName('basic')[0].checked = false;
+                }
+
+                // ore
+                var ore = document.getElementById("ore").value;
+                // serviciu
+                // foto
+                if (document.getElementsByName('foto')[0].checked) {
+                    foto = 1;
+                    if (document.getElementsByName('video')[0].checked) {
+                        video = 0.6;
+                        if (document.getElementsByName('drona')[0].checked) {
+                            drona = 0.2;
+                        } else { drona = 0; }
+                    } else {
+                        video = 0;
+                        if (document.getElementsByName('drona')[0].checked) {
+                            drona = 0.4;
+                        } else { drona = 0; }
+                    }
+                    // console.log(foto, video, drona);
+                } else {
+                    foto = 0;
+                    // video
+                    if (document.getElementsByName('video')[0].checked) {
+                        video = 1;
+                        if (document.getElementsByName('drona')[0].checked) {
+                            drona = 0.4;
+                        } else { drona = 0; }
+                        // console.log(foto, video, drona);
+                    } else {
+                        video = 0;
+                        // drona
+                        if (document.getElementsByName('drona')[0].checked) {
+                            drona = 1;
+                            // console.log(foto, video, drona);
+                        } else { drona = 0; }
+                    }
+                }
+                // verificare
+                if (foto == 0 && video == 0 && drona == 0) {
+                    pret = 0;
+                }
+                if (ore == 0) {
+                    pret = 0;
+                }
+                // total
+                if (pret == 0) {
+                    document.getElementById("pret").innerHTML = "x";
+                } else {
+                    document.getElementById("pret").innerHTML = ore * pret * (foto + video + drona) + pret;
+                }
             };
 
         </script>

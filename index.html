@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<!-- V2.0 -->
+<!-- V3.0 -->
 
 <head>
     <!-- SEO -->
@@ -16,21 +16,21 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-129787605-1"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
+        function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
 
         gtag('config', 'UA-129787605-1');
     </script>
     <!-- Hotjar Tracking Code for https://worthshoot.com -->
     <script>
-        (function(h,o,t,j,a,r){
-        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-        h._hjSettings={hjid:1103156,hjsv:6};
-        a=o.getElementsByTagName('head')[0];
-        r=o.createElement('script');r.async=1;
-        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
-        a.appendChild(r);
-    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+        (function (h, o, t, j, a, r) {
+            h.hj = h.hj || function () { (h.hj.q = h.hj.q || []).push(arguments) };
+            h._hjSettings = { hjid: 1103156, hjsv: 6 };
+            a = o.getElementsByTagName('head')[0];
+            r = o.createElement('script'); r.async = 1;
+            r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+            a.appendChild(r);
+        })(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
     </script>
     <!-- =SEO= -->
     <meta name="author" content="So Alenax">
@@ -129,6 +129,7 @@
 
         button,
         /* input[type=submit][disabled=disabled] */
+
         input[type=submit] {
             background: transparent;
             border: 2px solid rgba(249, 249, 249, 0.9);
@@ -220,8 +221,10 @@
         .form-parent {
             background-color: #353231;
             display: flex;
-            flex-direction: row-reverse;
+            /* flex-direction: row-reverse; */
             justify-content: center;
+            flex-direction: column;
+                align-items: center;
             padding: 10px;
         }
 
@@ -303,10 +306,44 @@
             /* Lux 18 */
         }
 
+        .exclusiv {
+            color: #CC9D99!important;
+        /*  A63232 
+            BF595E*/
+            font-weight: 200 !important;
+            font-size: 0.30rem;
+            /* Exclusive 20 */
+        }
+
         /* galerie */
+        .scrollHide{
+            position: relative;
+            width: 100%;
+            max-width: 100vw !important;
+        }
+        .galleryParent{
+            overflow-x: scroll;
+            overflow-y: hidden;
+            max-width: 100vw !important;
+            width: 100%;
+            cursor: grab; cursor : -o-grab; cursor : -moz-grab; cursor : -webkit-grab;
+        }
 
         .gallery {
             padding: 10px;
+            display: flex;
+            width: calc(400px * 6) !important;
+    max-width: max-content;
+        }
+
+    .gallery::after{
+            position: absolute;
+            top: calc(100% - 18px);;
+            right: 0;
+            bottom: 0;
+            left: 0;
+             background-color: #353231;     
+             content: '';  
         }
 
         .gallery>div {
@@ -332,7 +369,17 @@
         }
 
         /* images */
-
+        .gallery>div:nth-child(1){
+            /* square */
+            height: 200px;
+            width: 200px;
+        }
+        .gallery>div:nth-child(5),
+        .gallery>div:nth-child(6){
+            /* portrait */
+            height: 200px;
+            width: 165px;
+        }
         .gallery>div:nth-child(1):after {
             background-image: url("Profil Facebook.JPG");
         }
@@ -469,6 +516,13 @@
             border: 0;
             padding: 5px;
             color: rgba(38, 38, 38, 1);
+            text-align: center;
+        }
+
+        [name="DaD"],
+        [name="DaM"],
+        [name="DaY"] {
+            width: 50px;
         }
 
         input:hover {
@@ -483,6 +537,60 @@
             margin: 0;
         }
 
+                /* scrollIndicator */
+                .progress-container {
+  width: 100%;
+  height: 8px;
+  /* background: #ccc; */
+  position: relative;
+}
+.progress-container::after{
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    content: '';
+position: absolute;
+border-top: 8px solid transparent;
+border-right: 8px solid #353231;
+border-left: 8px solid #353231;
+}
+
+.progress-bar {
+  height: 8px;
+  background: #A5ABD6;
+  width: 0%;
+}
+/* stickyNav */
+        .stickyNav{
+            position: fixed;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            /* height: 16px; */
+            height: 8px;
+            background: rgba(38, 38, 38, 1);
+
+        }
+        .progress-containerDocument{
+            max-width: 400px;
+            margin: auto;
+            position: relative;
+        }
+        .progress-containerDocument::after{
+            top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    content: '';
+position: absolute;
+            border-top: 0;
+border-right: 8px solid rgba(38, 38, 38, 1);
+border-left: 8px solid rgba(38, 38, 38, 1);
+border-bottom: 8px solid transparent;
+        }
+        
+
         /* mobile */
 
         @media screen and (max-width:800px) {
@@ -493,6 +601,7 @@
                 top: 5px;
             }
         }
+
 
         @media screen and (max-width: 650px) {
             .form-parent {
@@ -513,13 +622,13 @@
                 padding: 10px 0 0 0;
             }
 
-            .gallery>div {
+            /* .gallery>div {
                 display: none;
             }
 
             .gallery>div:nth-child(3) {
                 display: block;
-            }
+            } */
 
             h1,
             .h1 {
@@ -532,510 +641,715 @@
         }
     </style>
 
-<body>
-    <div class="content menu-parent">
-        <div class="menu">
-            <div class="menu-instructions">
-                <h5>Programari pe pagina de
-                    <a href="https://www.facebook.com/pg/worthshoot/photos/?tab=album&album_id=547548865693245">Facebook</a>
-                </h5>
-                <h5>Sau completand formularul de mai jos</h5>
-                <!-- urmand instructiunile -->
-            </div>
-            <div class="image-parent logo-parent">
-                <div class="image logo"></div>
+    <body>
+        <div class="content menu-parent">
+            <div class="menu">
+                <div class="menu-instructions">
+                    <h5>Programari pe pagina de
+                        <a href="https://www.facebook.com/pg/worthshoot/photos/?tab=album&album_id=547548865693245">Facebook</a>
+                    </h5>
+                    <h5>Sau completand formularul de mai jos</h5>
+                    <!-- urmand instructiunile -->
+                </div>
+                <div class="image-parent logo-parent">
+                    <div class="image logo"></div>
+                </div>
             </div>
         </div>
-    </div>
-    <div class="announcement">
-        <!-- <h1>Pagina web in constructie !!</h1> -->
-        <h1>Completaza formularul!!</h1>
-    </div>
-    <div class="content form-parent">
-        <div class="gallery">
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
+        <div class="announcement">
+            <!-- <h1>Pagina web in constructie !!</h1> -->
+            <h1>Completaza formularul!!</h1>
         </div>
-        <form id="gform" method="POST" class="gform" data-email="worthshootsite@gmail.com" action="https://script.google.com/macros/s/AKfycbxHJr7gmuBSAAgDiKsTcYDTt2sTxA9SbQUKhNfrjQKoElY5RRg/exec">
-            <div class="form">
-
-                <div>Nivel calitate SERVICIU
-                    <br> Incepand de la:</div>
-                <div>
-                    <label class="container">
-                        <input name="CBa" type="checkbox">
-                        <span class="checkmark"></span>
-
-                        <div class="basic">Basic</div>
-                        <div>&nbsp;&nbsp;&nbsp;
-                            <span class="evidentiat">140lei</span>
-                            <!-- eveniment ' scurt ' -->
-                        </div>
-                        <!-- <div>&nbsp;&nbsp;&nbsp;&nbsp; [1xfoto/video]
-                        </div> -->
-                        <div class="notita">&nbsp; *pana la 2.870lei
-                            <!-- 1.770 -->
-                        </div>
-                    </label>
-                </div>
-                <div>
-                    <label class="container">
-                        <input name="CAv" type="checkbox" checked="checked">
-                        <span class="checkmark"></span>
-                        <div class="avantaj">Avantaj</div>
-                        <div>&nbsp;&nbsp;&nbsp;
-                            <span class="evidentiat">260lei</span>
-                            <!-- eveniment ' scurt ' -->
-                        </div>
-                        <!-- <div>&nbsp;&nbsp;&nbsp;&nbsp; [1xfoto/video + asistent]</div> -->
-                        <div class="notita">&nbsp; *pana la 5.280lei
-                            <!-- 3.280 -->
-                        </div>
-                    </label>
-                </div>
-                <div>
-                    <label class="container">
-                        <input name="CLu" type="checkbox">
-                        <span class="checkmark"></span>
-                        <div class="lux">Lux</div>
-                        <div>&nbsp;&nbsp;&nbsp;
-                            <span class="evidentiat">600lei</span>
-                            <!-- eveniment ' scurt ' -->
-                        </div>
-                        <!-- <div>&nbsp;&nbsp;&nbsp;&nbsp; [1xfoto/video + asistent]</div> -->
-                        <div class="notita">&nbsp; *pana la 12.090lei
-                        </div>
-                    </label>
-                </div>
-                <div>
-                    <h2>Alege</h2>
-                </div>
-                <div>Un serviciu:</div>
-                <div>
-                    <label class="container">
-                        <input class="serviciuJs" name="SCo" type="checkbox">
-                        <span class="checkmark"></span>
-                        <div>Corporate</div>
-                    </label>
-                </div>
-                <div>
-                    <label class="container">
-                        <input class="serviciuJs" name="SSf" type="checkbox">
-                        <span class="checkmark"></span>
-                        <div>Sedinta foto</div>
-                    </label>
-                </div>
-                <div>
-                    <label class="container">
-                        <input class="serviciuJs" name="SBo" type="checkbox">
-                        <span class="checkmark"></span>
-                        <div>Botez</div>
-                    </label>
-                </div>
-                <div>
-                    <label class="container">
-                        <input class="serviciuJs" name="STm" type="checkbox">
-                        <span class="checkmark"></span>
-                        <div>Taiere de mot</div>
-                    </label>
-                </div>
-                <div>
-                    <label class="container">
-                        <input class="serviciuJs" name="SMa" type="checkbox">
-                        <span class="checkmark"></span>
-                        <div>Majorat</div>
-                    </label>
-                </div>
-                <div>
-                    <label class="container">
-                        <input class="serviciuJs" name="SCc" type="checkbox">
-                        <span class="checkmark"></span>
-                        <div>Cununie civila</div>
-                    </label>
-                </div>
-                <div>
-                    <label class="container">
-                        <input class="serviciuJs" name="SNu" type="checkbox">
-                        <span class="checkmark"></span>
-                        <div>Nunta</div>
-                    </label>
-                </div>
-                <div>
-                    <label class="container">
-                        <input class="serviciuJs" name="SAe" type="checkbox">
-                        <span class="checkmark"></span>
-                        <div>Alt eveniment..</div>
-                    </label>
-                </div>
-                <div class="titlu">Echipare:</div>
-                <div>
-                    <label class="container">
-                        <input name="EFo" type="checkbox">
-                        <span class="checkmark"></span>
-                        <div>Foto</div>
-                    </label>
-                </div>
-                <div>
-                    <label class="container">
-                        <input name="EVi" type="checkbox">
-                        <span class="checkmark"></span>
-                        <div>Video</div>
-                    </label>
-                </div>
-                <div>
-                    <label class="container">
-                        <input name="EDr" type="checkbox">
-                        <span class="checkmark"></span>
-                        <div>Drona</div>
-                    </label>
-                </div>
-                <div style="display: none">
-                <div class="titlu">Tip serviciu:</div>
-                <div>
-                    <label class="container">
-                        <input class="tipJs" name="TBa" type="checkbox" checked="checked">
-                        <span class="checkmark"></span>
-                        <div>Basic</div>
-                    </label>
-                </div>
-                <div>
-                    <label class="container">
-                        <input class="tipJs" name="TPe" type="checkbox">
-                        <span class="checkmark"></span>
-                        <div>Personalizat</div>
-                    </label>
-                </div>
+        <div class="content form-parent">
+            <div class="scrollHide">
+            <div class="galleryParent">
+            <div class="gallery">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
             </div>
-                <div class="titlu">Data:</div>
-                <div>
-                    <input id="datePicker" type="date" oninput="if(this.value>max){ this.value= max;}if(this.value<min){this.value= min;}" name="Dat" required>
-                        <!-- type="text" title="Introduceti zz.ll.aaaa" pattern="[0-9-.]*"  -->
-                        <!-- oninput="if(this.value>max){ this.value= max;}if(this.value<min){ this.value= min;}" -->
-                </div>
-                <div>
-                    <div>Durata aproximativa: </div>
+            </div>
+            </div>
+            <div class="progress-container">
+                <div class="progress-bar [ galleryBar ]"></div>
+            </div>  
+            <form id="gform" method="POST" class="gform" data-email="worthshootsite@gmail.com" action="https://script.google.com/macros/s/AKfycbxHJr7gmuBSAAgDiKsTcYDTt2sTxA9SbQUKhNfrjQKoElY5RRg/exec">
+                <div class="form">
+                    <div>Serviciu</div>
                     <div>
-                        <input id="ore" type="number" name="Ore" min="1" max="72" placeholder="x" oninput="if(this.value>72){ this.value= 72;}if(this.value<1){ this.value='';}"
-                            required>&nbsp; ore
+                        <label class="container">
+                            <input class="serviciuJs" name="SCo" type="checkbox">
+                            <span class="checkmark"></span>
+                            <div>Corporate</div>
+                        </label>
                     </div>
-                </div>
-                <!-- <div class="titlu">Pret:</div> -->
-                <div>
-                    <div>Valoare aproximativa: </div>
-                    <div>(
-                        <span id="pret">x</span>lei + transport + mancare )
+                    <div>
+                        <label class="container">
+                            <input class="serviciuJs" name="SSf" type="checkbox">
+                            <span class="checkmark"></span>
+                            <div>Sedinta foto</div>
+                        </label>
                     </div>
-                </div>
-                <!-- <div>
+                    <div>
+                        <label class="container">
+                            <input class="serviciuJs" name="SBo" type="checkbox">
+                            <span class="checkmark"></span>
+                            <div>Botez</div>
+                        </label>
+                    </div>
+                    <div>
+                        <label class="container">
+                            <input class="serviciuJs" name="STm" type="checkbox">
+                            <span class="checkmark"></span>
+                            <div>Taiere de mot</div>
+                        </label>
+                    </div>
+                    <div>
+                        <label class="container">
+                            <input class="serviciuJs" name="SMa" type="checkbox">
+                            <span class="checkmark"></span>
+                            <div>Majorat</div>
+                        </label>
+                    </div>
+                    <div>
+                        <label class="container">
+                            <input class="serviciuJs" name="SCc" type="checkbox">
+                            <span class="checkmark"></span>
+                            <div>Cununie civila</div>
+                        </label>
+                    </div>
+                    <div>
+                        <label class="container">
+                            <input class="serviciuJs" name="SNu" type="checkbox">
+                            <span class="checkmark"></span>
+                            <div>Nunta</div>
+                        </label>
+                    </div>
+                    <div>
+                        <label class="container">
+                            <input class="serviciuJs" name="SAe" type="checkbox">
+                            <span class="checkmark"></span>
+                            <div>Alt serviciu..</div>
+                        </label>
+                    </div>
+                    <div class="titlu">Echipare</div>
+                    <div>
+                        <label class="container">
+                            <input name="EFo" type="checkbox">
+                            <span class="checkmark"></span>
+                            <div>Foto</div>
+                        </label>
+                    </div>
+                    <div>
+                        <label class="container">
+                            <input name="EVi" type="checkbox">
+                            <span class="checkmark"></span>
+                            <div>Video</div>
+                        </label>
+                    </div>
+                    <div>
+                        <label class="container">
+                            <input name="EDr" type="checkbox">
+                            <span class="checkmark"></span>
+                            <div>Drona</div>
+                        </label>
+                    </div>
+                    <div class="titlu">Data</div>
+                    <div>
+                        <input type="number" name="DaY" placeholder="anul" pattern="[0-9]*" required>
+                        <input type="number" name="DaM" placeholder="luna" pattern="[0-9]*" required>
+                        <input type="number" name="DaD" placeholder="ziua" pattern="[0-9]*" required>
+                        <!-- <input id="datePicker" type="date" oninput="if(this.value>max){ this.value= max;}if(this.value<min){this.value= min;}"
+                    name="Dat"> -->
+                    </div>
+                    <!-- Select a file: <input type="file" name="myFile"> -->
+                    <div class="titlu">Calitate incepand cu:</div>
+                    <div>
+                        <label class="container">
+                            <input class="calitateJs" name="CBa" type="checkbox">
+                            <span class="checkmark"></span>
+                            <div class="basic">Basic</div>
+                            <div>&nbsp;&nbsp;&nbsp;
+                                <span class="evidentiat">140lei</span>
+                            </div>
+                            <div class="notita">&nbsp; *pana la
+                                <span class="PLBJs">2.870</span>lei
+                                <!-- 2.870lei -->
+                                <!-- 1.770 -->
+                            </div>
+                        </label>
+                    </div>
+                    <div>
+                        <label class="container">
+                            <input class="calitateJs" name="CAv" type="checkbox" checked="checked">
+                            <span class="checkmark"></span>
+                            <div class="avantaj">Avantaj</div>
+                            <div>&nbsp;&nbsp;&nbsp;
+                                <span class="evidentiat">260lei</span>
+                            </div>
+                            <div class="notita">&nbsp; *pana la
+                                <span class="PLAJs">5.280</span>lei
+                                <!-- 5.280lei -->
+                                <!-- 3.280 -->
+                            </div>
+                        </label>
+                    </div>
+                    <div>
+                        <label class="container">
+                            <input class="calitateJs" name="CLu" type="checkbox">
+                            <span class="checkmark"></span>
+                            <div class="lux">Lux</div>
+                            <div>&nbsp;&nbsp;&nbsp;
+                                <span class="evidentiat">600lei</span>
+                            </div>
+                            <div class="notita">&nbsp; *pana la
+                                <span class="PLLJs">12.090</span>lei
+                                <!-- 12.090lei -->
+                            </div>
+                        </label>
+                    </div>
+                    <div>
+                        <label class="container">
+                            <input class="calitateJs" name="CEx" type="checkbox">
+                            <span class="checkmark"></span>
+                            <div class="exclusiv">Exclusiv</div>
+                            <div>&nbsp;&nbsp;&nbsp;
+                                <span class="evidentiat">1800lei</span>
+                            </div>
+                            <div class="notita">&nbsp; *pana la
+                                <span class="PLEJs">37.000</span>lei
+                                <!-- 37.000lei -->
+                            </div>
+                        </label>
+                    </div>
+
+                    <div>
+                        <div>Durata aproximativa: </div>
+                        <div>
+                            <input id="ore" type="number" name="Ore" min="1" max="72" placeholder="x" oninput="if(this.value>72){ this.value= 72;}if(this.value<1){ this.value='';}"
+                                required>&nbsp; ore
+                        </div>
+                    </div>
+                    <!-- <div class="titlu">Pret:</div> -->
+                    <div>
+                        <div>Valoare aproximativa: </div>
+                        <div>(
+                            <span id="pret">x</span>lei + transport + mancare )
+                        </div>
+                    </div>
+                    <!-- <div>
                     Pagina web in constructie !!
                 </div> -->
-                <div class="titlu">Nume intreg:</div>
-                <div>
-                    <!-- pattern="[a-zA-Z]{5,}" -->
-                    <input type="text" name="nIn" oninput="this.value = this.value.replace(/[^a-zA-Z -]/g, '');"
-                        required>
-                    <!-- this.value = this.value.replace(/(\..*)\./g, '$1'); -->
+                    <div class="titlu">Nume intreg:</div>
+                    <div>
+                        <!-- pattern="[a-zA-Z]{5,}" -->
+                        <input type="text" name="nIn" oninput="this.value = this.value.replace(/[^a-zA-Z -]/g, '');" required>
+                        <!-- this.value = this.value.replace(/(\..*)\./g, '$1'); -->
+                    </div>
+                    <div class="titlu">Numar telefon:</div>
+                    <div>
+                        <input type="number" name="nTe" pattern="[0-9-]*" required>
+                    </div>
+                    <div style="display: none">
+                        <!-- <input type="text" name="Mesaj" value="Da"> -->
+                        <input type="number" name="Total" pattern="[0-9-]*" value="0">
+                    </div>
+                    <div class="titlu">Mesaj (optional) :</div>
+                    <div>
+                        <input type="textarea" name="Msg">
+                    </div>
+                    <div>
+                        <button class="button-success ">
+                            Trimite
+                        </button>
+                    </div>
                 </div>
-                <div class="titlu">Numar telefon:</div>
-                <div>
-                    <input type="number" name="nTe" pattern="[0-9-]*" required>
-                </div>
-                <div>
-                    <button class="button-success ">
-                        Trimite
-                    </button>
-                </div>
-            </div>
-        </form>
-    </div>
-
-    </div>
-    <div class="footer">
-        <div id="thankyou_message" style="display:none;">
-            Va multumim pentru completarea formularului!
-            <br><br>
-            Veti fi contactat in cel mai scurt timp posibil de catre un reprezentant.
+            </form>
         </div>
-        <div>!! Pentru urgente, va rugam sa ne contactati pe pagina de
-            <a href="https://www.facebook.com/pg/worthshoot/photos/?tab=album&album_id=547548865693245">Facebook</a>
-            sau la numarul de telefon: 0747332638.</div>
-    </div>
 
-    <script>
-        // data
-        var twoDaysNext = new Date();
-        twoDaysNext.setDate(twoDaysNext.getDate() + 2);
-        document.getElementById('datePicker').valueAsDate = twoDaysNext;
-        document.getElementById('datePicker').min = new Date().getFullYear() + "-" + (new Date().getMonth() + 1) + "-" +
-            (new Date().getDate() + 2);
-        document.getElementById('datePicker').max = (new Date().getFullYear() + 4) + "-" + (new Date().getMonth() + 1) +
-            "-" + (new Date().getDate() + 2);
-        // pret
-        var pret = 0;
-        var foto = 0;
-        var video = 0;
-        var drona = 0;
-        var ore = 0;
-        var inputs = document.getElementsByTagName('input');
-        for (var i = 0; i < inputs.length; i++) {
-            inputs[i].addEventListener('change', calculeazaPret);
-        }
+        </div>
+        <div class="footer">
+            <div id="thankyou_message" style="display:none;">
+                Va multumim pentru completarea formularului!
+                <br>
+                <br> Veti fi contactat in cel mai scurt timp posibil de catre un reprezentant.
+            </div>
+            <div>!! Pentru urgente, va rugam sa ne contactati pe pagina de
+                <a href="https://www.facebook.com/pg/worthshoot/photos/?tab=album&album_id=547548865693245">Facebook</a>
+                sau la numarul de telefon: 0747332638.</div>
+        </div>
+        <div class="stickyNav">
+                <div class="progress-containerDocument">
+                        <div class="progress-bar [ documentBar ]"></div>
+                    </div>  
+        </div>
 
-        function calculeazaPret() {
-            // calitate
-            if (this.name == "CAv") {
-                document.getElementsByName('CBa')[0].checked = false;
-                document.getElementsByName('CAv')[0].checked = true;
-                document.getElementsByName('CLu')[0].checked = false;
-            } else {
-                if (this.name == "CBa") {
-                    document.getElementsByName('CBa')[0].checked = true;
-                    document.getElementsByName('CAv')[0].checked = false;
-                    document.getElementsByName('CLu')[0].checked = false;
-                } else {
-                    if (this.name == "CLu") {
-                        document.getElementsByName('CBa')[0].checked = false;
-                        document.getElementsByName('CAv')[0].checked = false;
-                        document.getElementsByName('CLu')[0].checked = true;
-                    } else {}
-                }
-            }
-            // serviciu
-            if (this.className == "serviciuJs") {
-                var inputs = document.getElementsByClassName("serviciuJs");
-                for (var i = 0; i < inputs.length; i++) {
-                    inputs[i].checked = false;
-                    // if (inputs[i].checked && inputs[i].className == "serviciuJs") {
-                    //     inputs[i].checked = !inputs[i].checked;
-                    // }
-                }
-                this.checked = true;
-            }
-            // tip
-            if (this.className == "tipJs") {
-                var inputs = document.getElementsByClassName("tipJs");
-                for (var i = 0; i < inputs.length; i++) {
-                    inputs[i].checked = false;
-                    // if (inputs[i].checked && inputs[i].className == "tipJs") {
-                    //     // inputs[i].checked = !inputs[i].checked;
-                    // }
-                }
-                this.checked = true;
-            }
-            // pret 
-            if (document.getElementsByName('CAv')[0].checked) {
-                pret = 130;
-                document.getElementsByName('CBa')[0].checked = false;
-                document.getElementsByName('CLu')[0].checked = false;
-            }
-            if (document.getElementsByName('CBa')[0].checked) {
-                pret = 70;
-                document.getElementsByName('CAv')[0].checked = false;
-                document.getElementsByName('CLu')[0].checked = false;
-            }
-            if (document.getElementsByName('CLu')[0].checked) {
-                pret = 300;
-                document.getElementsByName('CAv')[0].checked = false;
-                document.getElementsByName('CBa')[0].checked = false;
-            }
+        <script>
+            // date
+            var DaD = document.getElementsByName('DaD')[0];
+            var DaM = document.getElementsByName('DaM')[0];
+            var DaY = document.getElementsByName('DaY')[0];
+            var twoDaysNext = new Date().getDate() + 2;
+            var month = new Date().getMonth() + 1;
+            var year = new Date().getFullYear();
 
-            // ore
-            ore = document.getElementById("ore").value;
-            // serviciu
-            // foto
-            if (document.getElementsByName('EFo')[0].checked) {
-                foto = 1;
-                if (document.getElementsByName('EVi')[0].checked) {
-                    video = 0.6;
-                    if (document.getElementsByName('EDr')[0].checked) {
-                        drona = 0.2;
-                    } else {
-                        drona = 0;
-                    }
-                } else {
-                    video = 0;
-                    if (document.getElementsByName('EDr')[0].checked) {
-                        drona = 0.4;
-                    } else {
-                        drona = 0;
+            // pret
+            var pret = 0;
+            var foto = 0;
+            var video = 0;
+            var drona = 0;
+            var ore = 0;
+            var inputs = document.getElementsByTagName('input');
+            // var message =document.getElementsByName('Msg')[0].value;
+            for (var i = 0; i < inputs.length; i++) {
+                inputs[i].addEventListener('change', calculeazaPret);
+            }
+            // pana la
+            var pretPLB = 70;
+            var pretPLA = 130;
+            var pretPLL = 300;
+            var pretPLE = 900;
+
+            function calculeazaPret() {
+                // date
+                // day
+                if (DaD.value > 31) {
+                    DaD.value = 31;
+                }
+                // month
+                if (DaM.value > 12) {
+                    DaM.value = 12;
+                }
+                // year
+                if (DaY.value > year + 4) {
+                    DaY.value = year + 4;
+                }
+                if (DaY.value < year) {
+                    DaY.value = year;
+                }
+                // date rules
+                if (DaY.value == year && DaM.value < month) {
+                    DaM.value = month;
+                }
+                if (DaY.value == year && DaM.value == month && DaD.value < twoDaysNext) {
+                    DaD.value = twoDaysNext;
+                    console.log(twoDaysNext);
+                }
+                if (DaD.value < 1) {
+                    DaD.value = "01";
+                }
+                for (var i = 1; i < 10; i++) {
+                    if (DaD.value == i) {
+                        DaD.value = "0" + i;
                     }
                 }
-                // console.log(foto, video, drona);
-            } else {
-                foto = 0;
-                // video
-                if (document.getElementsByName('EVi')[0].checked) {
-                    video = 1;
-                    if (document.getElementsByName('EDr')[0].checked) {
-                        drona = 0.4;
+                if (DaM.value < 1) {
+                    DaM.value = "01";
+                }
+                for (var i = 1; i < 10; i++) {
+                    if (DaM.value == i) {
+                        DaM.value = "0" + i;
+                    }
+                }
+                // calitate
+                if (this.className == "calitateJs") {
+                    var inputs = document.getElementsByClassName("calitateJs");
+                    for (var i = 0; i < inputs.length; i++) {
+                        inputs[i].checked = false;
+                    }
+                    this.checked = true;
+                }
+                // serviciu
+                if (this.className == "serviciuJs") {
+                    var inputs = document.getElementsByClassName("serviciuJs");
+                    for (var i = 0; i < inputs.length; i++) {
+                        inputs[i].checked = false;
+                    }
+                    this.checked = true;
+                }
+                // tip
+                if (this.className == "tipJs") {
+                    var inputs = document.getElementsByClassName("tipJs");
+                    for (var i = 0; i < inputs.length; i++) {
+                        inputs[i].checked = false;
+                    }
+                    this.checked = true;
+                }
+                // pret 
+                if (document.getElementsByName('CBa')[0].checked) {
+                    pret = 70;
+                }
+                if (document.getElementsByName('CAv')[0].checked) {
+                    pret = 130;
+                }
+                if (document.getElementsByName('CLu')[0].checked) {
+                    pret = 300;
+                }
+                if (document.getElementsByName('CEx')[0].checked) {
+                    pret = 900;
+                }
+
+                // ore
+                ore = document.getElementById("ore").value;
+                // serviciu
+                // foto
+                if (document.getElementsByName('EFo')[0].checked) {
+                    foto = 1;
+                    if (document.getElementsByName('EVi')[0].checked) {
+                        video = 0.6;
+                        if (document.getElementsByName('EDr')[0].checked) {
+                            drona = 0.2;
+                        } else {
+                            drona = 0;
+                        }
                     } else {
-                        drona = 0;
+                        video = 0;
+                        if (document.getElementsByName('EDr')[0].checked) {
+                            drona = 0.4;
+                        } else {
+                            drona = 0;
+                        }
                     }
                     // console.log(foto, video, drona);
                 } else {
-                    video = 0;
-                    // drona
-                    if (document.getElementsByName('EDr')[0].checked) {
-                        drona = 1;
+                    foto = 0;
+                    // video
+                    if (document.getElementsByName('EVi')[0].checked) {
+                        video = 1;
+                        if (document.getElementsByName('EDr')[0].checked) {
+                            drona = 0.4;
+                        } else {
+                            drona = 0;
+                        }
                         // console.log(foto, video, drona);
                     } else {
-                        drona = 0;
+                        video = 0;
+                        // drona
+                        if (document.getElementsByName('EDr')[0].checked) {
+                            drona = 1;
+                            // console.log(foto, video, drona);
+                        } else {
+                            drona = 0;
+                        }
                     }
                 }
-            }
-            // verificare
-            if (foto == 0 && video == 0 && drona == 0) {
-                pret = 0;
-            }
-            if (ore == 0) {
-                pret = 0;
-            }
-            // total
-            if (pret == 0) {
-                document.getElementById("pret").innerHTML = "x";
-            } else {
-                document.getElementById("pret").innerHTML = ore * pret * (foto + video + drona) + pret;
-            }
-        };
-    </script>
-    <!-- // form -->
-    <script data-cfasync="false" type="text/javascript">
-        (function () {
-            // function validEmail(email) {
-            //     var re = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
-            //     return re.test(email);
-            // }
-
-            function validateHuman(honeypot) {
-                if (honeypot) { //if hidden form filled up
-                    // console.log("Robot Detected!");
-                    return true;
+                // pana la
+                var echipare = foto + video + drona;
+                if (echipare == 0) {
+                    echipare = 1.8;
+                }
+                var PLB = 24 * pretPLB * echipare + pretPLB;
+                var PLA = 24 * pretPLA * echipare + pretPLA;
+                var PLL = 24 * pretPLL * echipare + pretPLL;
+                var PLE = 24 * pretPLE * echipare + pretPLE;
+                // PLB 
+                document.getElementsByClassName("PLBJs")[0].innerHTML = PLB;
+                // PLA 
+                document.getElementsByClassName("PLAJs")[0].innerHTML = PLA;
+                // PLL 
+                document.getElementsByClassName("PLLJs")[0].innerHTML = PLL;
+                // PLE 
+                document.getElementsByClassName("PLEJs")[0].innerHTML = PLE;
+                // verificare
+                if (foto == 0 && video == 0 && drona == 0) {
+                    pret = 0;
+                }
+                if (ore == 0) {
+                    pret = 0;
+                }
+                // total
+                var Total = ore * pret * (foto + video + drona) + pret;
+                if (pret == 0) {
+                    document.getElementById("pret").innerHTML = "x";
                 } else {
-                    // console.log("Welcome Human!");
-                }
-            }
-
-            // get all data in form and return object
-            function getFormData(form) {
-                var elements = form.elements;
-
-                var fields = Object.keys(elements).filter(function (k) {
-                    return (elements[k].name !== "honeypot");
-                }).map(function (k) {
-                    if (elements[k].name !== undefined) {
-                        return elements[k].name;
-                        // special case for Edge's html collection
-                    } else if (elements[k].length > 0) {
-                        return elements[k].item(0).name;
-                    }
-                }).filter(function (item, pos, self) {
-                    return self.indexOf(item) == pos && item;
-                });
-
-                var formData = {};
-                fields.forEach(function (name) {
-                    var element = elements[name];
-
-                    // singular form elements just have one value
-                    if(element.checked==false){
-                        if(element.value=="on"){
-                            formData[name] = element.value = "-";
-                        }else{
-                            formData[name] = element.value;
-                        }  
-                    }
-                    if(element.checked==true){
-                        formData[name] = element.value = "x";
-                    }
-                    // formData[name] = element.value;
-                    // console.log(element.checked);
-                    // wtf??
-                    // when our element has multiple items, get their values
-                    // if (element.length) {
-                    //     var data = [];
-                    //     for (var i = 0; i < element.length; i++) {
-                    //         var item = element.item(i);
-                    //         if (itemchecked = true) {
-                    //             // data.push(item.value);
-                    //             console.log(item.value);
-                    //             // || item.selected
-                    //         }
-                    //     }
-                    //     formData[name] = data.join(', ');
-                    // }
-                });
-
-                // add form-specific values into the data
-                formData.formDataNameOrder = JSON.stringify(fields);
-                formData.formGoogleSheetName = form.dataset.sheet || "responses"; // default sheet name
-                formData.formGoogleSendEmail = form.dataset.email || ""; // no email by default
-
-                // console.log(formData);
-                return formData;
-            }
-
-            function handleFormSubmit(event) { // handles form submit without any jquery
-                event.preventDefault(); // we are submitting via xhr below
-                var form = event.target;
-                var data = getFormData(form); // get the values submitted in the form
-
-                /* OPTION: Remove this comment to enable SPAM prevention, see README.md */
-                if (validateHuman(data.honeypot)) { //if form is filled, form will not be submitted
-                    return false;
-                }
-                /**/
-
-                if (data.email && !validEmail(data.email)) { // if email is not valid show error
-                    var invalidEmail = form.querySelector(".email-invalid");
-                    if (invalidEmail) {
-                        invalidEmail.style.display = "block";
-                        return false;
-                    }
-                } else {
-                    disableAllButtons(form);
-                    var url = form.action;
-                    var xhr = new XMLHttpRequest();
-                    xhr.open('POST', url);
-                    // xhr.withCredentials = true;
-                    xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-                    xhr.onreadystatechange = function () {
-                        document.getElementById("thankyou_message").style.display = "block"; // show thankYouMessage
-                        // Trimis
-                        document.getElementById("gform").style.display = "none"; // hide form
-                        // gform
-                        return;
-                    };
-                    // url encode form data for sending as post data
-                    var encoded = Object.keys(data).map(function (k) {
-                        return encodeURIComponent(k) + "=" + encodeURIComponent(data[k]);
-                    }).join('&');
-                    xhr.send(encoded);
-                }
-            }
-
-            function loaded() {
-                // console.log("Contact form submission handler loaded successfully.");
-                // bind to the submit event of our form
-                var forms = document.querySelectorAll("form.gform");
-                for (var i = 0; i < forms.length; i++) {
-                    forms[i].addEventListener("submit", handleFormSubmit, false);
+                    document.getElementById("pret").innerHTML = Total;
+                    document.getElementsByName("Total")[0].value = Total;
                 }
             };
-            document.addEventListener("DOMContentLoaded", loaded, false);
-            // redirect block
+        </script>
+        <!-- // form -->
+        <script data-cfasync="false" type="text/javascript">
+            (function () {
+                // function validEmail(email) {
+                //     var re = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
+                //     return re.test(email);
+                // }
 
-            function disableAllButtons(form) {
-                var buttons = form.querySelectorAll("button");
-                for (var i = 0; i < buttons.length; i++) {
-                    buttons[i].disabled = true;
+                function validateHuman(honeypot) {
+                    if (honeypot) { //if hidden form filled up
+                        // console.log("Robot Detected!");
+                        return true;
+                    } else {
+                        // console.log("Welcome Human!");
+                    }
                 }
-            }
-        })();
-    </script>
-</body>
+
+                // get all data in form and return object
+                function getFormData(form) {
+                    var elements = form.elements;
+
+                    var fields = Object.keys(elements).filter(function (k) {
+                        return (elements[k].name !== "honeypot");
+                    }).map(function (k) {
+                        if (elements[k].name !== undefined) {
+                            return elements[k].name;
+                            // special case for Edge's html collection
+                        } else if (elements[k].length > 0) {
+                            return elements[k].item(0).name;
+                        }
+                    }).filter(function (item, pos, self) {
+                        return self.indexOf(item) == pos && item;
+                    });
+
+                    var formData = {};
+                    fields.forEach(function (name) {
+                        var element = elements[name];
+
+                        // singular form elements just have one value
+                        if (element.checked == false) {
+                            if (element.value == "on") {
+                                formData[name] = element.value = "-";
+                            } else {
+                                formData[name] = element.value;
+                            }
+                        }
+                        if (element.checked == true) {
+                            formData[name] = element.value = "x";
+                        }
+                        // message = message + "," +element.value;
+                        // console.log(message);
+                        // console.log(element.value);
+                        // formData[name] = element.value;
+                        // console.log(element.checked);
+                        // wtf??
+                        // when our element has multiple items, get their values
+                        // if (element.length) {
+                        //     var data = [];
+                        //     for (var i = 0; i < element.length; i++) {
+                        //         var item = element.item(i);
+                        //         if (itemchecked = true) {
+                        //             // data.push(item.value);
+                        //             console.log(item.value);
+                        //             // || item.selected
+                        //         }
+                        //     }
+                        //     formData[name] = data.join(', ');
+                        // }
+                    });
+
+                    // add form-specific values into the data
+                    formData.formDataNameOrder = JSON.stringify(fields);
+                    formData.formGoogleSheetName = form.dataset.sheet || "responses"; // default sheet name
+                    formData.formGoogleSendEmail = form.dataset.email || ""; // no email by default
+
+                    // console.log(formData);
+                    return formData;
+                }
+
+                function handleFormSubmit(event) { // handles form submit without any jquery
+                    event.preventDefault(); // we are submitting via xhr below
+                    var form = event.target;
+                    var data = getFormData(form); // get the values submitted in the form
+
+                    /* OPTION: Remove this comment to enable SPAM prevention, see README.md */
+                    if (validateHuman(data.honeypot)) { //if form is filled, form will not be submitted
+                        return false;
+                    }
+                    /**/
+
+                    if (data.email && !validEmail(data.email)) { // if email is not valid show error
+                        var invalidEmail = form.querySelector(".email-invalid");
+                        if (invalidEmail) {
+                            invalidEmail.style.display = "block";
+                            return false;
+                        }
+                    } else {
+                        disableAllButtons(form);
+                        var url = form.action;
+                        var xhr = new XMLHttpRequest();
+                        xhr.open('POST', url);
+                        // xhr.withCredentials = true;
+                        xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+                        xhr.onreadystatechange = function () {
+                            document.getElementById("thankyou_message").style.display = "block"; // show thankYouMessage
+                            // Trimis
+                            document.getElementById("gform").style.display = "none"; // hide form
+                            // gform
+                            return;
+                        };
+                        // url encode form data for sending as post data
+                        var encoded = Object.keys(data).map(function (k) {
+                            return encodeURIComponent(k) + "=" + encodeURIComponent(data[k]);
+                        }).join('&');
+                        xhr.send(encoded);
+                    }
+                }
+
+                function loaded() {
+                    // console.log("Contact form submission handler loaded successfully.");
+                    // bind to the submit event of our form
+                    var forms = document.querySelectorAll("form.gform");
+                    for (var i = 0; i < forms.length; i++) {
+                        forms[i].addEventListener("submit", handleFormSubmit, false);
+                    }
+                };
+                document.addEventListener("DOMContentLoaded", loaded, false);
+                // redirect block
+
+                function disableAllButtons(form) {
+                    var buttons = form.querySelectorAll("button");
+                    for (var i = 0; i < buttons.length; i++) {
+                        buttons[i].disabled = true;
+                    }
+                }
+            })();
+// galleryParent
+(function (root, factory) {
+    if (typeof define === 'function' && define.amd) {
+        define(['exports'], factory);
+    } else if (typeof exports !== 'undefined') {
+        factory(exports);
+    } else {
+        factory((root.dragscroll = {}));
+    }
+}(this, function (exports) {
+    var _window = window;
+    var _document = document;
+    var mousemove = 'mousemove';
+    var mouseup = 'mouseup';
+    var mousedown = 'mousedown';
+    var EventListener = 'EventListener';
+    var addEventListener = 'add'+EventListener;
+    var removeEventListener = 'remove'+EventListener;
+    var newScrollX, newScrollY;
+
+    var dragged = [];
+    var reset = function(i, el) {
+        for (i = 0; i < dragged.length;) {
+            el = dragged[i++];
+            el = el.container || el;
+            el[removeEventListener](mousedown, el.md, 0);
+            _window[removeEventListener](mouseup, el.mu, 0);
+            _window[removeEventListener](mousemove, el.mm, 0);
+        }
+
+        // cloning into array since HTMLCollection is updated dynamically
+        dragged = [].slice.call(_document.getElementsByClassName('galleryParent'));
+        for (i = 0; i < dragged.length;) {
+            (function(el, lastClientX, lastClientY, pushed, scroller, cont){
+                (cont = el.container || el)[addEventListener](
+                    mousedown,
+                    cont.md = function(e) {
+                        if (!el.hasAttribute('nochilddrag') ||
+                            _document.elementFromPoint(
+                                e.pageX, e.pageY
+                            ) == cont
+                        ) {
+                            pushed = 1;
+                            lastClientX = e.clientX;
+                            lastClientY = e.clientY;
+
+                            e.preventDefault();
+                        }
+                    }, 0
+                );
+
+                _window[addEventListener](
+                    mouseup, cont.mu = function() {pushed = 0;}, 0
+                );
+
+                _window[addEventListener](
+                    mousemove,
+                    cont.mm = function(e) {
+                        if (pushed) {
+                            (scroller = el.scroller||el).scrollLeft -=
+                                newScrollX = (- lastClientX + (lastClientX=e.clientX));
+                            scroller.scrollTop -=
+                                newScrollY = (- lastClientY + (lastClientY=e.clientY));
+                            if (el == _document.body) {
+                                (scroller = _document.documentElement).scrollLeft -= newScrollX;
+                                scroller.scrollTop -= newScrollY;
+                            }
+                        }
+                    }, 0
+                );
+             })(dragged[i++]);
+        }
+    }
+
+      
+    if (_document.readyState == 'complete') {
+        reset();
+    } else {
+        _window[addEventListener]('load', reset, 0);
+    }
+
+    exports.reset = reset;
+}));
+// scrollIndicator
+// When the user scrolls the page, execute myFunction 
+
+// var galleryBarDocument = document.body;
+
+
+
+// function progressBar() {
+//   var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+//   var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+//   var scrolled = (winScroll / height) * 100;
+//   document.getElementById("progressBar").style.width = scrolled + "%";
+// }
+// window.onscroll = function() {myFunsction()};
+// galleryBarDocumentParent
+var galleryBarDocumentParent = document.getElementsByClassName("galleryParent")[0];
+var galleryBarDocument = document.getElementsByClassName("galleryBar")[0];
+galleryBarDocumentParent.onscroll = function() {galleryBar()};
+function galleryBar() {
+    console.log(1);
+  var galleryBar = galleryBarDocumentParent.scrollLeft;
+  var width = galleryBarDocumentParent.scrollWidth - galleryBarDocumentParent.clientWidth;
+  var scrolled = (galleryBar / width) * 100;
+  galleryBarDocument.style.width = scrolled + "%";
+  if(scrolled < 26){
+    galleryBarDocument.style.background = "#A5ABD6";
+  }
+  if(scrolled > 25){
+    galleryBarDocument.style.background = "#9793DB";
+  }
+  if(scrolled > 50){
+    galleryBarDocument.style.background = "#D1BA75";
+  }
+  if(scrolled > 75){
+    galleryBarDocument.style.background = "#CC9D99";
+  }
+}
+// documentBar
+var documentBarDocumentParent = document.body;
+var documentBarDocument = document.getElementsByClassName("documentBar")[0];
+window.onscroll = function() {documentBar()};
+function documentBar() {
+    console.log(1);
+  var documentBar = document.body.scrollTop || document.documentElement.scrollTop;
+  var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  var scrolled = (documentBar / height) * 100;
+  documentBarDocument.style.width = scrolled + "%";
+  if(scrolled < 26){
+    documentBarDocument.style.background = "#A5ABD6";
+  }
+  if(scrolled > 25){
+    documentBarDocument.style.background = "#9793DB";
+  }
+  if(scrolled > 50){
+    documentBarDocument.style.background = "#D1BA75";
+  }
+  if(scrolled > 75){
+    documentBarDocument.style.background = "#CC9D99";
+  }
+}
+        </script>
+    </body>
 
 </html>

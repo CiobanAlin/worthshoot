@@ -224,7 +224,7 @@
             /* flex-direction: row-reverse; */
             justify-content: center;
             flex-direction: column;
-                align-items: center;
+            align-items: center;
             padding: 10px;
         }
 
@@ -307,8 +307,8 @@
         }
 
         .exclusiv {
-            color: #CC9D99!important;
-        /*  A63232 
+            color: #CC9D99 !important;
+            /*  A63232 
             BF595E*/
             font-weight: 200 !important;
             font-size: 0.30rem;
@@ -316,34 +316,40 @@
         }
 
         /* galerie */
-        .scrollHide{
+
+        .scrollHide {
             position: relative;
             width: 100%;
             max-width: 100vw !important;
         }
-        .galleryParent{
+
+        .galleryParent {
             overflow-x: scroll;
             overflow-y: hidden;
             max-width: 100vw !important;
             width: 100%;
-            cursor: grab; cursor : -o-grab; cursor : -moz-grab; cursor : -webkit-grab;
+            cursor: grab;
+            cursor: -o-grab;
+            cursor: -moz-grab;
+            cursor: -webkit-grab;
         }
 
         .gallery {
             padding: 10px;
             display: flex;
             width: calc(400px * 6) !important;
-    max-width: max-content;
+            max-width: max-content;
         }
 
-    .gallery::after{
+        .gallery::after {
             position: absolute;
-            top: calc(100% - 18px);;
+            top: calc(100% - 18px);
+            ;
             right: 0;
             bottom: 0;
             left: 0;
-             background-color: #353231;     
-             content: '';  
+            background-color: #353231;
+            content: '';
         }
 
         .gallery>div {
@@ -369,17 +375,20 @@
         }
 
         /* images */
-        .gallery>div:nth-child(1){
+
+        .gallery>div:nth-child(1) {
             /* square */
             height: 200px;
             width: 200px;
         }
+
         .gallery>div:nth-child(5),
-        .gallery>div:nth-child(6){
+        .gallery>div:nth-child(6) {
             /* portrait */
             height: 200px;
             width: 165px;
         }
+
         .gallery>div:nth-child(1):after {
             background-image: url("Profil Facebook.JPG");
         }
@@ -537,32 +546,36 @@
             margin: 0;
         }
 
-                /* scrollIndicator */
-                .progress-container {
-  width: 100%;
-  height: 8px;
-  /* background: #ccc; */
-  position: relative;
-}
-.progress-container::after{
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    content: '';
-position: absolute;
-border-top: 8px solid transparent;
-border-right: 8px solid #353231;
-border-left: 8px solid #353231;
-}
+        /* scrollIndicator */
 
-.progress-bar {
-  height: 8px;
-  background: #A5ABD6;
-  width: 0%;
-}
-/* stickyNav */
-        .stickyNav{
+        .progress-container {
+            width: 100%;
+            height: 8px;
+            /* background: #ccc; */
+            position: relative;
+        }
+
+        .progress-container::after {
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            content: '';
+            position: absolute;
+            border-top: 8px solid transparent;
+            border-right: 8px solid #353231;
+            border-left: 8px solid #353231;
+        }
+
+        .progress-bar {
+            height: 8px;
+            background: #A5ABD6;
+            width: 0%;
+        }
+
+        /* stickyNav */
+
+        .stickyNav {
             position: fixed;
             right: 0;
             left: 0;
@@ -572,24 +585,26 @@ border-left: 8px solid #353231;
             background: rgba(38, 38, 38, 1);
 
         }
-        .progress-containerDocument{
+
+        .progress-containerDocument {
             max-width: 400px;
             margin: auto;
             position: relative;
         }
-        .progress-containerDocument::after{
+
+        .progress-containerDocument::after {
             top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    content: '';
-position: absolute;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            content: '';
+            position: absolute;
             border-top: 0;
-border-right: 8px solid rgba(38, 38, 38, 1);
-border-left: 8px solid rgba(38, 38, 38, 1);
-border-bottom: 8px solid transparent;
+            border-right: 8px solid rgba(38, 38, 38, 1);
+            border-left: 8px solid rgba(38, 38, 38, 1);
+            border-bottom: 8px solid transparent;
         }
-        
+
 
         /* mobile */
 
@@ -629,7 +644,6 @@ border-bottom: 8px solid transparent;
             .gallery>div:nth-child(3) {
                 display: block;
             } */
-
             h1,
             .h1 {
                 font-size: 0.25rem;
@@ -662,20 +676,20 @@ border-bottom: 8px solid transparent;
         </div>
         <div class="content form-parent">
             <div class="scrollHide">
-            <div class="galleryParent">
-            <div class="gallery">
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-            </div>
-            </div>
+                <div class="galleryParent">
+                    <div class="gallery">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                </div>
             </div>
             <div class="progress-container">
                 <div class="progress-bar [ galleryBar ]"></div>
-            </div>  
+            </div>
             <form id="gform" method="POST" class="gform" data-email="worthshootsite@gmail.com" action="https://script.google.com/macros/s/AKfycbxHJr7gmuBSAAgDiKsTcYDTt2sTxA9SbQUKhNfrjQKoElY5RRg/exec">
                 <div class="form">
                     <div>Serviciu</div>
@@ -882,9 +896,9 @@ border-bottom: 8px solid transparent;
                 sau la numarul de telefon: 0747332638.</div>
         </div>
         <div class="stickyNav">
-                <div class="progress-containerDocument">
-                        <div class="progress-bar [ documentBar ]"></div>
-                    </div>  
+            <div class="progress-containerDocument">
+                <div class="progress-bar [ documentBar ]"></div>
+            </div>
         </div>
 
         <script>
@@ -1206,149 +1220,155 @@ border-bottom: 8px solid transparent;
                     }
                 }
             })();
-// galleryParent
-(function (root, factory) {
-    if (typeof define === 'function' && define.amd) {
-        define(['exports'], factory);
-    } else if (typeof exports !== 'undefined') {
-        factory(exports);
-    } else {
-        factory((root.dragscroll = {}));
-    }
-}(this, function (exports) {
-    var _window = window;
-    var _document = document;
-    var mousemove = 'mousemove';
-    var mouseup = 'mouseup';
-    var mousedown = 'mousedown';
-    var EventListener = 'EventListener';
-    var addEventListener = 'add'+EventListener;
-    var removeEventListener = 'remove'+EventListener;
-    var newScrollX, newScrollY;
+            // galleryParent
+            (function (root, factory) {
+                if (typeof define === 'function' && define.amd) {
+                    define(['exports'], factory);
+                } else if (typeof exports !== 'undefined') {
+                    factory(exports);
+                } else {
+                    factory((root.dragscroll = {}));
+                }
+            }(this, function (exports) {
+                var _window = window;
+                var _document = document;
+                var mousemove = 'mousemove';
+                var mouseup = 'mouseup';
+                var mousedown = 'mousedown';
+                var EventListener = 'EventListener';
+                var addEventListener = 'add' + EventListener;
+                var removeEventListener = 'remove' + EventListener;
+                var newScrollX, newScrollY;
 
-    var dragged = [];
-    var reset = function(i, el) {
-        for (i = 0; i < dragged.length;) {
-            el = dragged[i++];
-            el = el.container || el;
-            el[removeEventListener](mousedown, el.md, 0);
-            _window[removeEventListener](mouseup, el.mu, 0);
-            _window[removeEventListener](mousemove, el.mm, 0);
-        }
+                var dragged = [];
+                var reset = function (i, el) {
+                    for (i = 0; i < dragged.length;) {
+                        el = dragged[i++];
+                        el = el.container || el;
+                        el[removeEventListener](mousedown, el.md, 0);
+                        _window[removeEventListener](mouseup, el.mu, 0);
+                        _window[removeEventListener](mousemove, el.mm, 0);
+                    }
 
-        // cloning into array since HTMLCollection is updated dynamically
-        dragged = [].slice.call(_document.getElementsByClassName('galleryParent'));
-        for (i = 0; i < dragged.length;) {
-            (function(el, lastClientX, lastClientY, pushed, scroller, cont){
-                (cont = el.container || el)[addEventListener](
-                    mousedown,
-                    cont.md = function(e) {
-                        if (!el.hasAttribute('nochilddrag') ||
-                            _document.elementFromPoint(
-                                e.pageX, e.pageY
-                            ) == cont
-                        ) {
-                            pushed = 1;
-                            lastClientX = e.clientX;
-                            lastClientY = e.clientY;
+                    // cloning into array since HTMLCollection is updated dynamically
+                    dragged = [].slice.call(_document.getElementsByClassName('galleryParent'));
+                    for (i = 0; i < dragged.length;) {
+                        (function (el, lastClientX, lastClientY, pushed, scroller, cont) {
+                            (cont = el.container || el)[addEventListener](
+                                mousedown,
+                                cont.md = function (e) {
+                                    if (!el.hasAttribute('nochilddrag') ||
+                                        _document.elementFromPoint(
+                                            e.pageX, e.pageY
+                                        ) == cont
+                                    ) {
+                                        pushed = 1;
+                                        lastClientX = e.clientX;
+                                        lastClientY = e.clientY;
 
-                            e.preventDefault();
-                        }
-                    }, 0
-                );
+                                        e.preventDefault();
+                                    }
+                                }, 0
+                            );
 
-                _window[addEventListener](
-                    mouseup, cont.mu = function() {pushed = 0;}, 0
-                );
+                            _window[addEventListener](
+                                mouseup, cont.mu = function () { pushed = 0; }, 0
+                            );
 
-                _window[addEventListener](
-                    mousemove,
-                    cont.mm = function(e) {
-                        if (pushed) {
-                            (scroller = el.scroller||el).scrollLeft -=
-                                newScrollX = (- lastClientX + (lastClientX=e.clientX));
-                            scroller.scrollTop -=
-                                newScrollY = (- lastClientY + (lastClientY=e.clientY));
-                            if (el == _document.body) {
-                                (scroller = _document.documentElement).scrollLeft -= newScrollX;
-                                scroller.scrollTop -= newScrollY;
-                            }
-                        }
-                    }, 0
-                );
-             })(dragged[i++]);
-        }
-    }
-
-      
-    if (_document.readyState == 'complete') {
-        reset();
-    } else {
-        _window[addEventListener]('load', reset, 0);
-    }
-
-    exports.reset = reset;
-}));
-// scrollIndicator
-// When the user scrolls the page, execute myFunction 
-
-// var galleryBarDocument = document.body;
+                            _window[addEventListener](
+                                mousemove,
+                                cont.mm = function (e) {
+                                    if (pushed) {
+                                        (scroller = el.scroller || el).scrollLeft -=
+                                            newScrollX = (- lastClientX + (lastClientX = e.clientX));
+                                        scroller.scrollTop -=
+                                            newScrollY = (- lastClientY + (lastClientY = e.clientY));
+                                        if (el == _document.body) {
+                                            (scroller = _document.documentElement).scrollLeft -= newScrollX;
+                                            scroller.scrollTop -= newScrollY;
+                                        }
+                                    }
+                                }, 0
+                            );
+                        })(dragged[i++]);
+                    }
+                }
 
 
+                if (_document.readyState == 'complete') {
+                    reset();
+                } else {
+                    _window[addEventListener]('load', reset, 0);
+                }
 
-// function progressBar() {
-//   var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-//   var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-//   var scrolled = (winScroll / height) * 100;
-//   document.getElementById("progressBar").style.width = scrolled + "%";
-// }
-// window.onscroll = function() {myFunsction()};
-// galleryBarDocumentParent
-var galleryBarDocumentParent = document.getElementsByClassName("galleryParent")[0];
-var galleryBarDocument = document.getElementsByClassName("galleryBar")[0];
-galleryBarDocumentParent.onscroll = function() {galleryBar()};
-function galleryBar() {
-    console.log(1);
-  var galleryBar = galleryBarDocumentParent.scrollLeft;
-  var width = galleryBarDocumentParent.scrollWidth - galleryBarDocumentParent.clientWidth;
-  var scrolled = (galleryBar / width) * 100;
-  galleryBarDocument.style.width = scrolled + "%";
-  if(scrolled < 26){
-    galleryBarDocument.style.background = "#A5ABD6";
-  }
-  if(scrolled > 25){
-    galleryBarDocument.style.background = "#9793DB";
-  }
-  if(scrolled > 50){
-    galleryBarDocument.style.background = "#D1BA75";
-  }
-  if(scrolled > 75){
-    galleryBarDocument.style.background = "#CC9D99";
-  }
-}
-// documentBar
-var documentBarDocumentParent = document.body;
-var documentBarDocument = document.getElementsByClassName("documentBar")[0];
-window.onscroll = function() {documentBar()};
-function documentBar() {
-    console.log(1);
-  var documentBar = document.body.scrollTop || document.documentElement.scrollTop;
-  var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-  var scrolled = (documentBar / height) * 100;
-  documentBarDocument.style.width = scrolled + "%";
-  if(scrolled < 26){
-    documentBarDocument.style.background = "#A5ABD6";
-  }
-  if(scrolled > 25){
-    documentBarDocument.style.background = "#9793DB";
-  }
-  if(scrolled > 50){
-    documentBarDocument.style.background = "#D1BA75";
-  }
-  if(scrolled > 75){
-    documentBarDocument.style.background = "#CC9D99";
-  }
-}
+                exports.reset = reset;
+            }));
+            // scrollIndicator
+            // When the user scrolls the page, execute myFunction 
+
+            // var galleryBarDocument = document.body;
+
+
+
+            // function progressBar() {
+            //   var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            //   var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            //   var scrolled = (winScroll / height) * 100;
+            //   document.getElementById("progressBar").style.width = scrolled + "%";
+            // }
+            // window.onscroll = function() {myFunsction()};
+            // galleryBarDocumentParent
+            var galleryBarDocumentParent = document.getElementsByClassName("galleryParent")[0];
+            var galleryBarDocument = document.getElementsByClassName("galleryBar")[0];
+            galleryBarDocumentParent.onscroll = function () { galleryBar() };
+            function galleryBar() {
+                console.log(1);
+                var galleryBar = galleryBarDocumentParent.scrollLeft;
+                var width = galleryBarDocumentParent.scrollWidth - galleryBarDocumentParent.clientWidth;
+                var scrolled = (galleryBar / width) * 100;
+                galleryBarDocument.style.width = scrolled + "%";
+                if (scrolled < 26) {
+                    galleryBarDocument.style.background = "#A5ABD6";
+                }
+                if (scrolled > 25) {
+                    galleryBarDocument.style.background = "#9793DB";
+                }
+                if (scrolled > 50) {
+                    galleryBarDocument.style.background = "#D1BA75";
+                }
+                if (scrolled > 75) {
+                    galleryBarDocument.style.background = "#CC9D99";
+                }
+                if (scrolled == 100) {
+                    galleryBarDocument.style.background = "transparent";
+                }
+            }
+            // documentBar
+            var documentBarDocumentParent = document.body;
+            var documentBarDocument = document.getElementsByClassName("documentBar")[0];
+            window.onscroll = function () { documentBar() };
+            function documentBar() {
+                console.log(1);
+                var documentBar = document.body.scrollTop || document.documentElement.scrollTop;
+                var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+                var scrolled = (documentBar / height) * 100;
+                documentBarDocument.style.width = scrolled + "%";
+                if (scrolled < 26) {
+                    documentBarDocument.style.background = "#A5ABD6";
+                }
+                if (scrolled > 25) {
+                    documentBarDocument.style.background = "#9793DB";
+                }
+                if (scrolled > 50) {
+                    documentBarDocument.style.background = "#D1BA75";
+                }
+                if (scrolled > 75) {
+                    documentBarDocument.style.background = "#CC9D99";
+                }
+                if (scrolled == 100) {
+                    documentBarDocument.style.background = "transparent";
+                }
+            }
         </script>
     </body>
 

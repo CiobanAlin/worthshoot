@@ -44,6 +44,7 @@
     <style>
         html {
             font-size: 100px;
+            background-color: rgba(38, 38, 38, 1);
         }
 
         body {
@@ -54,6 +55,7 @@
             text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);
             font-family: 'Lato', sans-serif;
             font-weight: 900;
+            background: white;
         }
 
         div {
@@ -96,7 +98,6 @@
 
         h3,
         .h3,
-        .form>div,
         .footer>div {
             font-size: 0.25rem;
             letter-spacing: 0.1em;
@@ -109,7 +110,9 @@
         }
 
         h4,
-        .form>div {
+        .form>div,
+        .thankyouMessage,
+        .pret {
             font-size: 0.22rem;
             letter-spacing: 0.1em;
             font-weight: normal;
@@ -230,9 +233,11 @@
 
         .form {
             padding: 20px;
+            width: 380px;
         }
 
-        .form>div {
+        .form>div,
+        .thankyouMessage {
             /* color: #D6D6D6; */
             /* 16 */
             color: #E0E0E0;
@@ -249,6 +254,10 @@
             font-weight: 300;
             padding: 5px;
             text-align: left;
+        }
+
+        .pret{
+            font-family: 'Lato', sans-serif;
         }
 
         .form>div>div {
@@ -339,6 +348,7 @@
             display: flex;
             width: calc(400px * 6) !important;
             max-width: max-content;
+            margin: auto;
         }
 
         .gallery::after {
@@ -606,6 +616,7 @@
         }
 
 
+
         /* mobile */
 
         @media screen and (max-width:800px) {
@@ -627,6 +638,7 @@
 
             .form {
                 padding: 5px 20px;
+                width: 310px;
             }
 
             .form>div {
@@ -799,7 +811,7 @@
                 </div>
                 <div>
                     <label class="container">
-                        <input class="calitateJs" name="CAv" type="checkbox" checked="checked">
+                        <input class="calitateJs" name="CAv" type="checkbox">
                         <span class="checkmark"></span>
                         <div class="avantaj">Avantaj</div>
                         <div>&nbsp;&nbsp;&nbsp;
@@ -852,7 +864,7 @@
                 <div>
                     <div>Valoare aproximativa: </div>
                     <div>(
-                        <span id="pret">x</span>lei + transport + mancare )
+                        <span id="pret" class="pret">x</span>lei + transport + mancare )
                     </div>
                 </div>
                 <!-- <div>
@@ -892,15 +904,15 @@
                 </div>
             </div>
         </form>
-    </div>
-
-    </div>
-    <div class="footer">
-        <div id="thankyou_message" style="display:none;">
+        <div id="thankyou_message" class="thankyouMessage" style="display:none;">
             Va multumim pentru completarea formularului!
             <br>
             <br> Veti fi contactat in cel mai scurt timp posibil de catre un reprezentant.
         </div>
+    </div>
+
+    </div>
+    <div class="footer">
         <div>!! Pentru urgente, va rugam sa ne contactati pe pagina de
             <a href="https://www.facebook.com/pg/worthshoot/photos/?tab=album&album_id=547548865693245">Facebook</a>
             sau la numarul de telefon: 0747332638.</div>
@@ -960,7 +972,7 @@
             }
             if (DaY.value == year && DaM.value == month && DaD.value < twoDaysNext) {
                 DaD.value = twoDaysNext;
-                console.log(twoDaysNext);
+                // console.log(twoDaysNext);
             }
             if (DaD.value < 1) {
                 DaD.value = "01";
@@ -1131,7 +1143,11 @@
                 var formData = {};
                 fields.forEach(function (name) {
                     var element = elements[name];
-
+                    // if(element.name == "nTe"){
+                    //     element.style.display = "none";
+                    //     element.value = "666" + element.value ;
+                    // in googleSheet select column-> format -> plain text
+                    // }
                     // singular form elements just have one value
                     if (element.checked == false) {
                         if (element.value == "on") {
@@ -1332,7 +1348,7 @@
         var galleryBarDocument = document.getElementsByClassName("galleryBar")[0];
         galleryBarDocumentParent.onscroll = function () { galleryBar() };
         function galleryBar() {
-            console.log(1);
+            // console.log(1);
             var galleryBar = galleryBarDocumentParent.scrollLeft;
             var width = galleryBarDocumentParent.scrollWidth - galleryBarDocumentParent.clientWidth;
             var scrolled = (galleryBar / width) * 100;
@@ -1358,7 +1374,7 @@
         var documentBarDocument = document.getElementsByClassName("documentBar")[0];
         window.onscroll = function () { documentBar() };
         function documentBar() {
-            console.log(1);
+            // console.log(1);
             var documentBar = document.body.scrollTop || document.documentElement.scrollTop;
             var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
             var scrolled = (documentBar / height) * 100;

@@ -44,7 +44,7 @@
     <style>
         html {
             font-size: 100px;
-            background-color: rgba(38, 38, 38, 1);
+            background-color: #262626;
         }
 
         body {
@@ -201,7 +201,7 @@
         .menu-parent {
             box-shadow: 0 0.2rem 0.4rem rgba(0, 0, 0, 0.23);
             /* box-shadow: 0 0.2rem 0.4rem rgb(181, 181, 180); */
-            background-color: rgba(38, 38, 38, 1);
+            background-color: #262626;
             color: rgba(249, 249, 249, 0.9);
             border-bottom: 5px solid rgba(249, 249, 249, 0.9);
         }
@@ -433,7 +433,7 @@
         }
 
         .footer {
-            background-color: rgba(38, 38, 38, 1);
+            background-color: #262626;
             color: rgba(249, 249, 249, 0.9);
             border-top: 5px solid rgba(249, 249, 249, 0.9);
             display: flex;
@@ -520,7 +520,7 @@
             top: 5px;
             width: 5px;
             height: 10px;
-            border: solid rgba(38, 38, 38, 1);
+            border: solid #262626;
             border-width: 0 3px 3px 0;
             -webkit-transform: rotate(45deg);
             -ms-transform: rotate(45deg);
@@ -534,7 +534,7 @@
             height: 15px;
             border: 0;
             padding: 5px;
-            color: rgba(38, 38, 38, 1);
+            color: #262626;
             text-align: center;
         }
 
@@ -592,7 +592,8 @@
             bottom: 0;
             /* height: 16px; */
             /* height: 8px; */
-            background: rgba(38, 38, 38, 1);
+            background: #262626;
+            z-index: 11;
         }
 
         .stickyMenuParent {
@@ -605,14 +606,15 @@
         .stickyMenu {
             position: fixed;
             right: 18pt;
-    bottom: calc(8px + 18pt + 60px + 18pt);
-    background: #262626;
-    display: flex;
-    width: 60px;
-    justify-content: center;
-    height: 60px;
-    align-items: center;
-    border-radius: 50%;
+            bottom: calc(8px + 18pt + 60px + 18pt);
+            background: #262626;
+            display: flex;
+            width: 60px;
+            justify-content: center;
+            height: 60px;
+            align-items: center;
+            border-radius: 50%;
+            z-index: 11;
         }
 
         .stickyMenu a {
@@ -633,8 +635,8 @@
             content: '';
             position: absolute;
             border-top: 0;
-            border-right: 8px solid rgba(38, 38, 38, 1);
-            border-left: 8px solid rgba(38, 38, 38, 1);
+            border-right: 8px solid #262626;
+            border-left: 8px solid #262626;
             border-bottom: 8px solid transparent;
         }
 
@@ -668,15 +670,14 @@
             text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.6);
         } */
 
-        .sidenav {
+        .sidenavParent {
             width: 0;
             position: fixed;
             z-index: 1;
             /* top: 50px; */
             left: 0;
             right: 0;
-            bottom: 8px;
-            background-color: rgba(38, 38, 38, 1);
+            /* bottom: 8px; */
             overflow-x: hidden;
             transition: 0.5s;
             margin: auto;
@@ -685,6 +686,24 @@
             text-align: right;
             align-items: flex-end;
             color: #f1f1f1;
+            bottom: calc(8px + 18pt + 60px + 18pt + 18pt + 60px + 18pt);
+            top: 18pt;
+            z-index: 11;
+        }
+
+        .sidenav {
+            background-color: #262626;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position: absolute;
+    border-radius: 2px; 
+    box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12);
+        }
+
+        .sidenavAbout{
+            top: 0;
+            overflow: auto;
         }
 
         .sidenav h2 {
@@ -773,6 +792,16 @@
 
         .menu button:hover {
             border: 2px solid black;
+        }
+
+        .menuShadow{
+            background-color: rgba(0,0,0,0.502);
+    bottom: 0;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 10;
         }
 
         /* mobile */
@@ -1096,33 +1125,35 @@
             <div class="progress-bar [ documentBar ]"></div>
         </div>
     </div>
-    <div id="mySidenav" class="sidenav">
-        <!-- menu -->
-        <div class="menu">
-            <a href="javascript:void(0);" class="contactEnter">Contact</a>
-            <!-- <a href="javascript:void(0);" class="tipsEnter">Tips</a> -->
-            <a href="javascript:void(0);" class="aboutEnter">Despre</a>
-        </div>
-        <!-- /menu -->
-        <!-- contact -->
-        <div class="contact overlay-text dn">
-            <div>
-                <a class="button-special" href="tel:0747332638" target="_blank">
-                    <h2>0747332638</h2>
-                </a>
-                <a class="button-special" href="mailto:worthshoot@gmail.com" target="_blank">
-                    <h3>worthshoot@
-                        <br>gmail.com</h3>
-                </a>
+    <div class="menuShadow dn"></div>
+    <div id="mySidenav" class="sidenavParent">
+        <div class="sidenav">
+            <!-- menu -->
+            <div class="menu">
+                <a href="javascript:void(0);" class="contactEnter">Contact</a>
+                <!-- <a href="javascript:void(0);" class="tipsEnter">Tips</a> -->
+                <a href="javascript:void(0);" class="aboutEnter">Despre</a>
             </div>
-            <!-- <a class="button-special" href="https://goo.gl/maps/Zv9yFYr71CK2" target="_blank">
+            <!-- /menu -->
+            <!-- contact -->
+            <div class="contact overlay-text dn">
+                <div>
+                    <a class="button-special" href="tel:0747332638" target="_blank">
+                        <h2>0747332638</h2>
+                    </a>
+                    <a class="button-special" href="mailto:worthshoot@gmail.com" target="_blank">
+                        <h3>worthshoot@
+                            <br>gmail.com</h3>
+                    </a>
+                </div>
+                <!-- <a class="button-special" href="https://goo.gl/maps/Zv9yFYr71CK2" target="_blank">
                 <div>
                     <h2>Suceava</h2>
                     <h3>Romania &lt; Europe</h3>
                 </div>
             </a> -->
 
-            <!-- <div class="last">
+                <!-- <div class="last">
                 <a href="https://www.facebook.com/so.alenax/" target="_blank">
                     <button>Facebook</button>
                 </a>
@@ -1130,12 +1161,12 @@
                     <button>Instagram</button>
                 </a>
             </div> -->
-        </div>
-        <!-- /contact -->
-        <!-- tips -->
-        <div class="tips overlay-text dn">
-            <div>
-                <!-- <h2>Service(number of events)</h2>
+            </div>
+            <!-- /contact -->
+            <!-- tips -->
+            <div class="tips overlay-text dn">
+                <div>
+                    <!-- <h2>Service(number of events)</h2>
                 <h3>Every service has it`s portofolio and it`s price</h3>
                 <h2>Choose between
               <u>Bronze</u>,
@@ -1144,28 +1175,29 @@
                 <h3>Contact me for personalized shooting and I will make a good offer</h3>
                 <h3>Practice your modeling before shooting and you
                     <u>may</u> receive a nice discount!!</h3> -->
+                </div>
             </div>
-        </div>
-        <!-- /tips -->
-        <!-- about -->
-        <div class="about overlay-text dn">
-            <div>
-                <h2> Noi suntem WorthShoot.com </h2>
+            <!-- /tips -->
+            <!-- about -->
+            <div class="about overlay-text dn">
+                <div>
+                    <h2> Noi suntem WorthShoot.com </h2>
 
-                <h3> Suntem din Suceava.
-                    <br> Am inceput fotografia in 2012.
-                    <br> Am inceput cu portrete, pana cand am devenit foarte buni.
-                    <br> In 2014 am incercat fotografia macro, iar usor, usor am inceput sa fim foarte buni la surprinderea celor
-                    mai fine detalii.
-                    <br> In 2018 am inceput fotografia si filmarea de evenimente, dandu-ne silinta sa fim din ce in ce mai buni pe zi ce
-                    trece.
-                    <br> Contactati-ne, si va veti bucura ca ne-ati ales.
-                    <br> Stim cum sa coordonam un subiect si sa il aranjam perfect in scena!
-                    <br> Daca iubiti fotografia x videografia, ne veti iubi si pe noi.
-                </h3>
+                    <h3> Suntem din Suceava.
+                        <br> Am inceput fotografia in 2012.
+                        <br> Am inceput cu portrete, pana cand am devenit foarte buni.
+                        <br> In 2014 am incercat fotografia macro, iar usor, usor am inceput sa fim foarte buni la surprinderea
+                        celor mai fine detalii.
+                        <br> In 2018 am inceput fotografia si filmarea de evenimente, dandu-ne silinta sa fim din ce in ce mai
+                        buni pe zi ce trece.
+                        <br> Contactati-ne, si va veti bucura ca ne-ati ales.
+                        <br> Stim cum sa coordonam un subiect si sa il aranjam perfect in scena!
+                        <br> Daca iubiti fotografia x videografia, ne veti iubi si pe noi.
+                    </h3>
+                </div>
             </div>
+            <!-- /about -->
         </div>
-        <!-- /about -->
     </div>
 
     <script>
@@ -1654,12 +1686,16 @@
             document.getElementById("mySidenav").style.width = "300px";
             document.getElementsByClassName("menuEnter")[0].classList.add("dn");
             document.getElementsByClassName("menuClose")[0].classList.remove("dn");
+            document.getElementsByTagName("body")[0].style.overflow = "hidden";
+            document.getElementsByClassName("menuShadow")[0].classList.remove("dn");
         }
         //close menu
         document.getElementsByClassName('menuClose')[0].onclick = function () {
             document.getElementById("mySidenav").style.width = "0";
             document.getElementsByClassName("menuEnter")[0].classList.remove("dn");
             document.getElementsByClassName("menuClose")[0].classList.add("dn");
+            document.getElementsByTagName("body")[0].style.overflow = "scroll";
+            document.getElementsByClassName("menuShadow")[0].classList.add("dn");
         }
     </script>
     <script>
@@ -1704,6 +1740,7 @@
             document.getElementsByClassName('about')[0].classList.remove("dn");
             document.getElementsByClassName('aboutClose')[0].classList.remove("dn");
             document.getElementsByClassName('menuClose')[0].classList.add("dn");
+            document.getElementsByClassName('sidenav')[0].classList.add("sidenavAbout");
         }
         //close about
         document.getElementsByClassName('aboutClose')[0].onclick = function () {
@@ -1711,6 +1748,7 @@
             document.getElementsByClassName('about')[0].classList.add("dn");
             document.getElementsByClassName('aboutClose')[0].classList.add("dn");
             document.getElementsByClassName('menuClose')[0].classList.remove("dn");
+            document.getElementsByClassName('sidenav')[0].classList.remove("sidenavAbout");
         }
     </script>
     <!-- messenger -->
@@ -1736,7 +1774,7 @@
  logged_out_greeting="#353231"-->
     <div class="fb-customerchat" page_id="547548839026581" logged_in_greeting="Bună! Suntem aici pentru a răspunde la orice întrebări pe care le puteți avea."
         logged_out_greeting="Bună! Suntem aici pentru a răspunde la orice întrebăre pe care o aveti." theme_color="#262626"></div>
-        <!-- #CCC4C0 -->
+    <!-- #CCC4C0 -->
 
 </body>
 

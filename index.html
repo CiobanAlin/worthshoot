@@ -604,14 +604,14 @@
 
         .stickyMenu {
             position: fixed;
-            /* right: 0; */
-            /* left: 0; */
-            bottom: 8px;
-            background: rgba(38, 38, 38, 1);
-            display: flex;
-            width: 40px;
-            justify-content: center;
-            height: 40px;
+    bottom: calc(8px + 18pt + 60px + 18pt);
+    background: #262626;
+    display: flex;
+    width: 60px;
+    justify-content: center;
+    height: 60px;
+    align-items: center;
+    border-radius: 50%;
         }
 
         .stickyMenu a {
@@ -719,12 +719,12 @@
 
         .menuEnter {
             font-size: 25px;
-            margin-bottom: -5px;
+            margin-bottom: 2px;
         }
 
 
         .close {
-            margin-top: -40px;
+            margin-top: -32px;
         }
 
         .close::before {
@@ -1734,7 +1734,8 @@
     <!-- ref="<OPTIONAL_WEBHOOK_PARAM>"  logged_in_greeting="#262626"
  logged_out_greeting="#353231"-->
     <div class="fb-customerchat" page_id="547548839026581" logged_in_greeting="Bună! Suntem aici pentru a răspunde la orice întrebări pe care le puteți avea."
-        logged_out_greeting="Bună! Suntem aici pentru a răspunde la orice întrebăre pe care o aveti." theme_color="#CCC4C0"></div>
+        logged_out_greeting="Bună! Suntem aici pentru a răspunde la orice întrebăre pe care o aveti." theme_color="#262626"></div>
+        <!-- #CCC4C0 -->
 
 </body>
 

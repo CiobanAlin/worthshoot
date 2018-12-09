@@ -1688,7 +1688,7 @@
             document.getElementById("mySidenav").style.width = "300px";
             document.getElementsByClassName("menuEnter")[0].classList.add("dn");
             document.getElementsByClassName("menuClose")[0].classList.remove("dn");
-            document.getElementsByTagName("body")[0].style.overflow = "hidden";
+            document.getElementsByTagName("body")[0].style.overflowY = "hidden";
             document.getElementsByClassName("menuShadow")[0].classList.remove("dn");
         }
         //close menu
@@ -1696,7 +1696,7 @@
             document.getElementById("mySidenav").style.width = "0";
             document.getElementsByClassName("menuEnter")[0].classList.remove("dn");
             document.getElementsByClassName("menuClose")[0].classList.add("dn");
-            document.getElementsByTagName("body")[0].style.overflow = "scroll";
+            document.getElementsByTagName("body")[0].style.overflowY = "scroll";
             document.getElementsByClassName("menuShadow")[0].classList.add("dn");
         }
     </script>

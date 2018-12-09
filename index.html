@@ -206,7 +206,7 @@
             border-bottom: 5px solid rgba(249, 249, 249, 0.9);
         }
 
-        .menu {
+        .menuTop {
             width: 100%;
             min-height: 100px;
             display: flex;
@@ -215,7 +215,7 @@
             margin: 0 auto;
         }
 
-        .menu>div {
+        .menuTop>div {
             width: 50%;
         }
 
@@ -256,7 +256,7 @@
             text-align: left;
         }
 
-        .pret{
+        .pret {
             font-family: 'Lato', sans-serif;
         }
 
@@ -268,7 +268,7 @@
             padding: 30px 10px 10px !important;
         }
 
-        .menu-instructions {
+        .menuTop-instructions {
             padding: 20px;
             border-right: 5px solid rgba(249, 249, 249, 0.9);
             text-align: right;
@@ -591,9 +591,31 @@
             left: 0;
             bottom: 0;
             /* height: 16px; */
-            height: 8px;
+            /* height: 8px; */
             background: rgba(38, 38, 38, 1);
+        }
 
+        .stickyMenuParent {
+            max-width: 500px;
+            margin: auto;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .stickyMenu {
+            position: fixed;
+            /* right: 0; */
+            /* left: 0; */
+            bottom: 8px;
+            background: rgba(38, 38, 38, 1);
+            display: flex;
+            width: 40px;
+            justify-content: center;
+            height: 40px;
+        }
+
+        .stickyMenu a {
+            border: 0;
         }
 
         .progress-containerDocument {
@@ -615,7 +637,142 @@
             border-bottom: 8px solid transparent;
         }
 
+        /* menu */
 
+        /* .closed {
+            background: 0 0;
+            border: 0;
+            cursor: pointer;
+            outline: 0;
+            overflow: hidden;
+            position: fixed;
+            right: 15px;
+            top: 0;
+            z-index: 2;
+            padding-top: 2px;
+            padding-bottom: 2px;
+            padding-right: calc(1.44em - 1.0em);
+            padding-left: calc(1.44em - 0.8em);
+        }
+
+        .closed::before {
+            color: #fff;
+            content: '\00D7';
+            display: block;
+            font-size: 36px;
+            font-weight: 600;
+            line-height: 36px;
+            padding: 0;
+            margin: 0;
+            text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.6);
+        } */
+
+        .sidenav {
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            /* top: 50px; */
+            left: 0;
+            right: 0;
+            bottom: 8px;
+            background-color: rgba(38, 38, 38, 1);
+            overflow-x: hidden;
+            transition: 0.5s;
+            margin: auto;
+            border-bottom-right-radius: 2px;
+            border-bottom-left-radius: 2px;
+            text-align: right;
+            align-items: flex-end;
+            color: #f1f1f1;
+        }
+
+        .sidenav h2 {
+            text-align: right;
+        }
+
+        .sidenav a {
+            padding: 8px 25px 8px 8px;
+            text-decoration: none;
+            font-size: 25px;
+            color: #818181;
+            display: block;
+            transition: 0.3s;
+            border: 0;
+        }
+
+        .sidenav a:last-child {
+            padding-bottom: 20px;
+        }
+
+        .sidenav a:hover {
+            color: #f1f1f1;
+        }
+
+        .sidenav button {
+            color: #818181;
+            box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.0), 0 2px 2px 0 rgba(0, 0, 0, 0.0), 0 3px 1px -2px rgba(0, 0, 0, 0.0);
+        }
+
+        .sidenav button:hover {
+            color: #f1f1f1;
+        }
+
+        .menuEnter {
+            font-size: 25px;
+            margin-bottom: -5px;
+        }
+
+
+        .close {
+            margin-top: -40px;
+        }
+
+        .close::before {
+            content: '\00D7';
+            font-size: 40px;
+        }
+
+        .menu {
+            display: flex;
+            flex-flow: column;
+            justify-content: center;
+            align-content: center;
+            flex-wrap: wrap;
+            margin: 0;
+            color: rgba(38, 38, 38, 0.5);
+        }
+
+        .menu h3 {
+            padding-top: 0px;
+            padding-right: 15px;
+            padding-bottom: 8px;
+            padding-left: 15px;
+            margin: 5px 0;
+        }
+
+        .menu h4 {
+            font-family: 'Lato', sans-serif;
+        }
+
+        .menu button {
+            border: 2px solid transparent;
+            box-shadow: inset 0 1px 5px 0 rgba(0, 0, 0, 0.0), inset 0 2px 2px 0 rgba(0, 0, 0, 0.0), inset 0 3px 1px -2px rgba(0, 0, 0, 0.0);
+            color: rgba(38, 38, 38, 0.5);
+        }
+
+        .menu .selected {
+            font-weight: 700;
+            color: rgba(38, 38, 38, 0.9);
+        }
+
+        .menu .tab-selected {
+            color: rgba(38, 38, 38, 0.9);
+            border-bottom: 2px solid rgba(38, 38, 38, 0.9);
+        }
+
+        .menu button:hover {
+            border: 2px solid black;
+        }
 
         /* mobile */
 
@@ -665,13 +822,17 @@
                 padding: 20px 10px 10px !important;
             }
         }
+
+        .dn {
+            display: none;
+        }
     </style>
 </head>
 
 <body>
     <div class="content menu-parent">
-        <div class="menu">
-            <div class="menu-instructions">
+        <div class="menuTop">
+            <div class="menuTop-instructions">
                 <h5>Programari pe pagina de
                     <a href="https://www.facebook.com/pg/worthshoot/photos/?tab=album&album_id=547548865693245">Facebook</a>
                 </h5>
@@ -864,7 +1025,8 @@
                 <div>
                     <div>Valoare aproximativa: </div>
                     <div>(
-                        <span id="pret" class="pret">x</span>lei + transport + mancare )
+                        <span id="pret" class="pret">x</span>lei + transport
+                        <span class="mancare"> + mancare</span> )
                     </div>
                 </div>
                 <!-- <div>
@@ -917,10 +1079,92 @@
             <a href="https://www.facebook.com/pg/worthshoot/photos/?tab=album&album_id=547548865693245">Facebook</a>
             sau la numarul de telefon: 0747332638.</div>
     </div>
+    <div class="stickyMenuParent">
+        <div class="stickyMenu">
+            <a href="javascript:void(0);" class="menuEnter ">
+                ☰
+            </a>
+            <a href="javascript:void(0);" class="menuClose close dn"></a>
+            <a href="javascript:void(0);" class="contactClose close dn"></a>
+            <a href="javascript:void(0);" class="tipsClose close dn"></a>
+            <a href="javascript:void(0);" class="aboutClose close dn"></a>
+        </div>
+    </div>
     <div class="stickyNav">
         <div class="progress-containerDocument">
             <div class="progress-bar [ documentBar ]"></div>
         </div>
+    </div>
+    <div id="mySidenav" class="sidenav">
+        <!-- menu -->
+        <div class="menu">
+            <a href="javascript:void(0);" class="contactEnter">Contact</a>
+            <!-- <a href="javascript:void(0);" class="tipsEnter">Tips</a> -->
+            <a href="javascript:void(0);" class="aboutEnter">Despre</a>
+        </div>
+        <!-- /menu -->
+        <!-- contact -->
+        <div class="contact overlay-text dn">
+            <div>
+                <a class="button-special" href="tel:0747332638" target="_blank">
+                    <h2>0747332638</h2>
+                </a>
+                <a class="button-special" href="mailto:worthshoot@gmail.com" target="_blank">
+                    <h3>worthshoot@
+                        <br>gmail.com</h3>
+                </a>
+            </div>
+            <!-- <a class="button-special" href="https://goo.gl/maps/Zv9yFYr71CK2" target="_blank">
+                <div>
+                    <h2>Suceava</h2>
+                    <h3>Romania &lt; Europe</h3>
+                </div>
+            </a> -->
+
+            <!-- <div class="last">
+                <a href="https://www.facebook.com/so.alenax/" target="_blank">
+                    <button>Facebook</button>
+                </a>
+                <a href="https://www.instagram.com/so.alenax/" target="_blank">
+                    <button>Instagram</button>
+                </a>
+            </div> -->
+        </div>
+        <!-- /contact -->
+        <!-- tips -->
+        <div class="tips overlay-text dn">
+            <div>
+                <!-- <h2>Service(number of events)</h2>
+                <h3>Every service has it`s portofolio and it`s price</h3>
+                <h2>Choose between
+              <u>Bronze</u>,
+              <u>Silver</u> and
+              <u>Gold</u> to see extra options</h2>
+                <h3>Contact me for personalized shooting and I will make a good offer</h3>
+                <h3>Practice your modeling before shooting and you
+                    <u>may</u> receive a nice discount!!</h3> -->
+            </div>
+        </div>
+        <!-- /tips -->
+        <!-- about -->
+        <div class="about overlay-text dn">
+            <div>
+                <h2> Noi suntem WorthShoot.com </h2>
+
+                <h3> Suntem din Suceava.
+                    <br> Am inceput fotografia in 2012.
+                    <br> Am inceput cu portrete, pana cand am devenit foarte buni.
+                    <br> In 2014 am incercat fotografia macro, iar usor, usor am inceput sa fim foarte buni la surprinderea celor
+                    mai fine detalii.
+                    <br> In 2018 am inceput fotografia si filmarea de evenimente, dandu-ne silinta sa fim din ce in ce mai buni pe zi ce
+                    trece.
+                    <br> Contactati-ne, si va veti bucura ca ne-ati ales.
+                    <br> Stim cum sa coordonam un subiect si sa il aranjam perfect in scena!
+                    <br> Daca iubiti fotografia x videografia, ne veti iubi si pe noi.
+                </h3>
+            </div>
+        </div>
+        <!-- /about -->
     </div>
 
     <script>
@@ -1096,6 +1340,11 @@
             if (ore == 0) {
                 pret = 0;
             }
+            if (ore < 3) {
+                document.getElementsByClassName("mancare")[0].style.display = "none";
+            } else {
+                document.getElementsByClassName("mancare")[0].style.display = "inline";
+            }
             // total
             var Total = ore * pret * (foto + video + drona) + pret;
             if (pret == 0) {
@@ -1201,7 +1450,7 @@
                 /**/
 
                 if (data.email && !validEmail(data.email)) { // if email is not valid show error
-                    var invalidEmail = form.querySelector(".email-invalid");
+                    var invalidEmail = form.getElementsByClassName("email-invalid")[0];
                     if (invalidEmail) {
                         invalidEmail.style.display = "block";
                         return false;
@@ -1396,6 +1645,74 @@
             }
         }
     </script>
+
+    <!-- MENU MENU -->
+    <script>
+        //enter menu
+        document.getElementsByClassName('menuEnter')[0].onclick = function () {
+            document.getElementById("mySidenav").style.width = "300px";
+            document.getElementsByClassName("menuEnter")[0].classList.add("dn");
+            document.getElementsByClassName("menuClose")[0].classList.remove("dn");
+        }
+        //close menu
+        document.getElementsByClassName('menuClose')[0].onclick = function () {
+            document.getElementById("mySidenav").style.width = "0";
+            document.getElementsByClassName("menuEnter")[0].classList.remove("dn");
+            document.getElementsByClassName("menuClose")[0].classList.add("dn");
+        }
+    </script>
+    <script>
+        //enter contact
+        document.getElementsByClassName('contactEnter')[0].onclick = function () {
+            document.getElementsByClassName('menuClose')[0].classList.add("dn");
+            document.getElementsByClassName('menu')[0].classList.add("dn");
+            document.getElementsByClassName('contact')[0].classList.remove("dn");
+            document.getElementsByClassName('contactClose')[0].classList.remove("dn");
+            document.getElementsByClassName('menuClose')[0].classList.add("dn");
+        }
+        //close contact
+        document.getElementsByClassName('contactClose')[0].onclick = function () {
+            document.getElementsByClassName('menu')[0].classList.remove("dn");
+            document.getElementsByClassName('contact')[0].classList.add("dn");
+            document.getElementsByClassName('contactClose')[0].classList.add("dn");
+            document.getElementsByClassName('menuClose')[0].classList.remove("dn");
+        }
+    </script>
+    <script>
+        //enter tips
+        document.getElementsByClassName('tipsEnter')[0].onclick = function () {
+            document.getElementsByClassName('menuClose')[0].classList.add("dn");
+            document.getElementsByClassName('menu')[0].classList.add("dn");
+            document.getElementsByClassName('tips')[0].classList.remove("dn");
+            document.getElementsByClassName('tipsClose')[0].classList.remove("dn");
+            document.getElementsByClassName('menuClose')[0].classList.add("dn");
+        }
+        //close tips
+        document.getElementsByClassName('tipsClose')[0].onclick = function () {
+            document.getElementsByClassName('menu')[0].classList.remove("dn");
+            document.getElementsByClassName('tips')[0].classList.add("dn");
+            document.getElementsByClassName('tipsClose')[0].classList.add("dn");
+            document.getElementsByClassName('menuClose')[0].classList.remove("dn");
+        }
+    </script>
+    <script>
+        //enter about
+        document.getElementsByClassName('aboutEnter')[0].onclick = function () {
+            document.getElementsByClassName('menuClose')[0].classList.add("dn");
+            document.getElementsByClassName('menu')[0].classList.add("dn");
+            document.getElementsByClassName('about')[0].classList.remove("dn");
+            document.getElementsByClassName('aboutClose')[0].classList.remove("dn");
+            document.getElementsByClassName('menuClose')[0].classList.add("dn");
+        }
+        //close about
+        document.getElementsByClassName('aboutClose')[0].onclick = function () {
+            document.getElementsByClassName('menu')[0].classList.remove("dn");
+            document.getElementsByClassName('about')[0].classList.add("dn");
+            document.getElementsByClassName('aboutClose')[0].classList.add("dn");
+            document.getElementsByClassName('menuClose')[0].classList.remove("dn");
+        }
+    </script>
+    <!-- messenger -->
     <script>
         window.fbAsyncInit = function () {
             FB.init({
@@ -1417,7 +1734,7 @@
     <!-- ref="<OPTIONAL_WEBHOOK_PARAM>"  logged_in_greeting="#262626"
  logged_out_greeting="#353231"-->
     <div class="fb-customerchat" page_id="547548839026581" logged_in_greeting="Bună! Suntem aici pentru a răspunde la orice întrebări pe care le puteți avea."
-        logged_out_greeting="Bună! Suntem aici pentru a răspunde la orice întrebări pe care le puteți avea." theme_color="#CCC4C0"></div>
+        logged_out_greeting="Bună! Suntem aici pentru a răspunde la orice întrebăre pe care o aveti." theme_color="#CCC4C0"></div>
 
 </body>
 

@@ -855,8 +855,11 @@
             .titlu {
                 padding: 20px 10px 10px !important;
             }
-            .footer>div{
-                margin-right: calc(18pt + 45pt + 18pt); 
+            .footer>div {
+                margin-right: calc(18pt + 45pt + 18pt);
+            }
+            .thankyouMessage{
+                margin-right: calc(18pt + 45pt + 18pt);
             }
         }
 
@@ -970,21 +973,21 @@
                 <div class="titlu">Echipare</div>
                 <div>
                     <label class="container">
-                        <input name="EFo" type="checkbox">
+                        <input class="echipareJs" name="EFo" type="checkbox">
                         <span class="checkmark"></span>
                         <div>Foto</div>
                     </label>
                 </div>
                 <div>
                     <label class="container">
-                        <input name="EVi" type="checkbox">
+                        <input class="echipareJs" name="EVi" type="checkbox">
                         <span class="checkmark"></span>
                         <div>Video</div>
                     </label>
                 </div>
                 <div>
                     <label class="container">
-                        <input name="EDr" type="checkbox">
+                        <input class="echipareJs" name="EDr" type="checkbox">
                         <span class="checkmark"></span>
                         <div>Drona</div>
                     </label>
@@ -1113,7 +1116,7 @@
         <div id="thankyou_message" class="thankyouMessage" style="display:none;">
             Va multumim pentru completarea formularului!
             <br>
-            <br> Veti fi contactat in cel mai scurt timp posibil de catre un reprezentant.
+            <br> Veti fi contactat/a in cel mai scurt timp posibil de catre un reprezentant.
         </div>
     </div>
 
@@ -1214,6 +1217,11 @@
     </div>
 
     <script>
+        // trimite
+        var trimite = document.getElementsByClassName("button-success")[0];
+        var requiredServiciu = 0;
+        var requiredEchipare = 0;
+        var requiredCalitate = 0;
         // date
         var DaD = document.getElementsByName('DaD')[0];
         var DaM = document.getElementsByName('DaM')[0];
@@ -1280,6 +1288,68 @@
                     DaM.value = "0" + i;
                 }
             }
+            //required
+            var requiredInputs = document.getElementsByTagName('input');
+            for (var i = 0; i < requiredInputs.length; i++) {
+                // serviciu
+                if (requiredInputs[i].className == "serviciuJs") {
+                    if (requiredInputs[i].checked == false) {
+                        trimite.disabled = true;
+                        requiredServiciu = 0;
+                    } else {
+                        requiredServiciu = 1;
+                        // return true;
+                        break;
+                    }
+                } else { }
+            }
+            for (var i = 0; i < requiredInputs.length; i++) {
+                // echipare
+                if (requiredInputs[i].className == "echipareJs") {
+                    if (requiredInputs[i].checked == false) {
+                        console.log("echipare _|_");
+                        trimite.disabled = true;
+                        requiredEchipare = 0;
+                    } else {
+                        requiredEchipare = 1;
+                        // return true;
+                        break;
+                    }
+                } else { }
+            }
+            for (var i = 0; i < requiredInputs.length; i++) {
+                // calitate
+                if (requiredInputs[i].className == "calitateJs") {
+                    if (requiredInputs[i].checked == false) {
+                        trimite.disabled = true;
+                        requiredCalitate == 0;
+                    } else {
+                        requiredCalitate = 1;
+                        // return 0;
+                        break;
+                    }
+                } else { }
+            }
+            if (requiredServiciu == 0) {
+                trimite.innerText = "Alege serviciu!";
+            } else {
+
+            // }
+                if (requiredEchipare == 0) {
+                    trimite.innerText = "Alege echipare!";
+                } else {
+                    if (requiredCalitate == 0) {
+                        trimite.innerText = "Alege nivel calitate!";
+                    } else {
+                        if (requiredServiciu == 1 && requiredEchipare == 1 && requiredCalitate == 1) {
+                            trimite.innerText = "TRIMITEE";
+                            trimite.disabled = false;
+                        }else{}
+                    }
+                }
+            }
+        
+
             // calitate
             if (this.className == "calitateJs") {
                 var inputs = document.getElementsByClassName("calitateJs");
@@ -1728,7 +1798,7 @@
             document.getElementsByClassName('menuClose')[0].classList.remove("dn");
         }
     </script>
-    <script>
+    <!-- <script>
         //enter tips
         document.getElementsByClassName('tipsEnter')[0].onclick = function () {
             document.getElementsByClassName('menuClose')[0].classList.add("dn");
@@ -1744,7 +1814,7 @@
             document.getElementsByClassName('tipsClose')[0].classList.add("dn");
             document.getElementsByClassName('menuClose')[0].classList.remove("dn");
         }
-    </script>
+    </script> -->
     <script>
         //enter about
         document.getElementsByClassName('aboutEnter')[0].onclick = function () {

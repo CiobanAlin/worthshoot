@@ -608,7 +608,7 @@
             position: fixed;
             /* right: 18pt;
             bottom: calc(18pt + 45pt + 18pt); */
-            right: calc(18pt + 45pt + 18pt); 
+            right: calc(18pt + 45pt + 18pt);
             bottom: 18pt;
             background: #262626;
             display: flex;
@@ -809,7 +809,7 @@
             z-index: 10;
         }
 
-        .about h3{
+        .about h3 {
             font-family: 'Neuton', serif;
         }
 
@@ -869,7 +869,7 @@
             /* .thankyouMessage{
                 margin-right: calc(18pt + 45pt + 18pt);
             } */
-            .sidenavParent{
+            .sidenavParent {
                 margin-right: auto;
             }
         }
@@ -1251,6 +1251,11 @@
         // var message =document.getElementsByName('Msg')[0].value;
         for (var i = 0; i < inputs.length; i++) {
             inputs[i].addEventListener('change', calculeazaPret);
+            // live complete oninput
+            if (inputs[i].name == "DaY" || inputs[i].name == "DaM" || inputs[i].name == "DaD") { }else{
+                 // document.addEventListener("keydown", keyDownTextField, false);
+                inputs[i].addEventListener('input', calculeazaPret);
+            }
         }
         // pana la
         var pretPLB = 70;
@@ -1318,7 +1323,6 @@
                 // echipare
                 if (requiredInputs[i].className == "echipareJs") {
                     if (requiredInputs[i].checked == false) {
-                        console.log("echipare _|_");
                         trimite.disabled = true;
                         requiredEchipare = 0;
                     } else {
@@ -1345,7 +1349,7 @@
                 trimite.innerText = "Alege serviciu!";
             } else {
 
-            // }
+                // }
                 if (requiredEchipare == 0) {
                     trimite.innerText = "Alege echipare!";
                 } else {
@@ -1355,11 +1359,11 @@
                         if (requiredServiciu == 1 && requiredEchipare == 1 && requiredCalitate == 1) {
                             trimite.innerText = "TRIMITE";
                             trimite.disabled = false;
-                        }else{}
+                        } else { }
                     }
                 }
             }
-        
+
 
             // calitate
             if (this.className == "calitateJs") {
@@ -1844,12 +1848,6 @@
             document.getElementsByClassName('menuClose')[0].classList.remove("dn");
             document.getElementsByClassName('sidenav')[0].classList.remove("sidenavAbout");
         }
-    </script>
-    <!-- live complete oninput -->
-    <script>
-        // document.addEventListener("keydown", keyDownTextField, false);
-        document.addEventListener("input", calculeazaPret);
-
     </script>
     <!-- messenger -->
     <script>

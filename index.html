@@ -813,6 +813,11 @@
             font-family: 'Neuton', serif;
         }
 
+        .marginAbout {
+            margin: 10px 15px;
+            display: block;
+        }
+
         /* mobile */
 
         @media screen and (max-width:800px) {
@@ -1209,24 +1214,33 @@
             <!-- about -->
             <div class="about overlay-text dn">
                 <div>
-                    <h2> Noi suntem WorthShoot.com </h2>
-
-                    <h3> <br>
-                        Suntem din Suceava.
-                        <br> <br>
-                        Am inceput fotografia in 2012 cu portrete, fiind si in prezent cea mai mare pasiune.
-                        <br> <br>
-                        In 2014 am incercat fotografia macro, iar usor, usor am inceput sa fim foarte buni la surprinderea
-                        celor mai fine detalii.
-                        <br> <br>
-                        In 2018 am inceput fotografia si filmarea de evenimente, dandu-ne silinta sa fim din ce in ce mai
-                        buni pe zi ce trece.
-                        <br> <br>
-                        Contactati-ne si va veti bucura ca ne-ati ales.
-                        <br> <br>
-                        Stim cum sa coordonam si sa aranjam perfect in scena!
-                        <br> <br>
-                        Daca iubiti fotografia x videografia, ne veti iubi si pe noi.
+                    <h2>
+                        <span class="marginAbout">
+                            Noi suntem WorthShoot.com
+                        </span>
+                    </h2>
+                    <h3>
+                        <span class="marginAbout">
+                            Suntem din Suceava.
+                        </span>
+                        <span class="marginAbout">
+                            Am inceput fotografia in 2012 cu portrete, fiind si in prezent cea mai mare pasiune.
+                        </span>
+                        <span class="marginAbout">
+                            In 2014 am incercat fotografia macro, iar usor, usor am inceput sa fim foarte buni la surprinderea celor mai fine detalii.
+                        </span>
+                        <span class="marginAbout">
+                            In 2018 am inceput fotografia si filmarea de evenimente, dandu-ne silinta sa fim din ce in ce mai buni pe zi ce trece.
+                        </span>
+                        <span class="marginAbout">
+                            Contactati-ne si va veti bucura ca ne-ati ales.
+                        </span>
+                        <span class="marginAbout">
+                            Stim cum sa coordonam si sa aranjam perfect in scena!
+                        </span>
+                        <span class="marginAbout">
+                            Daca iubiti fotografia x videografia, ne veti iubi si pe noi.
+                        </span>
                     </h3>
                 </div>
             </div>
@@ -1259,8 +1273,8 @@
         for (var i = 0; i < inputs.length; i++) {
             inputs[i].addEventListener('change', calculeazaPret);
             // live complete oninput
-            if (inputs[i].name == "DaY" || inputs[i].name == "DaM" || inputs[i].name == "DaD") { }else{
-                 // document.addEventListener("keydown", keyDownTextField, false);
+            if (inputs[i].name == "DaY" || inputs[i].name == "DaM" || inputs[i].name == "DaD") { } else {
+                // document.addEventListener("keydown", keyDownTextField, false);
                 inputs[i].addEventListener('input', calculeazaPret);
             }
         }

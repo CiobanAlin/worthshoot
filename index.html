@@ -1027,7 +1027,8 @@
                             <span class="evidentiat">160lei</span>
                         </div>
                         <div class="notita">&nbsp; *pana la
-                            <span class="PLBJs">3.280</span>lei
+                            <span class="PLBJs">2.240</span>lei
+                            <!-- 3280 -->
                             <!-- x * 41 -->
                             <!-- 2.870lei -->
                             <!-- 1.770 -->
@@ -1043,7 +1044,8 @@
                             <span class="evidentiat">280lei</span>
                         </div>
                         <div class="notita">&nbsp; *pana la
-                            <span class="PLAJs">5.740</span>lei
+                            <span class="PLAJs">3.920</span>lei
+                            <!-- 5.740 -->
                             <!-- 5.280lei -->
                             <!-- 3.280 -->
                         </div>
@@ -1058,7 +1060,7 @@
                             <span class="evidentiat">600lei</span>
                         </div>
                         <div class="notita">&nbsp; *pana la
-                            <span class="PLLJs">12.090</span>lei
+                            <span class="PLLJs">8.400</span>lei
                             <!-- 12.090lei -->
                         </div>
                     </label>
@@ -1072,7 +1074,7 @@
                             <span class="evidentiat">1800lei</span>
                         </div>
                         <div class="notita">&nbsp; *pana la
-                            <span class="PLEJs">37.000</span>lei
+                            <span class="PLEJs">25.200</span>lei
                             <!-- 37.000lei -->
                         </div>
                     </label>
@@ -1477,10 +1479,12 @@
             if (echipare == 0) {
                 echipare = 1.8;
             }
-            var PLB = 24 * pretPLB * echipare + pretPLB;
-            var PLA = 24 * pretPLA * echipare + pretPLA;
-            var PLL = 24 * pretPLL * echipare + pretPLL;
-            var PLE = 24 * pretPLE * echipare + pretPLE;
+            var timeNormal = 15;
+            // 24
+            var PLB = timeNormal * pretPLB * echipare + pretPLB;
+            var PLA = timeNormal * pretPLA * echipare + pretPLA;
+            var PLL = timeNormal * pretPLL * echipare + pretPLL;
+            var PLE = timeNormal * pretPLE * echipare + pretPLE;
             // PLB 
             document.getElementsByClassName("PLBJs")[0].innerHTML = PLB;
             // PLA 

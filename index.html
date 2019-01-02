@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html>
-<!-- V3.0 -->
+<!-- V4.0 2019.01.02 -->
 
 <head>
     <!-- SEO -->
     <title>WorthShoot.com</title>
 
-    <meta name="KeyWord" content="fotografie suceava, video suceava, corporate suceava, sedinta foto suceava, botez suceava, taieremot suceava, cununie civila suceava, nunta suceava, evenimente suceava, worthshoot, WorthShoot.com, videografie, fotografie, foto, foto video, sedinta foto, suceava">
-
-    <meta name="description" content="Foto & Video || Suceava & Romania || 0747332638 || worthshoot@gmail.com || Suceava < Romania < Europe ">
+    <meta name="KeyWord" content="nunta suceava, foto suceava, video suceava, sedinta foto suceava, botez suceava, evenimente suceava, worthshoot, worthshoot.com">
+<!--  corporate suceava,  taieremot suceava, cununie civila suceava, , videografie, fotografie, foto, foto video, sedinta foto, suceava -->
+    <meta name="description" content="Foto & Video | Suceava, Romania | 0747332638 | worthshoot@gmail.com">
 
     <meta name="google-site-verification" content="JBxLdW3nkVyhcVUbhuJPpBTEW75aknoZ-pXdBFBSpTk" />
     <!-- analytics -->
@@ -879,7 +879,10 @@
             }
         }
 
-        .dn {
+        .dn 
+        /* 2019.01.02 test */
+        ,
+        .notita{
             display: none;
         }
     </style>
@@ -922,6 +925,138 @@
         </div>
         <form id="gform" method="POST" class="gform" data-email="worthshootsite@gmail.com" action="https://script.google.com/macros/s/AKfycbxHJr7gmuBSAAgDiKsTcYDTt2sTxA9SbQUKhNfrjQKoElY5RRg/exec">
             <div class="form">
+<!-- 2019.01.02 TEST  -->
+                <div class="titlu">Echipare</div>
+                <div>
+                    <label class="container">
+                        <input class="echipareJs" name="EFo" type="checkbox">
+                        <span class="checkmark"></span>
+                        <div>Foto</div>
+                    </label>
+                </div>
+                <div>
+                    <label class="container">
+                        <input class="echipareJs" name="EVi" type="checkbox">
+                        <span class="checkmark"></span>
+                        <div>Video</div>
+                    </label>
+                </div>
+                <div>
+                    <label class="container">
+                        <input class="echipareJs" name="EDr" type="checkbox">
+                        <span class="checkmark"></span>
+                        <div>Drona</div>
+                    </label>
+                </div>
+                <!-- Select a file: <input type="file" name="myFile"> -->
+                <div class="titlu">Calitate incepand cu:</div>
+                <div>
+                    <label class="container">
+                        <input class="calitateJs" name="CBa" type="checkbox">
+                        <span class="checkmark"></span>
+                        <div class="basic">Basic</div>
+                        <div>&nbsp;&nbsp;&nbsp;
+                            <span class="evidentiat">160lei</span>
+                        </div>
+                        <div class="notita">&nbsp; *pana la
+                            <span class="PLBJs">2.240</span>lei
+                            <!-- 3280 -->
+                            <!-- x * 41 -->
+                            <!-- 2.870lei -->
+                            <!-- 1.770 -->
+                        </div>
+                    </label>
+                </div>
+                <div>
+                    <label class="container">
+                        <input class="calitateJs" name="CAv" type="checkbox">
+                        <span class="checkmark"></span>
+                        <div class="avantaj">Avantaj</div>
+                        <div>&nbsp;&nbsp;&nbsp;
+                            <span class="evidentiat">280lei</span>
+                        </div>
+                        <div class="notita">&nbsp; *pana la
+                            <span class="PLAJs">3.920</span>lei
+                            <!-- 5.740 -->
+                            <!-- 5.280lei -->
+                            <!-- 3.280 -->
+                        </div>
+                    </label>
+                </div>
+                <div>
+                    <label class="container">
+                        <input class="calitateJs" name="CLu" type="checkbox">
+                        <span class="checkmark"></span>
+                        <div class="lux">Lux</div>
+                        <div>&nbsp;&nbsp;&nbsp;
+                            <span class="evidentiat">600lei</span>
+                        </div>
+                        <div class="notita">&nbsp; *pana la
+                            <span class="PLLJs">8.400</span>lei
+                            <!-- 12.090lei -->
+                        </div>
+                    </label>
+                </div>
+                <div class="dn"><!-- 2019.01.02 TEST-->
+                    <label class="container">
+                        <input class="calitateJs" name="CEx" type="checkbox">
+                        <span class="checkmark"></span>
+                        <div class="exclusiv">Exclusiv</div>
+                        <div>&nbsp;&nbsp;&nbsp;
+                            <span class="evidentiat">1800lei</span>
+                        </div>
+                        <div class="notita">&nbsp; *pana la
+                            <span class="PLEJs">25.200</span>lei
+                            <!-- 37.000lei -->
+                        </div>
+                    </label>
+                </div>
+
+
+
+                <div>
+                    <div>
+                    *Nivelul calitatii difera atat prin numarul de artisti, tipul echipamentelor folosite cat si tipul de prelucrare al materialelor.
+                    </div>
+                    <div>
+                    **Pentru mai multe detalii va rugam sa scrieti in sectiunea de mai jos "CALITATE" si sa terminati de completat formularul.
+                    </div>
+                </div>
+                <div class="titlu">Mesaj (optional) :</div>
+                <div>
+                    <input type="textarea" name="Msg">
+                </div>
+
+
+
+                <div>
+                    <div>Durata aproximativa: </div>
+                    <div>
+                        <input id="ore" type="number" name="Ore" min="1" max="72" placeholder="x" oninput="if(this.value>72){ this.value= 72;}if(this.value<1){ this.value='';}"
+                            required>&nbsp; ore
+                    </div>
+                </div>
+                <!-- <div class="titlu">Pret:</div> -->
+                <div>
+                    <div>Valoare aproximativa: </div>
+                    <div>(
+                        <span id="pret" class="pret">x</span>lei + transport
+                        <span class="mancare"> + mancare</span> )
+                    </div>
+                </div>
+                <!-- <div>
+                    Pagina web in constructie !!
+                </div> -->
+
+
+                <div class="titlu">Data</div>
+                <div>
+                    <input type="number" name="DaY" placeholder="anul" pattern="[0-9]*" required>
+                    <input type="number" name="DaM" placeholder="luna" pattern="[0-9]*" required>
+                    <input type="number" name="DaD" placeholder="ziua" pattern="[0-9]*" required>
+                    <!-- <input id="datePicker" type="date" oninput="if(this.value>max){ this.value= max;}if(this.value<min){this.value= min;}"
+                    name="Dat"> -->
+                </div>
                 <div>Serviciu</div>
                 <div>
                     <label class="container">
@@ -986,118 +1121,9 @@
                         <div>Alt serviciu..</div>
                     </label>
                 </div>
-                <div class="titlu">Echipare</div>
-                <div>
-                    <label class="container">
-                        <input class="echipareJs" name="EFo" type="checkbox">
-                        <span class="checkmark"></span>
-                        <div>Foto</div>
-                    </label>
-                </div>
-                <div>
-                    <label class="container">
-                        <input class="echipareJs" name="EVi" type="checkbox">
-                        <span class="checkmark"></span>
-                        <div>Video</div>
-                    </label>
-                </div>
-                <div>
-                    <label class="container">
-                        <input class="echipareJs" name="EDr" type="checkbox">
-                        <span class="checkmark"></span>
-                        <div>Drona</div>
-                    </label>
-                </div>
-                <div class="titlu">Data</div>
-                <div>
-                    <input type="number" name="DaY" placeholder="anul" pattern="[0-9]*" required>
-                    <input type="number" name="DaM" placeholder="luna" pattern="[0-9]*" required>
-                    <input type="number" name="DaD" placeholder="ziua" pattern="[0-9]*" required>
-                    <!-- <input id="datePicker" type="date" oninput="if(this.value>max){ this.value= max;}if(this.value<min){this.value= min;}"
-                    name="Dat"> -->
-                </div>
-                <!-- Select a file: <input type="file" name="myFile"> -->
-                <div class="titlu">Calitate incepand cu:</div>
-                <div>
-                    <label class="container">
-                        <input class="calitateJs" name="CBa" type="checkbox">
-                        <span class="checkmark"></span>
-                        <div class="basic">Basic</div>
-                        <div>&nbsp;&nbsp;&nbsp;
-                            <span class="evidentiat">160lei</span>
-                        </div>
-                        <div class="notita">&nbsp; *pana la
-                            <span class="PLBJs">2.240</span>lei
-                            <!-- 3280 -->
-                            <!-- x * 41 -->
-                            <!-- 2.870lei -->
-                            <!-- 1.770 -->
-                        </div>
-                    </label>
-                </div>
-                <div>
-                    <label class="container">
-                        <input class="calitateJs" name="CAv" type="checkbox">
-                        <span class="checkmark"></span>
-                        <div class="avantaj">Avantaj</div>
-                        <div>&nbsp;&nbsp;&nbsp;
-                            <span class="evidentiat">280lei</span>
-                        </div>
-                        <div class="notita">&nbsp; *pana la
-                            <span class="PLAJs">3.920</span>lei
-                            <!-- 5.740 -->
-                            <!-- 5.280lei -->
-                            <!-- 3.280 -->
-                        </div>
-                    </label>
-                </div>
-                <div>
-                    <label class="container">
-                        <input class="calitateJs" name="CLu" type="checkbox">
-                        <span class="checkmark"></span>
-                        <div class="lux">Lux</div>
-                        <div>&nbsp;&nbsp;&nbsp;
-                            <span class="evidentiat">600lei</span>
-                        </div>
-                        <div class="notita">&nbsp; *pana la
-                            <span class="PLLJs">8.400</span>lei
-                            <!-- 12.090lei -->
-                        </div>
-                    </label>
-                </div>
-                <div>
-                    <label class="container">
-                        <input class="calitateJs" name="CEx" type="checkbox">
-                        <span class="checkmark"></span>
-                        <div class="exclusiv">Exclusiv</div>
-                        <div>&nbsp;&nbsp;&nbsp;
-                            <span class="evidentiat">1800lei</span>
-                        </div>
-                        <div class="notita">&nbsp; *pana la
-                            <span class="PLEJs">25.200</span>lei
-                            <!-- 37.000lei -->
-                        </div>
-                    </label>
-                </div>
 
-                <div>
-                    <div>Durata aproximativa: </div>
-                    <div>
-                        <input id="ore" type="number" name="Ore" min="1" max="72" placeholder="x" oninput="if(this.value>72){ this.value= 72;}if(this.value<1){ this.value='';}"
-                            required>&nbsp; ore
-                    </div>
-                </div>
-                <!-- <div class="titlu">Pret:</div> -->
-                <div>
-                    <div>Valoare aproximativa: </div>
-                    <div>(
-                        <span id="pret" class="pret">x</span>lei + transport
-                        <span class="mancare"> + mancare</span> )
-                    </div>
-                </div>
-                <!-- <div>
-                    Pagina web in constructie !!
-                </div> -->
+
+
                 <div class="titlu">Nume intreg:</div>
                 <div>
                     <!-- pattern="[a-zA-Z]{5,}" -->
@@ -1113,10 +1139,7 @@
                     <!-- <input type="text" name="Mesaj" value="Da"> -->
                     <input type="number" name="Total" pattern="[0-9-]*" value="0">
                 </div>
-                <div class="titlu">Mesaj (optional) :</div>
-                <div>
-                    <input type="textarea" name="Msg">
-                </div>
+
                 <!--                 <div>
                         <label class="container">
                             <input class="calitateJs" name="CEx" type="checkbox" required>

@@ -545,6 +545,18 @@
             width: 50px;
         }
 
+        [name="OInB"],
+        [name="OIsB"],
+        [name="OInS"],
+        [name="OIsS"]{
+            width: 70px;
+        }
+        .hourStrip{
+            display: inline-block;
+    padding: 0;
+    margin: 0;
+        }
+
         input:hover {
             background-color: #CCC4C0;
         }
@@ -970,40 +982,31 @@
                 </div>
                 <div>
                     <div>
-                        De la ora:
+                        Interval:
                     </div>
                 </div>
                 <div>
-                    <input type="number" name="OIB" placeholder="ora" pattern="[0-9]*" required>
+                    <input type="number" name="OInB" placeholder="ora inceput" pattern="[0-9]*" min="0" max="24"
+                        required>
+                    <div class="hourStrip">-</div>
+                    <input type="number" name="OIsB" placeholder="ora sfarsit" pattern="[0-9]*" min="0" max="24"
+                        required>
                 </div>
                 <div>
                     <div>
-                        *Sugestie ora 16:00
-                    </div>
-                </div>
-                <div>
-                    <div>
-                        Pana la ora:
-                    </div>
-                </div>
-                <div>
-                    <input type="number" name="OIB" placeholder="ora" pattern="[0-9]*" required>
-                </div>
-                <div>
-                    <div>
-                        *Sugestie ora 18:00
+                        *Sugestie 16-18
                     </div>
                 </div>
 
 
                 <div class="titlu">Sala / Restaurant</div>
                 <div>
-                        <label class="container">
-                            <input class="echipareJs" name="EFo" type="checkbox" checked>
-                            <span class="checkmark"></span>
-                            <div>Alta data fata de biserica</div>
-                        </label>
-                    </div>
+                    <label class="container">
+                        <input class="echipareJs" name="EFo" type="checkbox" checked>
+                        <span class="checkmark"></span>
+                        <div>Alta data fata de biserica</div>
+                    </label>
+                </div>
                 <div>
                     <div>
                         Data
@@ -1016,28 +1019,19 @@
                 </div>
                 <div>
                     <div>
-                        De la ora:
+                        Interval:
                     </div>
                 </div>
                 <div>
-                    <input type="number" name="OIB" placeholder="ora" pattern="[0-9]*" required>
+                    <input type="number" name="OInS" placeholder="ora inceput" pattern="[0-9]*" min="0" max="24"
+                        required>
+                    <div class="hourStrip">-</div>
+                    <input type="number" name="OIsS" placeholder="ora sfarsit" pattern="[0-9]*" min="0" max="24"
+                        required>
                 </div>
                 <div>
                     <div>
-                        *Sugestie ora 20:00
-                    </div>
-                </div>
-                <div>
-                    <div>
-                        Pana la ora:
-                    </div>
-                </div>
-                <div>
-                    <input type="number" name="OIB" placeholder="ora" pattern="[0-9]*" required>
-                </div>
-                <div>
-                    <div>
-                        *Sugestie ora 24:00
+                        *Sugestie 19-24
                     </div>
                 </div>
 
@@ -1048,16 +1042,16 @@
 
 
 
-                <div>
+                <!-- <div>
                     <div>Durata aproximativa: </div>
                     <div>
                         <input id="ore" type="number" name="Ore" min="1" max="72" placeholder="x" oninput="if(this.value>72){ this.value= 72;}if(this.value<1){ this.value='';}"
                             required>&nbsp; ore
                     </div>
-                </div>
+                </div> -->
                 <!-- <div class="titlu">Pret:</div> -->
                 <div>
-                   Valoare aproximativa eveniment: 
+                    Valoare aproximativa eveniment:
                     <div>(
                         <span id="pret" class="pret">x</span>lei + transport
                         <span class="mancare"> + mancare</span> )
@@ -1076,7 +1070,8 @@
                 <div class="titlu">Nume intreg:</div>
                 <div>
                     <!-- pattern="[a-zA-Z]{5,}" -->
-                    <input type="text" name="nIn" oninput="this.value = this.value.replace(/[^a-zA-Z -]/g, '');" required>
+                    <input type="text" name="nIn" oninput="this.value = this.value.replace(/[^a-zA-Z -]/g, '');"
+                        required>
                     <!-- this.value = this.value.replace(/(\..*)\./g, '$1'); -->
                 </div>
                 <div class="titlu">Numar telefon:</div>
@@ -1089,40 +1084,40 @@
                 </div>
                 <div class="titlu">Optionale</div>
                 <div>
-                        <label class="container">
-                            <input class="echipareJs" name="EFo" type="checkbox">
-                            <span class="checkmark"></span>
-                            <div>Sedinta foto copil [ 3xh ]</div>
-                        </label>
-                    </div> 
+                    <label class="container">
+                        <input class="echipareJs" name="EFo" type="checkbox">
+                        <span class="checkmark"></span>
+                        <div>Sedinta foto copil [ 3xh ]</div>
+                    </label>
+                </div>
                 <div>
-                        <label class="container">
-                            <input class="echipareJs" name="EFo" type="checkbox">
-                            <span class="checkmark"></span>
-                            <div>Tablou canvas [ 210lei ]</div>
-                        </label>
-                    </div>
+                    <label class="container">
+                        <input class="echipareJs" name="EFo" type="checkbox">
+                        <span class="checkmark"></span>
+                        <div>Tablou canvas [ 210lei ]</div>
+                    </label>
+                </div>
                 <div>
-                        <label class="container">
-                            <input class="echipareJs" name="EFo" type="checkbox">
-                            <span class="checkmark"></span>
-                            <div>Album Mare [ 1200lei ]</div>
-                        </label>
-                    </div>
-                    <div>
-                            <label class="container">
-                                <input class="echipareJs" name="EFo" type="checkbox">
-                                <span class="checkmark"></span>
-                                <div>Album Mediu [ 800lei ]</div>
-                            </label>
-                        </div>
-                        <div>
-                                <label class="container">
-                                    <input class="echipareJs" name="EFo" type="checkbox">
-                                    <span class="checkmark"></span>
-                                    <div>Album Mic [ 400lei ]</div>
-                                </label>
-                            </div>
+                    <label class="container">
+                        <input class="echipareJs" name="EFo" type="checkbox">
+                        <span class="checkmark"></span>
+                        <div>Album Mare [ 1200lei ]</div>
+                    </label>
+                </div>
+                <div>
+                    <label class="container">
+                        <input class="echipareJs" name="EFo" type="checkbox">
+                        <span class="checkmark"></span>
+                        <div>Album Mediu [ 800lei ]</div>
+                    </label>
+                </div>
+                <div>
+                    <label class="container">
+                        <input class="echipareJs" name="EFo" type="checkbox">
+                        <span class="checkmark"></span>
+                        <div>Album Mic [ 400lei ]</div>
+                    </label>
+                </div>
                 <div>
                     <label class="container">
                         <input class="echipareJs" name="EFo" type="checkbox">
@@ -1131,36 +1126,36 @@
                     </label>
                 </div>
                 <div>
-                        <label class="container">
-                            <input class="echipareJs" name="EFo" type="checkbox">
-                            <span class="checkmark"></span>
-                            <div>Echipare superioara [ + 30%/h ]</div>
-                        </label>
+                    <label class="container">
+                        <input class="echipareJs" name="EFo" type="checkbox">
+                        <span class="checkmark"></span>
+                        <div>Echipare superioara [ + 30%/h ]</div>
+                    </label>
+                </div>
+
+
+                <div>
+                    <label class="container">
+                        <input class="echipareJs" name="EFo" type="checkbox">
+                        <span class="checkmark"></span>
+                        <div>Surprinde cat mai multe momente [ + 50% - meniu]</div>
+                    </label>
+                </div>
+
+                <div>
+                    Valoare TOTALA aproximativa eveniment x + optionale y:
+                    <div>(
+                        <span id="pret" class="pret">x</span>lei + transport
+                        <span class="mancare"> + mancare</span> )
                     </div>
+                </div>
 
+                <!-- *30min in plus pe gratis -->
 
-                    <div>
-                            <label class="container">
-                                <input class="echipareJs" name="EFo" type="checkbox">
-                                <span class="checkmark"></span>
-                                <div>Surprinde cat mai multe momente [ + 50%  - meniu]</div>
-                            </label>
-                        </div>
-
-                        <div>
-                                Valoare TOTALA aproximativa eveniment x  + optionale y: 
-                                 <div>(
-                                     <span id="pret" class="pret">x</span>lei + transport
-                                     <span class="mancare"> + mancare</span> )
-                                 </div>
-                             </div>
-
-<!-- *30min in plus pe gratis -->
-
-                    <div class="titlu">Mesaj (optional) :</div>
-                    <div>
-                        <input type="textarea" name="Msg">
-                    </div>
+                <div class="titlu">Mesaj (optional) :</div>
+                <div>
+                    <input type="textarea" name="Msg">
+                </div>
                 <div>
                     <button class="button-success ">
                         Trimite
@@ -1218,35 +1213,12 @@
                             <br>gmail.com</h3>
                     </a>
                 </div>
-                <!-- <a class="button-special" href="https://goo.gl/maps/Zv9yFYr71CK2" target="_blank">
-                <div>
-                    <h2>Suceava</h2>
-                    <h3>Romania &lt; Europe</h3>
-                </div>
-            </a> -->
-
-                <!-- <div class="last">
-                <a href="https://www.facebook.com/so.alenax/" target="_blank">
-                    <button>Facebook</button>
-                </a>
-                <a href="https://www.instagram.com/so.alenax/" target="_blank">
-                    <button>Instagram</button>
-                </a>
-            </div> -->
             </div>
             <!-- /contact -->
             <!-- tips -->
             <div class="tips overlay-text dn">
                 <div>
-                    <!-- <h2>Service(number of events)</h2>
-                <h3>Every service has it`s portofolio and it`s price</h3>
-                <h2>Choose between
-              <u>Bronze</u>,
-              <u>Silver</u> and
-              <u>Gold</u> to see extra options</h2>
-                <h3>Contact me for personalized shooting and I will make a good offer</h3>
-                <h3>Practice your modeling before shooting and you
-                    <u>may</u> receive a nice discount!!</h3> -->
+
                 </div>
             </div>
             <!-- /tips -->
@@ -1266,10 +1238,12 @@
                             Am inceput fotografia in 2012 cu portrete, fiind si in prezent cea mai mare pasiune.
                         </span>
                         <span class="marginAbout">
-                            In 2014 am incercat fotografia macro, iar usor, usor am inceput sa fim foarte buni la surprinderea celor mai fine detalii.
+                            In 2014 am incercat fotografia macro, iar usor, usor am inceput sa fim foarte buni la
+                            surprinderea celor mai fine detalii.
                         </span>
                         <span class="marginAbout">
-                            In 2018 am inceput fotografia si filmarea de evenimente, dandu-ne silinta sa fim din ce in ce mai buni pe zi ce trece.
+                            In 2018 am inceput fotografia si filmarea de evenimente, dandu-ne silinta sa fim din ce in
+                            ce mai buni pe zi ce trece.
                         </span>
                         <span class="marginAbout">
                             Contactati-ne si va veti bucura ca ne-ati ales.
@@ -1300,6 +1274,10 @@
         var twoDaysNext = new Date().getDate() + 2;
         var month = new Date().getMonth() + 1;
         var year = new Date().getFullYear();
+        // Ora biserica
+        var OIB = document.getElementsByName('OIB')[0];
+        OIB.value = "00-22";
+        // OIB.value = "22";
 
         // pret
         var pret = 0;
@@ -1312,7 +1290,7 @@
         for (var i = 0; i < inputs.length; i++) {
             inputs[i].addEventListener('change', calculeazaPret);
             // live complete oninput
-            if (inputs[i].name == "DaY" || inputs[i].name == "DaM" || inputs[i].name == "DaD") { } else {
+            if (inputs[i].name == "DaY" || inputs[i].name == "DaM" || inputs[i].name == "DaD") {} else {
                 // document.addEventListener("keydown", keyDownTextField, false);
                 inputs[i].addEventListener('input', calculeazaPret);
             }
@@ -1324,6 +1302,7 @@
         var pretPLE = 900;
 
         function calculeazaPret() {
+
             // date
             // day
             if (DaD.value > 31) {
@@ -1377,7 +1356,7 @@
                         // return true;
                         break;
                     }
-                } else { }
+                } else {}
             }
             for (var i = 0; i < requiredInputs.length; i++) {
                 // echipare
@@ -1390,7 +1369,7 @@
                         // return true;
                         break;
                     }
-                } else { }
+                } else {}
             }
             for (var i = 0; i < requiredInputs.length; i++) {
                 // calitate
@@ -1403,7 +1382,7 @@
                         // return 0;
                         break;
                     }
-                } else { }
+                } else {}
             }
             if (requiredServiciu == 0) {
                 trimite.innerText = "Alege serviciu!";
@@ -1419,7 +1398,7 @@
                         if (requiredServiciu == 1 && requiredEchipare == 1 && requiredCalitate == 1) {
                             trimite.innerText = "TRIMITE";
                             trimite.disabled = false;
-                        } else { }
+                        } else {}
                     }
                 }
             }

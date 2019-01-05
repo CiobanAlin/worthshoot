@@ -1275,9 +1275,11 @@
         var month = new Date().getMonth() + 1;
         var year = new Date().getFullYear();
         // Ora biserica
-        var OIB = document.getElementsByName('OIB')[0];
-        OIB.value = "00-22";
-        // OIB.value = "22";
+        var OInB = document.getElementsByName('OInB')[0];
+        var OIsB = document.getElementsByName('OIsB')[0];
+        // Ora sala
+        var OInS = document.getElementsByName('OInS')[0];
+        var OIsS = document.getElementsByName('OIsS')[0];
 
         // pret
         var pret = 0;
@@ -1302,6 +1304,31 @@
         var pretPLE = 900;
 
         function calculeazaPret() {
+            // ora
+            // if (OInB.value < 8) {
+            //     OInB.value = 8;
+            // }
+            if (OInB.value > 18) {
+                OInB.value = 18;
+            }
+
+            // if (OIsB.value <= OInB.value) {
+            //     OIsB.value = OInB.value + 2;
+            // }
+            if (OIsB.value > 20) {
+                OIsB.value = 20;
+            }
+
+            if (OInS.value > 24) {
+                OInS.value = 24;
+            }
+
+            if (OIsS.value > 24) {
+                OIsS.value = 24;
+            }
+
+
+
 
             // date
             // day
@@ -1405,126 +1432,126 @@
 
 
             // calitate
-            if (this.className == "calitateJs") {
-                var inputs = document.getElementsByClassName("calitateJs");
-                for (var i = 0; i < inputs.length; i++) {
-                    inputs[i].checked = false;
-                }
-                this.checked = true;
-            }
+            // if (this.className == "calitateJs") {
+            //     var inputs = document.getElementsByClassName("calitateJs");
+            //     for (var i = 0; i < inputs.length; i++) {
+            //         inputs[i].checked = false;
+            //     }
+            //     this.checked = true;
+            // }
             // serviciu
-            if (this.className == "serviciuJs") {
-                var inputs = document.getElementsByClassName("serviciuJs");
-                for (var i = 0; i < inputs.length; i++) {
-                    inputs[i].checked = false;
-                }
-                this.checked = true;
-            }
+            // if (this.className == "serviciuJs") {
+            //     var inputs = document.getElementsByClassName("serviciuJs");
+            //     for (var i = 0; i < inputs.length; i++) {
+            //         inputs[i].checked = false;
+            //     }
+            //     this.checked = true;
+            // }
             // tip
-            if (this.className == "tipJs") {
-                var inputs = document.getElementsByClassName("tipJs");
-                for (var i = 0; i < inputs.length; i++) {
-                    inputs[i].checked = false;
-                }
-                this.checked = true;
-            }
+            // if (this.className == "tipJs") {
+            //     var inputs = document.getElementsByClassName("tipJs");
+            //     for (var i = 0; i < inputs.length; i++) {
+            //         inputs[i].checked = false;
+            //     }
+            //     this.checked = true;
+            // }
             // pret 
-            if (document.getElementsByName('CBa')[0].checked) {
-                pret = pretPLB;
-            }
-            if (document.getElementsByName('CAv')[0].checked) {
-                pret = pretPLA;
-            }
-            if (document.getElementsByName('CLu')[0].checked) {
-                pret = pretPLL;
-            }
-            if (document.getElementsByName('CEx')[0].checked) {
-                pret = pretPLE;
-            }
+            // if (document.getElementsByName('CBa')[0].checked) {
+            //     pret = pretPLB;
+            // }
+            // if (document.getElementsByName('CAv')[0].checked) {
+            //     pret = pretPLA;
+            // }
+            // if (document.getElementsByName('CLu')[0].checked) {
+            //     pret = pretPLL;
+            // }
+            // if (document.getElementsByName('CEx')[0].checked) {
+            //     pret = pretPLE;
+            // }
 
             // ore
-            ore = document.getElementById("ore").value;
+            // ore = document.getElementById("ore").value;
             // serviciu
             // foto
-            if (document.getElementsByName('EFo')[0].checked) {
-                foto = 1;
-                if (document.getElementsByName('EVi')[0].checked) {
-                    video = 0.6;
-                    if (document.getElementsByName('EDr')[0].checked) {
-                        drona = 0.2;
-                    } else {
-                        drona = 0;
-                    }
-                } else {
-                    video = 0;
-                    if (document.getElementsByName('EDr')[0].checked) {
-                        drona = 0.4;
-                    } else {
-                        drona = 0;
-                    }
-                }
-                // console.log(foto, video, drona);
-            } else {
-                foto = 0;
-                // video
-                if (document.getElementsByName('EVi')[0].checked) {
-                    video = 1;
-                    if (document.getElementsByName('EDr')[0].checked) {
-                        drona = 0.4;
-                    } else {
-                        drona = 0;
-                    }
-                    // console.log(foto, video, drona);
-                } else {
-                    video = 0;
-                    // drona
-                    if (document.getElementsByName('EDr')[0].checked) {
-                        drona = 1;
-                        // console.log(foto, video, drona);
-                    } else {
-                        drona = 0;
-                    }
-                }
-            }
-            // pana la
-            var echipare = foto + video + drona;
-            if (echipare == 0) {
-                echipare = 1.8;
-            }
-            var timeNormal = 15;
-            // 24
-            var PLB = timeNormal * pretPLB * echipare + pretPLB;
-            var PLA = timeNormal * pretPLA * echipare + pretPLA;
-            var PLL = timeNormal * pretPLL * echipare + pretPLL;
-            var PLE = timeNormal * pretPLE * echipare + pretPLE;
-            // PLB 
-            document.getElementsByClassName("PLBJs")[0].innerHTML = PLB;
-            // PLA 
-            document.getElementsByClassName("PLAJs")[0].innerHTML = PLA;
-            // PLL 
-            document.getElementsByClassName("PLLJs")[0].innerHTML = PLL;
-            // PLE 
-            document.getElementsByClassName("PLEJs")[0].innerHTML = PLE;
-            // verificare
-            if (foto == 0 && video == 0 && drona == 0) {
-                pret = 0;
-            }
-            if (ore == 0) {
-                pret = 0;
-            }
-            if (ore < 3) {
-                document.getElementsByClassName("mancare")[0].style.display = "none";
-            } else {
-                document.getElementsByClassName("mancare")[0].style.display = "inline";
-            }
-            // total
-            var Total = ore * pret * (foto + video + drona) + pret;
-            if (pret == 0) {
-                document.getElementById("pret").innerHTML = "x";
-            } else {
-                document.getElementById("pret").innerHTML = Total;
-                document.getElementsByName("Total")[0].value = Total;
-            }
+            // if (document.getElementsByName('EFo')[0].checked) {
+            //     foto = 1;
+            //     if (document.getElementsByName('EVi')[0].checked) {
+            //         video = 0.6;
+            //         if (document.getElementsByName('EDr')[0].checked) {
+            //             drona = 0.2;
+            //         } else {
+            //             drona = 0;
+            //         }
+            //     } else {
+            //         video = 0;
+            //         if (document.getElementsByName('EDr')[0].checked) {
+            //             drona = 0.4;
+            //         } else {
+            //             drona = 0;
+            //         }
+            //     }
+            //     // console.log(foto, video, drona);
+            // } else {
+            //     foto = 0;
+            //     // video
+            //     if (document.getElementsByName('EVi')[0].checked) {
+            //         video = 1;
+            //         if (document.getElementsByName('EDr')[0].checked) {
+            //             drona = 0.4;
+            //         } else {
+            //             drona = 0;
+            //         }
+            //         // console.log(foto, video, drona);
+            //     } else {
+            //         video = 0;
+            //         // drona
+            //         if (document.getElementsByName('EDr')[0].checked) {
+            //             drona = 1;
+            //             // console.log(foto, video, drona);
+            //         } else {
+            //             drona = 0;
+            //         }
+            //     }
+            // }
+            // // pana la
+            // var echipare = foto + video + drona;
+            // if (echipare == 0) {
+            //     echipare = 1.8;
+            // }
+            // var timeNormal = 15;
+            // // 24
+            // var PLB = timeNormal * pretPLB * echipare + pretPLB;
+            // var PLA = timeNormal * pretPLA * echipare + pretPLA;
+            // var PLL = timeNormal * pretPLL * echipare + pretPLL;
+            // var PLE = timeNormal * pretPLE * echipare + pretPLE;
+            // // PLB 
+            // document.getElementsByClassName("PLBJs")[0].innerHTML = PLB;
+            // // PLA 
+            // document.getElementsByClassName("PLAJs")[0].innerHTML = PLA;
+            // // PLL 
+            // document.getElementsByClassName("PLLJs")[0].innerHTML = PLL;
+            // // PLE 
+            // document.getElementsByClassName("PLEJs")[0].innerHTML = PLE;
+            // // verificare
+            // if (foto == 0 && video == 0 && drona == 0) {
+            //     pret = 0;
+            // }
+            // if (ore == 0) {
+            //     pret = 0;
+            // }
+            // if (ore < 3) {
+            //     document.getElementsByClassName("mancare")[0].style.display = "none";
+            // } else {
+            //     document.getElementsByClassName("mancare")[0].style.display = "inline";
+            // }
+            // // total
+            // var Total = ore * pret * (foto + video + drona) + pret;
+            // if (pret == 0) {
+            //     document.getElementById("pret").innerHTML = "x";
+            // } else {
+            //     document.getElementById("pret").innerHTML = Total;
+            //     document.getElementsByName("Total")[0].value = Total;
+            // }
         };
     </script>
     <!-- // form -->

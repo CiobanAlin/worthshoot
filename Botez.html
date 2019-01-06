@@ -1375,18 +1375,18 @@
                 DaMB.value = 12;
             }
             // year
-            if (DaYB.value > year + 4) {
-                DaYB.value = year + 4;
+            if (DaYB.value > yearB + 4) {
+                DaYB.value = yearB + 4;
             }
-            if (DaYB.value < year) {
-                DaYB.value = year;
+            if (DaYB.value < yearB) {
+                DaYB.value = yearB;
             }
             // date rules
-            if (DaYB.value == year && DaMB.value < month) {
-                DaMB.value = month;
+            if (DaYB.value == yearB && DaMB.value < monthB) {
+                DaMB.value = monthB;
             }
-            if (DaYB.value == year && DaMB.value == month && DaDB.value < twoDaysNext) {
-                DaDB.value = twoDaysNext;
+            if (DaYB.value == yearB && DaMB.value == monthB && DaDB.value < twoDaysNextB) {
+                DaDB.value = twoDaysNextB;
                 // console.log(twoDaysNext);
             }
             if (DaDB.value < 1) {
@@ -1414,18 +1414,18 @@
                 DaMS.value = 12;
             }
             // year
-            if (DaYS.value > year + 4) {
-                DaYS.value = year + 4;
+            if (DaYS.value > yearS + 4) {
+                DaYS.value = yearS + 4;
             }
-            if (DaYS.value < year) {
-                DaYS.value = year;
+            if (DaYS.value < yearS) {
+                DaYS.value = yearS;
             }
             // date rules
-            if (DaYS.value == year && DaMS.value < month) {
-                DaMS.value = month;
+            if (DaYS.value == yearS && DaMS.value < monthS) {
+                DaMS.value = monthS;
             }
-            if (DaYS.value == year && DaMS.value == month && DaDS.value < twoDaysNext) {
-                DaDS.value = twoDaysNext;
+            if (DaYS.value == yearS && DaMS.value == month && DaDS.value < twoDaysNextS) {
+                DaDS.value = twoDaysNextS;
                 // console.log(twoDaysNext);
             }
             if (DaDS.value < 1) {

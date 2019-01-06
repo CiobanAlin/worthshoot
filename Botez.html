@@ -900,7 +900,7 @@
             display: none;
         }
 
-        .adfdb{
+        .adfdb {
             display: none;
         }
     </style>
@@ -1087,9 +1087,9 @@
                     <label class="container">
                         <input class="echipareJs" name="OpSfc" type="checkbox">
                         <span class="checkmark"></span>
-                        <div>Sedinta foto copil 
-                            <br>
-                            [ <span id="sfc">x</span>lei ]</div>
+                        <div>Sedinta foto copil
+                            <br> [
+                            <span id="sfc">x</span>lei ]</div>
                     </label>
                 </div>
                 <div>
@@ -1124,18 +1124,18 @@
                     <label class="container">
                         <input class="echipareJs" name="OpEart" type="checkbox">
                         <span class="checkmark"></span>
-                        <div>Editare artistica 
-                                <br>
-                                [ <span id="ea">x</span>lei ] </div>
+                        <div>Editare artistica
+                            <br> [
+                            <span id="ea">x</span>lei ] </div>
                     </label>
                 </div>
                 <div>
                     <label class="container">
                         <input class="echipareJs" name="OpEsup" type="checkbox">
                         <span class="checkmark"></span>
-                        <div>Echipare superioara 
-                                <br>
-                                [ <span id="es">x</span>lei ]
+                        <div>Echipare superioara
+                            <br> [
+                            <span id="es">x</span>lei ]
                         </div>
                     </label>
                 </div>
@@ -1145,9 +1145,9 @@
                     <label class="container">
                         <input class="echipareJs" name="OpScmmm" type="checkbox">
                         <span class="checkmark"></span>
-                        <div>Surprinde cat mai multe momente 
-                                <br>
-                                [ <span id="scmmm">x</span>lei ]
+                        <div>Surprinde cat mai multe momente
+                            <br> [
+                            <span id="scmmm">x</span>lei ]
                         </div>
                     </label>
                 </div>
@@ -1312,8 +1312,21 @@
         var pretPLE = 900;
 
         var valoare = 90;
+        var sfc = valoare * 3 + valoare * 2;
+        document.getElementById("sfc").innerHTML = sfc;
 
-        document.getElementById("sfc").innerHTML = valoare * 3 + valoare * 2;
+        var Tc = 210;
+        var AMare = 1200;
+        var AMediu = 800;
+        var AMic = 400;
+        var sfcPret = 0;
+        var TcPret = 0;
+        var AMarePret = 0;
+        var AMediuPret = 0;
+        var AMicPret = 0;
+        var eaPret = 0;
+        var esPret = 0;
+        var scmmmPret = 0;
 
         function calculeazaPret() {
             // ora
@@ -1401,7 +1414,7 @@
                 console.log("calculSala");
                 console.log(calculSala);
                 calculSala = calculSala - (calculSala * 2);
-                pret = calculSala + OIsSV ;
+                pret = calculSala + OIsSV;
             }
 
             console.log(pret);
@@ -1422,29 +1435,68 @@
                 document.getElementById("es").innerHTML = es;
                 var scmmm = pret / 100 * 50;
                 document.getElementById("scmmm").innerHTML = scmmm;
-                var Tc = 210;
-                var AMare = 1200;
-                var AMediu = 800;
-                var AMic = 400;
-                document.getElementById("pretTotal").innerHTML = pret + ea + es + scmmm + Tc + AMare + AMediu + AMic;  
-            }else{
+
+
+                if (document.getElementsByName("OpSfc")[0].checked) {
+                    sfcPret = sfc;
+                } else {
+                    sfcPret = 0;
+                }
+                if (document.getElementsByName("OpTc")[0].checked) {
+                    TcPret = Tc;
+                } else {
+                    TcPret = 0;
+                }
+                if (document.getElementsByName("OpAMare")[0].checked) {
+                    AMarePret = AMare;
+                } else {
+                    AMarePret = 0;
+                }
+                if (document.getElementsByName("OpAMediu")[0].checked) {
+                    AMediuPret = AMediu;
+                } else {
+                    AMediuPret = 0;
+                }
+                if (document.getElementsByName("OpAMic")[0].checked) {
+                    AMicPret = AMic;
+                } else {
+                    AMicPret = 0;
+                }
+                if (document.getElementsByName("OpEart")[0].checked) {
+                    eaPret = ea;
+                } else {
+                    eaPret = 0;
+                }
+                if (document.getElementsByName("OpEsup")[0].checked) {
+                    esPret = es;
+                } else {
+                    esPret = 0;
+                }
+                if (document.getElementsByName("OpScmmm")[0].checked) {
+                    scmmmPret = scmmm;
+                } else {
+                    scmmmPret = 0;
+                }
+
+                document.getElementById("pretTotal").innerHTML = pret + eaPret + esPret + scmmmPret + TcPret + AMarePret + AMediuPret + AMicPret + sfcPret;
+            } else {
                 document.getElementById("pret").innerHTML = "x";
                 document.getElementById("ea").innerHTML = "x";
                 document.getElementById("es").innerHTML = "x";
                 document.getElementById("scmmm").innerHTML = "x";
-                document.getElementsByName("Total")[0].value = 0;  
+                document.getElementsByName("Total")[0].value = 0;
             }
 
 
-// Adfdb
-var Adfdb = document.getElementsByName("Adfdb")[0].checked;
-if(Adfdb){
-    document.getElementsByClassName("Adfdb")[0].style.display = "block";
-    document.getElementsByClassName("Adfdb")[1].style.display = "block";
-}else{
-    document.getElementsByClassName("Adfdb")[0].style.display = "none";
-    document.getElementsByClassName("Adfdb")[1].style.display = "none";
-}
+            // Adfdb
+            var Adfdb = document.getElementsByName("Adfdb")[0].checked;
+            if (Adfdb) {
+                document.getElementsByClassName("Adfdb")[0].style.display = "block";
+                document.getElementsByClassName("Adfdb")[1].style.display = "block";
+            } else {
+                document.getElementsByClassName("Adfdb")[0].style.display = "none";
+                document.getElementsByClassName("Adfdb")[1].style.display = "none";
+            }
 
 
             //required

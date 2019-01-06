@@ -548,13 +548,14 @@
         [name="OInB"],
         [name="OIsB"],
         [name="OInS"],
-        [name="OIsS"]{
+        [name="OIsS"] {
             width: 70px;
         }
-        .hourStrip{
+
+        .hourStrip {
             display: inline-block;
-    padding: 0;
-    margin: 0;
+            padding: 0;
+            margin: 0;
         }
 
         input:hover {
@@ -986,11 +987,9 @@
                     </div>
                 </div>
                 <div>
-                    <input type="number" name="OInB" placeholder="ora inceput" pattern="[0-9]*" min="0" max="24"
-                        required>
+                    <input type="number" name="OInB" placeholder="ora inceput" pattern="[0-9]*" min="0" max="24" required>
                     <div class="hourStrip">-</div>
-                    <input type="number" name="OIsB" placeholder="ora sfarsit" pattern="[0-9]*" min="0" max="24"
-                        required>
+                    <input type="number" name="OIsB" placeholder="ora sfarsit" pattern="[0-9]*" min="0" max="24" required>
                 </div>
                 <div>
                     <div>
@@ -1023,11 +1022,9 @@
                     </div>
                 </div>
                 <div>
-                    <input type="number" name="OInS" placeholder="ora inceput" pattern="[0-9]*" min="0" max="24"
-                        required>
+                    <input type="number" name="OInS" placeholder="ora inceput" pattern="[0-9]*" min="0" max="24" required>
                     <div class="hourStrip">-</div>
-                    <input type="number" name="OIsS" placeholder="ora sfarsit" pattern="[0-9]*" min="0" max="24"
-                        required>
+                    <input type="number" name="OIsS" placeholder="ora sfarsit" pattern="[0-9]*" min="0" max="24" required>
                 </div>
                 <div>
                     <div>
@@ -1070,8 +1067,7 @@
                 <div class="titlu">Nume intreg:</div>
                 <div>
                     <!-- pattern="[a-zA-Z]{5,}" -->
-                    <input type="text" name="nIn" oninput="this.value = this.value.replace(/[^a-zA-Z -]/g, '');"
-                        required>
+                    <input type="text" name="nIn" oninput="this.value = this.value.replace(/[^a-zA-Z -]/g, '');" required>
                     <!-- this.value = this.value.replace(/(\..*)\./g, '$1'); -->
                 </div>
                 <div class="titlu">Numar telefon:</div>
@@ -1238,12 +1234,10 @@
                             Am inceput fotografia in 2012 cu portrete, fiind si in prezent cea mai mare pasiune.
                         </span>
                         <span class="marginAbout">
-                            In 2014 am incercat fotografia macro, iar usor, usor am inceput sa fim foarte buni la
-                            surprinderea celor mai fine detalii.
+                            In 2014 am incercat fotografia macro, iar usor, usor am inceput sa fim foarte buni la surprinderea celor mai fine detalii.
                         </span>
                         <span class="marginAbout">
-                            In 2018 am inceput fotografia si filmarea de evenimente, dandu-ne silinta sa fim din ce in
-                            ce mai buni pe zi ce trece.
+                            In 2018 am inceput fotografia si filmarea de evenimente, dandu-ne silinta sa fim din ce in ce mai buni pe zi ce trece.
                         </span>
                         <span class="marginAbout">
                             Contactati-ne si va veti bucura ca ne-ati ales.
@@ -1292,7 +1286,7 @@
         for (var i = 0; i < inputs.length; i++) {
             inputs[i].addEventListener('change', calculeazaPret);
             // live complete oninput
-            if (inputs[i].name == "DaY" || inputs[i].name == "DaM" || inputs[i].name == "DaD") {} else {
+            if (inputs[i].name == "DaY" || inputs[i].name == "DaM" || inputs[i].name == "DaD") { } else {
                 // document.addEventListener("keydown", keyDownTextField, false);
                 inputs[i].addEventListener('input', calculeazaPret);
             }
@@ -1302,6 +1296,8 @@
         var pretPLA = 140;
         var pretPLL = 300;
         var pretPLE = 900;
+
+        var valoare = 90;
 
         function calculeazaPret() {
             // ora
@@ -1319,6 +1315,7 @@
                 OIsB.value = 20;
             }
 
+            // sala
             if (OInS.value > 24) {
                 OInS.value = 24;
             }
@@ -1370,65 +1367,82 @@
                     DaM.value = "0" + i;
                 }
             }
-            //required
-            var requiredInputs = document.getElementsByTagName('input');
-            for (var i = 0; i < requiredInputs.length; i++) {
-                // serviciu
-                if (requiredInputs[i].className == "serviciuJs") {
-                    if (requiredInputs[i].checked == false) {
-                        trimite.disabled = true;
-                        requiredServiciu = 0;
-                    } else {
-                        requiredServiciu = 1;
-                        // return true;
-                        break;
-                    }
-                } else {}
-            }
-            for (var i = 0; i < requiredInputs.length; i++) {
-                // echipare
-                if (requiredInputs[i].className == "echipareJs") {
-                    if (requiredInputs[i].checked == false) {
-                        trimite.disabled = true;
-                        requiredEchipare = 0;
-                    } else {
-                        requiredEchipare = 1;
-                        // return true;
-                        break;
-                    }
-                } else {}
-            }
-            for (var i = 0; i < requiredInputs.length; i++) {
-                // calitate
-                if (requiredInputs[i].className == "calitateJs") {
-                    if (requiredInputs[i].checked == false) {
-                        trimite.disabled = true;
-                        requiredCalitate == 0;
-                    } else {
-                        requiredCalitate = 1;
-                        // return 0;
-                        break;
-                    }
-                } else {}
-            }
-            if (requiredServiciu == 0) {
-                trimite.innerText = "Alege serviciu!";
-            } else {
 
-                // }
-                if (requiredEchipare == 0) {
-                    trimite.innerText = "Alege echipare!";
-                } else {
-                    if (requiredCalitate == 0) {
-                        trimite.innerText = "Alege nivel calitate!";
-                    } else {
-                        if (requiredServiciu == 1 && requiredEchipare == 1 && requiredCalitate == 1) {
-                            trimite.innerText = "TRIMITE";
-                            trimite.disabled = false;
-                        } else {}
-                    }
-                }
+            // pret
+            var pret = OIsS.value - OInS.value;
+            console.log(pret);
+            // if (OInS.value > OIsS.value) {
+                pret = (OInS.value + OIsS.value) - 25 ;
+            // }
+            console.log(pret);
+            pret = pret + (OIsB.value - OInB.value);
+            console.log(pret);
+            pret = (pret + 4) * valoare;
+            console.log(pret);
+            if (OInB.value != "" && OIsB.value != "" && OInS.value != "" && OIsS.value != "") {
+                document.getElementById("pret").innerHTML = pret;
+                document.getElementsByName("Total")[0].value = pret;
             }
+
+            //required
+            // var requiredInputs = document.getElementsByTagName('input');
+            // for (var i = 0; i < requiredInputs.length; i++) {
+            //     // serviciu
+            //     if (requiredInputs[i].className == "serviciuJs") {
+            //         if (requiredInputs[i].checked == false) {
+            //             trimite.disabled = true;
+            //             requiredServiciu = 0;
+            //         } else {
+            //             requiredServiciu = 1;
+            //             // return true;
+            //             break;
+            //         }
+            //     } else {}
+            // }
+            // for (var i = 0; i < requiredInputs.length; i++) {
+            //     // echipare
+            //     if (requiredInputs[i].className == "echipareJs") {
+            //         if (requiredInputs[i].checked == false) {
+            //             trimite.disabled = true;
+            //             requiredEchipare = 0;
+            //         } else {
+            //             requiredEchipare = 1;
+            //             // return true;
+            //             break;
+            //         }
+            //     } else {}
+            // }
+            // for (var i = 0; i < requiredInputs.length; i++) {
+            //     // calitate
+            //     if (requiredInputs[i].className == "calitateJs") {
+            //         if (requiredInputs[i].checked == false) {
+            //             trimite.disabled = true;
+            //             requiredCalitate == 0;
+            //         } else {
+            //             requiredCalitate = 1;
+            //             // return 0;
+            //             break;
+            //         }
+            //     } else {}
+            // }
+            // if (requiredServiciu == 0) {
+            //     trimite.innerText = "Alege serviciu!";
+            // } else {
+
+            //     // }
+            //     if (requiredEchipare == 0) {
+            //         trimite.innerText = "Alege echipare!";
+            //     } else {
+            //         if (requiredCalitate == 0) {
+            //             trimite.innerText = "Alege nivel calitate!";
+            //         } else {
+            //             if (requiredServiciu == 1 && requiredEchipare == 1 && requiredCalitate == 1) {
+            //                 trimite.innerText = "TRIMITE";
+            //                 trimite.disabled = false;
+            //             } else {}
+            //         }
+            //     }
+            // }
 
 
             // calitate

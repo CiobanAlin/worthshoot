@@ -1366,42 +1366,82 @@
 
             // date
             // day
-            if (DaD.value > 31) {
-                DaD.value = 31;
+            // biserica
+            if (DaDB.value > 31) {
+                DaDB.value = 31;
             }
             // month
-            if (DaM.value > 12) {
-                DaM.value = 12;
+            if (DaMB.value > 12) {
+                DaMB.value = 12;
             }
             // year
-            if (DaY.value > year + 4) {
-                DaY.value = year + 4;
+            if (DaYB.value > year + 4) {
+                DaYB.value = year + 4;
             }
-            if (DaY.value < year) {
-                DaY.value = year;
+            if (DaYB.value < year) {
+                DaYB.value = year;
             }
             // date rules
-            if (DaY.value == year && DaM.value < month) {
-                DaM.value = month;
+            if (DaYB.value == year && DaMB.value < month) {
+                DaMB.value = month;
             }
-            if (DaY.value == year && DaM.value == month && DaD.value < twoDaysNext) {
-                DaD.value = twoDaysNext;
+            if (DaYB.value == year && DaMB.value == month && DaDB.value < twoDaysNext) {
+                DaDB.value = twoDaysNext;
                 // console.log(twoDaysNext);
             }
-            if (DaD.value < 1) {
-                DaD.value = "01";
+            if (DaDB.value < 1) {
+                DaDB.value = "01";
             }
             for (var i = 1; i < 10; i++) {
-                if (DaD.value == i) {
-                    DaD.value = "0" + i;
+                if (DaDB.value == i) {
+                    DaDB.value = "0" + i;
                 }
             }
-            if (DaM.value < 1) {
-                DaM.value = "01";
+            if (DaMB.value < 1) {
+                DaMB.value = "01";
             }
             for (var i = 1; i < 10; i++) {
-                if (DaM.value == i) {
-                    DaM.value = "0" + i;
+                if (DaMB.value == i) {
+                    DaMB.value = "0" + i;
+                }
+            }
+            // sala
+            if (DaDS.value > 31) {
+                DaDS.value = 31;
+            }
+            // month
+            if (DaMS.value > 12) {
+                DaMS.value = 12;
+            }
+            // year
+            if (DaYS.value > year + 4) {
+                DaYS.value = year + 4;
+            }
+            if (DaYS.value < year) {
+                DaYS.value = year;
+            }
+            // date rules
+            if (DaYS.value == year && DaMS.value < month) {
+                DaMS.value = month;
+            }
+            if (DaYS.value == year && DaMS.value == month && DaDS.value < twoDaysNext) {
+                DaDS.value = twoDaysNext;
+                // console.log(twoDaysNext);
+            }
+            if (DaDS.value < 1) {
+                DaDS.value = "01";
+            }
+            for (var i = 1; i < 10; i++) {
+                if (DaDS.value == i) {
+                    DaDS.value = "0" + i;
+                }
+            }
+            if (DaMS.value < 1) {
+                DaMS.value = "01";
+            }
+            for (var i = 1; i < 10; i++) {
+                if (DaMS.value == i) {
+                    DaMS.value = "0" + i;
                 }
             }
 

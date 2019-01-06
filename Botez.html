@@ -981,9 +981,9 @@
                     </div>
                 </div>
                 <div>
-                    <input type="number" name="DaY" placeholder="anul" pattern="[0-9]*" required>
-                    <input type="number" name="DaM" placeholder="luna" pattern="[0-9]*" required>
-                    <input type="number" name="DaD" placeholder="ziua" pattern="[0-9]*" required>
+                    <input type="number" name="DaYB" placeholder="anul" pattern="[0-9]*" required>
+                    <input type="number" name="DaMB" placeholder="luna" pattern="[0-9]*" required>
+                    <input type="number" name="DaDB" placeholder="ziua" pattern="[0-9]*" required>
                 </div>
                 <div>
                     <div>
@@ -1016,9 +1016,9 @@
                     </div>
                 </div>
                 <div class="Adfdb">
-                    <input type="number" name="DaY" placeholder="anul" pattern="[0-9]*" required>
-                    <input type="number" name="DaM" placeholder="luna" pattern="[0-9]*" required>
-                    <input type="number" name="DaD" placeholder="ziua" pattern="[0-9]*" required>
+                    <input type="number" name="DaYS" placeholder="anul" pattern="[0-9]*" required>
+                    <input type="number" name="DaMS" placeholder="luna" pattern="[0-9]*" required>
+                    <input type="number" name="DaDS" placeholder="ziua" pattern="[0-9]*" required>
                 </div>
                 <div>
                     <div>
@@ -1276,12 +1276,20 @@
         var requiredEchipare = 0;
         var requiredCalitate = 0;
         // date
-        var DaD = document.getElementsByName('DaD')[0];
-        var DaM = document.getElementsByName('DaM')[0];
-        var DaY = document.getElementsByName('DaY')[0];
-        var twoDaysNext = new Date().getDate() + 2;
-        var month = new Date().getMonth() + 1;
-        var year = new Date().getFullYear();
+        var DaDB = document.getElementsByName('DaDB')[0];
+        var DaMB = document.getElementsByName('DaMB')[0];
+        var DaYB = document.getElementsByName('DaYB')[0];
+        var twoDaysNextB = new Date().getDate() + 2;
+        var monthB = new Date().getMonth() + 1;
+        var yearB = new Date().getFullYear();
+
+        var DaDS = document.getElementsByName('DaDS')[0];
+        var DaMS = document.getElementsByName('DaMS')[0];
+        var DaYS = document.getElementsByName('DaYS')[0];
+        var twoDaysNextS = new Date().getDate() + 2;
+        var monthS = new Date().getMonth() + 1;
+        var yearS = new Date().getFullYear();
+        
         // Ora biserica
         var OInB = document.getElementsByName('OInB')[0];
         var OIsB = document.getElementsByName('OIsB')[0];

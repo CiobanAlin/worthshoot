@@ -899,6 +899,10 @@
         .notita {
             display: none;
         }
+
+        .adfdb{
+            display: none;
+        }
     </style>
 </head>
 
@@ -1001,17 +1005,17 @@
                 <div class="titlu">Sala / Restaurant</div>
                 <div>
                     <label class="container">
-                        <input class="echipareJs" name="EFo" type="checkbox" checked>
+                        <input class="echipareJs" name="Adfdb" type="checkbox">
                         <span class="checkmark"></span>
                         <div>Alta data fata de biserica</div>
                     </label>
                 </div>
-                <div>
+                <div class="Adfdb">
                     <div>
                         Data
                     </div>
                 </div>
-                <div>
+                <div class="Adfdb">
                     <input type="number" name="DaY" placeholder="anul" pattern="[0-9]*" required>
                     <input type="number" name="DaM" placeholder="luna" pattern="[0-9]*" required>
                     <input type="number" name="DaD" placeholder="ziua" pattern="[0-9]*" required>
@@ -1081,67 +1085,77 @@
                 <div class="titlu">Optionale</div>
                 <div>
                     <label class="container">
-                        <input class="echipareJs" name="EFo" type="checkbox">
+                        <input class="echipareJs" name="OpSfc" type="checkbox">
                         <span class="checkmark"></span>
-                        <div>Sedinta foto copil [ 3xh ]</div>
+                        <div>Sedinta foto copil 
+                            <br>
+                            [ <span id="sfc">x</span>lei ]</div>
                     </label>
                 </div>
                 <div>
                     <label class="container">
-                        <input class="echipareJs" name="EFo" type="checkbox">
+                        <input class="echipareJs" name="OpTc" type="checkbox">
                         <span class="checkmark"></span>
                         <div>Tablou canvas [ 210lei ]</div>
                     </label>
                 </div>
                 <div>
                     <label class="container">
-                        <input class="echipareJs" name="EFo" type="checkbox">
+                        <input class="echipareJs" name="OpAMare" type="checkbox">
                         <span class="checkmark"></span>
                         <div>Album Mare [ 1200lei ]</div>
                     </label>
                 </div>
                 <div>
                     <label class="container">
-                        <input class="echipareJs" name="EFo" type="checkbox">
+                        <input class="echipareJs" name="OpAMediu" type="checkbox">
                         <span class="checkmark"></span>
                         <div>Album Mediu [ 800lei ]</div>
                     </label>
                 </div>
                 <div>
                     <label class="container">
-                        <input class="echipareJs" name="EFo" type="checkbox">
+                        <input class="echipareJs" name="OpAMic" type="checkbox">
                         <span class="checkmark"></span>
                         <div>Album Mic [ 400lei ]</div>
                     </label>
                 </div>
                 <div>
                     <label class="container">
-                        <input class="echipareJs" name="EFo" type="checkbox">
+                        <input class="echipareJs" name="OpEart" type="checkbox">
                         <span class="checkmark"></span>
-                        <div>Editare artistica [+ 30%/h] </div>
+                        <div>Editare artistica 
+                                <br>
+                                [ <span id="ea">x</span>lei ] </div>
                     </label>
                 </div>
                 <div>
                     <label class="container">
-                        <input class="echipareJs" name="EFo" type="checkbox">
+                        <input class="echipareJs" name="OpEsup" type="checkbox">
                         <span class="checkmark"></span>
-                        <div>Echipare superioara [ + 30%/h ]</div>
+                        <div>Echipare superioara 
+                                <br>
+                                [ <span id="es">x</span>lei ]
+                        </div>
                     </label>
                 </div>
 
 
                 <div>
                     <label class="container">
-                        <input class="echipareJs" name="EFo" type="checkbox">
+                        <input class="echipareJs" name="OpScmmm" type="checkbox">
                         <span class="checkmark"></span>
-                        <div>Surprinde cat mai multe momente [ + 50% - meniu]</div>
+                        <div>Surprinde cat mai multe momente 
+                                <br>
+                                [ <span id="scmmm">x</span>lei ]
+                        </div>
                     </label>
                 </div>
 
                 <div>
-                    Valoare TOTALA aproximativa eveniment x + optionale y:
+                    Valoare TOTALA aproximativa eveniment + optionale:
                     <div>(
-                        <span id="pret" class="pret">x</span>lei + transport
+                        <span id="pretTotal" class="pret">x</span>lei + transport
                         <span class="mancare"> + mancare</span> )
                     </div>
                 </div>
@@ -1299,6 +1313,8 @@
 
         var valoare = 90;
 
+        document.getElementById("sfc").innerHTML = valoare * 3 + valoare * 2;
+
         function calculeazaPret() {
             // ora
             // if (OInB.value < 8) {
@@ -1369,20 +1385,67 @@
             }
 
             // pret
-            var pret = OIsS.value - OInS.value;
+            console.log("start");
+            console.log(OInB.value);
+            console.log(OIsB.value);
+            console.log(OInS.value);
+            console.log(OIsS.value);
+
+            var pret = 0;
+            var OIsSV = Number(OIsS.value);
+            var OInSV = Number(OInS.value);
+            pret = OIsSV - OInSV;
             console.log(pret);
-            // if (OInS.value > OIsS.value) {
-                pret = (OInS.value + OIsS.value) - 25 ;
-            // }
+            if (OInSV > OIsSV) {
+                var calculSala = OInSV - 24;
+                console.log("calculSala");
+                console.log(calculSala);
+                calculSala = calculSala - (calculSala * 2);
+                pret = calculSala + OIsSV ;
+            }
+
             console.log(pret);
-            pret = pret + (OIsB.value - OInB.value);
+            var calculBiserica = OIsB.value - OInB.value;
+            console.log("calculBiserica");
+            console.log(calculBiserica);
+            pret = pret + calculBiserica;
             console.log(pret);
             pret = (pret + 4) * valoare;
             console.log(pret);
+
             if (OInB.value != "" && OIsB.value != "" && OInS.value != "" && OIsS.value != "") {
                 document.getElementById("pret").innerHTML = pret;
                 document.getElementsByName("Total")[0].value = pret;
+                var ea = pret / 100 * 30;
+                document.getElementById("ea").innerHTML = ea;
+                var es = pret / 100 * 30;
+                document.getElementById("es").innerHTML = es;
+                var scmmm = pret / 100 * 50;
+                document.getElementById("scmmm").innerHTML = scmmm;
+                var Tc = 210;
+                var AMare = 1200;
+                var AMediu = 800;
+                var AMic = 400;
+                document.getElementById("pretTotal").innerHTML = pret + ea + es + scmmm + Tc + AMare + AMediu + AMic;  
+            }else{
+                document.getElementById("pret").innerHTML = "x";
+                document.getElementById("ea").innerHTML = "x";
+                document.getElementById("es").innerHTML = "x";
+                document.getElementById("scmmm").innerHTML = "x";
+                document.getElementsByName("Total")[0].value = 0;  
             }
+
+
+// Adfdb
+var Adfdb = document.getElementsByName("Adfdb")[0].checked;
+if(Adfdb){
+    document.getElementsByClassName("Adfdb")[0].style.display = "block";
+    document.getElementsByClassName("Adfdb")[1].style.display = "block";
+}else{
+    document.getElementsByClassName("Adfdb")[0].style.display = "none";
+    document.getElementsByClassName("Adfdb")[1].style.display = "none";
+}
+
 
             //required
             // var requiredInputs = document.getElementsByTagName('input');

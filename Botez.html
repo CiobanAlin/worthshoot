@@ -1039,22 +1039,6 @@
                         *Sugestie 19-24
                     </div>
                 </div>
-
-
-
-
-
-
-
-
-                <!-- <div>
-                    <div>Durata aproximativa: </div>
-                    <div>
-                        <input id="ore" type="number" name="Ore" min="1" max="72" placeholder="x" oninput="if(this.value>72){ this.value= 72;}if(this.value<1){ this.value='';}"
-                            required>&nbsp; ore
-                    </div>
-                </div> -->
-                <!-- <div class="titlu">Pret:</div> -->
                 <div>
                     Valoare aproximativa eveniment:
                     <div>(
@@ -1062,16 +1046,6 @@
                         <span class="mancare"> + mancare</span> )
                     </div>
                 </div>
-                <!-- <div>
-                    Pagina web in constructie !!
-                </div> -->
-
-
-
-
-
-
-
                 <div class="titlu">Nume intreg:</div>
                 <div>
                     <!-- pattern="[a-zA-Z]{5,}" -->
@@ -1163,6 +1137,10 @@
                         <span id="pretTotal" class="pret">x</span>lei + transport
                         <span class="mancare"> + mancare</span> )
                     </div>
+                </div>
+                <div style="display: none">
+                    <!-- <input type="text" name="Mesaj" value="Da"> -->
+                    <input type="number" name="TotalCuOptionale" pattern="[0-9-]*" value="0">
                 </div>
 
                 <!-- *30min in plus pe gratis -->
@@ -1532,15 +1510,18 @@
                 } else {
                     scmmmPret = 0;
                 }
+                var TotalCuOptionale = pret + eaPret + esPret + scmmmPret + TcPret + AMarePret + AMediuPret + AMicPret +
+                    sfcPret;
+                document.getElementById("pretTotal").innerHTML =
+                    document.getElementsByName("TotalCuOptionale")[0].value = TotalCuOptionale;
 
-                document.getElementById("pretTotal").innerHTML = pret + eaPret + esPret + scmmmPret + TcPret +
-                    AMarePret + AMediuPret + AMicPret + sfcPret;
             } else {
                 document.getElementById("pret").innerHTML = "x";
                 document.getElementById("ea").innerHTML = "x";
                 document.getElementById("es").innerHTML = "x";
                 document.getElementById("scmmm").innerHTML = "x";
                 document.getElementsByName("Total")[0].value = 0;
+                document.getElementsByName("TotalCuOptionale")[0].value = 0;
             }
 
 

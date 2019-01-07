@@ -539,10 +539,26 @@
             text-align: center;
         }
 
-        [name="DaD"],
-        [name="DaM"],
-        [name="DaY"] {
+        [name="DaDB"],
+        [name="DaMB"],
+        [name="DaYB"],
+        [name="DaDS"],
+        [name="DaMS"],
+        [name="DaYS"] {
             width: 50px;
+        }
+
+        [name="OInB"],
+        [name="OIsB"],
+        [name="OInS"],
+        [name="OIsS"] {
+            width: 70px;
+        }
+
+        .hourStrip {
+            display: inline-block;
+            padding: 0;
+            margin: 0;
         }
 
         input:hover {
@@ -879,10 +895,15 @@
             }
         }
 
-        .dn 
+        .dn
         /* 2019.01.02 test */
+
         ,
-        .notita{
+        .notita {
+            display: none;
+        }
+
+        .Adfdb {
             display: none;
         }
     </style>
@@ -913,230 +934,121 @@
                 <div class="gallery">
                     <div></div>
                     <div></div>
+                    <!-- <div></div>
                     <div></div>
                     <div></div>
-                    <div></div>
-                    <div></div>
+                    <div></div> -->
                 </div>
             </div>
         </div>
         <div class="progress-container">
             <div class="progress-bar [ galleryBar ]"></div>
         </div>
-        <form id="gform" method="POST" class="gform" data-email="worthshootsite@gmail.com" action="https://script.google.com/macros/s/AKfycbxHJr7gmuBSAAgDiKsTcYDTt2sTxA9SbQUKhNfrjQKoElY5RRg/exec">
+        <form id="gform" method="POST" class="gform" data-email="worthshootsite@gmail.com" action="https://script.google.com/macros/s/AKfycbwKP4Q8-Ak665DHEsmMRgEgCpDvDmiYcxjKA84tUnMT4C_xcVlT/exec">
             <div class="form">
                 <!-- 2019.01.02 TEST  -->
+                <div>Serviciu</div>
+                <div>
+                    <label class="container">
+                        <input class="serviciuJs" name="SBo" type="checkbox" checked>
+                        <span class="checkmark"></span>
+                        <div>Botez</div>
+                    </label>
+                </div>
+                <div>
+                    <div>
+                        *Valoare medie eveniment: 900lei
+                    </div>
+                </div>
+
+                <!--                
+<div>
+    <label class="container">
+        <input class="serviciuJs" name="SAe" type="checkbox">
+        <span class="checkmark"></span>
+        <div>Alt serviciu..</div>
+    </label>
+</div> -->
                 <div class="titlu">Echipare</div>
                 <div>
                     <label class="container">
-                        <input class="echipareJs" name="EFo" type="checkbox">
+                        <input class="echipareJs" name="EFo" type="checkbox" checked>
                         <span class="checkmark"></span>
                         <div>Foto</div>
                     </label>
                 </div>
-                <div>
-                    <label class="container">
-                        <input class="echipareJs" name="EVi" type="checkbox">
-                        <span class="checkmark"></span>
-                        <div>Video</div>
-                    </label>
-                </div>
-                <div>
-                    <label class="container">
-                        <input class="echipareJs" name="EDr" type="checkbox">
-                        <span class="checkmark"></span>
-                        <div>Drona</div>
-                    </label>
-                </div>
-                <!-- Select a file: <input type="file" name="myFile"> -->
-                <div class="titlu">Calitate incepand cu:</div>
-                <div>
-                    <label class="container">
-                        <input class="calitateJs" name="CBa" type="checkbox">
-                        <span class="checkmark"></span>
-                        <div class="basic">Basic</div>
-                        <div>&nbsp;&nbsp;&nbsp;
-                            <span class="evidentiat">160lei</span>
-                        </div>
-                        <div class="notita">&nbsp; *pana la
-                            <span class="PLBJs">2.240</span>lei
-                            <!-- 3280 -->
-                            <!-- x * 41 -->
-                            <!-- 2.870lei -->
-                            <!-- 1.770 -->
-                        </div>
-                    </label>
-                </div>
-                <div>
-                    <label class="container">
-                        <input class="calitateJs" name="CAv" type="checkbox">
-                        <span class="checkmark"></span>
-                        <div class="avantaj">Avantaj</div>
-                        <div>&nbsp;&nbsp;&nbsp;
-                            <span class="evidentiat">280lei</span>
-                        </div>
-                        <div class="notita">&nbsp; *pana la
-                            <span class="PLAJs">3.920</span>lei
-                            <!-- 5.740 -->
-                            <!-- 5.280lei -->
-                            <!-- 3.280 -->
-                        </div>
-                    </label>
-                </div>
-                <div>
-                    <label class="container">
-                        <input class="calitateJs" name="CLu" type="checkbox">
-                        <span class="checkmark"></span>
-                        <div class="lux">Lux</div>
-                        <div>&nbsp;&nbsp;&nbsp;
-                            <span class="evidentiat">600lei</span>
-                        </div>
-                        <div class="notita">&nbsp; *pana la
-                            <span class="PLLJs">8.400</span>lei
-                            <!-- 12.090lei -->
-                        </div>
-                    </label>
-                </div>
-                <div class="dn">
-                    <!-- 2019.01.02 TEST-->
-                    <label class="container">
-                        <input class="calitateJs" name="CEx" type="checkbox">
-                        <span class="checkmark"></span>
-                        <div class="exclusiv">Exclusiv</div>
-                        <div>&nbsp;&nbsp;&nbsp;
-                            <span class="evidentiat">1800lei</span>
-                        </div>
-                        <div class="notita">&nbsp; *pana la
-                            <span class="PLEJs">25.200</span>lei
-                            <!-- 37.000lei -->
-                        </div>
-                    </label>
-                </div>
-
-
-
+                <div class="titlu">Biserica</div>
                 <div>
                     <div>
-                        *Nivelul calitatii difera atat prin numarul de artisti, tipul echipamentelor folosite cat si
-                        tipul de prelucrare al materialelor.
-                    </div>
-                    <div>
-                        **Pentru mai multe detalii va rugam sa scrieti in sectiunea de mai jos "CALITATE" si sa
-                        terminati de completat formularul.
-                    </div>
-                </div>
-                <div class="titlu">Mesaj (optional) :</div>
-                <div>
-                    <input type="textarea" name="Msg">
-                </div>
-
-
-                <div>Serviciu</div>
-                <div>
-                    <div>
-                        *Intre [ ] se afiseaza durata medie
+                        Data
                     </div>
                 </div>
                 <div>
-                    <label class="container">
-                        <input class="serviciuJs" name="SBo" type="checkbox">
-                        <span class="checkmark"></span>
-                        <div>Botez - [ 8h ]</div>
-                    </label>
+                    <input type="number" name="DaYB" placeholder="anul" pattern="[0-9]*" required>
+                    <input type="number" name="DaMB" placeholder="luna" pattern="[0-9]*" required>
+                    <input type="number" name="DaDB" placeholder="ziua" pattern="[0-9]*" required>
                 </div>
                 <div>
-                    <label class="container">
-                        <input class="serviciuJs" name="SNu" type="checkbox">
-                        <span class="checkmark"></span>
-                        <div>Nunta - [ 12h ]</div>
-                    </label>
-                </div>
-                <div>
-                    <label class="container">
-                        <input class="serviciuJs" name="SSf" type="checkbox">
-                        <span class="checkmark"></span>
-                        <div>Sedinta foto - [ 1h ]</div>
-                    </label>
-                </div>
-                <div>
-                    <label class="container">
-                        <input class="serviciuJs" name="SCo" type="checkbox">
-                        <span class="checkmark"></span>
-                        <div>Corporate - [ 4h ]</div>
-                    </label>
-                </div>
-                <div>
-                    <label class="container">
-                        <input class="serviciuJs" name="SPr" type="checkbox">
-                        <span class="checkmark"></span>
-                        <div>Produs - [ 3h ]</div>
-                    </label>
-                </div>
-                <!-- sedinta foto -->
-                <!-- botez -->
-                <div>
-                    <label class="container">
-                        <input class="serviciuJs" name="STm" type="checkbox">
-                        <span class="checkmark"></span>
-                        <div>Taiere de mot - [ 8h ]</div>
-                    </label>
-                </div>
-                <div>
-                    <label class="container">
-                        <input class="serviciuJs" name="SMa" type="checkbox">
-                        <span class="checkmark"></span>
-                        <div>Majorat - [ 4h ]</div>
-                    </label>
-                </div>
-                <div>
-                    <label class="container">
-                        <input class="serviciuJs" name="SCc" type="checkbox">
-                        <span class="checkmark"></span>
-                        <div>Cununie civila - [ 8h ]</div>
-                    </label>
-                </div>
-                <!-- nunta -->
-                <div>
-                    <label class="container">
-                        <input class="serviciuJs" name="SAe" type="checkbox">
-                        <span class="checkmark"></span>
-                        <div>Alt serviciu..</div>
-                    </label>
-                </div>
-
-
-                <div>
-                    <div>Durata aproximativa: </div>
                     <div>
-                        <input id="ore" type="number" name="Ore" min="1" max="72" placeholder="x" oninput="if(this.value>72){ this.value= 72;}if(this.value<1){ this.value='';}"
-                            required>&nbsp; ore
+                        Interval:
                     </div>
                 </div>
-                <!-- <div class="titlu">Pret:</div> -->
                 <div>
-                    <div>Valoare aproximativa: </div>
+                    <input type="number" name="OInB" placeholder="ora inceput" pattern="[0-9]*" min="0" max="24"
+                        required>
+                    <div class="hourStrip">-</div>
+                    <input type="number" name="OIsB" placeholder="ora sfarsit" pattern="[0-9]*" min="0" max="24"
+                        required>
+                </div>
+                <div>
+                    <div>
+                        *Sugestie 16-18
+                    </div>
+                </div>
+
+
+                <div class="titlu">Sala / Restaurant</div>
+                <div>
+                    <label class="container">
+                        <input class="echipareJs" name="Adfdb" type="checkbox">
+                        <span class="checkmark"></span>
+                        <div>Alta data fata de biserica</div>
+                    </label>
+                </div>
+                <div class="Adfdb">
+                    <div>
+                        Data
+                    </div>
+                </div>
+                <div class="Adfdb">
+                    <input type="number" name="DaYS" placeholder="anul" pattern="[0-9]*" required>
+                    <input type="number" name="DaMS" placeholder="luna" pattern="[0-9]*" required>
+                    <input type="number" name="DaDS" placeholder="ziua" pattern="[0-9]*" required>
+                </div>
+                <div>
+                    <div>
+                        Interval:
+                    </div>
+                </div>
+                <div>
+                    <input type="number" name="OInS" placeholder="ora inceput" pattern="[0-9]*" min="0" max="24"
+                        required>
+                    <div class="hourStrip">-</div>
+                    <input type="number" name="OIsS" placeholder="ora sfarsit" pattern="[0-9]*" min="0" max="24"
+                        required>
+                </div>
+                <div>
+                    <div>
+                        *Sugestie 19-24
+                    </div>
+                </div>
+                <div>
+                    Valoare aproximativa eveniment:
                     <div>(
                         <span id="pret" class="pret">x</span>lei + transport
                         <span class="mancare"> + mancare</span> )
                     </div>
                 </div>
-                <!-- <div>
-                    Pagina web in constructie !!
-                </div> -->
-
-
-                <div class="titlu">Data</div>
-                <div>
-                    <input type="number" name="DaY" placeholder="anul" pattern="[0-9]*" required>
-                    <input type="number" name="DaM" placeholder="luna" pattern="[0-9]*" required>
-                    <input type="number" name="DaD" placeholder="ziua" pattern="[0-9]*" required>
-                    <!-- <input id="datePicker" type="date" oninput="if(this.value>max){ this.value= max;}if(this.value<min){this.value= min;}"
-                    name="Dat"> -->
-                </div>
-
-
-
-
                 <div class="titlu">Nume intreg:</div>
                 <div>
                     <!-- pattern="[a-zA-Z]{5,}" -->
@@ -1152,16 +1064,94 @@
                     <!-- <input type="text" name="Mesaj" value="Da"> -->
                     <input type="number" name="Total" pattern="[0-9-]*" value="0">
                 </div>
+                <div class="titlu">Optionale</div>
+                <div>
+                    <label class="container">
+                        <input class="echipareJs" name="OpSfc" type="checkbox">
+                        <span class="checkmark"></span>
+                        <div>Sedinta foto copil
+                            <br> [
+                            <span id="sfc">x</span>lei ]</div>
+                    </label>
+                </div>
+                <div>
+                    <label class="container">
+                        <input class="echipareJs" name="OpTc" type="checkbox">
+                        <span class="checkmark"></span>
+                        <div>Tablou canvas [ 210lei ]</div>
+                    </label>
+                </div>
+                <div>
+                    <label class="container">
+                        <input class="echipareJs" name="OpAMare" type="checkbox">
+                        <span class="checkmark"></span>
+                        <div>Album Mare [ 1200lei ]</div>
+                    </label>
+                </div>
+                <div>
+                    <label class="container">
+                        <input class="echipareJs" name="OpAMediu" type="checkbox">
+                        <span class="checkmark"></span>
+                        <div>Album Mediu [ 800lei ]</div>
+                    </label>
+                </div>
+                <div>
+                    <label class="container">
+                        <input class="echipareJs" name="OpAMic" type="checkbox">
+                        <span class="checkmark"></span>
+                        <div>Album Mic [ 400lei ]</div>
+                    </label>
+                </div>
+                <div>
+                    <label class="container">
+                        <input class="echipareJs" name="OpEart" type="checkbox">
+                        <span class="checkmark"></span>
+                        <div>Editare artistica
+                            <br> [
+                            <span id="ea">x</span>lei ] </div>
+                    </label>
+                </div>
+                <div>
+                    <label class="container">
+                        <input class="echipareJs" name="OpEsup" type="checkbox">
+                        <span class="checkmark"></span>
+                        <div>Echipare superioara
+                            <br> [
+                            <span id="es">x</span>lei ]
+                        </div>
+                    </label>
+                </div>
 
-                <!--                 <div>
-                        <label class="container">
-                            <input class="calitateJs" name="CEx" type="checkbox" required>
-                            <span class="checkmark"></span>
-                            <div>Am citit si accept <a href="/termeni-si-conditii.html">termenii si conditiile*</a> </div>
-                
-                           
-                        </label> 
-                    </div>-->
+
+                <div>
+                    <label class="container">
+                        <input class="echipareJs" name="OpScmmm" type="checkbox">
+                        <span class="checkmark"></span>
+                        <div>Surprinde cat mai multe momente
+                            <br> [
+                            <span id="scmmm">x</span>lei ]
+                        </div>
+                    </label>
+                </div>
+
+                <div>
+                    Valoare TOTALA aproximativa eveniment + optionale:
+                    <div>(
+                        <span id="pretTotal" class="pret">x</span>lei + transport
+                        <span class="mancare"> + mancare</span> )
+                    </div>
+                </div>
+                <div style="display: none">
+                    <!-- <input type="text" name="Mesaj" value="Da"> -->
+                    <input type="number" name="TotalCuOptionale" pattern="[0-9-]*" value="0">
+                </div>
+
+                <!-- *30min in plus pe gratis -->
+
+                <div class="titlu">Mesaj (optional) :</div>
+                <div>
+                    <input type="textarea" name="Msg">
+                </div>
                 <div>
                     <button class="button-success ">
                         Trimite
@@ -1219,35 +1209,12 @@
                             <br>gmail.com</h3>
                     </a>
                 </div>
-                <!-- <a class="button-special" href="https://goo.gl/maps/Zv9yFYr71CK2" target="_blank">
-                <div>
-                    <h2>Suceava</h2>
-                    <h3>Romania &lt; Europe</h3>
-                </div>
-            </a> -->
-
-                <!-- <div class="last">
-                <a href="https://www.facebook.com/so.alenax/" target="_blank">
-                    <button>Facebook</button>
-                </a>
-                <a href="https://www.instagram.com/so.alenax/" target="_blank">
-                    <button>Instagram</button>
-                </a>
-            </div> -->
             </div>
             <!-- /contact -->
             <!-- tips -->
             <div class="tips overlay-text dn">
                 <div>
-                    <!-- <h2>Service(number of events)</h2>
-                <h3>Every service has it`s portofolio and it`s price</h3>
-                <h2>Choose between
-              <u>Bronze</u>,
-              <u>Silver</u> and
-              <u>Gold</u> to see extra options</h2>
-                <h3>Contact me for personalized shooting and I will make a good offer</h3>
-                <h3>Practice your modeling before shooting and you
-                    <u>may</u> receive a nice discount!!</h3> -->
+
                 </div>
             </div>
             <!-- /tips -->
@@ -1297,12 +1264,26 @@
         var requiredEchipare = 0;
         var requiredCalitate = 0;
         // date
-        var DaD = document.getElementsByName('DaD')[0];
-        var DaM = document.getElementsByName('DaM')[0];
-        var DaY = document.getElementsByName('DaY')[0];
-        var twoDaysNext = new Date().getDate() + 2;
-        var month = new Date().getMonth() + 1;
-        var year = new Date().getFullYear();
+        var DaDB = document.getElementsByName('DaDB')[0];
+        var DaMB = document.getElementsByName('DaMB')[0];
+        var DaYB = document.getElementsByName('DaYB')[0];
+        var twoDaysNextB = new Date().getDate() + 2;
+        var monthB = new Date().getMonth() + 1;
+        var yearB = new Date().getFullYear();
+
+        var DaDS = document.getElementsByName('DaDS')[0];
+        var DaMS = document.getElementsByName('DaMS')[0];
+        var DaYS = document.getElementsByName('DaYS')[0];
+        var twoDaysNextS = new Date().getDate() + 2;
+        var monthS = new Date().getMonth() + 1;
+        var yearS = new Date().getFullYear();
+
+        // Ora biserica
+        var OInB = document.getElementsByName('OInB')[0];
+        var OIsB = document.getElementsByName('OIsB')[0];
+        // Ora sala
+        var OInS = document.getElementsByName('OInS')[0];
+        var OIsS = document.getElementsByName('OIsS')[0];
 
         // pret
         var pret = 0;
@@ -1315,7 +1296,8 @@
         for (var i = 0; i < inputs.length; i++) {
             inputs[i].addEventListener('change', calculeazaPret);
             // live complete oninput
-            if (inputs[i].name == "DaY" || inputs[i].name == "DaM" || inputs[i].name == "DaD") {} else {
+            if (inputs[i].name == "DaYB" || inputs[i].name == "DaMB" || inputs[i].name == "DaDB" || inputs[i].name ==
+                "DaYS" || inputs[i].name == "DaMS" || inputs[i].name == "DaDS") {} else {
                 // document.addEventListener("keydown", keyDownTextField, false);
                 inputs[i].addEventListener('input', calculeazaPret);
             }
@@ -1326,229 +1308,420 @@
         var pretPLL = 300;
         var pretPLE = 900;
 
+        var valoare = 90;
+        var sfc = valoare * 3 + valoare * 2;
+        document.getElementById("sfc").innerHTML = sfc;
+
+        var Tc = 210;
+        var AMare = 1200;
+        var AMediu = 800;
+        var AMic = 400;
+        var sfcPret = 0;
+        var TcPret = 0;
+        var AMarePret = 0;
+        var AMediuPret = 0;
+        var AMicPret = 0;
+        var eaPret = 0;
+        var esPret = 0;
+        var scmmmPret = 0;
+
         function calculeazaPret() {
+            // ora
+            // if (OInB.value < 8) {
+            //     OInB.value = 8;
+            // }
+            if (OInB.value > 18) {
+                OInB.value = 18;
+            }
+
+            // if (OIsB.value <= OInB.value) {
+            //     OIsB.value = OInB.value + 2;
+            // }
+            if (OIsB.value > 20) {
+                OIsB.value = 20;
+            }
+
+            // sala
+            if (OInS.value > 24) {
+                OInS.value = 24;
+            }
+
+            if (OIsS.value > 24) {
+                OIsS.value = 24;
+            }
+
+
+
+
             // date
             // day
-            if (DaD.value > 31) {
-                DaD.value = 31;
+            // biserica
+            if (DaDB.value > 31) {
+                DaDB.value = 31;
             }
             // month
-            if (DaM.value > 12) {
-                DaM.value = 12;
+            if (DaMB.value > 12) {
+                DaMB.value = 12;
             }
             // year
-            if (DaY.value > year + 4) {
-                DaY.value = year + 4;
+            if (DaYB.value > yearB + 4) {
+                DaYB.value = yearB + 4;
             }
-            if (DaY.value < year) {
-                DaY.value = year;
+            if (DaYB.value < yearB) {
+                DaYB.value = yearB;
             }
             // date rules
-            if (DaY.value == year && DaM.value < month) {
-                DaM.value = month;
+            if (DaYB.value == yearB && DaMB.value < monthB) {
+                DaMB.value = monthB;
             }
-            if (DaY.value == year && DaM.value == month && DaD.value < twoDaysNext) {
-                DaD.value = twoDaysNext;
+            if (DaYB.value == yearB && DaMB.value == monthB && DaDB.value < twoDaysNextB) {
+                DaDB.value = twoDaysNextB;
                 // console.log(twoDaysNext);
             }
-            if (DaD.value < 1) {
-                DaD.value = "01";
+            if (DaDB.value < 1) {
+                DaDB.value = "01";
             }
             for (var i = 1; i < 10; i++) {
-                if (DaD.value == i) {
-                    DaD.value = "0" + i;
+                if (DaDB.value == i) {
+                    DaDB.value = "0" + i;
                 }
             }
-            if (DaM.value < 1) {
-                DaM.value = "01";
+            if (DaMB.value < 1) {
+                DaMB.value = "01";
             }
             for (var i = 1; i < 10; i++) {
-                if (DaM.value == i) {
-                    DaM.value = "0" + i;
+                if (DaMB.value == i) {
+                    DaMB.value = "0" + i;
                 }
             }
-            //required
-            var requiredInputs = document.getElementsByTagName('input');
-            for (var i = 0; i < requiredInputs.length; i++) {
-                // serviciu
-                if (requiredInputs[i].className == "serviciuJs") {
-                    if (requiredInputs[i].checked == false) {
-                        trimite.disabled = true;
-                        requiredServiciu = 0;
-                    } else {
-                        requiredServiciu = 1;
-                        // return true;
-                        break;
-                    }
-                } else {}
+            // sala
+            if (DaDS.value > 31) {
+                DaDS.value = 31;
             }
-            for (var i = 0; i < requiredInputs.length; i++) {
-                // echipare
-                if (requiredInputs[i].className == "echipareJs") {
-                    if (requiredInputs[i].checked == false) {
-                        trimite.disabled = true;
-                        requiredEchipare = 0;
-                    } else {
-                        requiredEchipare = 1;
-                        // return true;
-                        break;
-                    }
-                } else {}
+            // month
+            if (DaMS.value > 12) {
+                DaMS.value = 12;
             }
-            for (var i = 0; i < requiredInputs.length; i++) {
-                // calitate
-                if (requiredInputs[i].className == "calitateJs") {
-                    if (requiredInputs[i].checked == false) {
-                        trimite.disabled = true;
-                        requiredCalitate == 0;
-                    } else {
-                        requiredCalitate = 1;
-                        // return 0;
-                        break;
-                    }
-                } else {}
+            // year
+            if (DaYS.value > yearS + 4) {
+                DaYS.value = yearS + 4;
             }
-            if (requiredServiciu == 0) {
-                trimite.innerText = "Alege serviciu!";
-            } else {
+            if (DaYS.value < yearS) {
+                DaYS.value = yearS;
+            }
+            // date rules
+            if (DaYS.value == yearS && DaMS.value < monthS) {
+                DaMS.value = monthS;
+            }
+            if (DaYS.value == yearS && DaMS.value == monthS && DaDS.value < twoDaysNextS) {
+                DaDS.value = twoDaysNextS;
+                // console.log(twoDaysNext);
+            }
+            if (DaDS.value < 1) {
+                DaDS.value = "01";
+            }
+            for (var i = 1; i < 10; i++) {
+                if (DaDS.value == i) {
+                    DaDS.value = "0" + i;
+                }
+            }
+            if (DaMS.value < 1) {
+                DaMS.value = "01";
+            }
+            for (var i = 1; i < 10; i++) {
+                if (DaMS.value == i) {
+                    DaMS.value = "0" + i;
+                }
+            }
 
-                // }
-                if (requiredEchipare == 0) {
-                    trimite.innerText = "Alege echipare!";
-                } else {
-                    if (requiredCalitate == 0) {
-                        trimite.innerText = "Alege nivel calitate!";
-                    } else {
-                        if (requiredServiciu == 1 && requiredEchipare == 1 && requiredCalitate == 1) {
-                            trimite.innerText = "TRIMITE";
-                            trimite.disabled = false;
-                        } else {}
-                    }
-                }
+            // pret
+            console.log("start");
+            console.log(OInB.value);
+            console.log(OIsB.value);
+            console.log(OInS.value);
+            console.log(OIsS.value);
+
+            var pret = 0;
+            var OIsSV = Number(OIsS.value);
+            var OInSV = Number(OInS.value);
+            pret = OIsSV - OInSV;
+            console.log(pret);
+            if (OInSV > OIsSV) {
+                var calculSala = OInSV - 24;
+                console.log("calculSala");
+                console.log(calculSala);
+                calculSala = calculSala - (calculSala * 2);
+                pret = calculSala + OIsSV;
             }
+
+            console.log(pret);
+            var calculBiserica = OIsB.value - OInB.value;
+            console.log("calculBiserica");
+            console.log(calculBiserica);
+            pret = pret + calculBiserica;
+            console.log(pret);
+            pret = (pret + 4) * valoare;
+            console.log(pret);
+
+            if (OInB.value != "" && OIsB.value != "" && OInS.value != "" && OIsS.value != "") {
+                document.getElementById("pret").innerHTML = pret;
+                document.getElementsByName("Total")[0].value = pret;
+                var ea = pret / 100 * 30;
+                document.getElementById("ea").innerHTML = ea;
+                var es = pret / 100 * 30;
+                document.getElementById("es").innerHTML = es;
+                var scmmm = pret / 100 * 50;
+                document.getElementById("scmmm").innerHTML = scmmm;
+
+
+                if (document.getElementsByName("OpSfc")[0].checked) {
+                    sfcPret = sfc;
+                } else {
+                    sfcPret = 0;
+                }
+                if (document.getElementsByName("OpTc")[0].checked) {
+                    TcPret = Tc;
+                } else {
+                    TcPret = 0;
+                }
+                if (document.getElementsByName("OpAMare")[0].checked) {
+                    AMarePret = AMare;
+                } else {
+                    AMarePret = 0;
+                }
+                if (document.getElementsByName("OpAMediu")[0].checked) {
+                    AMediuPret = AMediu;
+                } else {
+                    AMediuPret = 0;
+                }
+                if (document.getElementsByName("OpAMic")[0].checked) {
+                    AMicPret = AMic;
+                } else {
+                    AMicPret = 0;
+                }
+                if (document.getElementsByName("OpEart")[0].checked) {
+                    eaPret = ea;
+                } else {
+                    eaPret = 0;
+                }
+                if (document.getElementsByName("OpEsup")[0].checked) {
+                    esPret = es;
+                } else {
+                    esPret = 0;
+                }
+                if (document.getElementsByName("OpScmmm")[0].checked) {
+                    scmmmPret = scmmm;
+                } else {
+                    scmmmPret = 0;
+                }
+                var TotalCuOptionale = pret + eaPret + esPret + scmmmPret + TcPret + AMarePret + AMediuPret + AMicPret +
+                    sfcPret;
+                document.getElementById("pretTotal").innerHTML =
+                    document.getElementsByName("TotalCuOptionale")[0].value = TotalCuOptionale;
+
+            } else {
+                document.getElementById("pret").innerHTML = "x";
+                document.getElementById("ea").innerHTML = "x";
+                document.getElementById("es").innerHTML = "x";
+                document.getElementById("scmmm").innerHTML = "x";
+                document.getElementsByName("Total")[0].value = 0;
+                document.getElementsByName("TotalCuOptionale")[0].value = 0;
+            }
+
+
+            // Adfdb
+            var Adfdb = document.getElementsByName("Adfdb")[0].checked;
+            if (Adfdb) {
+                document.getElementsByClassName("Adfdb")[0].style.display = "block";
+                document.getElementsByClassName("Adfdb")[1].style.display = "block";
+            } else {
+                document.getElementsByClassName("Adfdb")[0].style.display = "none";
+                document.getElementsByClassName("Adfdb")[1].style.display = "none";
+            }
+
+
+            //required
+            // var requiredInputs = document.getElementsByTagName('input');
+            // for (var i = 0; i < requiredInputs.length; i++) {
+            //     // serviciu
+            //     if (requiredInputs[i].className == "serviciuJs") {
+            //         if (requiredInputs[i].checked == false) {
+            //             trimite.disabled = true;
+            //             requiredServiciu = 0;
+            //         } else {
+            //             requiredServiciu = 1;
+            //             // return true;
+            //             break;
+            //         }
+            //     } else {}
+            // }
+            // for (var i = 0; i < requiredInputs.length; i++) {
+            //     // echipare
+            //     if (requiredInputs[i].className == "echipareJs") {
+            //         if (requiredInputs[i].checked == false) {
+            //             trimite.disabled = true;
+            //             requiredEchipare = 0;
+            //         } else {
+            //             requiredEchipare = 1;
+            //             // return true;
+            //             break;
+            //         }
+            //     } else {}
+            // }
+            // for (var i = 0; i < requiredInputs.length; i++) {
+            //     // calitate
+            //     if (requiredInputs[i].className == "calitateJs") {
+            //         if (requiredInputs[i].checked == false) {
+            //             trimite.disabled = true;
+            //             requiredCalitate == 0;
+            //         } else {
+            //             requiredCalitate = 1;
+            //             // return 0;
+            //             break;
+            //         }
+            //     } else {}
+            // }
+            // if (requiredServiciu == 0) {
+            //     trimite.innerText = "Alege serviciu!";
+            // } else {
+
+            //     // }
+            //     if (requiredEchipare == 0) {
+            //         trimite.innerText = "Alege echipare!";
+            //     } else {
+            //         if (requiredCalitate == 0) {
+            //             trimite.innerText = "Alege nivel calitate!";
+            //         } else {
+            //             if (requiredServiciu == 1 && requiredEchipare == 1 && requiredCalitate == 1) {
+            //                 trimite.innerText = "TRIMITE";
+            //                 trimite.disabled = false;
+            //             } else {}
+            //         }
+            //     }
+            // }
 
 
             // calitate
-            if (this.className == "calitateJs") {
-                var inputs = document.getElementsByClassName("calitateJs");
-                for (var i = 0; i < inputs.length; i++) {
-                    inputs[i].checked = false;
-                }
-                this.checked = true;
-            }
+            // if (this.className == "calitateJs") {
+            //     var inputs = document.getElementsByClassName("calitateJs");
+            //     for (var i = 0; i < inputs.length; i++) {
+            //         inputs[i].checked = false;
+            //     }
+            //     this.checked = true;
+            // }
             // serviciu
-            if (this.className == "serviciuJs") {
-                var inputs = document.getElementsByClassName("serviciuJs");
-                for (var i = 0; i < inputs.length; i++) {
-                    inputs[i].checked = false;
-                }
-                this.checked = true;
-            }
+            // if (this.className == "serviciuJs") {
+            //     var inputs = document.getElementsByClassName("serviciuJs");
+            //     for (var i = 0; i < inputs.length; i++) {
+            //         inputs[i].checked = false;
+            //     }
+            //     this.checked = true;
+            // }
             // tip
-            if (this.className == "tipJs") {
-                var inputs = document.getElementsByClassName("tipJs");
-                for (var i = 0; i < inputs.length; i++) {
-                    inputs[i].checked = false;
-                }
-                this.checked = true;
-            }
+            // if (this.className == "tipJs") {
+            //     var inputs = document.getElementsByClassName("tipJs");
+            //     for (var i = 0; i < inputs.length; i++) {
+            //         inputs[i].checked = false;
+            //     }
+            //     this.checked = true;
+            // }
             // pret 
-            if (document.getElementsByName('CBa')[0].checked) {
-                pret = pretPLB;
-            }
-            if (document.getElementsByName('CAv')[0].checked) {
-                pret = pretPLA;
-            }
-            if (document.getElementsByName('CLu')[0].checked) {
-                pret = pretPLL;
-            }
-            if (document.getElementsByName('CEx')[0].checked) {
-                pret = pretPLE;
-            }
+            // if (document.getElementsByName('CBa')[0].checked) {
+            //     pret = pretPLB;
+            // }
+            // if (document.getElementsByName('CAv')[0].checked) {
+            //     pret = pretPLA;
+            // }
+            // if (document.getElementsByName('CLu')[0].checked) {
+            //     pret = pretPLL;
+            // }
+            // if (document.getElementsByName('CEx')[0].checked) {
+            //     pret = pretPLE;
+            // }
 
             // ore
-            ore = document.getElementById("ore").value;
+            // ore = document.getElementById("ore").value;
             // serviciu
             // foto
-            if (document.getElementsByName('EFo')[0].checked) {
-                foto = 1;
-                if (document.getElementsByName('EVi')[0].checked) {
-                    video = 0.6;
-                    if (document.getElementsByName('EDr')[0].checked) {
-                        drona = 0.2;
-                    } else {
-                        drona = 0;
-                    }
-                } else {
-                    video = 0;
-                    if (document.getElementsByName('EDr')[0].checked) {
-                        drona = 0.4;
-                    } else {
-                        drona = 0;
-                    }
-                }
-                // console.log(foto, video, drona);
-            } else {
-                foto = 0;
-                // video
-                if (document.getElementsByName('EVi')[0].checked) {
-                    video = 1;
-                    if (document.getElementsByName('EDr')[0].checked) {
-                        drona = 0.4;
-                    } else {
-                        drona = 0;
-                    }
-                    // console.log(foto, video, drona);
-                } else {
-                    video = 0;
-                    // drona
-                    if (document.getElementsByName('EDr')[0].checked) {
-                        drona = 1;
-                        // console.log(foto, video, drona);
-                    } else {
-                        drona = 0;
-                    }
-                }
-            }
-            // pana la
-            var echipare = foto + video + drona;
-            if (echipare == 0) {
-                echipare = 1.8;
-            }
-            var timeNormal = 15;
-            // 24
-            var PLB = timeNormal * pretPLB * echipare + pretPLB;
-            var PLA = timeNormal * pretPLA * echipare + pretPLA;
-            var PLL = timeNormal * pretPLL * echipare + pretPLL;
-            var PLE = timeNormal * pretPLE * echipare + pretPLE;
-            // PLB 
-            document.getElementsByClassName("PLBJs")[0].innerHTML = PLB;
-            // PLA 
-            document.getElementsByClassName("PLAJs")[0].innerHTML = PLA;
-            // PLL 
-            document.getElementsByClassName("PLLJs")[0].innerHTML = PLL;
-            // PLE 
-            document.getElementsByClassName("PLEJs")[0].innerHTML = PLE;
-            // verificare
-            if (foto == 0 && video == 0 && drona == 0) {
-                pret = 0;
-            }
-            if (ore == 0) {
-                pret = 0;
-            }
-            if (ore < 3) {
-                document.getElementsByClassName("mancare")[0].style.display = "none";
-            } else {
-                document.getElementsByClassName("mancare")[0].style.display = "inline";
-            }
-            // total
-            var Total = ore * pret * (foto + video + drona) + pret;
-            if (pret == 0) {
-                document.getElementById("pret").innerHTML = "x";
-            } else {
-                document.getElementById("pret").innerHTML = Total;
-                document.getElementsByName("Total")[0].value = Total;
-            }
+            // if (document.getElementsByName('EFo')[0].checked) {
+            //     foto = 1;
+            //     if (document.getElementsByName('EVi')[0].checked) {
+            //         video = 0.6;
+            //         if (document.getElementsByName('EDr')[0].checked) {
+            //             drona = 0.2;
+            //         } else {
+            //             drona = 0;
+            //         }
+            //     } else {
+            //         video = 0;
+            //         if (document.getElementsByName('EDr')[0].checked) {
+            //             drona = 0.4;
+            //         } else {
+            //             drona = 0;
+            //         }
+            //     }
+            //     // console.log(foto, video, drona);
+            // } else {
+            //     foto = 0;
+            //     // video
+            //     if (document.getElementsByName('EVi')[0].checked) {
+            //         video = 1;
+            //         if (document.getElementsByName('EDr')[0].checked) {
+            //             drona = 0.4;
+            //         } else {
+            //             drona = 0;
+            //         }
+            //         // console.log(foto, video, drona);
+            //     } else {
+            //         video = 0;
+            //         // drona
+            //         if (document.getElementsByName('EDr')[0].checked) {
+            //             drona = 1;
+            //             // console.log(foto, video, drona);
+            //         } else {
+            //             drona = 0;
+            //         }
+            //     }
+            // }
+            // // pana la
+            // var echipare = foto + video + drona;
+            // if (echipare == 0) {
+            //     echipare = 1.8;
+            // }
+            // var timeNormal = 15;
+            // // 24
+            // var PLB = timeNormal * pretPLB * echipare + pretPLB;
+            // var PLA = timeNormal * pretPLA * echipare + pretPLA;
+            // var PLL = timeNormal * pretPLL * echipare + pretPLL;
+            // var PLE = timeNormal * pretPLE * echipare + pretPLE;
+            // // PLB 
+            // document.getElementsByClassName("PLBJs")[0].innerHTML = PLB;
+            // // PLA 
+            // document.getElementsByClassName("PLAJs")[0].innerHTML = PLA;
+            // // PLL 
+            // document.getElementsByClassName("PLLJs")[0].innerHTML = PLL;
+            // // PLE 
+            // document.getElementsByClassName("PLEJs")[0].innerHTML = PLE;
+            // // verificare
+            // if (foto == 0 && video == 0 && drona == 0) {
+            //     pret = 0;
+            // }
+            // if (ore == 0) {
+            //     pret = 0;
+            // }
+            // if (ore < 3) {
+            //     document.getElementsByClassName("mancare")[0].style.display = "none";
+            // } else {
+            //     document.getElementsByClassName("mancare")[0].style.display = "inline";
+            // }
+            // // total
+            // var Total = ore * pret * (foto + video + drona) + pret;
+            // if (pret == 0) {
+            //     document.getElementById("pret").innerHTML = "x";
+            // } else {
+            //     document.getElementById("pret").innerHTML = Total;
+            //     document.getElementsByName("Total")[0].value = Total;
+            // }
         };
     </script>
     <!-- // form -->

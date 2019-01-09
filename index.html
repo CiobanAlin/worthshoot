@@ -234,7 +234,10 @@
 
         .form {
             padding: 20px;
-            width: 380px;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
         }
 
         .form>div,
@@ -245,6 +248,7 @@
             /* Titlu 12 */
             padding: 10px;
             text-align: center;
+            width: 380px;
         }
 
         .form>div>div,
@@ -430,7 +434,7 @@
 
 
 
-                .gallery>div:nth-child(8):after {
+        .gallery>div:nth-child(8):after {
             background-image: url("_MG_5769.JPG");
         }
 
@@ -895,12 +899,12 @@
             }
 
             .form {
-                padding: 5px 20px;
-                width: 310px;
+                padding: 5px 20px;    
             }
 
             .form>div {
                 padding: 5px 10px;
+                width: 310px;
             }
 
             .gallery {
@@ -941,8 +945,14 @@
             display: none;
         }
 
-        .Adfdb {
+        .Adfdb,
+        .TotalCuOptionale {
             display: none;
+        }
+
+        .form>div.fullText{
+            width: 100%;
+            max-width: calc(380px * 2);
         }
     </style>
 </head>
@@ -965,7 +975,8 @@
     <div class="announcement">
         <!-- <h1>Pagina web in constructie !!</h1> -->
         <!-- completaza datele tale. -->
-        <h1>Mai jos aveti mai multe imagini, dati spre stanga pe imagine pentru a le vedea, iar pentru a le mari, pe telefon folositi doua degete.</h1>
+        <h1>Mai jos aveti mai multe imagini, dati spre stanga pe imagine pentru a le vedea, iar pentru a le mari, pe telefon
+            folositi doua degete.</h1>
     </div>
     <div class="content form-parent">
         <div class="scrollHide">
@@ -994,14 +1005,14 @@
         <div class="progress-container">
             <div class="progress-bar [ galleryBar ]"></div>
         </div>
-            <div class="announcement" style="    
+        <div class="announcement" style="    
                 background-color: white;
     box-shadow: inset 0 0.2rem 0.4rem rgba(0, 0, 0, 0.23);
     padding: 5px;
     width: calc(100% + 20px);
     max-width: 100vw;">
-                <h1>Afla pretul completand datele tale!</h1>
-                </div>
+            <h1>Afla pretul completand datele tale!</h1>
+        </div>
         <form id="gform" method="POST" class="gform" data-email="worthshootsite@gmail.com" action="https://script.google.com/macros/s/AKfycbwKP4Q8-Ak665DHEsmMRgEgCpDvDmiYcxjKA84tUnMT4C_xcVlT/exec">
             <div class="form">
                 <!-- 2019.01.02 TEST  -->
@@ -1052,11 +1063,9 @@
                     </div>
                 </div>
                 <div>
-                    <input type="number" name="OInB" placeholder="ora inceput" pattern="[0-9]*" min="0" max="24"
-                        required>
+                    <input type="number" name="OInB" placeholder="ora inceput" pattern="[0-9]*" min="0" max="24" required>
                     <div class="hourStrip">-</div>
-                    <input type="number" name="OIsB" placeholder="ora sfarsit" pattern="[0-9]*" min="0" max="24"
-                        required>
+                    <input type="number" name="OIsB" placeholder="ora sfarsit" pattern="[0-9]*" min="0" max="24" required>
                 </div>
                 <div>
                     <div>
@@ -1089,11 +1098,9 @@
                     </div>
                 </div>
                 <div>
-                    <input type="number" name="OInS" placeholder="ora inceput" pattern="[0-9]*" min="0" max="24"
-                        required>
+                    <input type="number" name="OInS" placeholder="ora inceput" pattern="[0-9]*" min="0" max="24" required>
                     <div class="hourStrip">-</div>
-                    <input type="number" name="OIsS" placeholder="ora sfarsit" pattern="[0-9]*" min="0" max="24"
-                        required>
+                    <input type="number" name="OIsS" placeholder="ora sfarsit" pattern="[0-9]*" min="0" max="24" required>
                 </div>
                 <div>
                     <div>
@@ -1107,21 +1114,21 @@
                         <span class="mancare"> + mancare</span> )
                     </div>
                 </div>
-                    <div class="announcement">
-        <!-- <h1>Pagina web in constructie !!</h1> -->
-        <!-- completaza datele tale. -->
-        <h1>Pretul nu se potriveste cu bugetul dvs.? Nici-o problema, terminati de completat formularul si specificati bugetul dvs. in 'Mesaj'.
-            </br>O sa facem tot ce este posibil pentru a gasi cea mai buna solutie impreuna!</h1>
-    </div>
-                            <div class="titlu">Mesaj (optional) :</div>
+                <div class="fullText">
+                    <!-- <h1>Pagina web in constructie !!</h1> -->
+                    <!-- completaza datele tale. -->
+                    Pretul nu se potriveste cu bugetul dvs.? Nicio problema, terminati de completat formularul si specificati bugetul dvs. in
+                    'Mesaj'.
+                    O sa facem orice ne sta in putinta pentru a gasi cea mai buna solutie impreuna!
+                </div>
+                <div class="titlu">Mesaj (optional) :</div>
                 <div>
                     <input type="textarea" name="Msg">
                 </div>
                 <div class="titlu">Nume intreg:</div>
                 <div>
                     <!-- pattern="[a-zA-Z]{5,}" -->
-                    <input type="text" name="nIn" oninput="this.value = this.value.replace(/[^a-zA-Z -]/g, '');"
-                        required>
+                    <input type="text" name="nIn" oninput="this.value = this.value.replace(/[^a-zA-Z -]/g, '');" required>
                     <!-- this.value = this.value.replace(/(\..*)\./g, '$1'); -->
                 </div>
                 <div class="titlu">Numar telefon:</div>
@@ -1196,15 +1203,15 @@
                         <input class="echipareJs" name="OpScmmm" type="checkbox">
                         <span class="checkmark"></span>
                         <!-- Surprinde cat mai multe momente -->
-                        <div>Surprinde cat mai multe momente WoW <br> 
-                            [ fotograf secundar ]
+                        <div>Surprinde cat mai multe momente WoW
+                            <br> [ fotograf secundar ]
                             <br> [
                             <span id="scmmm">x</span>lei ]
                         </div>
                     </label>
                 </div>
 
-                <div>
+                <div class="TotalCuOptionale">
                     Valoare TOTALA aproximativa eveniment + optionale:
                     <div>(
                         <span id="pretTotal" class="pret">x</span>lei + transport
@@ -1301,12 +1308,10 @@
                             Am inceput fotografia in 2012 cu portrete, fiind si in prezent cea mai mare pasiune.
                         </span>
                         <span class="marginAbout">
-                            In 2014 am incercat fotografia macro, iar usor, usor am inceput sa fim foarte buni la
-                            surprinderea celor mai fine detalii.
+                            In 2014 am incercat fotografia macro, iar usor, usor am inceput sa fim foarte buni la surprinderea celor mai fine detalii.
                         </span>
                         <span class="marginAbout">
-                            In 2018 am inceput fotografia si filmarea de evenimente, dandu-ne silinta sa fim din ce in
-                            ce mai buni pe zi ce trece.
+                            In 2018 am inceput fotografia si filmarea de evenimente, dandu-ne silinta sa fim din ce in ce mai buni pe zi ce trece.
                         </span>
                         <span class="marginAbout">
                             Contactati-ne si va veti bucura ca ne-ati ales.
@@ -1325,6 +1330,11 @@
     </div>
 
     <script>
+        // pret botez
+        document.getElementById("pret").innerHTML = "720";
+                document.getElementById("ea").innerHTML = "216";
+                document.getElementById("es").innerHTML = "216";
+                document.getElementById("scmmm").innerHTML = "216";
         // trimite
         var trimite = document.getElementsByClassName("button-success")[0];
         var requiredServiciu = 0;
@@ -1364,7 +1374,7 @@
             inputs[i].addEventListener('change', calculeazaPret);
             // live complete oninput
             if (inputs[i].name == "DaYB" || inputs[i].name == "DaMB" || inputs[i].name == "DaDB" || inputs[i].name ==
-                "DaYS" || inputs[i].name == "DaMS" || inputs[i].name == "DaDS") {} else {
+                "DaYS" || inputs[i].name == "DaMS" || inputs[i].name == "DaDS") { } else {
                 // document.addEventListener("keydown", keyDownTextField, false);
                 inputs[i].addEventListener('input', calculeazaPret);
             }
@@ -1508,7 +1518,7 @@
             console.log(OInS.value);
             console.log(OIsS.value);
 
-            var pret = 0;
+            pret = 0;
             var OIsSV = Number(OIsS.value);
             var OInSV = Number(OInS.value);
             pret = OIsSV - OInSV;
@@ -1583,14 +1593,20 @@
                 }
                 var TotalCuOptionale = pret + eaPret + esPret + scmmmPret + TcPret + AMarePret + AMediuPret + AMicPret +
                     sfcPret;
+                    if(TotalCuOptionale != 0){
                 document.getElementById("pretTotal").innerHTML =
                     document.getElementsByName("TotalCuOptionale")[0].value = TotalCuOptionale;
+                document.getElementsByClassName("TotalCuOptionale")[0].style.display = "block";
+            } else {
+                document.getElementsByClassName("TotalCuOptionale")[0].style.display = "none";
+            }
+                    
 
             } else {
-                document.getElementById("pret").innerHTML = "x";
-                document.getElementById("ea").innerHTML = "x";
-                document.getElementById("es").innerHTML = "x";
-                document.getElementById("scmmm").innerHTML = "x";
+                document.getElementById("pret").innerHTML = "720";
+                document.getElementById("ea").innerHTML = "216";
+                document.getElementById("es").innerHTML = "216";
+                document.getElementById("scmmm").innerHTML = "216";
                 document.getElementsByName("Total")[0].value = 0;
                 document.getElementsByName("TotalCuOptionale")[0].value = 0;
             }

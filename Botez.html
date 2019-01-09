@@ -899,7 +899,7 @@
             }
 
             .form {
-                padding: 5px 20px;    
+                padding: 5px 20px;
             }
 
             .form>div {
@@ -950,7 +950,7 @@
             display: none;
         }
 
-        .form>div.fullText{
+        .form>div.fullText {
             width: 100%;
             max-width: calc(380px * 2);
         }
@@ -961,10 +961,14 @@
     <div class="content menu-parent">
         <div class="menuTop">
             <div class="menuTop-instructions">
-                <h5>Rezervari pe pagina de
-                    <a href="https://www.facebook.com/pg/worthshoot/">Facebook</a>
+                <h5>
+                    Aveti o urgenta?
+                    <br>
+                    Sunati la [ 07 4733 2638 ]
+                    <!-- Rezervari pe pagina de
+                    <a href="https://www.facebook.com/pg/worthshoot/">Facebook</a> -->
                 </h5>
-                <h5>Sau completand formularul de mai jos</h5>
+                <!-- <h5>Sau completand formularul de mai jos</h5> -->
                 <!-- urmand instructiunile -->
             </div>
             <div class="image-parent logo-parent">
@@ -1016,6 +1020,9 @@
         <form id="gform" method="POST" class="gform" data-email="worthshootsite@gmail.com" action="https://script.google.com/macros/s/AKfycbwKP4Q8-Ak665DHEsmMRgEgCpDvDmiYcxjKA84tUnMT4C_xcVlT/exec">
             <div class="form">
                 <!-- 2019.01.02 TEST  -->
+                <div class="fullText">
+                    Adesea, o sa va dati seama de valoarea unui moment abia atunci cand acesta va deveni o amintire!
+                </div>
                 <div>Serviciu</div>
                 <div>
                     <label class="container">
@@ -1118,8 +1125,7 @@
                     <!-- <h1>Pagina web in constructie !!</h1> -->
                     <!-- completaza datele tale. -->
                     Pretul nu se potriveste cu bugetul dvs.? Nicio problema, terminati de completat formularul si specificati bugetul dvs. in
-                    'Mesaj'.
-                    O sa facem orice ne sta in putinta pentru a gasi cea mai buna solutie impreuna!
+                    'Mesaj'. O sa facem orice ne sta in putinta pentru a gasi cea mai buna solutie impreuna!
                 </div>
                 <div class="titlu">Mesaj (optional) :</div>
                 <div>
@@ -1139,6 +1145,11 @@
                     <!-- <input type="text" name="Mesaj" value="Da"> -->
                     <input type="number" name="Total" pattern="[0-9-]*" value="0">
                 </div>
+
+                <div class="fullText">
+                    Surprinde cat mai frumos, evenimentele care se petrec o singura data in viata.
+                </div>
+
                 <div class="titlu">Optionale</div>
                 <div>
                     <label class="container">
@@ -1332,9 +1343,9 @@
     <script>
         // pret botez
         document.getElementById("pret").innerHTML = "720";
-                document.getElementById("ea").innerHTML = "216";
-                document.getElementById("es").innerHTML = "216";
-                document.getElementById("scmmm").innerHTML = "216";
+        document.getElementById("ea").innerHTML = "216";
+        document.getElementById("es").innerHTML = "216";
+        document.getElementById("scmmm").innerHTML = "216";
         // trimite
         var trimite = document.getElementsByClassName("button-success")[0];
         var requiredServiciu = 0;
@@ -1593,14 +1604,14 @@
                 }
                 var TotalCuOptionale = pret + eaPret + esPret + scmmmPret + TcPret + AMarePret + AMediuPret + AMicPret +
                     sfcPret;
-                    if(TotalCuOptionale != 0){
-                document.getElementById("pretTotal").innerHTML =
-                    document.getElementsByName("TotalCuOptionale")[0].value = TotalCuOptionale;
-                document.getElementsByClassName("TotalCuOptionale")[0].style.display = "block";
-            } else {
-                document.getElementsByClassName("TotalCuOptionale")[0].style.display = "none";
-            }
-                    
+                if (TotalCuOptionale != 0) {
+                    document.getElementById("pretTotal").innerHTML =
+                        document.getElementsByName("TotalCuOptionale")[0].value = TotalCuOptionale;
+                    document.getElementsByClassName("TotalCuOptionale")[0].style.display = "block";
+                } else {
+                    document.getElementsByClassName("TotalCuOptionale")[0].style.display = "none";
+                }
+
 
             } else {
                 document.getElementById("pret").innerHTML = "720";

@@ -233,7 +233,9 @@
         }
 
         .form {
-            padding: 20px;
+            padding: 20px 0;
+            /* announcement */
+            padding-top: 0px;
             display: flex;
             justify-content: center;
             flex-direction: column;
@@ -246,7 +248,7 @@
             /* 16 */
             color: #E0E0E0;
             /* Titlu 12 */
-            padding: 10px;
+            padding: 10px 30px;
             text-align: center;
             width: 380px;
         }
@@ -273,11 +275,15 @@
             padding: 30px 10px 10px !important;
         }
 
-        .menuTop-instructions {
+        .menuTopInstructions {
             padding: 20px;
             border-right: 5px solid rgba(249, 249, 249, 0.9);
             text-align: right;
             text-transform: uppercase;
+            height: 100px;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
         }
 
         /* culori */
@@ -920,7 +926,8 @@
             }
 
             .form {
-                padding: 5px 20px;
+                /* padding: 5px 20px; */
+                padding: 5px 0;
             }
 
             .form>div {
@@ -971,7 +978,7 @@
             display: none;
         }
 
-        .form>div.fullText {
+        .form>div>div.fullText {
             width: 100%;
             max-width: calc(380px * 2);
         }
@@ -1056,12 +1063,44 @@
             margin-bottom: 30px;
         }
 
-        .announcementTwo {
+        .announcementWhite {
             background-color: white;
             box-shadow: inset 0 0.2rem 0.4rem rgba(0, 0, 0, 0.23);
             padding: 5px;
             width: calc(100% + 20px);
-            max-width: 100vw;
+            max-width: 100vw !important;
+        }
+
+        .announcementBlack {
+            background-color: #262626;
+            /* box-shadow: inset 0 0.2rem 0.4rem rgba(255, 255, 255, 0.23); */
+            padding: 5px;
+            width: calc(100% + 20px) !important;
+            max-width: 100vw !important;
+            display: flex;
+            justify-content: center;
+            margin: 0 !important;
+        }
+
+        .announcementBlack:nth-child(1) {
+            margin: 0 0 20px !important;
+        }
+
+        .announcementBlack:nth-child(3) {
+            margin: 20px 0 0 0 !important;
+        }
+
+        .announcementBlack>div {
+            justify-content: center;
+            font-size: 0.22rem;
+            letter-spacing: 0.1em;
+            font-weight: normal !important;
+            margin: 4px;
+            font-family: 'Lato', sans-serif !important;
+        }
+
+        .gform {
+            width: 100%;
         }
     </style>
 </head>
@@ -1069,7 +1108,7 @@
 <body>
     <div class="content [ menuParent ]">
         <div class="menuTop">
-            <div class="menuTop-instructions">
+            <div class="menuTopInstructions">
                 <h5>
                     Aveti o urgenta?
                     <br> Sunati la
@@ -1086,12 +1125,12 @@
             </div>
         </div>
     </div>
-    <div class="announcement">
-        <!-- <h1>Pagina web in constructie !!</h1> -->
-        <!-- completaza datele tale. -->
-        <!-- <h1>Mai jos aveti mai multe imagini, dati spre stanga pe imagine pentru a le vedea, iar pentru a le mari, pe telefon
+    <!-- <div class="announcement"> -->
+    <!-- <h1>Pagina web in constructie !!</h1> -->
+    <!-- completaza datele tale. -->
+    <!-- <h1>Mai jos aveti mai multe imagini, dati spre stanga pe imagine pentru a le vedea, iar pentru a le mari, pe telefon
             folositi doua degete.</h1> -->
-    </div>
+    <!-- </div> -->
     <div class="content form-parent">
         <!-- <div class="scrollHide"> -->
         <div class="galleryParent">
@@ -1121,14 +1160,17 @@
         <!-- <div class="progress-container">
             <div class="progress-bar [ galleryBar ]"></div>
         </div> -->
-        <div class="announcement announcementTwo">
-            <h1>Afla pretul completand datele tale!</h1>
+        <div class="announcement announcementWhite">
+            <!-- <h1>Afla pretul completand datele tale!</h1> -->
+            <h1>Pret aproximativ in functie de durata.</h1>
         </div>
         <form id="gform" method="POST" class="gform" data-email="worthshootsite@gmail.com" action="https://script.google.com/macros/s/AKfycbwKP4Q8-Ak665DHEsmMRgEgCpDvDmiYcxjKA84tUnMT4C_xcVlT/exec">
             <div class="form">
                 <!-- 2019.01.02 TEST  -->
-                <div class="fullText">
-                    Adesea, o sa va dati seama de valoarea unui moment abia atunci cand acesta va deveni o amintire!
+                <div class="announcementBlack">
+                    <div class="fullText">
+                        Adesea, o sa va dati seama de valoarea unui moment abia atunci cand acesta va deveni o amintire!
+                    </div>
                 </div>
                 <div>Serviciu</div>
                 <div>
@@ -1228,11 +1270,13 @@
                         <span class="mancare"> + mancare</span> )
                     </div>
                 </div>
-                <div class="fullText">
-                    <!-- <h1>Pagina web in constructie !!</h1> -->
-                    <!-- completaza datele tale. -->
-                    Pretul nu se potriveste cu bugetul dvs.? Nicio problema, terminati de completat formularul si specificati bugetul dvs. in
-                    'Mesaj'. O sa facem orice ne sta in putinta pentru a gasi cea mai buna solutie impreuna!
+                <div class="announcementBlack">
+                    <div class="fullText">
+                        <!-- <h1>Pagina web in constructie !!</h1> -->
+                        <!-- completaza datele tale. -->
+                        Pretul nu se potriveste cu bugetul dvs.? Nicio problema, terminati de completat formularul si specificati bugetul dvs. in
+                        'Mesaj'. O sa facem orice ne sta in putinta pentru a gasi cea mai buna solutie impreuna!
+                    </div>
                 </div>
                 <div class="titlu">Mesaj (optional) :</div>
                 <div>
@@ -1253,8 +1297,10 @@
                     <input type="number" name="Total" pattern="[0-9-]*" value="0">
                 </div>
 
-                <div class="fullText">
-                    Surprinde cat mai frumos, evenimentele care se petrec o singura data in viata.
+                <div class="announcementBlack">
+                    <div class="fullText">
+                        Surprinde cat mai frumos, evenimentele care se petrec o singura data in viata.
+                    </div>
                 </div>
 
                 <div class="titlu">Optionale</div>

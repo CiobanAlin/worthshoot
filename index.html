@@ -8,7 +8,7 @@
 
     <meta name="KeyWord" content="foto video botez, servicii foto video, poze profesionale, sedinta foto, worthshoot, worthshoot.com">
     <!--  corporate suceava,  taieremot suceava, cununie civila suceava, , videografie, fotografie, foto, foto video, sedinta foto, suceava -->
-    <meta name="description" content="Foto Botez | Suceava [ 0747332638 ] worthshoot@gmail.com">
+    <meta name="description" content="Foto Botez | Suceava [ 0747 332 638 ] worthshoot@gmail.com">
 
     <meta name="google-site-verification" content="JBxLdW3nkVyhcVUbhuJPpBTEW75aknoZ-pXdBFBSpTk" />
     <!-- analytics -->
@@ -193,13 +193,13 @@
             background-image: url("logo10.png");
         }
 
-        .logo-parent {
+        .logoParent {
             padding-top: 16.67%;
         }
 
         /* menu */
 
-        .menu-parent {
+        .menuParent {
             box-shadow: 0 0.2rem 0.4rem rgba(0, 0, 0, 0.23);
             /* box-shadow: 0 0.2rem 0.4rem rgb(181, 181, 180); */
             background-color: #262626;
@@ -338,42 +338,52 @@
         }
 
         .galleryParent {
-            overflow-x: scroll;
-            overflow-y: hidden;
+            /* overflow-x: scroll;
+            overflow-y: hidden; */
             max-width: 100vw !important;
             width: 100%;
-            cursor: grab;
+            /* cursor: grab;
             cursor: -o-grab;
             cursor: -moz-grab;
-            cursor: -webkit-grab;
+            cursor: -webkit-grab; */
         }
 
         .gallery {
             padding: 10px;
             display: flex;
-            width: calc(400px * 16) !important;
-            max-width: max-content;
+            /* width: calc(1600px * 16) !important; */
+            /* max-width: max-content; */
+            max-width: 1200px;
             margin: auto;
+            flex-flow: column;
         }
 
-        .gallery::after {
+        /* .gallery::after {
             position: absolute;
             top: calc(100% - 18px);
-            ;
             right: 0;
             bottom: 0;
             left: 0;
             background-color: #353231;
             content: '';
-        }
+        } */
 
         .gallery>div {
-            height: 200px;
-            width: 300px;
-            margin: 10px;
+            /* height: 200px;
+            width: 300px; */
+            padding-top: 66%;
+            width: 100%;
+            max-width: 1200px;
+            /* margin: 10px; */
+            margin: 10px 0;
             position: relative;
             background-color: rgba(249, 249, 249, 0.9);
             box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12);
+            display: none;
+        }
+
+        .gallery>div.galleryOpenButton {
+            display: block;
         }
 
         .gallery>div:after {
@@ -389,43 +399,29 @@
             bottom: 10px;
         }
 
-        /* images */
-
-        .gallery>div:nth-child(1) {
-            /* square */
-            height: 200px;
-            width: 200px;
-        }
-
-        .gallery>div:nth-child(7),
-        .gallery>div:nth-child(16) {
-            /* portrait */
-            height: 200px;
-            width: 165px;
-        }
 
         .gallery>div:nth-child(1):after {
-            background-image: url("Profil Facebook.JPG");
+            background-image: url("IMG_4436.png");
         }
 
         .gallery>div:nth-child(2):after {
-            background-image: url("IMG_5413.JPG");
+            background-image: url("IMG_5413.png");
         }
 
         .gallery>div:nth-child(3):after {
-            background-image: url("IMG_5422.JPG");
+            background-image: url("IMG_5422.png");
         }
 
         .gallery>div:nth-child(4):after {
-            background-image: url("IMG_5456.JPG");
+            background-image: url("IMG_5456.png");
         }
 
         .gallery>div:nth-child(5):after {
-            background-image: url("IMG_5819.JPG");
+            background-image: url("IMG_5819.png");
         }
 
         .gallery>div:nth-child(6):after {
-            background-image: url("IMG_20180825_141630.JPG");
+            background-image: url("IMG_20180825_141630.png");
         }
 
         .gallery>div:nth-child(7):after {
@@ -435,39 +431,39 @@
 
 
         .gallery>div:nth-child(8):after {
-            background-image: url("_MG_5769.JPG");
+            background-image: url("_MG_5769.png");
         }
 
         .gallery>div:nth-child(9):after {
-            background-image: url("_MG_5834.JPG");
+            background-image: url("_MG_5834.png");
         }
 
         .gallery>div:nth-child(10):after {
-            background-image: url("_MG_5843.JPG");
+            background-image: url("_MG_5843.png");
         }
 
         .gallery>div:nth-child(11):after {
-            background-image: url("_MG_5864.JPG");
+            background-image: url("_MG_5864.png");
         }
 
         .gallery>div:nth-child(12):after {
-            background-image: url("_MG_7040.JPG");
+            background-image: url("_MG_7040.png");
         }
 
         .gallery>div:nth-child(13):after {
-            background-image: url("_MG_7118.JPG");
+            background-image: url("_MG_7118.png");
         }
 
         .gallery>div:nth-child(14):after {
-            background-image: url("_MG_7139.JPG");
+            background-image: url("_MG_7139.png");
         }
 
         .gallery>div:nth-child(15):after {
-            background-image: url("_MG_7346.JPG");
+            background-image: url("_MG_7346.png");
         }
 
         .gallery>div:nth-child(16):after {
-            background-image: url("_MG_7358.JPG");
+            background-image: url("_MG_7358.png");
         }
 
         .announcement {
@@ -888,6 +884,27 @@
             .close {
                 margin-top: -30px;
             }
+            /* images */
+            .gallery>div:nth-child(1) {
+                /* square */
+                padding-top: 100%;
+                /* height: 200px;
+            width: 200px; */
+                /* height: 100%; */
+                /* max-height: 800px; */
+                /* width: 100%; */
+                /* max-width: 800px; */
+            }
+
+            .gallery>div:nth-child(7),
+            .gallery>div:nth-child(16) {
+                /* portrait */
+                padding-top: 121.21%;
+                /* height: 200px;
+            width: 165px; */
+                /* height: 800px;
+            width: 660px; */
+            }
         }
 
 
@@ -954,61 +971,142 @@
             width: 100%;
             max-width: calc(380px * 2);
         }
+
+        .galleryOpen {
+            position: fixed;
+            top: 100px;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            background-color: #353231;
+            overflow-y: scroll;
+            z-index: 99;
+            padding-left: 0;
+            padding-right: 0;
+            max-width: 100%;
+            display: flex;
+            align-items: center;
+        }
+
+        .galleryOpenShadow {
+            position: fixed;
+            top: 100px;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            background-color: #353231;
+            z-index: 98;
+            padding-left: 0;
+            padding-right: 0;
+        }
+
+        .galleryOpen>div {
+            margin: 10px 0;
+            display: block;
+            /* background-color: #353231; */
+        }
+
+        .galleryOpen>div:after {
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+        }
+
+        .galleryOpenBody {
+            overflow: hidden;
+        }
+
+        .galleryOpenLogoParentClose {
+            width: 50px;
+            height: 50px;
+            margin: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 30px;
+            padding: 10px;
+
+        }
+
+        .galleryOpenLogoParentClose>div {
+            background-image: url();
+
+        }
+
+        .galleryOpenLogoParentCloseX {
+            display: none;
+            text-align: center;
+        }
+        .galleryOpenMenuParent{
+            position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 98;
+        }
+        .galleryOpenButtonText{
+            margin-bottom: 30px;
+        }
     </style>
 </head>
 
 <body>
-    <div class="content menu-parent">
+    <div class="content [ menuParent ]">
         <div class="menuTop">
             <div class="menuTop-instructions">
                 <h5>
                     Aveti o urgenta?
-                    <br>
-                    Sunati la [ 07 4733 2638 ]
+                    <br> Sunati la
+                    <br> [ 0747 332 638 ]
                     <!-- Rezervari pe pagina de
                     <a href="https://www.facebook.com/pg/worthshoot/">Facebook</a> -->
                 </h5>
                 <!-- <h5>Sau completand formularul de mai jos</h5> -->
                 <!-- urmand instructiunile -->
             </div>
-            <div class="image-parent logo-parent">
-                <div class="image logo"></div>
+            <div class="image-parent [ logoParent ] ">
+                <button class="[ galleryOpenLogoParentCloseX ]">Inapoi</button>
+                <div class="image [ logo ]"></div>
             </div>
         </div>
     </div>
     <div class="announcement">
         <!-- <h1>Pagina web in constructie !!</h1> -->
         <!-- completaza datele tale. -->
-        <h1>Mai jos aveti mai multe imagini, dati spre stanga pe imagine pentru a le vedea, iar pentru a le mari, pe telefon
-            folositi doua degete.</h1>
+        <!-- <h1>Mai jos aveti mai multe imagini, dati spre stanga pe imagine pentru a le vedea, iar pentru a le mari, pe telefon
+            folositi doua degete.</h1> -->
     </div>
     <div class="content form-parent">
-        <div class="scrollHide">
-            <div class="galleryParent">
-                <div class="gallery">
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
+        <!-- <div class="scrollHide"> -->
+        <div class="galleryParent">
+            <div class="[ gallery ]">
+                <div class="[ galleryOpenButton ]">
                 </div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
             </div>
         </div>
-        <div class="progress-container">
+        <button class="[ galleryOpenButton ] galleryOpenButtonText">Galerie</button>
+        <!-- </div> -->
+        <!-- <div class="progress-container">
             <div class="progress-bar [ galleryBar ]"></div>
-        </div>
+        </div> -->
         <div class="announcement" style="    
                 background-color: white;
     box-shadow: inset 0 0.2rem 0.4rem rgba(0, 0, 0, 0.23);
@@ -1255,7 +1353,7 @@
     <div class="footer">
         <div>!! Pentru urgente, va rugam sa ne contactati pe pagina de
             <a href="https://www.facebook.com/pg/worthshoot/">Facebook</a>
-            sau la [ 07 4733 2638 ]</div>
+            sau la [ 0747 332 638 ]</div>
     </div>
     <div class="stickyMenuParent">
         <div class="stickyMenu">
@@ -1287,7 +1385,7 @@
             <div class="contact overlay-text dn">
                 <div>
                     <a class="button-special" href="tel:0747332638" target="_blank">
-                        <h2>0747332638</h2>
+                        <h2>0747 332 638</h2>
                     </a>
                     <a class="button-special" href="mailto:worthshoot@gmail.com" target="_blank">
                         <h3>worthshoot@
@@ -1339,7 +1437,39 @@
             <!-- /about -->
         </div>
     </div>
+    <!-- <div class="galleryOpenShadow"></div> -->
+    <!-- //galerieDeschidere -->
+    <script>
+        var galleryOpenButton = document.getElementsByClassName("galleryOpenButton");
+        for (var i = 0; i < galleryOpenButton.length; i++) {
+            galleryOpenButton[i].addEventListener('click', galleryOpenFunction);
+        }
+        function galleryOpenFunction() {
+            var body = document.getElementsByTagName("BODY")[0];
+            body.scrollTop = 0;
+            body.classList.add("galleryOpenBody");
+            document.getElementsByClassName("gallery")[0].classList.add("galleryOpen");
+            document.getElementsByClassName("menuParent")[0].classList.add("galleryOpenMenuParent");
+            document.getElementsByClassName("logoParent")[0].classList.add("galleryOpenLogoParentClose");
+            document.getElementsByClassName("galleryOpenLogoParentCloseX")[0].style.display = "block";
+            document.getElementsByClassName("logo")[0].style.display = "none";
+        }
+</script>
+<script>
+        var galleryOpenLogoParentCloseX = document.getElementsByClassName("galleryOpenLogoParentCloseX")[0];
+        galleryOpenLogoParentCloseX.addEventListener('click', galleryOpenLogoParentCloseXFunction);
 
+        function galleryOpenLogoParentCloseXFunction() {
+            var body = document.getElementsByTagName("BODY")[0];
+            body.scrollTop = 0;
+            body.classList.remove("galleryOpenBody");
+            document.getElementsByClassName("gallery")[0].classList.remove("galleryOpen");
+            document.getElementsByClassName("menuParent")[0].classList.remove("galleryOpenMenuParent");
+            document.getElementsByClassName("logoParent")[0].classList.remove("galleryOpenLogoParentClose");
+            document.getElementsByClassName("galleryOpenLogoParentCloseX")[0].style.display = "none";
+            document.getElementsByClassName("logo")[0].style.display = "block";
+        }
+    </script>
     <script>
         // pret botez
         document.getElementById("pret").innerHTML = "720";
@@ -1372,7 +1502,6 @@
         // Ora sala
         var OInS = document.getElementsByName('OInS')[0];
         var OIsS = document.getElementsByName('OIsS')[0];
-
         // pret
         var pret = 0;
         var foto = 0;

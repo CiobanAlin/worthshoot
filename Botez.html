@@ -1099,6 +1099,26 @@
             font-family: 'Lato', sans-serif !important;
         }
 
+                .announcementWhiteForm{
+                    background-color: white;
+                    box-shadow: inset 0 0.2rem 0.4rem rgba(0, 0, 0, 0.23);
+            padding: 5px;
+            width: calc(100% + 20px) !important;
+            max-width: 100vw !important;
+            display: flex;
+            justify-content: center;
+            margin: 0 !important;
+            padding: 5px !important;
+        }
+        .announcementWhiteForm>div {
+                font-family: 'Lato', sans-serif !important;
+    font-size: 0.35rem;
+    letter-spacing: 0.1em;
+    margin: 0 7px;
+    text-align: center;
+    color: #353231 !important;
+        }
+
         .gform {
             width: 100%;
         }
@@ -1160,18 +1180,19 @@
         <!-- <div class="progress-container">
             <div class="progress-bar [ galleryBar ]"></div>
         </div> -->
-        <div class="announcement announcementWhite">
+        <!-- <div class="announcement announcementWhite"> -->
             <!-- <h1>Afla pretul completand datele tale!</h1> -->
-            <h1>Pret aproximativ in functie de durata.</h1>
-        </div>
+            <!-- <h1>Pret aproximativ in functie de durata.</h1>
+        </div> -->
         <form id="gform" method="POST" class="gform" data-email="worthshootsite@gmail.com" action="https://script.google.com/macros/s/AKfycbwKP4Q8-Ak665DHEsmMRgEgCpDvDmiYcxjKA84tUnMT4C_xcVlT/exec">
             <div class="form">
                 <!-- 2019.01.02 TEST  -->
-                <div class="announcementBlack">
-                    <div class="fullText">
-                        Adesea, o sa va dati seama de valoarea unui moment abia atunci cand acesta va deveni o amintire!
+                <div class="announcementWhiteForm">
+                        <div class="fullText">
+                            <!-- <h1>Afla pretul completand datele tale!</h1> -->
+                            <!-- <h1>Pret aproximativ in functie de durata.</h1> -->
+                        </div>
                     </div>
-                </div>
                 <div>Serviciu</div>
                 <div>
                     <label class="container">
@@ -1183,6 +1204,12 @@
                 <div>
                     <div>
                         *Valoare medie eveniment: 900lei
+                    </div>
+                </div>
+                <div class="announcementWhiteForm">
+                    <div class="fullText">
+                        <!-- <h1>Afla pretul completand datele tale!</h1> -->
+                        <h1>Pret aproximativ in functie de durata.</h1>
                     </div>
                 </div>
 
@@ -1202,6 +1229,11 @@
                         <div>Foto</div>
                     </label>
                 </div>
+                <div class="announcementBlack">
+                        <div class="fullText">
+                            Adesea, o sa va dati seama de valoarea unui moment abia atunci cand acesta va deveni o amintire!
+                        </div>
+                    </div>
                 <div class="titlu">Biserica</div>
                 <div>
                     <div>
@@ -1296,14 +1328,12 @@
                     <!-- <input type="text" name="Mesaj" value="Da"> -->
                     <input type="number" name="Total" pattern="[0-9-]*" value="0">
                 </div>
-
-                <div class="announcementBlack">
-                    <div class="fullText">
-                        Surprinde cat mai frumos, evenimentele care se petrec o singura data in viata.
-                    </div>
-                </div>
-
                 <div class="titlu">Optionale</div>
+                <div class="announcementBlack">
+                        <div class="fullText">
+                            Surprinde cat mai frumos, evenimentele care se petrec o singura data in viata.
+                        </div>
+                    </div>
                 <div>
                     <label class="container">
                         <input class="echipareJs" name="OpSfc" type="checkbox">

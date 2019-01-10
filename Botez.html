@@ -1038,16 +1038,26 @@
             display: none;
             text-align: center;
         }
-        .galleryOpenMenuParent{
+
+        .galleryOpenMenuParent {
             position: fixed;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    z-index: 98;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            z-index: 98;
         }
-        .galleryOpenButtonText{
+
+        .galleryOpenButtonText {
             margin-bottom: 30px;
+        }
+
+        .announcementTwo {
+            background-color: white;
+            box-shadow: inset 0 0.2rem 0.4rem rgba(0, 0, 0, 0.23);
+            padding: 5px;
+            width: calc(100% + 20px);
+            max-width: 100vw;
         }
     </style>
 </head>
@@ -1107,12 +1117,7 @@
         <!-- <div class="progress-container">
             <div class="progress-bar [ galleryBar ]"></div>
         </div> -->
-        <div class="announcement" style="    
-                background-color: white;
-    box-shadow: inset 0 0.2rem 0.4rem rgba(0, 0, 0, 0.23);
-    padding: 5px;
-    width: calc(100% + 20px);
-    max-width: 100vw;">
+        <div class="announcement announcementTwo">
             <h1>Afla pretul completand datele tale!</h1>
         </div>
         <form id="gform" method="POST" class="gform" data-email="worthshootsite@gmail.com" action="https://script.google.com/macros/s/AKfycbwKP4Q8-Ak665DHEsmMRgEgCpDvDmiYcxjKA84tUnMT4C_xcVlT/exec">
@@ -1454,8 +1459,8 @@
             document.getElementsByClassName("galleryOpenLogoParentCloseX")[0].style.display = "block";
             document.getElementsByClassName("logo")[0].style.display = "none";
         }
-</script>
-<script>
+    </script>
+    <script>
         var galleryOpenLogoParentCloseX = document.getElementsByClassName("galleryOpenLogoParentCloseX")[0];
         galleryOpenLogoParentCloseX.addEventListener('click', galleryOpenLogoParentCloseXFunction);
 
@@ -2057,7 +2062,9 @@
                     xhr.onreadystatechange = function () {
                         document.getElementById("thankyou_message").style.display = "block"; // show thankYouMessage
                         // Trimis
-                        document.getElementById("gform").style.display = "none"; // hide form
+                        document.getElementById("gform").style.display = "none";
+                        document.getElementsByClassName("announcementTwo")[0].style.display = "none";
+                        // hide form
                         // gform
                         return;
                     };

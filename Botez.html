@@ -965,12 +965,12 @@
             }
         }
 
-        .dn
+        
         /* 2019.01.02 test */
 
-        ,
+        .dn,
         .notita {
-            display: none;
+            display: none !important;
         }
 
         .Adfdb,
@@ -1181,21 +1181,22 @@
             <div class="progress-bar [ galleryBar ]"></div>
         </div> -->
         <!-- <div class="announcement announcementWhite"> -->
-            <!-- <h1>Afla pretul completand datele tale!</h1> -->
-            <!-- <h1>Pret aproximativ in functie de durata.</h1>
+        <!-- <h1>Afla pretul completand datele tale!</h1> -->
+        <!-- <h1>Pret aproximativ in functie de durata.</h1>
         </div> -->
         <form id="gform" method="POST" class="gform" data-email="worthshootsite@gmail.com" action="https://script.google.com/macros/s/AKfycbwKP4Q8-Ak665DHEsmMRgEgCpDvDmiYcxjKA84tUnMT4C_xcVlT/exec">
             <div class="form">
                 <!-- 2019.01.02 TEST  -->
                 <div class="announcementWhiteForm">
-                        <div class="fullText">
-                            <!-- <h1>Afla pretul completand datele tale!</h1> -->
-                            <!-- <h1>Pret aproximativ in functie de durata.</h1> -->
-                            <h1>
-                               Ceea ce ne deferentiaza pe noi de restul este claritatea, culorile realiste si echilibrul de compozitie.
-                            </h1>
-                        </div>
+                    <div class="fullText">
+                        <!-- <h1>Afla pretul completand datele tale!</h1> -->
+                        <!-- <h1>Pret aproximativ in functie de durata.</h1> -->
+                        <h1>
+                            Ceea ce ne deferentiaza pe noi de restul este claritatea, culorile realiste si echilibrul
+                            de compozitie.
+                        </h1>
                     </div>
+                </div>
                 <div>Serviciu</div>
                 <div>
                     <label class="container">
@@ -1208,8 +1209,11 @@
                     <div>
                         *Valoare medie eveniment: 900lei
                     </div>
+                    <div>
+                        **Pret aproximativ in functie de durata
+                    </div>
                 </div>
-                <div class="announcementBlack">
+                <div class="announcementBlack dn">
                     <div class="fullText">
                         <!-- <h1>Afla pretul completand datele tale!</h1> -->
                         Pret aproximativ in functie de durata.
@@ -1233,10 +1237,11 @@
                     </label>
                 </div>
                 <div class="announcementBlack">
-                        <div class="fullText">
-                            Adesea, o sa va dati seama de valoarea unui moment abia atunci cand acesta va deveni o amintire!
-                        </div>
+                    <div class="fullText">
+                        Adesea, o sa va dati seama de valoarea unui moment abia atunci cand acesta va deveni o
+                        amintire!
                     </div>
+                </div>
                 <div class="titlu">Biserica</div>
                 <div>
                     <div>
@@ -1254,9 +1259,11 @@
                     </div>
                 </div>
                 <div>
-                    <input type="number" name="OInB" placeholder="ora inceput" pattern="[0-9]*" min="0" max="24" required>
+                    <input type="number" name="OInB" placeholder="ora inceput" pattern="[0-9]*" min="0" max="24"
+                        required>
                     <div class="hourStrip">-</div>
-                    <input type="number" name="OIsB" placeholder="ora sfarsit" pattern="[0-9]*" min="0" max="24" required>
+                    <input type="number" name="OIsB" placeholder="ora sfarsit" pattern="[0-9]*" min="0" max="24"
+                        required>
                 </div>
                 <div>
                     <div>
@@ -1289,9 +1296,11 @@
                     </div>
                 </div>
                 <div>
-                    <input type="number" name="OInS" placeholder="ora inceput" pattern="[0-9]*" min="0" max="24" required>
+                    <input type="number" name="OInS" placeholder="ora inceput" pattern="[0-9]*" min="0" max="24"
+                        required>
                     <div class="hourStrip">-</div>
-                    <input type="number" name="OIsS" placeholder="ora sfarsit" pattern="[0-9]*" min="0" max="24" required>
+                    <input type="number" name="OIsS" placeholder="ora sfarsit" pattern="[0-9]*" min="0" max="24"
+                        required>
                 </div>
                 <div>
                     <div>
@@ -1309,7 +1318,8 @@
                     <div class="fullText">
                         <!-- <h1>Pagina web in constructie !!</h1> -->
                         <!-- completaza datele tale. -->
-                        Pretul nu se potriveste cu bugetul dvs.? Nicio problema, terminati de completat formularul si specificati bugetul dvs. in
+                        Pretul nu se potriveste cu bugetul dvs.? Nicio problema, terminati de completat formularul si
+                        specificati bugetul dvs. in
                         'Mesaj'. O sa facem orice ne sta in putinta pentru a gasi cea mai buna solutie impreuna!
                     </div>
                 </div>
@@ -1320,7 +1330,8 @@
                 <div class="titlu">Nume intreg:</div>
                 <div>
                     <!-- pattern="[a-zA-Z]{5,}" -->
-                    <input type="text" name="nIn" oninput="this.value = this.value.replace(/[^a-zA-Z -]/g, '');" required>
+                    <input type="text" name="nIn" oninput="this.value = this.value.replace(/[^a-zA-Z -]/g, '');"
+                        required>
                     <!-- this.value = this.value.replace(/(\..*)\./g, '$1'); -->
                 </div>
                 <div class="titlu">Numar telefon:</div>
@@ -1331,12 +1342,12 @@
                     <!-- <input type="text" name="Mesaj" value="Da"> -->
                     <input type="number" name="Total" pattern="[0-9-]*" value="0">
                 </div>
-                <div class="titlu">Optionale</div>
+                <!-- <div class="titlu">Optionale</div> -->
                 <div class="announcementBlack">
-                        <div class="fullText">
-                            Surprinde cat mai frumos, evenimentele care se petrec o singura data in viata.
-                        </div>
+                    <div class="fullText">
+                        Surprinde cat mai frumos, evenimentele care se petrec o singura data in viata.
                     </div>
+                </div>
                 <div>
                     <label class="container">
                         <input class="echipareJs" name="OpSfc" type="checkbox">
@@ -1350,40 +1361,48 @@
                     <label class="container">
                         <input class="echipareJs" name="OpTc" type="checkbox">
                         <span class="checkmark"></span>
-                        <div>Tablou canvas [ 210lei ]</div>
+                        <div>Tablou canvas
+                            <br>
+                            [ 210lei ]</div>
                     </label>
                 </div>
                 <div>
                     <label class="container">
                         <input class="echipareJs" name="OpAMare" type="checkbox">
                         <span class="checkmark"></span>
-                        <div>Album Mare [ 900lei ]</div>
+                        <div>Album Mare
+                            <br>
+                            [ 1200lei ]</div>
                     </label>
                 </div>
-                <div>
+                <div class="dn">
                     <label class="container">
                         <input class="echipareJs" name="OpAMediu" type="checkbox">
                         <span class="checkmark"></span>
-                        <div>Album Mediu [ 1200lei ]</div>
+                        <div>Album Mediu
+                            <br>
+                            [ 900lei ]</div>
                     </label>
                 </div>
-                <div>
+                <div class="dn">
                     <label class="container">
                         <input class="echipareJs" name="OpAMic" type="checkbox">
                         <span class="checkmark"></span>
-                        <div>Album Mic [ 400lei ]</div>
+                        <div>Album Mic
+                            <br>
+                            [ 400lei ]</div>
                     </label>
                 </div>
-                <div>
+                <div class="dn">
                     <label class="container">
                         <input class="echipareJs" name="OpEart" type="checkbox">
                         <span class="checkmark"></span>
-                        <div>Editare artistica
+                        <div>Editare avansata
                             <br> [
                             <span id="ea">x</span>lei ] </div>
                     </label>
                 </div>
-                <div>
+                <div class="dn">
                     <label class="container">
                         <input class="echipareJs" name="OpEsup" type="checkbox">
                         <span class="checkmark"></span>
@@ -1395,7 +1414,7 @@
                 </div>
 
 
-                <div>
+                <div class="dn">
                     <label class="container">
                         <input class="echipareJs" name="OpScmmm" type="checkbox">
                         <span class="checkmark"></span>
@@ -1505,10 +1524,12 @@
                             Am inceput fotografia in 2012 cu portrete, fiind si in prezent cea mai mare pasiune.
                         </span>
                         <span class="marginAbout">
-                            In 2014 am incercat fotografia macro, iar usor, usor am inceput sa fim foarte buni la surprinderea celor mai fine detalii.
+                            In 2014 am incercat fotografia macro, iar usor, usor am inceput sa fim foarte buni la
+                            surprinderea celor mai fine detalii.
                         </span>
                         <span class="marginAbout">
-                            In 2018 am inceput fotografia si filmarea de evenimente, dandu-ne silinta sa fim din ce in ce mai buni pe zi ce trece.
+                            In 2018 am inceput fotografia si filmarea de evenimente, dandu-ne silinta sa fim din ce in
+                            ce mai buni pe zi ce trece.
                         </span>
                         <span class="marginAbout">
                             Contactati-ne si va veti bucura ca ne-ati ales.
@@ -1532,6 +1553,7 @@
         for (var i = 0; i < galleryOpenButton.length; i++) {
             galleryOpenButton[i].addEventListener('click', galleryOpenFunction);
         }
+
         function galleryOpenFunction() {
             var body = document.getElementsByTagName("BODY")[0];
             body.scrollTop = 0;
@@ -1602,7 +1624,7 @@
             inputs[i].addEventListener('change', calculeazaPret);
             // live complete oninput
             if (inputs[i].name == "DaYB" || inputs[i].name == "DaMB" || inputs[i].name == "DaDB" || inputs[i].name ==
-                "DaYS" || inputs[i].name == "DaMS" || inputs[i].name == "DaDS") { } else {
+                "DaYS" || inputs[i].name == "DaMS" || inputs[i].name == "DaDS") {} else {
                 // document.addEventListener("keydown", keyDownTextField, false);
                 inputs[i].addEventListener('input', calculeazaPret);
             }

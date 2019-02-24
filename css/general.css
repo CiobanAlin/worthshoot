@@ -93,6 +93,7 @@ h2 {
 h3 {
     /* color: #F57C21; */
     color: #FF9323;
+    font-size: 26px;
 }
 
 h3,
@@ -211,4 +212,31 @@ ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
+}
+
+.pret {
+    /* color: #241B99; */
+    /* color: #565388; */
+    /* color: #D42323; */
+    color: #F9D01C;
+    font-family: lato;
+    font-size: 20px;
+    color: #FAFCFD;
+    color: #E5E6F3;
+    color: #3E3D77;
+    color: #241B99;
+
+
+    color: #FAFCFD;
+    color: #3E3D77;
+    color: #565387;
+    color: #E5E6F3;
+    /* body-background */
+    color: #E5E6F3;
+    color: #FF9323;
+    color: #C77485;
+    color: #C57283;
+    color: #493545;
+    color: #C57283;
+
 }

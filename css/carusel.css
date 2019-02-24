@@ -118,28 +118,36 @@
     margin: 0 22px 33px 22px;
 }
 
-@media screen and (max-width:950px){
-    .selectTestimonial{
-    margin-top: 220px;
+@media screen and (max-width:950px) {
+    .selectTestimonial {
+        margin-top: 220px;
     }
-    .testimonial{
-    margin: -220px 0;
-    border-radius: 0;
-    margin-left: auto;
-    margin-right: auto;
-    right: 0;
-    left: 0;
+
+    .testimonial {
+        margin: -220px 0;
+        border-radius: 0;
+        margin-left: auto;
+        margin-right: auto;
+        right: 0;
+        left: 0;
     }
-    .imagineCarusel{
-    border-radius: 0;
+
+    .imagineCarusel {
+        border-radius: 0;
     }
-    .galerieCaruselParinte{  
-    margin: 33px 0;
-    width: 100%;
+
+    .galerieCaruselParinte {
+        margin: 33px 0;
+        width: 100%;
+    }
+
+    p {
+        margin-left: 0;
     }
 }
-@media screen and (max-width:550px){
-.testimonial{
-box-sizing: border-box;
-}
+
+@media screen and (max-width:550px) {
+    .testimonial {
+        box-sizing: border-box;
+    }
 }

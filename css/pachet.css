@@ -81,6 +81,7 @@ button {
     color: white;
     font-family: 'Noto Sans', sans-serif;
     font-weight: 700;
+    box-shadow: 0 1px 6px rgba(60, 64, 67, 0.3);
 }
 
 button:hover {

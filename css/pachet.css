@@ -98,6 +98,7 @@ button:hover {
 span {
     text-decoration: line-through;
     color: #1FA0FE;
+    color: rgba(0, 0, 0, 0.7);
 }
 
 .card ul {
@@ -133,4 +134,16 @@ span {
 
 .start .card {
     max-width: 300px;
+}
+
+.card h4 {
+    font-size: 20px;
+}
+
+.card h5 span {
+    font-size: 16px;
+}
+
+.card p {
+    text-align: center;
 }

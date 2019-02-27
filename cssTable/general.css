@@ -1,0 +1,250 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  font-family: "Roboto", sans-serif;
+  /* font-family: 'Mukta', sans-serif; */
+  /* font-family: 'Noto Sans', sans-serif; */
+  background-color: #e5e6f3;
+  /* font-family: 'Rubik', sans-serif; */
+  /* font-family: 'Playfair Display', serif; */
+
+  color: #3e3d77;
+  overflow-x: hidden;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* PALLETE */
+.palette {
+  color: #fafcfd;
+  color: #e5e6f3;
+  color: #3e3d77;
+  color: #241b99;
+  color: #493545;
+  color: #c57283;
+  color: #c77485;
+  color: #fafcfd;
+  color: #3e3d77;
+  color: #565387;
+  color: #e5e6f3;
+  /* body-background */
+  color: #e5e6f3;
+  color: #ff9323;
+}
+
+/* body>div {
+    width: calc(100% - 66px);
+    margin: 0;
+} */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+  padding: 0 25px;
+  opacity: 0.9;
+  text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  /* font-weight: 400;
+    font-size: 3.5rem;
+    letter-spacing: -.03125rem;
+    line-height: 4rem; */
+  font-family: "Rubik", sans-serif;
+
+  /* font-family: 'Playfair Display', serif; */
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  font-size: 34px;
+  /* margin-bottom: 40px; */
+  margin: 3px 0;
+
+  /* color: #241B99; */
+  color: #3e3d77;
+  max-width: 500px;
+  text-align: center;
+}
+
+h2 {
+  margin-top: 0;
+  /* margin-left: 66px; */
+
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  color: #493545;
+  margin-left: 13px;
+}
+
+h3 {
+  /* color: #F57C21; */
+  color: #ff9323;
+  font-size: 26px;
+}
+
+h3,
+h4,
+h5 {
+  display: inline-block;
+}
+
+h5 {
+  font-size: 17px;
+}
+
+p {
+  margin-left: 33px;
+  font-family: "Lato", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.navigatie {
+  height: 66px;
+  display: flex;
+  justify-content: space-between;
+  width: calc(100% - 66px);
+  padding: 0 33px;
+  box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.3);
+}
+
+.navigatie>div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navigatie>div>a>p {
+  /* padding: 11px 0; */
+  padding: 21px 0;
+  margin: 0 22px;
+  color: #3c4043;
+}
+
+.navigatie>div>a>p.selectat {
+  border-bottom: 2px solid#F57C21;
+  font-weight: 700;
+  font-family: Roboto, sans-serif;
+}
+
+.navigatie>div>a>button {
+  height: 46px;
+  font-size: 16px;
+}
+
+/* .cuprins {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+    max-width: 600px;
+    width: 100%;
+} */
+
+.logoWS {
+  /* width: 412px; */
+  /* height: 172px; */
+  width: 158.5px;
+  height: 66px;
+  background: url("../img/Logo/logo10.png");
+}
+
+.logoWSC {
+  /* width: 400px; */
+  /* height: 147px; */
+  margin-top: 66px;
+  width: 180px;
+  height: 66px;
+  background: url("../img/Logo/WS-Cover.png");
+  background-size: 181% auto !important;
+  background-position: center;
+  margin-bottom: 36px;
+}
+
+.logo {
+  background-size: 100%;
+  background-repeat: no-repeat;
+  opacity: 0.9;
+}
+
+.introducere {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  /* margin: 99px 0; */
+  margin: 66px 0 33px;
+}
+
+.logoWSText {
+  /* font-family: 'Mukta', sans-serif; */
+  font-family: "Roboto", sans-serif;
+  font-size: 30px;
+  padding: 11px 22px;
+  color: rgba(0, 0, 0, 0.7);
+  opacity: 0.9;
+  line-height: 30px;
+  text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.6);
+}
+
+.start {
+  align-items: center;
+}
+
+.start>div>h1 {
+  text-align: left;
+}
+
+.start>div:nth-child(2)>h1 {
+  color: #493545;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.pret {
+  /* color: #241B99; */
+  /* color: #565388; */
+  /* color: #D42323; */
+  color: #f9d01c;
+  font-family: lato;
+  font-size: 20px;
+  color: #fafcfd;
+  color: #e5e6f3;
+  color: #3e3d77;
+  color: #241b99;
+
+  color: #fafcfd;
+  color: #3e3d77;
+  color: #565387;
+  color: #e5e6f3;
+  /* body-background */
+  color: #e5e6f3;
+  color: #ff9323;
+
+  color: #c77485;
+  color: #c57283;
+  color: #493545;
+  color: #c57283;
+  color: #ced2df;
+  color: #1fa0fe;
+  color: #21b866;
+  color: rgba(0, 0, 0, 0.7);
+}

@@ -1,0 +1,45 @@
+.optiuniInitial,
+.optiuniList>div {
+    min-height: 80px;
+    /* background-color: lightblue; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 500px;
+    /* border: 1px solid black; */
+}
+
+
+
+.optiuniInitial>div {
+    /* display: inline-block; */
+    /* padding: 20px; */
+    padding: 0 20px;
+}
+
+.optiuniList>div {
+    /* padding: 20px; */
+    margin: 20px 0;
+}
+
+.displayNone,
+.optiuniAjutor {
+    display: none !important;
+}
+
+.optiuniInitial {
+    position: relative;
+    flex-flow: row;
+}
+
+.optiuniList {
+    position: absolute;
+    /* top: -52px; */
+    top: -20px;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    padding: 0 !important;
+    margin: 0;
+    z-index: 999;
+}

@@ -314,3 +314,14 @@ ul {
   background-blend-mode: overlay;
   background-size: cover !important;
 }
+
+.heroGtradient {
+  /* background-image: radial-gradient(black 0%, transparent 100%); */
+  background-image: radial-gradient(#493545 0%, transparent 100%);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0.2;
+}

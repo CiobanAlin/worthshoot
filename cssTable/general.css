@@ -288,7 +288,8 @@ ul {
 @media screen and (min-width: 1200px) {
   .hero {
     padding-top: 0;
-    height: 600px;
+    /* height: 600px; */
+    height: 383px;
   }
 }
 

@@ -155,6 +155,7 @@
         <h1>Alege pachetul</h1>
         <h2>care ti se potriveste!</h2>
     </div>
+    <div class="scrollToPacketTarget"></div>
     <div class="cardPocket cardPocketNunta displayNone">
         <div class="card">
             <div class="textCard">
@@ -462,6 +463,25 @@
         </div>
     </div>
     <p style="margin-bottom: 66px; margin-top: 33px">Te vom contacta in cel mai scurt timp posibil!</p>
+    <div class="scrollToPacketShow"></div>
+    <div class="storyGallery cardPocketNunta displayNone">
+        <img>
+        <img>
+        <img>
+        <img>
+        <img>
+        <img>
+        <img>
+        <img>
+        <img>
+        <img>
+        
+        <img>
+        <img>
+        <img>
+        <img>
+        <img>
+        </div>
     <div class="storyGallery cardPocketBotez">
 <img>
 <img>
@@ -473,35 +493,45 @@
 <img>
 <img>
 <img>
-<img>
-<img>
-<img>
-<img>
-<img>
-<img>
-<img>
-<img>
-<img>
-<img>
-<img>
-<img>
-<img>
-<img>
-<img>
-<img>
-<img>
-<img>
-<img>
-<img>
-<img>
-<img>
-<img>
-<img>
-<img>
-<img>
-</div>
-</body>
 
+<img>
+<img>
+<img>
+<img>
+<img>
+<img>
+<img>
+<img>
+<img>
+<img>
+
+<img>
+<img>
+<img>
+<img>
+<img>
+<img>
+<img>
+<img>
+<img>
+
+<img>
+<img>
+<img>
+<img>
+<img>
+<img>
+<img>
+
+</div>
+<button class="scrollToPacket"></button>
+</body>
+<script>
+    // arrow
+    var scrollToPacket = document.getElementsByClassName("scrollToPacket");
+    scrollToPacket[0].innerHTML =
+            '<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 2048 2048" style=" margin-left: -15px; margin-top: 2px; fill: #f68937;"><path d="M1523 1440q0 13-10 23l-50 50q-10 10-23 10t-23-10l-393-393-393 393q-10 10-23 10t-23-10l-50-50q-10-10-10-23t10-23l466-466q10-10 23-10t23 10l466 466q10 10 10 23zm0-384q0 13-10 23l-50 50q-10 10-23 10t-23-10l-393-393-393 393q-10 10-23 10t-23-10l-50-50q-10-10-10-23t10-23l466-466q10-10 23-10t23 10l466 466q10 10 10 23z"/></svg>';
+</script>
 <script>
     var gift = document.getElementsByClassName("gift");
     for (i = 0; i < gift.length; i++) {
@@ -586,5 +616,34 @@
         }
     }
 </script>
+<!-- scrollToPacket -->
+<script>
+ document.getElementsByClassName("scrollToPacket")[0].onclick = scrollToPacket;   
+  function scrollToPacket() {
+  var elmnt = document.getElementsByClassName("scrollToPacketTarget")[0];
+  elmnt.scrollIntoView();
+}  
+</script>
+<!-- scrollToPacketShow -->
+<script>
+window.addEventListener('scroll', function(e) {
+    scrollToPacketShow();
+});
+window.addEventListener('resize', function(e) {
+    scrollToPacketShow();
+});
+
+      var scrollToPacket = document.getElementsByClassName("scrollToPacket")[0];
+      function scrollToPacketShow() {
+      var element = document.getElementsByClassName("scrollToPacketShow")[0];
+      var elementHeightPosition = element.offsetTop - element.scrollTop + element.clientTop;
+      var scrollHeight = this.scrollY;
+      if(elementHeightPosition<scrollHeight){
+        scrollToPacket.style.display="block";
+      }else{
+        scrollToPacket.style.display="none";  
+      }
+    }  
+    </script>
 
 </html>

@@ -368,6 +368,155 @@ img {
   flex-flow: column;
 }
 
+.scrollToPacket {
+  width: 40px;
+  height: 40px;
+  /* background: #49354579; */
+  /* background: #ced2df; */
+  background: rgba(206, 210, 223, 0.5);
+  /* color: #ced2df; */
+  /* color: #21B866; */
+  color: #f68937;
+  position: fixed;
+  top: auto;
+  bottom: 30px;
+  right: 30px;
+  left: auto;
+  display: none;
+}
+
+.scrollToPacket:hover {
+  color: white;
+  background: rgba(206, 210, 223, 0.9);
+}
+
+/* .scrollToPacketTarget {
+  display: none;
+} */
+
+/* 500 */
+.storyGallery.cardPocketNunta>img:nth-child(1) {
+  content: url("../img/Normal/Cuplu/500/\ (1).jpg");
+}
+
+.storyGallery.cardPocketNunta>img:nth-child(2) {
+  content: url("../img/Normal/Cuplu/500/\ (2).jpg");
+}
+
+.storyGallery.cardPocketNunta>img:nth-child(3) {
+  content: url("../img/Normal/Cuplu/500/\ (3).jpg");
+}
+
+.storyGallery.cardPocketNunta>img:nth-child(4) {
+  content: url("../img/Normal/Cuplu/500/\ (4).jpg");
+}
+
+.storyGallery.cardPocketNunta>img:nth-child(5) {
+  content: url("../img/Normal/Cuplu/500/\ (5).jpg");
+}
+
+.storyGallery.cardPocketNunta>img:nth-child(6) {
+  content: url("../img/Normal/Cuplu/500/\ (6).jpg");
+}
+
+.storyGallery.cardPocketNunta>img:nth-child(7) {
+  content: url("../img/Normal/Cuplu/500/\ (7).jpg");
+}
+
+.storyGallery.cardPocketNunta>img:nth-child(8) {
+  content: url("../img/Normal/Cuplu/500/\ (8).jpg");
+}
+
+.storyGallery.cardPocketNunta>img:nth-child(9) {
+  content: url("../img/Normal/Cuplu/500/\ (9).jpg");
+}
+
+.storyGallery.cardPocketNunta>img:nth-child(10) {
+  content: url("../img/Normal/Cuplu/500/\ (10).jpg");
+}
+
+.storyGallery.cardPocketNunta>img:nth-child(11) {
+  content: url("../img/Normal/Cuplu/500/\ (11).jpg");
+}
+
+.storyGallery.cardPocketNunta>img:nth-child(12) {
+  content: url("../img/Normal/Cuplu/500/\ (12).jpg");
+}
+
+.storyGallery.cardPocketNunta>img:nth-child(13) {
+  content: url("../img/Normal/Cuplu/500/\ (13).jpg");
+}
+
+.storyGallery.cardPocketNunta>img:nth-child(14) {
+  content: url("../img/Normal/Cuplu/500/\ (14).jpg");
+}
+
+.storyGallery.cardPocketNunta>img:nth-child(15) {
+  content: url("../img/Normal/Cuplu/500/\ (15).jpg");
+}
+
+/* 1200 */
+@media screen and (min-width:499px) {
+  .storyGallery.cardPocketNunta>img:nth-child(1) {
+    content: url("../img/Normal/Cuplu/1200/\ (1).jpg");
+  }
+
+  .storyGallery.cardPocketNunta>img:nth-child(2) {
+    content: url("../img/Normal/Cuplu/1200/\ (2).jpg");
+  }
+
+  .storyGallery.cardPocketNunta>img:nth-child(3) {
+    content: url("../img/Normal/Cuplu/1200/\ (3).jpg");
+  }
+
+  .storyGallery.cardPocketNunta>img:nth-child(4) {
+    content: url("../img/Normal/Cuplu/1200/\ (4).jpg");
+  }
+
+  .storyGallery.cardPocketNunta>img:nth-child(5) {
+    content: url("../img/Normal/Cuplu/1200/\ (5).jpg");
+  }
+
+  .storyGallery.cardPocketNunta>img:nth-child(6) {
+    content: url("../img/Normal/Cuplu/1200/\ (6).jpg");
+  }
+
+  .storyGallery.cardPocketNunta>img:nth-child(7) {
+    content: url("../img/Normal/Cuplu/1200/\ (7).jpg");
+  }
+
+  .storyGallery.cardPocketNunta>img:nth-child(8) {
+    content: url("../img/Normal/Cuplu/1200/\ (8).jpg");
+  }
+
+  .storyGallery.cardPocketNunta>img:nth-child(9) {
+    content: url("../img/Normal/Cuplu/1200/\ (9).jpg");
+  }
+
+  .storyGallery.cardPocketNunta>img:nth-child(10) {
+    content: url("../img/Normal/Cuplu/1200/\ (10).jpg");
+  }
+
+  .storyGallery.cardPocketNunta>img:nth-child(11) {
+    content: url("../img/Normal/Cuplu/1200/\ (11).jpg");
+  }
+
+  .storyGallery.cardPocketNunta>img:nth-child(12) {
+    content: url("../img/Normal/Cuplu/1200/\ (12).jpg");
+  }
+
+  .storyGallery.cardPocketNunta>img:nth-child(13) {
+    content: url("../img/Normal/Cuplu/1200/\ (13).jpg");
+  }
+
+  .storyGallery.cardPocketNunta>img:nth-child(14) {
+    content: url("../img/Normal/Cuplu/1200/\ (14).jpg");
+  }
+
+  .storyGallery.cardPocketNunta>img:nth-child(15) {
+    content: url("../img/Normal/Cuplu/1200/\ (15).jpg");
+  }
+}
 
 /* 500 */
 .storyGallery.cardPocketBotez>img:nth-child(1) {

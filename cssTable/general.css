@@ -123,26 +123,26 @@ a {
   box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.3);
 }
 
-.navigatie > div {
+.navigatie>div {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.navigatie > div > a > p {
+.navigatie>div>a>p {
   /* padding: 11px 0; */
   padding: 21px 0;
   margin: 0 22px;
   color: #3c4043;
 }
 
-.navigatie > div > a > p.selectat {
+.navigatie>div>a>p.selectat {
   border-bottom: 2px solid#F57C21;
   font-weight: 700;
   font-family: Roboto, sans-serif;
 }
 
-.navigatie > div > a > button {
+.navigatie>div>a>button {
   height: 46px;
   font-size: 16px;
 }
@@ -221,11 +221,11 @@ a {
   align-items: center;
 }
 
-.start > div > h1 {
+.start>div>h1 {
   text-align: left;
 }
 
-.start > div:nth-child(2) > h1 {
+.start>div:nth-child(2)>h1 {
   color: #493545;
 }
 
@@ -292,7 +292,7 @@ ul {
   }
 }
 
-.hero > div {
+.hero>div {
   position: absolute;
   top: 0;
   right: 0;
@@ -324,6 +324,7 @@ ul {
   bottom: 0;
   opacity: 0.2;
 }
+
 .parinteFotografiiHero {
   max-width: 1200px;
   margin: 33px;
@@ -355,4 +356,13 @@ ul {
     box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0), 0 2px 2px 0 rgba(0, 0, 0, 0),
       0 3px 1px -2px rgba(0, 0, 0, 0);
   }
+}
+
+img {
+  max-width: 1200px;
+}
+
+.storyGallery {
+  display: flex;
+  flex-flow: column;
 }

@@ -360,9 +360,295 @@ ul {
 
 img {
   max-width: 1200px;
+  width: 100%;
 }
 
 .storyGallery {
   display: flex;
   flex-flow: column;
+}
+
+
+/* 500 */
+.storyGallery.cardPocketBotez>img:nth-child(1) {
+  content: url("../img/Normal/Botez/500//3.jpg");
+}
+
+.storyGallery.cardPocketBotez>img:nth-child(2) {
+  content: url("../img/Normal/Botez/500//8.jpg");
+}
+
+.storyGallery.cardPocketBotez>img:nth-child(3) {
+  content: url("../img/Normal/Botez/500//9.jpg");
+}
+
+.storyGallery.cardPocketBotez>img:nth-child(4) {
+  content: url("../img/Normal/Botez/500//10.jpg");
+}
+
+.storyGallery.cardPocketBotez>img:nth-child(5) {
+  content: url("../img/Normal/Botez/500//13.jpg");
+}
+
+.storyGallery.cardPocketBotez>img:nth-child(6) {
+  content: url("../img/Normal/Botez/500//14.jpg");
+}
+
+.storyGallery.cardPocketBotez>img:nth-child(7) {
+  content: url("../img/Normal/Botez/500//16.jpg");
+}
+
+.storyGallery.cardPocketBotez>img:nth-child(8) {
+  content: url("../img/Normal/Botez/500//21.jpg");
+}
+
+.storyGallery.cardPocketBotez>img:nth-child(9) {
+  content: url("../img/Normal/Botez/500//24.jpg");
+}
+
+.storyGallery.cardPocketBotez>img:nth-child(10) {
+  content: url("../img/Normal/Botez/500//26.jpg");
+}
+
+.storyGallery.cardPocketBotez>img:nth-child(11) {
+  content: url("../img/Normal/Botez/500//28.jpg");
+}
+
+.storyGallery.cardPocketBotez>img:nth-child(12) {
+  content: url("../img/Normal/Botez/500//29.jpg");
+}
+
+.storyGallery.cardPocketBotez>img:nth-child(13) {
+  content: url("../img/Normal/Botez/500//30.jpg");
+}
+
+.storyGallery.cardPocketBotez>img:nth-child(14) {
+  content: url("../img/Normal/Botez/500//32.jpg");
+}
+
+.storyGallery.cardPocketBotez>img:nth-child(15) {
+  content: url("../img/Normal/Botez/500//33.jpg");
+}
+
+.storyGallery.cardPocketBotez>img:nth-child(16) {
+  content: url("../img/Normal/Botez/500//34.jpg");
+}
+
+.storyGallery.cardPocketBotez>img:nth-child(17) {
+  content: url("../img/Normal/Botez/500//35-0.jpg");
+}
+
+.storyGallery.cardPocketBotez>img:nth-child(18) {
+  content: url("../img/Normal/Botez/500//35-1.jpg");
+}
+
+.storyGallery.cardPocketBotez>img:nth-child(19) {
+  content: url("../img/Normal/Botez/500//35-2.jpg");
+}
+
+.storyGallery.cardPocketBotez>img:nth-child(20) {
+  content: url("../img/Normal/Botez/500//36-0.jpg");
+}
+
+.storyGallery.cardPocketBotez>img:nth-child(21) {
+  content: url("../img/Normal/Botez/500//36-1.jpg");
+}
+
+.storyGallery.cardPocketBotez>img:nth-child(22) {
+  content: url("../img/Normal/Botez/500//37.jpg");
+}
+
+.storyGallery.cardPocketBotez>img:nth-child(23) {
+  content: url("../img/Normal/Botez/500//38.jpg");
+}
+
+.storyGallery.cardPocketBotez>img:nth-child(24) {
+  content: url("../img/Normal/Botez/500//39.jpg");
+}
+
+.storyGallery.cardPocketBotez>img:nth-child(25) {
+  content: url("../img/Normal/Botez/500//42.jpg");
+}
+
+.storyGallery.cardPocketBotez>img:nth-child(26) {
+  content: url("../img/Normal/Botez/500//43-0.jpg");
+}
+
+.storyGallery.cardPocketBotez>img:nth-child(27) {
+  content: url("../img/Normal/Botez/500//43-1.jpg");
+}
+
+.storyGallery.cardPocketBotez>img:nth-child(28) {
+  content: url("../img/Normal/Botez/500//43-2.jpg");
+}
+
+.storyGallery.cardPocketBotez>img:nth-child(29) {
+  content: url("../img/Normal/Botez/500//44.jpg");
+}
+
+.storyGallery.cardPocketBotez>img:nth-child(30) {
+  content: url("../img/Normal/Botez/500//47.jpg");
+}
+
+.storyGallery.cardPocketBotez>img:nth-child(31) {
+  content: url("../img/Normal/Botez/500//48.jpg");
+}
+
+.storyGallery.cardPocketBotez>img:nth-child(32) {
+  content: url("../img/Normal/Botez/500//54.jpg");
+}
+
+.storyGallery.cardPocketBotez>img:nth-child(33) {
+  content: url("../img/Normal/Botez/500//55.jpg");
+}
+
+.storyGallery.cardPocketBotez>img:nth-child(34) {
+  content: url("../img/Normal/Botez/500//56.jpg");
+}
+
+.storyGallery.cardPocketBotez>img:nth-child(35) {
+  content: url("../img/Normal/Botez/500//57.jpg");
+}
+
+/* 1200 */
+@media screen and (min-width:499px) {
+  .storyGallery.cardPocketBotez>img:nth-child(1) {
+    content: url("../img/Normal/Botez/1200/3.jpg");
+  }
+
+  .storyGallery.cardPocketBotez>img:nth-child(2) {
+    content: url("../img/Normal/Botez/1200/8.jpg");
+  }
+
+  .storyGallery.cardPocketBotez>img:nth-child(3) {
+    content: url("../img/Normal/Botez/1200/9.jpg");
+  }
+
+  .storyGallery.cardPocketBotez>img:nth-child(4) {
+    content: url("../img/Normal/Botez/1200/10.jpg");
+  }
+
+  .storyGallery.cardPocketBotez>img:nth-child(5) {
+    content: url("../img/Normal/Botez/1200/13.jpg");
+  }
+
+  .storyGallery.cardPocketBotez>img:nth-child(6) {
+    content: url("../img/Normal/Botez/1200/14.jpg");
+  }
+
+  .storyGallery.cardPocketBotez>img:nth-child(7) {
+    content: url("../img/Normal/Botez/1200/16.jpg");
+  }
+
+  .storyGallery.cardPocketBotez>img:nth-child(8) {
+    content: url("../img/Normal/Botez/1200/21.jpg");
+  }
+
+  .storyGallery.cardPocketBotez>img:nth-child(9) {
+    content: url("../img/Normal/Botez/1200/24.jpg");
+  }
+
+  .storyGallery.cardPocketBotez>img:nth-child(10) {
+    content: url("../img/Normal/Botez/1200/26.jpg");
+  }
+
+  .storyGallery.cardPocketBotez>img:nth-child(11) {
+    content: url("../img/Normal/Botez/1200/28.jpg");
+  }
+
+  .storyGallery.cardPocketBotez>img:nth-child(12) {
+    content: url("../img/Normal/Botez/1200/29.jpg");
+  }
+
+  .storyGallery.cardPocketBotez>img:nth-child(13) {
+    content: url("../img/Normal/Botez/1200/30.jpg");
+  }
+
+  .storyGallery.cardPocketBotez>img:nth-child(14) {
+    content: url("../img/Normal/Botez/1200/32.jpg");
+  }
+
+  .storyGallery.cardPocketBotez>img:nth-child(15) {
+    content: url("../img/Normal/Botez/1200/33.jpg");
+  }
+
+  .storyGallery.cardPocketBotez>img:nth-child(16) {
+    content: url("../img/Normal/Botez/1200/34.jpg");
+  }
+
+  .storyGallery.cardPocketBotez>img:nth-child(17) {
+    content: url("../img/Normal/Botez/1200/35-0.jpg");
+  }
+
+  .storyGallery.cardPocketBotez>img:nth-child(18) {
+    content: url("../img/Normal/Botez/1200/35-1.jpg");
+  }
+
+  .storyGallery.cardPocketBotez>img:nth-child(19) {
+    content: url("../img/Normal/Botez/1200/35-2.jpg");
+  }
+
+  .storyGallery.cardPocketBotez>img:nth-child(20) {
+    content: url("../img/Normal/Botez/1200/36-0.jpg");
+  }
+
+  .storyGallery.cardPocketBotez>img:nth-child(21) {
+    content: url("../img/Normal/Botez/1200/36-1.jpg");
+  }
+
+  .storyGallery.cardPocketBotez>img:nth-child(22) {
+    content: url("../img/Normal/Botez/1200/37.jpg");
+  }
+
+  .storyGallery.cardPocketBotez>img:nth-child(23) {
+    content: url("../img/Normal/Botez/1200/38.jpg");
+  }
+
+  .storyGallery.cardPocketBotez>img:nth-child(24) {
+    content: url("../img/Normal/Botez/1200/39.jpg");
+  }
+
+  .storyGallery.cardPocketBotez>img:nth-child(25) {
+    content: url("../img/Normal/Botez/1200/42.jpg");
+  }
+
+  .storyGallery.cardPocketBotez>img:nth-child(26) {
+    content: url("../img/Normal/Botez/1200/43-0.jpg");
+  }
+
+  .storyGallery.cardPocketBotez>img:nth-child(27) {
+    content: url("../img/Normal/Botez/1200/43-1.jpg");
+  }
+
+  .storyGallery.cardPocketBotez>img:nth-child(28) {
+    content: url("../img/Normal/Botez/1200/43-2.jpg");
+  }
+
+  .storyGallery.cardPocketBotez>img:nth-child(29) {
+    content: url("../img/Normal/Botez/1200/44.jpg");
+  }
+
+  .storyGallery.cardPocketBotez>img:nth-child(30) {
+    content: url("../img/Normal/Botez/1200/47.jpg");
+  }
+
+  .storyGallery.cardPocketBotez>img:nth-child(31) {
+    content: url("../img/Normal/Botez/1200/48.jpg");
+  }
+
+  .storyGallery.cardPocketBotez>img:nth-child(32) {
+    content: url("../img/Normal/Botez/1200/54.jpg");
+  }
+
+  .storyGallery.cardPocketBotez>img:nth-child(33) {
+    content: url("../img/Normal/Botez/1200/55.jpg");
+  }
+
+  .storyGallery.cardPocketBotez>img:nth-child(34) {
+    content: url("../img/Normal/Botez/1200/56.jpg");
+  }
+
+  .storyGallery.cardPocketBotez>img:nth-child(35) {
+    content: url("../img/Normal/Botez/1200/57.jpg");
+  }
 }

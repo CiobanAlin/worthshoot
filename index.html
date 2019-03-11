@@ -62,7 +62,7 @@
             <div class="heroGtradient"></div>
         </div>
     </div>
-    <div class="cardPocket start">
+    <!-- <div class="cardPocket start">
         <div class="card">
             <h1>Echipa
                 <ul>
@@ -78,8 +78,15 @@
                 </ul>
             </h1>
         </div>
+    </div> -->
+    <div class="introducere">
+        <h1>Echipa</h1>
+        <h2>- prietenoasa, ambitioasa, sincera </h2>
     </div>
-        <!-- <div class="hero">
+    <div class="storyGallery cardPocketEchipa">
+        <img>
+    </div>
+    <!-- <div class="hero">
         <div style="background: url('IMG_4054\ PS.jpg')">
             <h1>Fotografii
                 <ul>
@@ -276,7 +283,7 @@
                             <!-- 800e + 800cadou -->
                             <!-- 2590e -->
                             <h4 class="oferta">1090e</h4>
-                             <!-- 850e + 250 - 10 -->
+                            <!-- 850e + 250 - 10 -->
                             <!-- 580e -->
                             <!-- 1190e -->
                             <!-- 1790e -->
@@ -475,62 +482,62 @@
         <img>
         <img>
         <img>
-        
+
         <img>
         <img>
         <img>
         <img>
         <img>
-        </div>
+    </div>
     <div class="storyGallery cardPocketBotez">
-<img>
-<img>
-<img>
-<img>
-<img>
-<img>
-<img>
-<img>
-<img>
-<img>
+        <img>
+        <img>
+        <img>
+        <img>
+        <img>
+        <img>
+        <img>
+        <img>
+        <img>
+        <img>
 
-<img>
-<img>
-<img>
-<img>
-<img>
-<img>
-<img>
-<img>
-<img>
-<img>
+        <img>
+        <img>
+        <img>
+        <img>
+        <img>
+        <img>
+        <img>
+        <img>
+        <img>
+        <img>
 
-<img>
-<img>
-<img>
-<img>
-<img>
-<img>
-<img>
-<img>
-<img>
+        <img>
+        <img>
+        <img>
+        <img>
+        <img>
+        <img>
+        <img>
+        <img>
+        <img>
 
-<img>
-<img>
-<img>
-<img>
-<img>
-<img>
-<img>
+        <img>
+        <img>
+        <img>
+        <img>
+        <img>
+        <img>
+        <img>
 
-</div>
-<button class="scrollToPacket"></button>
+    </div>
+    <button class="scrollToPacket"></button>
 </body>
 <script>
     // arrow
     var scrollToPacket = document.getElementsByClassName("scrollToPacket");
     scrollToPacket[0].innerHTML =
-            '<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 2048 2048" style=" margin-left: -15px; margin-top: 2px; fill: #f68937;"><path d="M1523 1440q0 13-10 23l-50 50q-10 10-23 10t-23-10l-393-393-393 393q-10 10-23 10t-23-10l-50-50q-10-10-10-23t10-23l466-466q10-10 23-10t23 10l466 466q10 10 10 23zm0-384q0 13-10 23l-50 50q-10 10-23 10t-23-10l-393-393-393 393q-10 10-23 10t-23-10l-50-50q-10-10-10-23t10-23l466-466q10-10 23-10t23 10l466 466q10 10 10 23z"/></svg>';
+        '<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 2048 2048" style=" margin-left: -15px; margin-top: 2px; fill: #f68937;"><path d="M1523 1440q0 13-10 23l-50 50q-10 10-23 10t-23-10l-393-393-393 393q-10 10-23 10t-23-10l-50-50q-10-10-10-23t10-23l466-466q10-10 23-10t23 10l466 466q10 10 10 23zm0-384q0 13-10 23l-50 50q-10 10-23 10t-23-10l-393-393-393 393q-10 10-23 10t-23-10l-50-50q-10-10-10-23t10-23l466-466q10-10 23-10t23 10l466 466q10 10 10 23z"/></svg>';
 </script>
 <script>
     var gift = document.getElementsByClassName("gift");
@@ -618,32 +625,34 @@
 </script>
 <!-- scrollToPacket -->
 <script>
- document.getElementsByClassName("scrollToPacket")[0].onclick = scrollToPacket;   
-  function scrollToPacket() {
-  var elmnt = document.getElementsByClassName("scrollToPacketTarget")[0];
-  elmnt.scrollIntoView();
-}  
+    document.getElementsByClassName("scrollToPacket")[0].onclick = scrollToPacket;
+
+    function scrollToPacket() {
+        var elmnt = document.getElementsByClassName("scrollToPacketTarget")[0];
+        elmnt.scrollIntoView();
+    }
 </script>
 <!-- scrollToPacketShow -->
 <script>
-window.addEventListener('scroll', function(e) {
-    scrollToPacketShow();
-});
-window.addEventListener('resize', function(e) {
-    scrollToPacketShow();
-});
+    window.addEventListener('scroll', function (e) {
+        scrollToPacketShow();
+    });
+    window.addEventListener('resize', function (e) {
+        scrollToPacketShow();
+    });
 
-      var scrollToPacket = document.getElementsByClassName("scrollToPacket")[0];
-      function scrollToPacketShow() {
-      var element = document.getElementsByClassName("scrollToPacketShow")[0];
-      var elementHeightPosition = element.offsetTop - element.scrollTop + element.clientTop;
-      var scrollHeight = this.scrollY;
-      if(elementHeightPosition<scrollHeight){
-        scrollToPacket.style.display="block";
-      }else{
-        scrollToPacket.style.display="none";  
-      }
-    }  
-    </script>
+    var scrollToPacket = document.getElementsByClassName("scrollToPacket")[0];
+
+    function scrollToPacketShow() {
+        var element = document.getElementsByClassName("scrollToPacketShow")[0];
+        var elementHeightPosition = element.offsetTop - element.scrollTop + element.clientTop;
+        var scrollHeight = this.scrollY;
+        if (elementHeightPosition < scrollHeight) {
+            scrollToPacket.style.display = "block";
+        } else {
+            scrollToPacket.style.display = "none";
+        }
+    }
+</script>
 
 </html>

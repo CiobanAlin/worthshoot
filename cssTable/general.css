@@ -123,26 +123,26 @@ a {
   box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.3);
 }
 
-.navigatie > div {
+.navigatie>div {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.navigatie > div > a > p {
+.navigatie>div>a>p {
   /* padding: 11px 0; */
   padding: 21px 0;
   margin: 0 22px;
   color: #3c4043;
 }
 
-.navigatie > div > a > p.selectat {
+.navigatie>div>a>p.selectat {
   border-bottom: 2px solid#F57C21;
   font-weight: 700;
   font-family: Roboto, sans-serif;
 }
 
-.navigatie > div > a > button {
+.navigatie>div>a>button {
   height: 46px;
   font-size: 16px;
 }
@@ -221,11 +221,11 @@ a {
   align-items: center;
 }
 
-.start > div > h1 {
+.start>div>h1 {
   text-align: left;
 }
 
-.start > div:nth-child(2) > h1 {
+.start>div:nth-child(2)>h1 {
   color: #493545;
 }
 
@@ -276,7 +276,7 @@ ul {
   /* margin: 33px; */
   /* border-radius: 5px; */
   position: relative;
-  margin-bottom: 66px;
+  /* margin-bottom: 66px; */
   /* background: url('IMG_0644.png'); */
   width: 100%;
   max-width: 2048px;
@@ -292,7 +292,7 @@ ul {
   }
 }
 
-.hero > div {
+.hero>div {
   position: absolute;
   top: 0;
   right: 0;
@@ -350,8 +350,16 @@ ul {
   content: "";
 }
 
+.cardPocketEchipa>img {
+  border-radius: 6px;
+  box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14),
+    0 3px 1px -2px rgba(0, 0, 0, 0.12);
+}
+
 @media screen and (max-width: 1200px) {
-  .fotografiiHero {
+
+  .fotografiiHero,
+  .cardPocketEchipa>img {
     border-radius: 0;
     box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0), 0 2px 2px 0 rgba(0, 0, 0, 0),
       0 3px 1px -2px rgba(0, 0, 0, 0);
@@ -393,423 +401,422 @@ img {
 /* .scrollToPacketTarget {
   display: none;
 } */
-.cardPocketEchipa > img {
-  border-radius: 6px;
-  box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14),
-    0 3px 1px -2px rgba(0, 0, 0, 0.12);
-}
+
+
 /* 500 */
-.storyGallery.cardPocketEchipa > img:nth-child(1) {
+.storyGallery.cardPocketEchipa>img:nth-child(1) {
   content: url("../img/Echipa/500/echipa-01.jpg");
 }
+
 /* 1200 */
-.storyGallery.cardPocketEchipa > img:nth-child(1) {
+.storyGallery.cardPocketEchipa>img:nth-child(1) {
   content: url("../img/Echipa/1200/echipa-01.jpg");
 }
+
 /* 500 */
-.storyGallery.cardPocketNunta > img:nth-child(1) {
+.storyGallery.cardPocketNunta>img:nth-child(1) {
   content: url("../img/Normal/Cuplu/500/\ (1).jpg");
 }
 
-.storyGallery.cardPocketNunta > img:nth-child(2) {
+.storyGallery.cardPocketNunta>img:nth-child(2) {
   content: url("../img/Normal/Cuplu/500/\ (2).jpg");
 }
 
-.storyGallery.cardPocketNunta > img:nth-child(3) {
+.storyGallery.cardPocketNunta>img:nth-child(3) {
   content: url("../img/Normal/Cuplu/500/\ (3).jpg");
 }
 
-.storyGallery.cardPocketNunta > img:nth-child(4) {
+.storyGallery.cardPocketNunta>img:nth-child(4) {
   content: url("../img/Normal/Cuplu/500/\ (4).jpg");
 }
 
-.storyGallery.cardPocketNunta > img:nth-child(5) {
+.storyGallery.cardPocketNunta>img:nth-child(5) {
   content: url("../img/Normal/Cuplu/500/\ (5).jpg");
 }
 
-.storyGallery.cardPocketNunta > img:nth-child(6) {
+.storyGallery.cardPocketNunta>img:nth-child(6) {
   content: url("../img/Normal/Cuplu/500/\ (6).jpg");
 }
 
-.storyGallery.cardPocketNunta > img:nth-child(7) {
+.storyGallery.cardPocketNunta>img:nth-child(7) {
   content: url("../img/Normal/Cuplu/500/\ (7).jpg");
 }
 
-.storyGallery.cardPocketNunta > img:nth-child(8) {
+.storyGallery.cardPocketNunta>img:nth-child(8) {
   content: url("../img/Normal/Cuplu/500/\ (8).jpg");
 }
 
-.storyGallery.cardPocketNunta > img:nth-child(9) {
+.storyGallery.cardPocketNunta>img:nth-child(9) {
   content: url("../img/Normal/Cuplu/500/\ (9).jpg");
 }
 
-.storyGallery.cardPocketNunta > img:nth-child(10) {
+.storyGallery.cardPocketNunta>img:nth-child(10) {
   content: url("../img/Normal/Cuplu/500/\ (10).jpg");
 }
 
-.storyGallery.cardPocketNunta > img:nth-child(11) {
+.storyGallery.cardPocketNunta>img:nth-child(11) {
   content: url("../img/Normal/Cuplu/500/\ (11).jpg");
 }
 
-.storyGallery.cardPocketNunta > img:nth-child(12) {
+.storyGallery.cardPocketNunta>img:nth-child(12) {
   content: url("../img/Normal/Cuplu/500/\ (12).jpg");
 }
 
-.storyGallery.cardPocketNunta > img:nth-child(13) {
+.storyGallery.cardPocketNunta>img:nth-child(13) {
   content: url("../img/Normal/Cuplu/500/\ (13).jpg");
 }
 
-.storyGallery.cardPocketNunta > img:nth-child(14) {
+.storyGallery.cardPocketNunta>img:nth-child(14) {
   content: url("../img/Normal/Cuplu/500/\ (14).jpg");
 }
 
-.storyGallery.cardPocketNunta > img:nth-child(15) {
+.storyGallery.cardPocketNunta>img:nth-child(15) {
   content: url("../img/Normal/Cuplu/500/\ (15).jpg");
 }
 
 /* 1200 */
 @media screen and (min-width: 499px) {
-  .storyGallery.cardPocketNunta > img:nth-child(1) {
+  .storyGallery.cardPocketNunta>img:nth-child(1) {
     content: url("../img/Normal/Cuplu/1200/\ (1).jpg");
   }
 
-  .storyGallery.cardPocketNunta > img:nth-child(2) {
+  .storyGallery.cardPocketNunta>img:nth-child(2) {
     content: url("../img/Normal/Cuplu/1200/\ (2).jpg");
   }
 
-  .storyGallery.cardPocketNunta > img:nth-child(3) {
+  .storyGallery.cardPocketNunta>img:nth-child(3) {
     content: url("../img/Normal/Cuplu/1200/\ (3).jpg");
   }
 
-  .storyGallery.cardPocketNunta > img:nth-child(4) {
+  .storyGallery.cardPocketNunta>img:nth-child(4) {
     content: url("../img/Normal/Cuplu/1200/\ (4).jpg");
   }
 
-  .storyGallery.cardPocketNunta > img:nth-child(5) {
+  .storyGallery.cardPocketNunta>img:nth-child(5) {
     content: url("../img/Normal/Cuplu/1200/\ (5).jpg");
   }
 
-  .storyGallery.cardPocketNunta > img:nth-child(6) {
+  .storyGallery.cardPocketNunta>img:nth-child(6) {
     content: url("../img/Normal/Cuplu/1200/\ (6).jpg");
   }
 
-  .storyGallery.cardPocketNunta > img:nth-child(7) {
+  .storyGallery.cardPocketNunta>img:nth-child(7) {
     content: url("../img/Normal/Cuplu/1200/\ (7).jpg");
   }
 
-  .storyGallery.cardPocketNunta > img:nth-child(8) {
+  .storyGallery.cardPocketNunta>img:nth-child(8) {
     content: url("../img/Normal/Cuplu/1200/\ (8).jpg");
   }
 
-  .storyGallery.cardPocketNunta > img:nth-child(9) {
+  .storyGallery.cardPocketNunta>img:nth-child(9) {
     content: url("../img/Normal/Cuplu/1200/\ (9).jpg");
   }
 
-  .storyGallery.cardPocketNunta > img:nth-child(10) {
+  .storyGallery.cardPocketNunta>img:nth-child(10) {
     content: url("../img/Normal/Cuplu/1200/\ (10).jpg");
   }
 
-  .storyGallery.cardPocketNunta > img:nth-child(11) {
+  .storyGallery.cardPocketNunta>img:nth-child(11) {
     content: url("../img/Normal/Cuplu/1200/\ (11).jpg");
   }
 
-  .storyGallery.cardPocketNunta > img:nth-child(12) {
+  .storyGallery.cardPocketNunta>img:nth-child(12) {
     content: url("../img/Normal/Cuplu/1200/\ (12).jpg");
   }
 
-  .storyGallery.cardPocketNunta > img:nth-child(13) {
+  .storyGallery.cardPocketNunta>img:nth-child(13) {
     content: url("../img/Normal/Cuplu/1200/\ (13).jpg");
   }
 
-  .storyGallery.cardPocketNunta > img:nth-child(14) {
+  .storyGallery.cardPocketNunta>img:nth-child(14) {
     content: url("../img/Normal/Cuplu/1200/\ (14).jpg");
   }
 
-  .storyGallery.cardPocketNunta > img:nth-child(15) {
+  .storyGallery.cardPocketNunta>img:nth-child(15) {
     content: url("../img/Normal/Cuplu/1200/\ (15).jpg");
   }
 }
 
 /* 500 */
-.storyGallery.cardPocketBotez > img:nth-child(1) {
+.storyGallery.cardPocketBotez>img:nth-child(1) {
   content: url("../img/Normal/Botez/500//3.jpg");
 }
 
-.storyGallery.cardPocketBotez > img:nth-child(2) {
+.storyGallery.cardPocketBotez>img:nth-child(2) {
   content: url("../img/Normal/Botez/500//8.jpg");
 }
 
-.storyGallery.cardPocketBotez > img:nth-child(3) {
+.storyGallery.cardPocketBotez>img:nth-child(3) {
   content: url("../img/Normal/Botez/500//9.jpg");
 }
 
-.storyGallery.cardPocketBotez > img:nth-child(4) {
+.storyGallery.cardPocketBotez>img:nth-child(4) {
   content: url("../img/Normal/Botez/500//10.jpg");
 }
 
-.storyGallery.cardPocketBotez > img:nth-child(5) {
+.storyGallery.cardPocketBotez>img:nth-child(5) {
   content: url("../img/Normal/Botez/500//13.jpg");
 }
 
-.storyGallery.cardPocketBotez > img:nth-child(6) {
+.storyGallery.cardPocketBotez>img:nth-child(6) {
   content: url("../img/Normal/Botez/500//14.jpg");
 }
 
-.storyGallery.cardPocketBotez > img:nth-child(7) {
+.storyGallery.cardPocketBotez>img:nth-child(7) {
   content: url("../img/Normal/Botez/500//16.jpg");
 }
 
-.storyGallery.cardPocketBotez > img:nth-child(8) {
+.storyGallery.cardPocketBotez>img:nth-child(8) {
   content: url("../img/Normal/Botez/500//21.jpg");
 }
 
-.storyGallery.cardPocketBotez > img:nth-child(9) {
+.storyGallery.cardPocketBotez>img:nth-child(9) {
   content: url("../img/Normal/Botez/500//24.jpg");
 }
 
-.storyGallery.cardPocketBotez > img:nth-child(10) {
+.storyGallery.cardPocketBotez>img:nth-child(10) {
   content: url("../img/Normal/Botez/500//26.jpg");
 }
 
-.storyGallery.cardPocketBotez > img:nth-child(11) {
+.storyGallery.cardPocketBotez>img:nth-child(11) {
   content: url("../img/Normal/Botez/500//28.jpg");
 }
 
-.storyGallery.cardPocketBotez > img:nth-child(12) {
+.storyGallery.cardPocketBotez>img:nth-child(12) {
   content: url("../img/Normal/Botez/500//29.jpg");
 }
 
-.storyGallery.cardPocketBotez > img:nth-child(13) {
+.storyGallery.cardPocketBotez>img:nth-child(13) {
   content: url("../img/Normal/Botez/500//30.jpg");
 }
 
-.storyGallery.cardPocketBotez > img:nth-child(14) {
+.storyGallery.cardPocketBotez>img:nth-child(14) {
   content: url("../img/Normal/Botez/500//32.jpg");
 }
 
-.storyGallery.cardPocketBotez > img:nth-child(15) {
+.storyGallery.cardPocketBotez>img:nth-child(15) {
   content: url("../img/Normal/Botez/500//33.jpg");
 }
 
-.storyGallery.cardPocketBotez > img:nth-child(16) {
+.storyGallery.cardPocketBotez>img:nth-child(16) {
   content: url("../img/Normal/Botez/500//34.jpg");
 }
 
-.storyGallery.cardPocketBotez > img:nth-child(17) {
+.storyGallery.cardPocketBotez>img:nth-child(17) {
   content: url("../img/Normal/Botez/500//35-0.jpg");
 }
 
-.storyGallery.cardPocketBotez > img:nth-child(18) {
+.storyGallery.cardPocketBotez>img:nth-child(18) {
   content: url("../img/Normal/Botez/500//35-1.jpg");
 }
 
-.storyGallery.cardPocketBotez > img:nth-child(19) {
+.storyGallery.cardPocketBotez>img:nth-child(19) {
   content: url("../img/Normal/Botez/500//35-2.jpg");
 }
 
-.storyGallery.cardPocketBotez > img:nth-child(20) {
+.storyGallery.cardPocketBotez>img:nth-child(20) {
   content: url("../img/Normal/Botez/500//36-0.jpg");
 }
 
-.storyGallery.cardPocketBotez > img:nth-child(21) {
+.storyGallery.cardPocketBotez>img:nth-child(21) {
   content: url("../img/Normal/Botez/500//36-1.jpg");
 }
 
-.storyGallery.cardPocketBotez > img:nth-child(22) {
+.storyGallery.cardPocketBotez>img:nth-child(22) {
   content: url("../img/Normal/Botez/500//37.jpg");
 }
 
-.storyGallery.cardPocketBotez > img:nth-child(23) {
+.storyGallery.cardPocketBotez>img:nth-child(23) {
   content: url("../img/Normal/Botez/500//38.jpg");
 }
 
-.storyGallery.cardPocketBotez > img:nth-child(24) {
+.storyGallery.cardPocketBotez>img:nth-child(24) {
   content: url("../img/Normal/Botez/500//39.jpg");
 }
 
-.storyGallery.cardPocketBotez > img:nth-child(25) {
+.storyGallery.cardPocketBotez>img:nth-child(25) {
   content: url("../img/Normal/Botez/500//42.jpg");
 }
 
-.storyGallery.cardPocketBotez > img:nth-child(26) {
+.storyGallery.cardPocketBotez>img:nth-child(26) {
   content: url("../img/Normal/Botez/500//43-0.jpg");
 }
 
-.storyGallery.cardPocketBotez > img:nth-child(27) {
+.storyGallery.cardPocketBotez>img:nth-child(27) {
   content: url("../img/Normal/Botez/500//43-1.jpg");
 }
 
-.storyGallery.cardPocketBotez > img:nth-child(28) {
+.storyGallery.cardPocketBotez>img:nth-child(28) {
   content: url("../img/Normal/Botez/500//43-2.jpg");
 }
 
-.storyGallery.cardPocketBotez > img:nth-child(29) {
+.storyGallery.cardPocketBotez>img:nth-child(29) {
   content: url("../img/Normal/Botez/500//44.jpg");
 }
 
-.storyGallery.cardPocketBotez > img:nth-child(30) {
+.storyGallery.cardPocketBotez>img:nth-child(30) {
   content: url("../img/Normal/Botez/500//47.jpg");
 }
 
-.storyGallery.cardPocketBotez > img:nth-child(31) {
+.storyGallery.cardPocketBotez>img:nth-child(31) {
   content: url("../img/Normal/Botez/500//48.jpg");
 }
 
-.storyGallery.cardPocketBotez > img:nth-child(32) {
+.storyGallery.cardPocketBotez>img:nth-child(32) {
   content: url("../img/Normal/Botez/500//54.jpg");
 }
 
-.storyGallery.cardPocketBotez > img:nth-child(33) {
+.storyGallery.cardPocketBotez>img:nth-child(33) {
   content: url("../img/Normal/Botez/500//55.jpg");
 }
 
-.storyGallery.cardPocketBotez > img:nth-child(34) {
+.storyGallery.cardPocketBotez>img:nth-child(34) {
   content: url("../img/Normal/Botez/500//56.jpg");
 }
 
-.storyGallery.cardPocketBotez > img:nth-child(35) {
+.storyGallery.cardPocketBotez>img:nth-child(35) {
   content: url("../img/Normal/Botez/500//57.jpg");
 }
 
 /* 1200 */
 @media screen and (min-width: 499px) {
-  .storyGallery.cardPocketBotez > img:nth-child(1) {
+  .storyGallery.cardPocketBotez>img:nth-child(1) {
     content: url("../img/Normal/Botez/1200/3.jpg");
   }
 
-  .storyGallery.cardPocketBotez > img:nth-child(2) {
+  .storyGallery.cardPocketBotez>img:nth-child(2) {
     content: url("../img/Normal/Botez/1200/8.jpg");
   }
 
-  .storyGallery.cardPocketBotez > img:nth-child(3) {
+  .storyGallery.cardPocketBotez>img:nth-child(3) {
     content: url("../img/Normal/Botez/1200/9.jpg");
   }
 
-  .storyGallery.cardPocketBotez > img:nth-child(4) {
+  .storyGallery.cardPocketBotez>img:nth-child(4) {
     content: url("../img/Normal/Botez/1200/10.jpg");
   }
 
-  .storyGallery.cardPocketBotez > img:nth-child(5) {
+  .storyGallery.cardPocketBotez>img:nth-child(5) {
     content: url("../img/Normal/Botez/1200/13.jpg");
   }
 
-  .storyGallery.cardPocketBotez > img:nth-child(6) {
+  .storyGallery.cardPocketBotez>img:nth-child(6) {
     content: url("../img/Normal/Botez/1200/14.jpg");
   }
 
-  .storyGallery.cardPocketBotez > img:nth-child(7) {
+  .storyGallery.cardPocketBotez>img:nth-child(7) {
     content: url("../img/Normal/Botez/1200/16.jpg");
   }
 
-  .storyGallery.cardPocketBotez > img:nth-child(8) {
+  .storyGallery.cardPocketBotez>img:nth-child(8) {
     content: url("../img/Normal/Botez/1200/21.jpg");
   }
 
-  .storyGallery.cardPocketBotez > img:nth-child(9) {
+  .storyGallery.cardPocketBotez>img:nth-child(9) {
     content: url("../img/Normal/Botez/1200/24.jpg");
   }
 
-  .storyGallery.cardPocketBotez > img:nth-child(10) {
+  .storyGallery.cardPocketBotez>img:nth-child(10) {
     content: url("../img/Normal/Botez/1200/26.jpg");
   }
 
-  .storyGallery.cardPocketBotez > img:nth-child(11) {
+  .storyGallery.cardPocketBotez>img:nth-child(11) {
     content: url("../img/Normal/Botez/1200/28.jpg");
   }
 
-  .storyGallery.cardPocketBotez > img:nth-child(12) {
+  .storyGallery.cardPocketBotez>img:nth-child(12) {
     content: url("../img/Normal/Botez/1200/29.jpg");
   }
 
-  .storyGallery.cardPocketBotez > img:nth-child(13) {
+  .storyGallery.cardPocketBotez>img:nth-child(13) {
     content: url("../img/Normal/Botez/1200/30.jpg");
   }
 
-  .storyGallery.cardPocketBotez > img:nth-child(14) {
+  .storyGallery.cardPocketBotez>img:nth-child(14) {
     content: url("../img/Normal/Botez/1200/32.jpg");
   }
 
-  .storyGallery.cardPocketBotez > img:nth-child(15) {
+  .storyGallery.cardPocketBotez>img:nth-child(15) {
     content: url("../img/Normal/Botez/1200/33.jpg");
   }
 
-  .storyGallery.cardPocketBotez > img:nth-child(16) {
+  .storyGallery.cardPocketBotez>img:nth-child(16) {
     content: url("../img/Normal/Botez/1200/34.jpg");
   }
 
-  .storyGallery.cardPocketBotez > img:nth-child(17) {
+  .storyGallery.cardPocketBotez>img:nth-child(17) {
     content: url("../img/Normal/Botez/1200/35-0.jpg");
   }
 
-  .storyGallery.cardPocketBotez > img:nth-child(18) {
+  .storyGallery.cardPocketBotez>img:nth-child(18) {
     content: url("../img/Normal/Botez/1200/35-1.jpg");
   }
 
-  .storyGallery.cardPocketBotez > img:nth-child(19) {
+  .storyGallery.cardPocketBotez>img:nth-child(19) {
     content: url("../img/Normal/Botez/1200/35-2.jpg");
   }
 
-  .storyGallery.cardPocketBotez > img:nth-child(20) {
+  .storyGallery.cardPocketBotez>img:nth-child(20) {
     content: url("../img/Normal/Botez/1200/36-0.jpg");
   }
 
-  .storyGallery.cardPocketBotez > img:nth-child(21) {
+  .storyGallery.cardPocketBotez>img:nth-child(21) {
     content: url("../img/Normal/Botez/1200/36-1.jpg");
   }
 
-  .storyGallery.cardPocketBotez > img:nth-child(22) {
+  .storyGallery.cardPocketBotez>img:nth-child(22) {
     content: url("../img/Normal/Botez/1200/37.jpg");
   }
 
-  .storyGallery.cardPocketBotez > img:nth-child(23) {
+  .storyGallery.cardPocketBotez>img:nth-child(23) {
     content: url("../img/Normal/Botez/1200/38.jpg");
   }
 
-  .storyGallery.cardPocketBotez > img:nth-child(24) {
+  .storyGallery.cardPocketBotez>img:nth-child(24) {
     content: url("../img/Normal/Botez/1200/39.jpg");
   }
 
-  .storyGallery.cardPocketBotez > img:nth-child(25) {
+  .storyGallery.cardPocketBotez>img:nth-child(25) {
     content: url("../img/Normal/Botez/1200/42.jpg");
   }
 
-  .storyGallery.cardPocketBotez > img:nth-child(26) {
+  .storyGallery.cardPocketBotez>img:nth-child(26) {
     content: url("../img/Normal/Botez/1200/43-0.jpg");
   }
 
-  .storyGallery.cardPocketBotez > img:nth-child(27) {
+  .storyGallery.cardPocketBotez>img:nth-child(27) {
     content: url("../img/Normal/Botez/1200/43-1.jpg");
   }
 
-  .storyGallery.cardPocketBotez > img:nth-child(28) {
+  .storyGallery.cardPocketBotez>img:nth-child(28) {
     content: url("../img/Normal/Botez/1200/43-2.jpg");
   }
 
-  .storyGallery.cardPocketBotez > img:nth-child(29) {
+  .storyGallery.cardPocketBotez>img:nth-child(29) {
     content: url("../img/Normal/Botez/1200/44.jpg");
   }
 
-  .storyGallery.cardPocketBotez > img:nth-child(30) {
+  .storyGallery.cardPocketBotez>img:nth-child(30) {
     content: url("../img/Normal/Botez/1200/47.jpg");
   }
 
-  .storyGallery.cardPocketBotez > img:nth-child(31) {
+  .storyGallery.cardPocketBotez>img:nth-child(31) {
     content: url("../img/Normal/Botez/1200/48.jpg");
   }
 
-  .storyGallery.cardPocketBotez > img:nth-child(32) {
+  .storyGallery.cardPocketBotez>img:nth-child(32) {
     content: url("../img/Normal/Botez/1200/54.jpg");
   }
 
-  .storyGallery.cardPocketBotez > img:nth-child(33) {
+  .storyGallery.cardPocketBotez>img:nth-child(33) {
     content: url("../img/Normal/Botez/1200/55.jpg");
   }
 
-  .storyGallery.cardPocketBotez > img:nth-child(34) {
+  .storyGallery.cardPocketBotez>img:nth-child(34) {
     content: url("../img/Normal/Botez/1200/56.jpg");
   }
 
-  .storyGallery.cardPocketBotez > img:nth-child(35) {
+  .storyGallery.cardPocketBotez>img:nth-child(35) {
     content: url("../img/Normal/Botez/1200/57.jpg");
   }
 }

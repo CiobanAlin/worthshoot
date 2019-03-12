@@ -45,11 +45,13 @@
 
     <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700,900|Rubik:300,400,500,700,900" rel="stylesheet">
 
+
     <link rel="stylesheet" type="text/css" href="cssTable/general.css" />
     <link rel="stylesheet" type="text/css" href="cssTable/carusel.css" />
     <link rel="stylesheet" type="text/css" href="cssTable/media.css" />
     <link rel="stylesheet" type="text/css" href="cssTable/pachet.css" />
     <link rel="stylesheet" type="text/css" href="cssTable/optiune.css" />
+    <link rel="stylesheet" type="text/css" href="cssTable/form.css" />
 </head>
 
 <body>
@@ -81,7 +83,7 @@
     </div> -->
     <div class="introducere">
         <h1>Echipa</h1>
-        <h2>- prietenoasa, ambitioasa, sincera </h2>
+        <h2>- prietenoasa, ambitioasa, de incredere </h2>
     </div>
     <div class="storyGallery cardPocketEchipa">
         <img>
@@ -164,7 +166,7 @@
     </div>
     <div class="scrollToPacketTarget"></div>
     <div class="cardPocket cardPocketNunta displayNone">
-        <div class="card">
+        <div class="card cardMare">
             <div class="textCard">
                 <h3>Pachete Foto Nunta</h3>
                 <h2>
@@ -296,7 +298,7 @@
     </div>
     <!-- botez -->
     <div class="cardPocket cardPocketBotez">
-        <div class="card">
+        <div class="card cardMare">
             <div class="textCard">
                 <h3>Pachete Foto Botez</h3>
                 <h2>
@@ -451,8 +453,8 @@
             Pachet ---
             <br>
             alaturi de data evenimentului!</h1>
-        <p class="cardPocketNunta displayNone">Exemplu: NFC 22.09.2022</p>
-        <p class="cardPocketBotez">Exemplu: BFC 22.09.2022</p>
+        <p class="cardPocketNunta displayNone">Exemplu: NFC 2022.09.22</p>
+        <p class="cardPocketBotez">Exemplu: BFC 2022.09.22</p>
     </div>
 
     <div class="cardPocket start">
@@ -461,13 +463,66 @@
                 Prin SMS <br>la <a href="">074 733 2638</a>
             </h3>
         </div>
-        <h2 style="margin: 22px;">sau</h2>
+        <h2 style="margin: 22px;">-</h2>
         <div class="card">
             <h3>
                 Ca mesaj pe pagina <br>
                 de <a href="https://www.facebook.com/worthshoot/">facebook</a>
             </h3>
         </div>
+    </div>
+    <!-- sectiuneExtra -->
+    <h2 class="orForm" style="text-align: center; margin: 22px auto">sau</h2>
+    <div class="cardPocket">
+        <form class="container card cardMare gform" id="gform" method="POST" data-email="worthshoot@gmail.com" action="https://script.google.com/macros/s/AKfycbw-agBq4PZmzFMWy12Jdd61n51aD_tiMaPBYQFR/exec">
+            <h3>Completeaza formularul!</h3>
+            <div class="form-group">
+                <select name="Pachet">
+                    <option value="optiune">-optiune-</option>
+                    <option value="NF1" class="cardPocketNunta displayNone">
+                        NF1 -440e
+                    </option>
+                    <option value="NF2" class="cardPocketNunta displayNone">
+                        NF2 -1090e
+                    </option>
+                    <option value="NFC" class="cardPocketNunta displayNone">
+                        NFC -oferta
+                    </option>
+                    <option value="BF1" class="cardPocketBotez">
+                        BF1 -190e
+                    </option>
+                    <option value="BF2" class="cardPocketBotez">
+                        BF2 -290e
+                    </option>
+                    <option value="BFC" class="cardPocketBotez">
+                        BFC -oferta
+                    </option>
+                </select>
+                <label for="select" class="control-label">Pachet</label><i class="bar"></i>
+            </div>
+            <div class="form-group">
+                <input type="text" name="Nume" required="required" />
+                <label for="input" class="control-label">Nume</label><i class="bar"></i>
+            </div>
+            <div class="form-group">
+                <input type="tel" name="Telefon" required="required" />
+                <label for="input" class="control-label">Telefon</label><i class="bar"></i>
+            </div>
+            <div class="form-group">
+                <input type="tel" name="Data" required="required" />
+                <label for="input" class="control-label">aaaa.ll.zz</label><i class="bar"></i>
+            </div>
+            <div class="button-container">
+                <!-- <button type="button" class="button"><span style="text-decoration: none;">Trimite</span></button> -->
+                <button class="button-success">
+                    Trimite
+                </button>
+            </div>
+        </form>
+    </div>
+    <!-- Customise the Thankyou Message People See when they submit the form: -->
+    <div class="introducere" style="display:none;" id="thankyou_message">
+        <h1>Formular trimis cu succes!</h1>
     </div>
     <p style="margin-bottom: 66px; margin-top: 33px">Te vom contacta in cel mai scurt timp posibil!</p>
     <div class="scrollToPacketShow"></div>
@@ -603,7 +658,7 @@
                 optiuniList.classList.add("displayNone");
                 myFunction();
                 if (i == 0) {
-                    console.log("plm");
+                    // console.log("plm");
                     for (j = 0; j < cardPocketBotez.length; j++) {
                         cardPocketBotez[j].classList.add("displayNone");
                     }
@@ -653,6 +708,154 @@
             scrollToPacket.style.display = "none";
         }
     }
+</script>
+<!-- // form -->
+<script data-cfasync="false" type="text/javascript">
+    (function () {
+        // console.log("daa");
+        // function validEmail(email) {
+        //     var re = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
+        //     return re.test(email);
+        // }
+
+        function validateHuman(honeypot) {
+            if (honeypot) { //if hidden form filled up
+                // console.log("Robot Detected!");
+                return true;
+            } else {
+                // console.log("Welcome Human!");
+            }
+        }
+
+        // get all data in form and return object
+        function getFormData(form) {
+            // console.log("daa");
+            var elements = form.elements;
+
+            var fields = Object.keys(elements).filter(function (k) {
+                return (elements[k].name !== "honeypot");
+            }).map(function (k) {
+                if (elements[k].name !== undefined) {
+                    return elements[k].name;
+                    // special case for Edge's html collection
+                } else if (elements[k].length > 0) {
+                    return elements[k].item(0).name;
+                }
+            }).filter(function (item, pos, self) {
+                return self.indexOf(item) == pos && item;
+            });
+
+            var formData = {};
+            fields.forEach(function (name) {
+                var element = elements[name];
+                // if(element.name == "nTe"){
+                //     element.style.display = "none";
+                //     element.value = "666" + element.value ;
+                // in googleSheet select column-> format -> plain text
+                // }
+                // singular form elements just have one value
+                // console.log("da");
+                // console.log(element.value);
+                formData[name] = element.value;
+                // if (element.checked == false) {
+                //     if (element.value == "on") {
+                //         formData[name] = element.value = "-";
+                //     } else {
+                //         formData[name] = element.value;
+                //     }
+                // }
+                // if (element.checked == true) {
+                //     formData[name] = element.value = "x";
+                // }
+
+                // message = message + "," +element.value;
+                // console.log(message);
+                // console.log(element.value);
+                // formData[name] = element.value;
+                // console.log(element.checked);
+                // wtf??
+                // when our element has multiple items, get their values
+                // if (element.length) {
+                //     var data = [];
+                //     for (var i = 0; i < element.length; i++) {
+                //         var item = element.item(i);
+                //         if (itemchecked = true) {
+                //             // data.push(item.value);
+                //             console.log(item.value);
+                //             // || item.selected
+                //         }
+                //     }
+                //     formData[name] = data.join(', ');
+                // }
+            });
+
+            // add form-specific values into the data
+            formData.formDataNameOrder = JSON.stringify(fields);
+            formData.formGoogleSheetName = form.dataset.sheet || "responses"; // default sheet name
+            formData.formGoogleSendEmail = form.dataset.email || ""; // no email by default
+
+            // console.log(formData);
+            return formData;
+        }
+
+        function handleFormSubmit(event) { // handles form submit without any jquery
+            event.preventDefault(); // we are submitting via xhr below
+            var form = event.target;
+            var data = getFormData(form); // get the values submitted in the form
+
+            /* OPTION: Remove this comment to enable SPAM prevention, see README.md */
+            if (validateHuman(data.honeypot)) { //if form is filled, form will not be submitted
+                return false;
+            }
+            /**/
+
+            if (data.email && !validEmail(data.email)) { // if email is not valid show error
+                var invalidEmail = form.getElementsByClassName("email-invalid")[0];
+                if (invalidEmail) {
+                    invalidEmail.style.display = "block";
+                    return false;
+                }
+            } else {
+                disableAllButtons(form);
+                var url = form.action;
+                var xhr = new XMLHttpRequest();
+                xhr.open('POST', url);
+                // xhr.withCredentials = true;
+                xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+                xhr.onreadystatechange = function () {
+                    document.getElementById("thankyou_message").style.display = "block"; // show thankYouMessage
+                    // Trimis
+                    document.getElementById("gform").style.display = "none"; // hide form
+                    document.getElementsByClassName("orForm")[0].style.display = "none";
+                    // gform
+                    return;
+                };
+                // url encode form data for sending as post data
+                var encoded = Object.keys(data).map(function (k) {
+                    return encodeURIComponent(k) + "=" + encodeURIComponent(data[k]);
+                }).join('&');
+                xhr.send(encoded);
+            }
+        }
+
+        function loaded() {
+            // console.log("Contact form submission handler loaded successfully.");
+            // bind to the submit event of our form
+            var forms = document.querySelectorAll("form.gform");
+            for (var i = 0; i < forms.length; i++) {
+                forms[i].addEventListener("submit", handleFormSubmit, false);
+            }
+        };
+        document.addEventListener("DOMContentLoaded", loaded, false);
+        // redirect block
+
+        function disableAllButtons(form) {
+            var buttons = form.querySelectorAll("button");
+            for (var i = 0; i < buttons.length; i++) {
+                buttons[i].disabled = true;
+            }
+        }
+    })();
 </script>
 
 </html>

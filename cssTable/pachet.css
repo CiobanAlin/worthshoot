@@ -20,6 +20,7 @@
     background-color: #FAFCFD;
     border-radius: 8px;
     padding: 28px 0 27px;
+    position: relative;
 }
 
 .cardVideoParent {
@@ -232,4 +233,10 @@ span {
 .pretNF2>h5 {
     margin-top: 0;
     margin-bottom: 0;
+}
+
+@media screen and (max-width: 538px) {
+    .card::before {
+        box-shadow: 0 8px 10px 1px rgba(0, 0, 0, 0.0), 0 3px 14px 2px rgba(0, 0, 0, 0.0), 0 5px 5px -3px rgba(0, 0, 0, 0.0);
+    }
 }

@@ -122,26 +122,26 @@ a {
   box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.3);
 }
 
-.navigatie > div {
+.navigatie>div {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.navigatie > div > a > p {
+.navigatie>div>a>p {
   /* padding: 11px 0; */
   padding: 21px 0;
   margin: 0 22px;
   color: #3c4043;
 }
 
-.navigatie > div > a > p.selectat {
+.navigatie>div>a>p.selectat {
   border-bottom: 2px solid#F57C21;
   font-weight: 700;
   font-family: Roboto, sans-serif;
 }
 
-.navigatie > div > a > button {
+.navigatie>div>a>button {
   height: 46px;
   font-size: 16px;
 }
@@ -161,19 +161,20 @@ a {
   /* height: 172px; */
   width: 158.5px;
   height: 66px;
-  background: url("../img/Logo/logo10.png");
+  /* background: url("../img/Logo/logo10.png"); */
 }
 
 .logoWSC {
   /* width: 400px; */
   /* height: 147px; */
-  margin-top: 66px;
+  /* margin-top: 66px; */
+  margin-top: 160px;
   width: 180px;
   height: 66px;
   background: url("../img/Logo/WS-Cover.png");
   background-size: 181% auto !important;
   background-position: center;
-  margin-bottom: 36px;
+  /* margin-bottom: 36px; */
 }
 
 .logo {
@@ -205,11 +206,11 @@ a {
   align-items: center;
 }
 
-.start > div > h1 {
+.start>div>h1 {
   text-align: left;
 }
 
-.start > div:nth-child(2) > h1 {
+.start>div:nth-child(2)>h1 {
   color: #493545;
 }
 

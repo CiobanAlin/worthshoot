@@ -4,7 +4,7 @@ body {
   align-items: center;
   flex-flow: column;
   width: 100%;
-  max-width: 1200px;
+  /* max-width: 1200px; */
   margin: auto;
   font-family: "Roboto", sans-serif;
   /* font-family: 'Mukta', sans-serif; */
@@ -38,7 +38,43 @@ body {
   /* body-background */
   color: #e5e6f3;
   color: #ff9323;
+
+  color: #F8F9FB;
 }
+
+section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+}
+
+section>* {
+  width: 100%;
+  /* max-width: 1200px; */
+  max-width: 582px;
+}
+
+.copertaGri {
+  background-color: #F8F9FB;
+  padding-bottom: 66px;
+}
+
+.copertaMov {
+  background-color: #e5e6f3;
+  padding-bottom: 66px;
+}
+
+.copertaAlbastra {
+  background-color: rgba(83, 135, 245, 0.1);
+  padding-bottom: 66px;
+  /* #5387F5 */
+  /* #A3D6FF; */
+  /* #3A2CF2; */
+  /* #241B99; */
+}
+
 
 /* body>div {
     width: calc(100% - 66px);
@@ -172,8 +208,8 @@ a {
   margin-top: 160px;
   width: 180px;
   height: 66px;
-  background: url("../img/Logo/WS-Cover.png");
-  /* background: url("../img/Logo/WS\ White\ STRONG.png"); */
+  /* background: url("../img/Logo/WS-Cover.png"); */
+  background: url("../img/Logo/WS\ White\ STRONG.png");
   /* WS White STRONG.png  */
   background-size: 181% auto !important;
   background-position: center;
@@ -189,8 +225,8 @@ a {
   bottom: -32px;
   /* font-family: 'Mukta', sans-serif; */
   font-family: "Rubik", sans-serif;
-  color: rgba(0, 0, 0, 0.9);
-  /* color: rgba(255, 255, 255, 0.9); */
+  /* color: rgba(0, 0, 0, 0.9); */
+  color: rgba(255, 255, 255, 0.9);
 }
 
 @media screen and (max-width: 650px) {
@@ -341,7 +377,8 @@ ul {
 }
 
 .parinteFotografiiHero {
-  max-width: 1200px;
+  /* max-width: 1200px; */
+  max-width: 582px;
   margin: 33px;
   border-radius: 6px;
   position: relative;
@@ -365,7 +402,8 @@ ul {
   content: "";
 }
 
-.cardPocketEchipa>img {
+.cardPocketEchipa>img,
+.cardPocketFotografii>img {
   border-radius: 6px;
   box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14),
     0 3px 1px -2px rgba(0, 0, 0, 0.12);
@@ -374,7 +412,8 @@ ul {
 @media screen and (max-width: 1200px) {
 
   .fotografiiHero,
-  .cardPocketEchipa>img {
+  .cardPocketEchipa>img,
+  .cardPocketFotografii>img {
     border-radius: 0;
     box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0), 0 2px 2px 0 rgba(0, 0, 0, 0),
       0 3px 1px -2px rgba(0, 0, 0, 0);
@@ -382,13 +421,18 @@ ul {
 }
 
 img {
-  max-width: 1200px;
+  /* max-width: 1200px; */
+  max-width: 582px;
   width: 100%;
 }
 
 .storyGallery {
   display: flex;
-  flex-flow: column;
+  /* flex-flow: column; */
+  flex-flow: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
 
 .scrollToPacket {
@@ -427,6 +471,17 @@ img {
 .storyGallery.cardPocketEchipa>img:nth-child(1) {
   content: url("../img/Echipa/1200/echipa-01.jpg");
 }
+
+/* 500 */
+.storyGallery.cardPocketFotografii>img:nth-child(1) {
+  content: url("../img/Fotografia/IMG_4054.jpg");
+}
+
+/* 1200 */
+.storyGallery.cardPocketFotografii>img:nth-child(1) {
+  content: url("../img/Fotografia/IMG_4054.jpg");
+}
+
 
 /* 500 */
 .storyGallery.cardPocketNunta>img:nth-child(1) {

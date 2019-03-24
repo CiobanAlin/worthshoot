@@ -19,7 +19,10 @@
 
 .optiuniList>div {
     /* padding: 20px; */
-    margin: 20px 0;
+    /* margin: 20px 0; */
+    min-width: 100px;
+    max-width: 100px;
+    margin: 20px;
 }
 
 .displayNone,
@@ -33,13 +36,35 @@
 }
 
 .optiuniList {
-    position: absolute;
+    /* position: absolute; */
     /* top: -52px; */
-    top: -20px;
-    right: 0;
-    left: 0;
-    bottom: 0;
+    /* top: -20px; */
+    /* right: 0; */
+    /* left: 0; */
+    /* bottom: 0; */
     padding: 0 !important;
-    margin: 0;
+    /* margin: 0; */
     z-index: 999;
+
+    position: fixed;
+    top: 100px;
+    right: auto;
+    bottom: auto;
+    left: auto;
+    max-width: 582px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: wrap;
+}
+
+.optiuniListBackground {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 998;
+    background-color: #e5e6f3;
 }

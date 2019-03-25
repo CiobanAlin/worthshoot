@@ -415,9 +415,9 @@ ul {
   width: calc(100% - 44px) !important;
   }
   
-  .copertaImagine{
-   padding-bottom: 33px !important; 
-  }
+ // .copertaImagine{
+  // padding-bottom: 33px !important; 
+  //}
 }
 
 //@media screen and (max-width: 1200px) {

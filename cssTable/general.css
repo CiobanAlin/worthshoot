@@ -340,11 +340,22 @@ ul {
   height: 0;
 }
 
-@media screen and (min-width: 1200px) {
+/* @media screen and (min-width: 1200px) {
   .hero {
     padding-top: 0;
-    /* height: 600px; */
+    height: 600px;
     height: 383px;
+  }
+} */
+
+@media screen and (min-width: 1200px) {
+  .hero {
+    padding-top: 0 !important;
+    height: 600px;
+  }
+
+  .logoWSC {
+    margin-top: 365px !important;
   }
 }
 
@@ -361,7 +372,7 @@ ul {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-position: center !important;
+  background-position: top center !important;
   /* background-color: rgba(229, 230, 243, 0.5) !important; */
   /* background-color: rgba(250, 252, 253, 0.5) !important; */
   /* background-color: rgba(73, 53, 69, 0.5) !important; */

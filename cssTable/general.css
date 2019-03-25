@@ -212,13 +212,14 @@ a {
   margin-top: 160px;
   width: 180px;
   height: 66px;
-  /* background: url("../img/Logo/WS-Cover.png"); */
-  background: url("../img/Logo/WS\ White\ STRONG.png");
+  background: url("../img/Logo/WS-Cover.png");
+  /* background: url("../img/Logo/WS\ White\ STRONG.png"); */
   /* WS White STRONG.png  */
   background-size: 181% auto !important;
   background-position: center;
   /* margin-bottom: 36px; */
   position: relative;
+  z-index: 4;
 }
 
 .logoWSC p {
@@ -229,8 +230,8 @@ a {
   bottom: -32px;
   /* font-family: 'Mukta', sans-serif; */
   font-family: "Rubik", sans-serif;
-  /* color: rgba(0, 0, 0, 0.9); */
-  color: rgba(255, 255, 255, 0.9);
+  color: rgba(0, 0, 0, 0.9);
+/*   color: rgba(255, 255, 255, 0.9); */
 }
 
 @media screen and (max-width: 650px) {
@@ -363,7 +364,7 @@ ul {
   background-position: center !important;
   /* background-color: rgba(229, 230, 243, 0.5) !important; */
   /* background-color: rgba(250, 252, 253, 0.5) !important; */
-  background-color: rgba(73, 53, 69, 0.5) !important;
+  /* background-color: rgba(73, 53, 69, 0.5) !important; */
   /* background-color: rgba(0, 0, 0, 0.7) !important; */
   background-blend-mode: overlay;
   background-size: cover !important;
@@ -378,6 +379,7 @@ ul {
   right: 0;
   bottom: 0;
   opacity: 0.2;
+  z-index: 3;
 }
 
 .parinteFotografiiHero {

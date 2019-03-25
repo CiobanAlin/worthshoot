@@ -1055,6 +1055,7 @@
 </script>
 <!-- optiune -->
 <script>
+    var bodyTarget = document.getElementsByTagName("BODY")[0];
     var optiuniList = document.getElementsByClassName("optiuniList")[0];  
     var optiuniListBackground = document.getElementsByClassName("optiuniListBackground")[0];
     var optiuniInitial = document.getElementsByClassName("optiuniInitial")[0];
@@ -1078,6 +1079,7 @@
         if (optiuniList.classList) {
             optiuniList.classList.toggle("displayNone");
             optiuniListBackground.classList.toggle("displayNone");
+            bodyTarget.classList.toggle("scrollHidden");
         }
     }
     for (i = 0; i < optiuniListSelector.length; i++) {
@@ -1091,6 +1093,7 @@
                 optiuniSelectat[i].classList.remove("displayNone");
                 optiuniList.classList.add("displayNone");
                 optiuniListBackground.classList.add("displayNone");
+                bodyTarget.classList.remove("scrollHidden");
                 optiuniListToggle();
                 if (i == 0) {
                     for (j = 0; j < cardPocketEveniment.length; j++) {

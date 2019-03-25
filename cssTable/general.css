@@ -335,9 +335,10 @@ ul {
   /* margin-bottom: 66px; */
   /* background: url('IMG_0644.png'); */
   width: 100%;
-  max-width: 2048px;
+  /* max-width: 2048px; */
   /* min-height: 1365.3px; */
   height: 0;
+  margin: auto;
 }
 
 /* @media screen and (min-width: 1200px) {
@@ -489,6 +490,10 @@ img {
 .scrollToPacket:hover {
   color: white;
   background: rgba(206, 210, 223, 0.9);
+}
+
+.scrollHidden {
+  overflow: hidden;
 }
 
 /* .scrollToPacketTarget {

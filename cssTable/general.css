@@ -379,7 +379,8 @@ ul {
   top: 0;
   left: 0;
   right: 0;
-  bottom: 0;
+  /* bottom: 0; */
+  bottom: -10px;
   /* opacity: 0.2; */
   z-index: 3;
 }

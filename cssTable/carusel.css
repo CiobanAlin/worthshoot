@@ -132,8 +132,6 @@
         border-radius: 0;
         margin-left: auto;
         margin-right: auto;
-        right: 0;
-        left: 0;
     }
 
     .imagineCarusel {
@@ -152,8 +150,22 @@
     }
 }
 
-@media screen and (max-width:550px) {
+@media screen and (max-width:626px) {
     .testimonial {
         box-sizing: border-box;
+        margin-left: 22px;
+        margin-right: 22px;
+        border-bottom-right-radius: 8px;
+        border-bottom-left-radius: 8px;
+        width: calc(100% - 44px);
+        right: 0;
+        left: 0;
+    }
+    
+    .imagineCarusel {
+        border-radius: 0;
+        margin: 0 22px;
+        border-top-right-radius: 8px;
+        border-top-left-radius: 8px;
     }
 }

@@ -82,7 +82,7 @@
         </div>
     </section>
     <!-- sectiune #C6C6C6 -->
-    <section class="copertaGri copertaImagine scrollToEchipaTarget">
+    <section class="copertaGri copertaImagine scrollToEchipaTarget scrollToFotografii">
         <div class="introducere ">
             <h1>Echipă</h1>
             <h2 class="storyTitle">
@@ -96,7 +96,7 @@
         </div>
     </section>
     <!-- sectiune -->
-    <section class="copertaMov copertaImagine">
+    <section class="copertaMov copertaImagine scrollToFotografiiTarget scrollToAlegeParagraful">
         <div class="introducere">
             <h1>Fotografii</h1>
             <h2 class="storyTitle">
@@ -115,7 +115,7 @@
         </div> -->
     </section>
     <!-- sectiune -->
-    <section class="copertaGri">
+    <section class="copertaGri scrollToAlegeParagrafulTarget">
         <div class="introducere">
             <h1>Alege paragraful</h1>
             <!-- capitolul -->
@@ -1268,30 +1268,33 @@
         }
     }
 </script>
-<!-- scrollToGeneral -->
+<!-- scrollToEchipa -->
 <script>
-    var elmntToScroll;
-    elmntToScroll = ["scrollToEchipa", "scrollToFotografii", "scrollToAlegeParagraful"];
-    elmntToScrollTarget = ["scrollToEchipaTarget", "scrollToFotografiiTarget", "scrollToAlegeParagrafulTarget"];
-    // for (i = 0; i < optiuniListSelector.length; i++) {
-
-
-    // }
-    for (var i = 0; i < elmntToScroll.length; i++) {
-        var target = document.getElementsByClassName(elmntToScrollTarget[i])[0];
-        // document.getElementsByClassName(elmntToScroll[i])[0].onclick = scrollToGeneral(target);
-        var targetF = document.getElementsByClassName(elmntToScroll[i])[0];
-        targetF.addEventListener("click", scrollToGeneral(target));
-        console.log(target);
-        console.log(targetF);
-    }
-
-    function scrollToGeneral(elmnt) {
-        var targetFunction = elmnt;
-        console.log(targetFunction);
-        targetFunction.scrollIntoView();
-    }
-</script>
+        document.getElementsByClassName("scrollToEchipa")[0].onclick = scrollToFormGroup;
+    
+        function scrollToFormGroup() {
+            var elmnt = document.getElementsByClassName("scrollToEchipaTarget")[0];
+            elmnt.scrollIntoView();
+        }
+    </script>
+    <!-- scrollToFotografii -->
+<script>
+        document.getElementsByClassName("scrollToAlegeParagraful")[0].onclick = scrollToFormGroup;
+    
+        function scrollToFormGroup() {
+            var elmnt = document.getElementsByClassName("scrollToAlegeParagrafulTarget")[0];
+            elmnt.scrollIntoView();
+        }
+    </script>
+        <!-- scrollToFotografii -->
+<script>
+        document.getElementsByClassName("scrollToFotografii")[0].onclick = scrollToFormGroup;
+    
+        function scrollToFormGroup() {
+            var elmnt = document.getElementsByClassName("scrollToFotografiiTarget")[0];
+            elmnt.scrollIntoView();
+        }
+    </script>
 <!-- scrollToFormGroup -->
 <script>
     document.getElementsByClassName("scrollToFormGroup")[0].onclick = scrollToFormGroup;

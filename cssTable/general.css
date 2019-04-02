@@ -477,12 +477,19 @@ img {
 
 .storyGallery {
   display: flex;
-  /* flex-flow: column; */
-  flex-flow: row;
-  flex-wrap: wrap;
+  flex-flow: column;
   justify-content: center;
   align-items: center;
 }
+
+/* @media screen and (min-width: 499px) {
+  .storyGallery {
+    flex-flow: row;
+    justify-content: end;
+    align-items: center;
+    overflow-x: scroll;
+  }
+} */
 
 .scrollToPacket {
   width: 40px;
@@ -545,9 +552,61 @@ img {
   content: url("../img/Fotografia/IMG_4054.jpg");
 }
 
-
+/* reclama */
 /* 500 */
-.storyGallery.cardPocketNunta>img:nth-child(1) {
+.storyGallery.cardPocketEveniment>img:nth-child(1) {
+  content: url("../img/Normal/Reclama/Damagi/1/500/\(1\).jpg");
+}
+
+.storyGallery.cardPocketEveniment>img:nth-child(2) {
+  content: url("../img/Normal/Reclama/Damagi/1/500/\(2\).jpg");
+}
+
+.storyGallery.cardPocketEveniment>img:nth-child(3) {
+  content: url("../img/Normal/Reclama/Damagi/1/500/\(3\).jpg");
+}
+
+.storyGallery.cardPocketEveniment>img:nth-child(4) {
+  content: url("../img/Normal/Reclama/Damagi/1/500/\(4\).jpg");
+}
+
+.storyGallery.cardPocketEveniment>img:nth-child(5) {
+  content: url("../img/Normal/Reclama/Damagi/1/500/\(5\).jpg");
+}
+
+.storyGallery.cardPocketEveniment>img:nth-child(6) {
+  content: url("../img/Normal/Reclama/Damagi/1/500/\(6\).jpg");
+}
+
+@media screen and (min-width: 499px) {
+  .storyGallery.cardPocketEveniment>img:nth-child(1) {
+    content: url("../img/Normal/Reclama/Damagi/1/1200/\(1\).jpg");
+  }
+
+  .storyGallery.cardPocketEveniment>img:nth-child(2) {
+    content: url("../img/Normal/Reclama/Damagi/1/1200/\(2\).jpg");
+  }
+
+  .storyGallery.cardPocketEveniment>img:nth-child(3) {
+    content: url("../img/Normal/Reclama/Damagi/1/1200/\(3\).jpg");
+  }
+
+  .storyGallery.cardPocketEveniment>img:nth-child(4) {
+    content: url("../img/Normal/Reclama/Damagi/1/1200/\(4\).jpg");
+  }
+
+  .storyGallery.cardPocketEveniment>img:nth-child(5) {
+    content: url("../img/Normal/Reclama/Damagi/1/1200/\(5\).jpg");
+  }
+
+  .storyGallery.cardPocketEveniment>img:nth-child(6) {
+    content: url("../img/Normal/Reclama/Damagi/1/1200/\(6\).jpg");
+  }
+}
+
+/* nunta */
+/* 500 */
+cardPocketEveniment.cardPocketNunta>img:nth-child(1) {
   content: url("../img/Normal/Cuplu/500/\ (1).jpg");
 }
 

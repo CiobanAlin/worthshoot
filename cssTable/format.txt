@@ -1,60 +1,51 @@
-/* 1200 */
-.storyGallery.cardPocketNunta>img:nth-child(1) {
-  content: url("../img/Normal/Cuplu/1200/(1).jpg");
+/* reclama */
+/* 500 */
+.storyGallery.cardPocketEveniment>img:nth-child(1) {
+  content: url("../img/Normal/Reclama/Damagi/500/\ (1).jpg");
 }
 
-.storyGallery.cardPocketNunta>img:nth-child(2) {
-  content: url("../img/Normal/Cuplu/1200/(2).jpg");
+.storyGallery.cardPocketEveniment>img:nth-child(2) {
+  content: url("../img/Normal/Reclama/Damagi/500/\ (2).jpg");
 }
 
-.storyGallery.cardPocketNunta>img:nth-child(3) {
-  content: url("../img/Normal/Cuplu/1200/(3).jpg");
+.storyGallery.cardPocketEveniment>img:nth-child(3) {
+  content: url("../img/Normal/Reclama/Damagi/500/\ (3).jpg");
 }
 
-.storyGallery.cardPocketNunta>img:nth-child(4) {
-  content: url("../img/Normal/Cuplu/1200/(4).jpg");
+.storyGallery.cardPocketEveniment>img:nth-child(4) {
+  content: url("../img/Normal/Reclama/Damagi/500/\ (4).jpg");
 }
 
-.storyGallery.cardPocketNunta>img:nth-child(5) {
-  content: url("../img/Normal/Cuplu/1200/(5).jpg");
+.storyGallery.cardPocketEveniment>img:nth-child(5) {
+  content: url("../img/Normal/Reclama/Damagi/500/\ (5).jpg");
 }
 
-.storyGallery.cardPocketNunta>img:nth-child(6) {
-  content: url("../img/Normal/Cuplu/1200/(6).jpg");
+.storyGallery.cardPocketEveniment>img:nth-child(6) {
+  content: url("../img/Normal/Reclama/Damagi/500/\ (6).jpg");
 }
 
-.storyGallery.cardPocketNunta>img:nth-child(7) {
-  content: url("../img/Normal/Cuplu/1200/(7).jpg");
-}
+@media screen and (min-width: 499px) {
+  .storyGallery.cardPocketEveniment>img:nth-child(1) {
+    content: url("../img/Normal/Reclama/Damagi/1200/\ (1).jpg");
+  }
 
-.storyGallery.cardPocketNunta>img:nth-child(8) {
-  content: url("../img/Normal/Cuplu/1200/(8).jpg");
-}
+  .storyGallery.cardPocketEveniment>img:nth-child(2) {
+    content: url("../img/Normal/Reclama/Damagi/1200/\ (2).jpg");
+  }
 
-.storyGallery.cardPocketNunta>img:nth-child(9) {
-  content: url("../img/Normal/Cuplu/1200/(9).jpg");
-}
+  .storyGallery.cardPocketEveniment>img:nth-child(3) {
+    content: url("../img/Normal/Reclama/Damagi/1200/\ (3).jpg");
+  }
 
-.storyGallery.cardPocketNunta>img:nth-child(10) {
-  content: url("../img/Normal/Cuplu/1200/(10).jpg");
-}
+  .storyGallery.cardPocketEveniment>img:nth-child(4) {
+    content: url("../img/Normal/Reclama/Damagi/1200/\ (4).jpg");
+  }
 
-.storyGallery.cardPocketNunta>img:nth-child(11) {
-  content: url("../img/Normal/Cuplu/1200/(11).jpg");
-}
+  .storyGallery.cardPocketEveniment>img:nth-child(5) {
+    content: url("../img/Normal/Reclama/Damagi/1200/\ (5).jpg");
+  }
 
-.storyGallery.cardPocketNunta>img:nth-child(12) {
-  content: url("../img/Normal/Cuplu/1200/(12).jpg");
-}
-
-.storyGallery.cardPocketNunta>img:nth-child(13) {
-  content: url("../img/Normal/Cuplu/1200/(13).jpg");
-}
-
-.storyGallery.cardPocketNunta>img:nth-child(14) {
-  content: url("../img/Normal/Cuplu/1200/(14).jpg");
-}
-
-.storyGallery.cardPocketNunta>img:nth-child(15) {
-  content: url("../img/Normal/Cuplu/1200/(15).jpg");
+  .storyGallery.cardPocketEveniment>img:nth-child(6) {
+    content: url("../img/Normal/Reclama/Damagi/1200/\ (6).jpg");
+  }
 }

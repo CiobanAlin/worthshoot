@@ -474,6 +474,13 @@ img {
   max-width: 582px;
   width: 100%;
 }
+.cardPocketEchipa,
+.cardPocketFotografii {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
 
 .storyGallery {
   transition: all .5s ease-in-out;
@@ -566,22 +573,22 @@ img {
 
 
 /* 500 */
-.storyGallery.cardPocketEchipa>img:nth-child(1) {
+.cardPocketEchipa>img:nth-child(1) {
   content: url("../img/Echipa/500/echipa-01.jpg");
 }
 
 /* 1200 */
-.storyGallery.cardPocketEchipa>img:nth-child(1) {
+.cardPocketEchipa>img:nth-child(1) {
   content: url("../img/Echipa/1200/echipa-01.jpg");
 }
 
 /* 500 */
-.storyGallery.cardPocketFotografii>img:nth-child(1) {
+.cardPocketFotografii>img:nth-child(1) {
   content: url("../img/Fotografia/IMG_4054.jpg");
 }
 
 /* 1200 */
-.storyGallery.cardPocketFotografii>img:nth-child(1) {
+.cardPocketFotografii>img:nth-child(1) {
   content: url("../img/Fotografia/IMG_4054.jpg");
 }
 

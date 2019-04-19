@@ -31,6 +31,6 @@ function includeHTML() {
     (function () {
         svg();
         paragraf();
-        formCall();
+        loaded();
     })();
 };

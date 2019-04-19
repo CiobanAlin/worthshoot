@@ -1,10 +1,3 @@
-function formCall() {
-    getFormData();
-    handleFormSubmit();
-    loaded();
-    disableAllButtons();
-}
-
 // get all data in form and return object
 function getFormData(form) {
     var elements = form.elements;

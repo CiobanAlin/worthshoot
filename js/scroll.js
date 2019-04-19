@@ -1,49 +1,26 @@
+function scrollToF(e) {
+    var elmnt = document.getElementsByClassName(e + 'Target')[0];
+    elmnt.scrollIntoView();
+}
+
+function scrollTo(e) {
+    document.getElementsByClassName(e)[0].addEventListener("click", function () {
+        scrollToF(e);
+    });
+}
+
 // <!-- scrollToEchipa -->
-
-document.getElementsByClassName("scrollToEchipa")[0].onclick = scrollToEchipa;
-
-function scrollToEchipa() {
-    var elmnt = document.getElementsByClassName("scrollToEchipaTarget")[0];
-    elmnt.scrollIntoView();
-}
-
+scrollTo("scrollToEchipa");
+// <!-- scrollToAlegeParagraful -->
+scrollTo("scrollToAlegeParagraful");
 // <!-- scrollToFotografii -->
-
-document.getElementsByClassName("scrollToAlegeParagraful")[0].onclick = scrollToAlegeParagraful;
-
-function scrollToAlegeParagraful() {
-    var elmnt = document.getElementsByClassName("scrollToAlegeParagrafulTarget")[0];
-    elmnt.scrollIntoView();
-}
-
-// <!-- scrollToFotografii -->
-
-document.getElementsByClassName("scrollToFotografii")[0].onclick = scrollToFotografii;
-
-function scrollToFotografii() {
-    var elmnt = document.getElementsByClassName("scrollToFotografiiTarget")[0];
-    elmnt.scrollIntoView();
-}
-
+scrollTo("scrollToFotografii");
 // <!-- scrollToFormGroup -->
-
-document.getElementsByClassName("scrollToFormGroup")[0].onclick = scrollToFormGroup;
-
-function scrollToFormGroup() {
-    var elmnt = document.getElementsByClassName("scrollToFormGroupTarget")[0];
-    elmnt.scrollIntoView();
-}
-
+scrollTo("scrollToFormGroup");
 // <!-- scrollToPacket -->
-
-document.getElementsByClassName("scrollToPacket")[0].onclick = scrollToPacket;
-
-function scrollToPacket() {
-    var elmnt = document.getElementsByClassName("scrollToPacketTarget")[0];
-    elmnt.scrollIntoView();
-}
-
+scrollTo("scrollToPacket");
 // <!-- scrollToPacketShow -->
+
 
 window.addEventListener('scroll', function (e) {
     scrollToPacketShow();
@@ -51,7 +28,6 @@ window.addEventListener('scroll', function (e) {
 window.addEventListener('resize', function (e) {
     scrollToPacketShow();
 });
-
 var scrollToPacket = document.getElementsByClassName("scrollToPacket")[0];
 
 function scrollToPacketShow() {

@@ -474,6 +474,7 @@ img {
   max-width: 582px;
   width: 100%;
 }
+
 .cardPocketEchipa,
 .cardPocketFotografii {
   display: flex;
@@ -489,11 +490,12 @@ img {
   margin: auto;
 }
 
-.storyGallery>img{
-    display: inline-block;
-    vertical-align: top;
+.storyGallery>img {
+  display: inline-block;
+  vertical-align: top;
 }
-@media only screen and (max-width: 582px){
+
+@media only screen and (max-width: 582px) {
   .storyGallery {
     display: flex;
     flex-flow: column;
@@ -501,23 +503,26 @@ img {
     align-items: center;
   }
 }
-@media only screen and (max-width: 1023px) and (min-width: 582px){
+
+@media only screen and (max-width: 1023px) and (min-width: 582px) {
   .storyGallery {
-      column-count: 2;
+    column-count: 2;
   }
 }
-@media only screen and (max-width: 1799px) and (min-width: 1024px){
+
+@media only screen and (max-width: 1799px) and (min-width: 1024px) {
   .storyGallery {
-      column-count: 3;
+    column-count: 3;
   }
 }
-@media only screen and (min-width: 1800px){
+
+@media only screen and (min-width: 1800px) {
   .storyGallery {
     column-count: 3;
     column-gap: 30px;
   }
 
-  .storyGallery>img{
+  .storyGallery>img {
     margin-bottom: 30px;
   }
 }
@@ -595,19 +600,19 @@ img {
 /* reclama */
 /* 500 */
 .storyGallery.cardPocketEveniment>img:nth-child(1) {
-  content: url("../img/Normal/Reclama/Damagi/1/500/\1.jpg");
+  content: url("../img/Normal/Reclama/Damagi/1/500/1.jpg");
 }
 
 .storyGallery.cardPocketEveniment>img:nth-child(2) {
-  content: url("../img/Normal/Reclama/Damagi/1/500/\2.jpg");
+  content: url("../img/Normal/Reclama/Damagi/1/500/2.jpg");
 }
 
 .storyGallery.cardPocketEveniment>img:nth-child(3) {
-  content: url("../img/Normal/Reclama/Damagi/1/500/\3.jpg");
+  content: url("../img/Normal/Reclama/Damagi/1/500/3.jpg");
 }
 
 .storyGallery.cardPocketEveniment>img:nth-child(4) {
-  content: url("../img/Normal/Reclama/Damagi/1/500/\4.jpg");
+  content: url("../img/Normal/Reclama/Damagi/1/500/4.jpg");
 }
 
 .storyGallery.cardPocketEveniment>img:nth-child(5) {

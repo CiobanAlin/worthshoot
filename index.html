@@ -26,7 +26,6 @@
         class="copertaMov copertaImagine scrollToFotografiiTarget scrollToAlegeParagraful">
     </section>
     <!-- sectiune -->
-    <!-- include-html="sections/paragraf/paragraf.html" -->
     <section include-html="sections/paragraf/paragraf.html" class="copertaGri scrollToAlegeParagrafulTarget"></section>
     <div class="optiuniListBackground displayNone"></div>
     <div include-html="sections/paragraf/paragrafOverlay.html" class="optiuniList displayNone"></div>
@@ -36,7 +35,121 @@
     <!-- sectiune -->
     <section include-html="sections/pachete/pachete.html" class="copertaAlbastra" style="padding-bottom: 0;"></section>
     <section include-html="sections/pachete/pacheteOferta.html" class="copertaAlbastra scrollToFormGroup"></section>
-    <section include-html="sections/contact/contact.html" class="copertaGri scrollToFormGroupTarget"></section>
+    <section class="copertaGri scrollToFormGroupTarget">
+        <div class="introducere">
+            <h1>Contactează-ne
+        </div>
+        <div class="cardPocket">
+            <form class="container card cardMare gform" id="gform" method="POST" data-email="worthshoot@gmail.com"
+                action="https://script.google.com/macros/s/AKfycbw-agBq4PZmzFMWy12Jdd61n51aD_tiMaPBYQFR/exec">
+                <h3>Completând formularul!</h3>
+                <div class="form-group">
+                    <select name="Pachet">
+                        <option value="optiune">-opțiune-</option>
+                        <option value="EFFizic" class="cardPocketEveniment">
+                            Persoană Fizică -100lei/h
+                        </option>
+                        <option value="EFJuridic" class="cardPocketEveniment">
+                            Persoană Juridică -150lei/h
+                        </option>
+                        <option value="EFC" class="cardPocketEveniment">
+                            Ofertă
+                        </option>
+                        <option value="RF1" class="cardPocketReclama displayNone">
+                            RF1 -100lei
+                        </option>
+                        <option value="RF5" class="cardPocketReclama displayNone">
+                            RF5 -250lei
+                        </option>
+                        <option value="RFC" class="cardPocketReclama displayNone">
+                            Ofertă
+                        </option>
+                        <option value="SFoto" class="cardPocketSedintaFoto displayNone">
+                            SFoto -60lei
+                        </option>
+                        <option value="SFCuplu" class="cardPocketSedintaFoto displayNone">
+                            SFotoCuplu -100lei
+                        </option>
+                        <option value="SFotoC" class="cardPocketSedintaFoto displayNone">
+                            Ofertă
+                        </option>
+
+                        <option value="NF1" class="cardPocketNunta displayNone">
+                            NFoto1 -440e
+                        </option>
+                        <option value="NF2" class="cardPocketNunta displayNone">
+                            NFoto2 -1090e
+                        </option>
+                        <option value="NFC" class="cardPocketNunta displayNone">
+                            Ofertă
+                        </option>
+                        <option value="BF1" class="cardPocketBotez displayNone">
+                            BFoto1 -190e
+                        </option>
+                        <option value="BF2" class="cardPocketBotez displayNone">
+                            BFoto2 -290e
+                        </option>
+                        <option value="BFC" class="cardPocketBotez displayNone">
+                            Ofertă
+                        </option>
+                        <option value="BF1" class="cardPocketBanchet displayNone">
+                            BanchetFoto1 -60lei/persoană
+                        </option>
+                        <option value="BF2" class="cardPocketBanchet displayNone">
+                            BanchetFoto2 -80lei/persoană
+                        </option>
+                        <option value="BFC" class="cardPocketBanchet displayNone">
+                            Ofertă
+                        </option>
+                    </select>
+                    <label for="select" class="control-label">Pachet</label><i class="bar"></i>
+                </div>
+                <div class="form-group">
+                    <input type="text" name="Nume" required="required" />
+                    <label for="input" class="control-label">Nume</label><i class="bar"></i>
+                </div>
+                <div class="form-group">
+                    <input type="tel" name="Telefon" required="required" />
+                    <label for="input" class="control-label">Telefon</label><i class="bar"></i>
+                </div>
+                <div class="form-group">
+                    <input type="tel" name="Data" required="required" />
+                    <label for="input" class="control-label">aaaa.ll.zz</label><i class="bar"></i>
+                </div>
+                <div class="button-container">
+                    <!-- <button type="button" class="button"><span style="text-decoration: none;">Trimite</span></button> -->
+                    <button class="button-success">
+                        Trimite
+                    </button>
+                </div>
+            </form>
+        </div>
+        <!-- Customise the Thankyou Message People See when they submit the form: -->
+        <div class="introducere" style="display:none;" id="thankyou_message">
+            <h1>Formular trimis cu succes!</h1>
+        </div>
+        <!-- sectiuneExtra -->
+        <h2 class="orForm" style="text-align: center; margin: 22px auto;">sau</h2>
+        <div class="cardPocket start" style="max-width: 1200px">
+            <div class="card">
+                <h3>
+                    Prin SMS <br>la <a href="">074 733 2638</a>
+                </h3>
+            </div>
+            <h2 style="margin: 22px;">-</h2>
+            <div class="card">
+                <h3>
+                    Ca mesaj pe pagina <br>
+                    de <a href="https://www.facebook.com/worthshoot/">facebook</a>
+                </h3>
+            </div>
+        </div>
+        <p style="margin-bottom: 0; margin-top: 33px; text-align: center;
+                margin-left: 0;">
+            Te vom contacta in cel mai scurt timp posibil!
+        </p>
+    </section>
+    <!-- include-html="sections/contact/contact.html" -->
     <div class="scrollToPacketShow"></div>
     <div class="storyGallery cardPocketEveniment">
         <img>

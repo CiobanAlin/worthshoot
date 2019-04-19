@@ -28,7 +28,6 @@ function paragraf() {
             bodyTarget.classList.toggle("scrollHidden");
         }
     }
-    console.log("optiuniListSelector.length: " + optiuniListSelector.length);
     for (i = 0; i < optiuniListSelector.length; i++) {
         optiuniListSelector[i].addEventListener("click", functieOptiuneSelectata);
     }

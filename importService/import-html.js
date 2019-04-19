@@ -28,6 +28,9 @@ function includeHTML() {
             return;
         }
     }
-    svg();
-    paragraf();
+    (function () {
+        svg();
+        paragraf();
+        formCall();
+    })();
 };

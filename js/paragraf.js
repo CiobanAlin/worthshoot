@@ -1,25 +1,42 @@
+// OPTIMIZED
+
 function paragraf() {
-    // <!-- optiune -->
 
-    var bodyTarget = document.getElementsByTagName("BODY")[0];
-    var optiuniList = document.getElementsByClassName("optiuniList")[0];
-    var optiuniListBackground = document.getElementsByClassName("optiuniListBackground")[0];
-    var optiuniInitial = document.getElementsByClassName("optiuniInitial")[0];
-    var optiuniSelectat = document.getElementsByClassName("optiuniSelectat");
-    var optiuniListSelector = document.getElementsByClassName("optiuniListSelector");
+    var i, j, k;
+    var bodyTarget = tagName("BODY")[0];
+    var optiuniList = className("optiuniList")[0];
+    var optiuniListBackground = className("optiuniListBackground")[0];
+    var optiuniInitial = className("optiuniInitial")[0];
+    var optiuniSelectat = className("optiuniSelectat");
+    var optiuniListSelector = className("optiuniListSelector");
 
-    var cardPocketEveniment = document.getElementsByClassName("cardPocketEveniment");
-    var cardPocketReclama = document.getElementsByClassName("cardPocketReclama");
-    var cardPocketSedintaFoto = document.getElementsByClassName("cardPocketSedintaFoto");
 
-    var cardPocketNunta = document.getElementsByClassName("cardPocketNunta");
-    var cardPocketBotez = document.getElementsByClassName("cardPocketBotez");
+    var cardPocketEveniment = className("cardPocketEveniment");
+    var cardPocketReclama = className("cardPocketReclama");
+    var cardPocketSedintaFoto = className("cardPocketSedintaFoto");
+    var cardPocketNunta = className("cardPocketNunta");
+    var cardPocketBotez = className("cardPocketBotez");
+    var cardPocketBanchet = className("cardPocketBanchet");
+    //add here opt
+    var cardPocketOpt = [
 
-    var cardPocketBanchet = document.getElementsByClassName("cardPocketBanchet");
+        cardPocketEveniment,
+        cardPocketReclama,
+        cardPocketSedintaFoto,
+        cardPocketNunta,
+        cardPocketBotez,
+        cardPocketBanchet
+        //add here opt
+    ];
+
 
     optiuniInitial.addEventListener("click", optiuniListToggle);
     optiuniList.addEventListener("click", optiuniListToggle);
     optiuniListBackground.addEventListener("click", optiuniListToggle);
+    for (i = 0; i < optiuniListSelector.length; i++) {
+        optiuniListSelector[i].addEventListener("click", functieOptiuneSelectata);
+    }
+
 
     function optiuniListToggle() {
         if (optiuniList.classList) {
@@ -28,176 +45,31 @@ function paragraf() {
             bodyTarget.classList.toggle("scrollHidden");
         }
     }
-    for (i = 0; i < optiuniListSelector.length; i++) {
-        optiuniListSelector[i].addEventListener("click", functieOptiuneSelectata);
+
+    function optiuniListSelectorAdd(e) {
+        for (j = 0; j < e.length; j++) {
+            e[j].classList.add("displayNone");
+        }
+    }
+
+    function optiuniListSelectorRemove(e) {
+        for (j = 0; j < e.length; j++) {
+            e[j].classList.remove("displayNone");
+        }
     }
 
     function functieOptiuneSelectata() {
         for (i = 0; i < optiuniListSelector.length; i++) {
             optiuniSelectat[i].classList.add("displayNone");
+            optiuniListSelectorAdd(cardPocketOpt[i]);
+
             if (optiuniListSelector[i] == this) {
                 optiuniSelectat[i].classList.remove("displayNone");
+                bodyTarget.classList.remove("scrollHidden");
+                optiuniListSelectorRemove(cardPocketOpt[i]);
                 optiuniList.classList.add("displayNone");
                 optiuniListBackground.classList.add("displayNone");
-                bodyTarget.classList.remove("scrollHidden");
                 optiuniListToggle();
-                if (i == 0) {
-                    for (j = 0; j < cardPocketEveniment.length; j++) {
-                        cardPocketEveniment[j].classList.remove("displayNone");
-                    }
-                    for (j = 0; j < cardPocketReclama.length; j++) {
-                        cardPocketReclama[j].classList.add("displayNone");
-                    }
-                    for (j = 0; j < cardPocketSedintaFoto.length; j++) {
-                        cardPocketSedintaFoto[j].classList.add("displayNone");
-                    }
-
-                    for (j = 0; j < cardPocketNunta.length; j++) {
-                        cardPocketNunta[j].classList.add("displayNone");
-                    }
-                    for (j = 0; j < cardPocketBotez.length; j++) {
-                        cardPocketBotez[j].classList.add("displayNone");
-                    }
-
-                    for (j = 0; j < cardPocketBanchet.length; j++) {
-                        cardPocketBanchet[j].classList.add("displayNone");
-                    }
-                }
-                if (i == 1) {
-                    for (j = 0; j < cardPocketEveniment.length; j++) {
-                        cardPocketEveniment[j].classList.add("displayNone");
-                    }
-                    for (j = 0; j < cardPocketReclama.length; j++) {
-                        cardPocketReclama[j].classList.remove("displayNone");
-                    }
-                    for (j = 0; j < cardPocketSedintaFoto.length; j++) {
-                        cardPocketSedintaFoto[j].classList.add("displayNone");
-                    }
-
-                    for (j = 0; j < cardPocketNunta.length; j++) {
-                        cardPocketNunta[j].classList.add("displayNone");
-                    }
-                    for (j = 0; j < cardPocketBotez.length; j++) {
-                        cardPocketBotez[j].classList.add("displayNone");
-                    }
-
-                    for (j = 0; j < cardPocketBanchet.length; j++) {
-                        cardPocketBanchet[j].classList.add("displayNone");
-                    }
-                }
-                if (i == 2) {
-                    for (j = 0; j < cardPocketEveniment.length; j++) {
-                        cardPocketEveniment[j].classList.add("displayNone");
-                    }
-                    for (j = 0; j < cardPocketReclama.length; j++) {
-                        cardPocketReclama[j].classList.add("displayNone");
-                    }
-                    for (j = 0; j < cardPocketSedintaFoto.length; j++) {
-                        cardPocketSedintaFoto[j].classList.remove("displayNone");
-                    }
-
-                    for (j = 0; j < cardPocketNunta.length; j++) {
-                        cardPocketNunta[j].classList.add("displayNone");
-                    }
-                    for (j = 0; j < cardPocketBotez.length; j++) {
-                        cardPocketBotez[j].classList.add("displayNone");
-                    }
-
-                    for (j = 0; j < cardPocketBanchet.length; j++) {
-                        cardPocketBanchet[j].classList.add("displayNone");
-                    }
-                }
-
-                if (i == 3) {
-                    for (j = 0; j < cardPocketEveniment.length; j++) {
-                        cardPocketEveniment[j].classList.add("displayNone");
-                    }
-                    for (j = 0; j < cardPocketReclama.length; j++) {
-                        cardPocketReclama[j].classList.add("displayNone");
-                    }
-                    for (j = 0; j < cardPocketSedintaFoto.length; j++) {
-                        cardPocketSedintaFoto[j].classList.add("displayNone");
-                    }
-
-                    for (j = 0; j < cardPocketNunta.length; j++) {
-                        cardPocketNunta[j].classList.remove("displayNone");
-                    }
-                    for (j = 0; j < cardPocketBotez.length; j++) {
-                        cardPocketBotez[j].classList.add("displayNone");
-                    }
-
-                    for (j = 0; j < cardPocketBanchet.length; j++) {
-                        cardPocketBanchet[j].classList.add("displayNone");
-                    }
-                }
-                if (i == 4) {
-                    for (j = 0; j < cardPocketEveniment.length; j++) {
-                        cardPocketEveniment[j].classList.add("displayNone");
-                    }
-                    for (j = 0; j < cardPocketReclama.length; j++) {
-                        cardPocketReclama[j].classList.add("displayNone");
-                    }
-                    for (j = 0; j < cardPocketSedintaFoto.length; j++) {
-                        cardPocketSedintaFoto[j].classList.add("displayNone");
-                    }
-
-                    for (j = 0; j < cardPocketNunta.length; j++) {
-                        cardPocketNunta[j].classList.add("displayNone");
-                    }
-                    for (j = 0; j < cardPocketBotez.length; j++) {
-                        cardPocketBotez[j].classList.remove("displayNone");
-                    }
-
-                    for (j = 0; j < cardPocketBanchet.length; j++) {
-                        cardPocketBanchet[j].classList.add("displayNone");
-                    }
-                }
-                if (i == 5) {
-                    for (j = 0; j < cardPocketEveniment.length; j++) {
-                        cardPocketEveniment[j].classList.add("displayNone");
-                    }
-                    for (j = 0; j < cardPocketReclama.length; j++) {
-                        cardPocketReclama[j].classList.add("displayNone");
-                    }
-                    for (j = 0; j < cardPocketSedintaFoto.length; j++) {
-                        cardPocketSedintaFoto[j].classList.add("displayNone");
-                    }
-
-                    for (j = 0; j < cardPocketNunta.length; j++) {
-                        cardPocketNunta[j].classList.add("displayNone");
-                    }
-                    for (j = 0; j < cardPocketBotez.length; j++) {
-                        cardPocketBotez[j].classList.add("displayNone");
-                    }
-
-                    for (j = 0; j < cardPocketBanchet.length; j++) {
-                        cardPocketBanchet[j].classList.remove("displayNone");
-                    }
-                }
-
-                // if (i == 6) {
-                //     for (j = 0; j < cardPocketEveniment.length; j++) {
-                //         cardPocketEveniment[j].classList.add("displayNone");
-                //     }
-                //     for (j = 0; j < cardPocketReclama.length; j++) {
-                //         cardPocketReclama[j].classList.add("displayNone");
-                //     }
-                //     for (j = 0; j < cardPocketSedintaFoto.length; j++) {
-                //         cardPocketSedintaFoto[j].classList.add("displayNone");
-                //     }
-
-                //     for (j = 0; j < cardPocketNunta.length; j++) {
-                //         cardPocketNunta[j].classList.add("displayNone");
-                //     }
-                //     for (j = 0; j < cardPocketBotez.length; j++) {
-                //         cardPocketBotez[j].classList.add("displayNone");
-                //     }
-
-                //     for (j = 0; j < cardPocketBanchet.length; j++) {
-                //         cardPocketBanchet[j].classList.remove("displayNone");
-                //     }
-                // }
-
             }
         }
     }

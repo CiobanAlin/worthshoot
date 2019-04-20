@@ -1,42 +1,45 @@
+// OPTIMIZED
+
 function scrollToF(e) {
-    var elmnt = document.getElementsByClassName(e + 'Target')[0];
-    elmnt.scrollIntoView();
+  var elmnt = className(e + "Target")[0];
+  elmnt.scrollIntoView();
 }
 
 function scrollTo(e) {
-    document.getElementsByClassName(e)[0].addEventListener("click", function () {
-        scrollToF(e);
-    });
+  e = "scrollTo" + e;
+  className(e)[0].addEventListener("click", function () {
+    scrollToF(e);
+  });
 }
 
-// <!-- scrollToEchipa -->
-scrollTo("scrollToEchipa");
-// <!-- scrollToAlegeParagraful -->
-scrollTo("scrollToAlegeParagraful");
-// <!-- scrollToFotografii -->
-scrollTo("scrollToFotografii");
-// <!-- scrollToFormGroup -->
-scrollTo("scrollToFormGroup");
-// <!-- scrollToPacket -->
-scrollTo("scrollToPacket");
-// <!-- scrollToPacketShow -->
+var scrollToVal = [
+  "Echipa",
+  "AlegeParagraful",
+  "Fotografii",
+  "FormGroup",
+  "Packet"
+];
 
+for (var i = 0; i < scrollToVal.length; i++) {
+  scrollTo(scrollToVal[i]);
+}
 
-window.addEventListener('scroll', function (e) {
-    scrollToPacketShow();
+window.addEventListener("scroll", function () {
+  scrollToPacketShow();
 });
-window.addEventListener('resize', function (e) {
-    scrollToPacketShow();
+window.addEventListener("resize", function () {
+  scrollToPacketShow();
 });
-var scrollToPacket = document.getElementsByClassName("scrollToPacket")[0];
+var scrollToPacket = className("scrollToPacket")[0];
 
 function scrollToPacketShow() {
-    var element = document.getElementsByClassName("scrollToPacketShow")[0];
-    var elementHeightPosition = element.offsetTop - element.scrollTop + element.clientTop;
-    var scrollHeight = this.scrollY;
-    if (elementHeightPosition < scrollHeight) {
-        scrollToPacket.style.display = "block";
-    } else {
-        scrollToPacket.style.display = "none";
-    }
+  var element = className("scrollToPacketShow")[0];
+  var elementHeightPosition =
+    element.offsetTop - element.scrollTop + element.clientTop;
+  var scrollHeight = this.scrollY;
+  if (elementHeightPosition < scrollHeight) {
+    scrollToPacket.style.display = "block";
+  } else {
+    scrollToPacket.style.display = "none";
+  }
 }

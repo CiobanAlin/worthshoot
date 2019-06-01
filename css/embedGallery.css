@@ -1,0 +1,5 @@
+.embedGallery,
+.embedGallery .ug-item-wrapper {
+    width: 100% !important;
+    max-width: 2000px;
+}

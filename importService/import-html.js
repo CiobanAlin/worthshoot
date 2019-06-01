@@ -34,5 +34,6 @@ function includeHTML() {
         svg();
         paragraf();
         loaded();
+        contactOptiuni();
     })();
 };

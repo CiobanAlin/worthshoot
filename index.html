@@ -140,7 +140,7 @@
     <!-- Pachete -->
     <section class="copertaAlbastra">
         <div class="introducere">
-            <h1>Galerie</h1>
+            <h1>Botez</h1>
         </div>
         <!-- botez -->
         <!-- <div id="flickrembed_85" class="embedGallery"></div>
@@ -185,7 +185,29 @@
             }
         </script>
         <!-- =botez -->
-
+        <div class="introducere">
+            <h1>Reclama</h1>
+        </div>
+        <!-- reclama -->
+        <div id="flickrembed_39"></div>
+        <div style="position:absolute; top:-70px; display:block; text-align:center; z-index:-1;"><a
+                href="https://www.onecompare.com/samsung/galaxy-s10-deals">at Onecompare</a></div>
+        <script
+            src='https://flickrembed.com/embed_v2.js.rand.php?container=flickrembed_39&source=flickr&layout=responsive&input=72157708875360483&sort=5&by=album&theme=carousel&scale=fit&speed=2000&limit=500&skin=default-light&autoplay=false'>
+        </script>
+        <script type="text/javascript">
+            function showpics() {
+                var a = $("#box").val();
+                $.getJSON("http://api.flickr.com/services/feeds/photos_public.gne?tags=" + a +
+                    "&tagmode=any&format=json&jsoncallback=?",
+                    function (a) {
+                        $("#images").hide().html(a).fadeIn("fast"), $.each(a.items, function (a, e) {
+                            $("<img/>").attr("src", e.media.m).appendTo("#images")
+                        })
+                    })
+            }
+        </script>
+        <!-- =reclama -->
     </section>
     <!-- Contact -->
     <section class="copertaGri scrollToFormGroupTarget">

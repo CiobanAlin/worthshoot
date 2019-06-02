@@ -1,0 +1,83 @@
+.ws-GDPR,
+.ws-GDPR .ws-btnSubliniat,
+.ws-GDPR .ws-butoane button {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    color: white;
+}
+
+.ws-GDPR {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: auto;
+    left: 0;
+    margin: auto;
+    padding: 30px;
+    background-color: rgba(34, 34, 34, .95);
+    border: solid 2px rgba(255, 255, 255, .7);
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, .3);
+    max-width: 370px;
+    z-index: 999;
+    display: none;
+    margin-top: 45px;
+}
+
+.ws-GDPR>div:nth-child(1) {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+}
+
+.ws-GDPR .ws-titluMic,
+.ws-GDPR .ws-btnSubliniat,
+.ws-GDPR .ws-butoane button {
+    font-weight: bold;
+}
+
+.ws-GDPR .ws-btnSubliniat,
+.ws-GDPR .ws-butoane button {
+    cursor: pointer;
+}
+
+.ws-GDPR .ws-titluMic {
+    line-height: 1.88;
+    margin-right: 15px;
+}
+
+.ws-GDPR .ws-btnSubliniat {
+    border: 0px;
+    background: transparent;
+    text-decoration: underline;
+}
+
+.ws-GDPR .ws-text {
+    margin-bottom: 45px;
+    text-align: left;
+    line-height: 1.79;
+}
+
+.ws-GDPR .ws-butoane {
+    display: flex;
+    flex-flow: column;
+}
+
+.ws-GDPR .ws-butoane button {
+    border: 2px solid rgba(255, 255, 255, .7);
+    ;
+    padding: 19px 0;
+    width: 100%;
+}
+
+.ws-GDPR .ws-butoane button {
+    color: #fff;
+    background: white;
+    color: black;
+    margin-bottom: 15px;
+}
+
+.ws-GDPR .ws-butoane a button {
+    background: transparent;
+    color: white;
+    margin-bottom: 0;
+}

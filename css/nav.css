@@ -1,0 +1,19 @@
+nav {
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: auto;
+
+    background-color: #f8f9fb;
+    padding-bottom: 15px;
+}
+
+@media screen and (min-width: 500px) {
+    nav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}

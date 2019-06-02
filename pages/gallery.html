@@ -69,17 +69,10 @@
     <link rel="stylesheet" type="text/css" href="css/optiune.css" />
     <link rel="stylesheet" type="text/css" href="css/form.css" />
     <link rel="stylesheet" type="text/css" href="css/embedGallery.css" />
-    <link rel="stylesheet" type="text/css" href="css/nav.css" />
     <!-- embd -->
 </head>
 
 <body onload="includeHTML()">
-    <nav>
-        <div class="logoWSC logo">
-            <p style="padding-left: 0;">We make history</p>
-        </div>
-        <!-- <div>Menu</div> -->
-    </nav>
     <!-- Echipa #C6C6C6 -->
     <section class="copertaGri copertaImagine scrollToEchipaTarget scrollToFotografii" style="display: none">
         <!-- embd -->
@@ -145,16 +138,17 @@
         <!-- embd -->
     </section>
     <!-- Pachete -->
-    <section class="copertaAlbastra" style="margin-top: 70px;">
+    <section class="copertaAlbastra">
         <div class="introducere">
-            <h1>Mini galerie</h1>
+            <h1>Botez</h1>
         </div>
-        <!-- t20 -->
-        <div id="flickrembed_95"></div>
-        <div style="position:absolute; top:-70px; display:block; text-align:center; z-index:-1;"><a rel="nofollow"
-                href="https://www.onecompare.com/samsung/galaxy-s10-deals">at Onecompare</a></div>
+        <!-- botez -->
+        <!-- <div id="flickrembed_85" class="embedGallery"></div>
+        <div style="position:absolute; top:-70px; display:block; text-align:center; z-index:-1;">
+            <a href="https://www.onecompare.com/samsung/galaxy-s10-deals">at Onecompare</a>
+        </div>
         <script
-            src='https://flickrembed.com/embed_v2.js.rand.php?container=flickrembed_95&source=flickr&layout=responsive&input=72157708881602833&sort=2&by=album&theme=tiles_justified&scale=fit&speed=3000&limit=500&skin=default-light&autoplay=false'>
+            src='https://flickrembed.com/embed_v2.js.rand.php?container=flickrembed_85&source=flickr&layout=responsive&input=72157708873092001&sort=5&by=album&theme=compact&scale=fit&speed=2000&limit=500&skin=default-light&autoplay=false'>
         </script>
         <script type="text/javascript">
             function showpics() {
@@ -168,7 +162,140 @@
                     })
             }
         </script>
-        <!-- =t20 -->
+        <small style="display: block; text-align: center; margin: 0 auto;">.</small> -->
+
+        <!-- V2 -->
+
+        <div id="flickrembed_2"></div>
+        <div style="position:absolute; top:-70px; display:block; text-align:center; z-index:-1;"><a
+                href="https://www.onecompare.com/samsung/galaxy-s10-deals">at Onecompare</a></div>
+        <script
+            src='https://flickrembed.com/embed_v2.js.rand.php?container=flickrembed_2&source=flickr&layout=responsive&input=72157708873092001&sort=5&by=album&theme=carousel&scale=fit&speed=2000&limit=500&skin=default-light&autoplay=false'>
+        </script>
+        <script type="text/javascript">
+            function showpics() {
+                var a = $("#box").val();
+                $.getJSON("http://api.flickr.com/services/feeds/photos_public.gne?tags=" + a +
+                    "&tagmode=any&format=json&jsoncallback=?",
+                    function (a) {
+                        $("#images").hide().html(a).fadeIn("fast"), $.each(a.items, function (a, e) {
+                            $("<img/>").attr("src", e.media.m).appendTo("#images")
+                        })
+                    })
+            }
+        </script>
+        <!-- =botez -->
+        <div class="introducere">
+            <h1>Reclama</h1>
+        </div>
+        <!-- reclama -->
+        <div id="flickrembed_39"></div>
+        <div style="position:absolute; top:-70px; display:block; text-align:center; z-index:-1;"><a
+                href="https://www.onecompare.com/samsung/galaxy-s10-deals">at Onecompare</a></div>
+        <script
+            src='https://flickrembed.com/embed_v2.js.rand.php?container=flickrembed_39&source=flickr&layout=responsive&input=72157708875360483&sort=5&by=album&theme=carousel&scale=fit&speed=2000&limit=500&skin=default-light&autoplay=false'>
+        </script>
+        <script type="text/javascript">
+            function showpics() {
+                var a = $("#box").val();
+                $.getJSON("http://api.flickr.com/services/feeds/photos_public.gne?tags=" + a +
+                    "&tagmode=any&format=json&jsoncallback=?",
+                    function (a) {
+                        $("#images").hide().html(a).fadeIn("fast"), $.each(a.items, function (a, e) {
+                            $("<img/>").attr("src", e.media.m).appendTo("#images")
+                        })
+                    })
+            }
+        </script>
+        <!-- =reclama -->
+        <div class="introducere">
+            <h1>Cuplu</h1>
+        </div>
+        <!-- cuplu -->
+        <div id="flickrembed_64"></div>
+        <div style="position:absolute; top:-70px; display:block; text-align:center; z-index:-1;"><a
+                href="https://www.onecompare.com/samsung/galaxy-s10-deals">at Onecompare</a></div>
+        <script
+            src='https://flickrembed.com/embed_v2.js.rand.php?container=flickrembed_64&source=flickr&layout=responsive&input=72157708875429463&sort=5&by=album&theme=carousel&scale=fit&speed=2000&limit=500&skin=default-light&autoplay=false'>
+        </script>
+        <script type="text/javascript">
+            function showpics() {
+                var a = $("#box").val();
+                $.getJSON("http://api.flickr.com/services/feeds/photos_public.gne?tags=" + a +
+                    "&tagmode=any&format=json&jsoncallback=?",
+                    function (a) {
+                        $("#images").hide().html(a).fadeIn("fast"), $.each(a.items, function (a, e) {
+                            $("<img/>").attr("src", e.media.m).appendTo("#images")
+                        })
+                    })
+            }
+        </script>
+        <!-- =cuplu -->
+        <div class="introducere">
+            <h1>Business</h1>
+        </div>
+        <!-- business -->
+        <div id="flickrembed_100"></div>
+        <div style="position:absolute; top:-70px; display:block; text-align:center; z-index:-1;"><a
+                href="https://www.onecompare.com/samsung/galaxy-s10-deals">at Onecompare</a></div>
+        <script
+            src='https://flickrembed.com/embed_v2.js.rand.php?container=flickrembed_100&source=flickr&layout=responsive&input=72157708875583102&sort=5&by=album&theme=carousel&scale=fit&speed=2000&limit=500&skin=default-light&autoplay=false'>
+        </script>
+        <script type="text/javascript">
+            function showpics() {
+                var a = $("#box").val();
+                $.getJSON("http://api.flickr.com/services/feeds/photos_public.gne?tags=" + a +
+                    "&tagmode=any&format=json&jsoncallback=?",
+                    function (a) {
+                        $("#images").hide().html(a).fadeIn("fast"), $.each(a.items, function (a, e) {
+                            $("<img/>").attr("src", e.media.m).appendTo("#images")
+                        })
+                    })
+            }
+        </script>
+        <!-- business 2 -->
+        <div id="flickrembed_36"></div>
+        <div style="position:absolute; top:-70px; display:block; text-align:center; z-index:-1;"><a
+                href="https://www.onecompare.com/samsung/galaxy-s10-deals">at Onecompare</a></div>
+        <script
+            src='https://flickrembed.com/embed_v2.js.rand.php?container=flickrembed_36&source=flickr&layout=responsive&input=72157708875718821&sort=5&by=album&theme=carousel&scale=fit&speed=2000&limit=500&skin=default-light&autoplay=false'>
+        </script>
+        <script type="text/javascript">
+            function showpics() {
+                var a = $("#box").val();
+                $.getJSON("http://api.flickr.com/services/feeds/photos_public.gne?tags=" + a +
+                    "&tagmode=any&format=json&jsoncallback=?",
+                    function (a) {
+                        $("#images").hide().html(a).fadeIn("fast"), $.each(a.items, function (a, e) {
+                            $("<img/>").attr("src", e.media.m).appendTo("#images")
+                        })
+                    })
+            }
+        </script>
+        <!-- =business -->
+        <div class="introducere">
+            <h1>Public</h1>
+        </div>
+        <!-- public -->
+        <div id="flickrembed_30"></div>
+        <div style="position:absolute; top:-70px; display:block; text-align:center; z-index:-1;"><a
+                href="https://www.onecompare.com/samsung/galaxy-s10-deals">at Onecompare</a></div>
+        <script
+            src='https://flickrembed.com/embed_v2.js.rand.php?container=flickrembed_30&source=flickr&layout=responsive&input=72157708875771323&sort=5&by=album&theme=carousel&scale=fit&speed=2000&limit=500&skin=default-light&autoplay=false'>
+        </script>
+        <script type="text/javascript">
+            function showpics() {
+                var a = $("#box").val();
+                $.getJSON("http://api.flickr.com/services/feeds/photos_public.gne?tags=" + a +
+                    "&tagmode=any&format=json&jsoncallback=?",
+                    function (a) {
+                        $("#images").hide().html(a).fadeIn("fast"), $.each(a.items, function (a, e) {
+                            $("<img/>").attr("src", e.media.m).appendTo("#images")
+                        })
+                    })
+            }
+        </script>
+        <!-- =public -->
     </section>
     <!-- Contact -->
     <section class="copertaGri scrollToFormGroupTarget">

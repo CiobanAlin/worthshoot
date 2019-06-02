@@ -1,3 +1,7 @@
+[id^="flickrembed"] {
+    max-width: 2000px;
+}
+
 .embedGallery,
 .embedGallery .ug-item-wrapper {
     width: 100% !important;

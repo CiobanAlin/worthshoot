@@ -7,3 +7,7 @@
 .ug-tile-navigation-wrapper {
     display: none;
 }
+
+.ug-thumb-wrapper.ug-tile {
+    box-shadow: 1px 1px 3px 0px rgba(31, 0, 46, 0.35);
+}

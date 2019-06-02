@@ -7,6 +7,14 @@ header {
     bottom: auto;
     background-color: #f8f9fb;
     padding-bottom: 8px;
+    display: flex;
+    -webkit-box-shadow: 1px 1px 3px 0px rgba(31, 0, 46, 0.35);
+    box-shadow: 1px 1px 3px 0px rgba(31, 0, 46, 0.35);
+    /* rgba(76, 0, 112, 0.35) */
+}
+
+header>div {
+    z-index: 1;
 }
 
 header p {
@@ -40,7 +48,6 @@ header p {
 
 @media screen and (min-width: 651px) {
     header {
-        display: flex;
         justify-content: center;
         align-items: center;
     }

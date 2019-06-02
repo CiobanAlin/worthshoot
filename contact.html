@@ -88,7 +88,7 @@
                 <span></span>
                 <span></span>
                 <ul id="menu">
-                    <a href="/contact">
+                    <a href="/contact.html">
                         <li>Contact</li>
                     </a>
                     <!--       <span>Galerie</span>
@@ -125,95 +125,8 @@
         </nav>
         <!-- <div>Menu</div> -->
     </header>
-    <!-- Echipa #C6C6C6 -->
-    <section class="copertaGri copertaImagine scrollToEchipaTarget scrollToFotografii" style="display: none">
-        <!-- embd -->
-        <div class="introducere ">
-            <h1>Echipă</h1>
-            <h2 class="storyTitle">
-                Prietenoasă | Profesionistă
-                <!-- Ambițioasă -->
-                <br>
-                De încredere
-            </h2>
-        </div>
-        <div class="cardPocketEchipa">
-            <img>
-        </div>
-        <!-- embd -->
-    </section>
-    <!-- Fotografii -->
-    <section class="copertaMov copertaImagine scrollToFotografiiTarget scrollToAlegeParagraful" style="display: none">
-        <!-- embd -->
-        <div class="introducere">
-            <h1>Fotografii</h1>
-            <h2 class="storyTitle">
-                Expresive | Clare
-                <br>
-                Realiste
-            </h2>
-        </div>
-        <div class="cardPocketFotografii">
-            <img>
-        </div>
-        <!-- <div class="parinteFotografiiHero">
-    <div class="galerieCarusel">
-        <div class="fotografiiHero" style="background: url('img/Fotografii/IMG_4054.jpg')"></div>
-    </div>
-</div> -->
-        <!-- embd -->
-    </section>
-
-    <!-- Testimoniale -->
-    <section class="copertaMov" style="padding-bottom: 0;">
-        <!-- embd sections/testimoniale/testimoniale.html -->
-        <div class="introducere cardPocketBotez displayNone">
-            <h1>Cuvintele</h1>
-            <h2>voastre!</h2>
-        </div>
-        <div class="galerieCaruselParinte cardPocketBotez displayNone">
-            <div class="galerieCarusel">
-                <div class="imagineCarusel"></div>
-                <div class="testimonial">
-                    <p>Seriozitate și profesionalism!</p>
-                    <h3>Cezar Munteanu</h3>
-                    <h4>- botez</h4>
-                </div>
-            </div>
-        </div>
-        <div class="selectTestimonial cardPocketBotez displayNone" style="padding-bottom: 33px;">
-            <div class="avatarLogoMic avatarLogoMicActiv"></div>
-            <!-- <div class="avatarLogoMic"></div>
-        <div class="avatarLogoMic"></div>
-        <div class="avatarLogoMic"></div> -->
-        </div>
-        <!-- embd -->
-    </section>
-    <!-- Pachete -->
-    <section class="copertaAlbastra t20 firstSection">
-        <!-- t20 -->
-        <div id="flickrembed_95"></div>
-        <div style="position:absolute; top:-70px; display:block; text-align:center; z-index:-1;"><a rel="nofollow"
-                href="https://www.onecompare.com/samsung/galaxy-s10-deals">at Onecompare</a></div>
-        <script
-            src='https://flickrembed.com/embed_v2.js.rand.php?container=flickrembed_95&source=flickr&layout=responsive&input=72157708881602833&sort=2&by=album&theme=tiles_justified&scale=fit&speed=3000&limit=500&skin=default-light&autoplay=false'>
-        </script>
-        <script type="text/javascript">
-            function showpics() {
-                var a = $("#box").val();
-                $.getJSON("http://api.flickr.com/services/feeds/photos_public.gne?tags=" + a +
-                    "&tagmode=any&format=json&jsoncallback=?",
-                    function (a) {
-                        $("#images").hide().html(a).fadeIn("fast"), $.each(a.items, function (a, e) {
-                            $("<img/>").attr("src", e.media.m).appendTo("#images")
-                        })
-                    })
-            }
-        </script>
-        <!-- =t20 -->
-    </section>
     <!-- Contact -->
-    <section class="copertaGri scrollToFormGroupTarget">
+    <section class="copertaGri scrollToFormGroupTarget firstSection">
         <div class="introducere">
             <h1>Contactează-ne</h1>
         </div>

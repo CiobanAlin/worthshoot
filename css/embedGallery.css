@@ -11,3 +11,49 @@
 .ug-thumb-wrapper.ug-tile {
     box-shadow: 1px 1px 3px 0px rgba(31, 0, 46, 0.35);
 }
+
+.ug-gallery-wrapper.ug-lightbox {
+    background: rgba(255, 255, 255, 0.95) !important;
+}
+
+.ug-slider-control,
+.ug-textpanel-title {
+    display: none !important;
+}
+
+.ug-lightbox .ug-lightbox-numbers {
+    left: 50% !important;
+    right: auto !important;
+}
+
+.ug-lightbox-button-close {
+    left: auto !important;
+    top: 3px !important;
+    right: 48px !important;
+}
+
+@media screen and (max-width: 650px) {
+    .ug-lightbox-button-close {
+        top: 22px !important;
+    }
+}
+
+.ug-lightbox-arrow-right {
+    width: 50% !important;
+    height: 100% !important;
+    top: 0px !important;
+    right: 0px !important;
+    bottom: 0px !important;
+    left: auto !important;
+    background-image: none !important;
+}
+
+.ug-lightbox-arrow-left {
+    width: 50% !important;
+    height: 100% !important;
+    top: 0px !important;
+    right: auto !important;
+    bottom: 0px !important;
+    left: 0px !important;
+    background-image: none !important;
+}

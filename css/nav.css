@@ -7,13 +7,58 @@ nav {
     bottom: auto;
 
     background-color: #f8f9fb;
-    padding-bottom: 15px;
+    padding-bottom: 13px;
 }
 
-@media screen and (min-width: 500px) {
+nav p {
+    width: 180px;
+    padding: 0;
+    padding-right: 8px;
+    margin: 0;
+    margin-top: -8px;
+    text-align: right;
+    font-family: "Rubik", sans-serif;
+    color: rgba(0, 0, 0, 0.9);
+}
+
+.logoWSC {
+    width: 180px;
+    height: 66px;
+    background: url("../img/Logo/WS-Cover.png");
+    background-size: 181% auto !important;
+    background-position: center;
+    position: relative;
+    z-index: 4;
+}
+
+.firstSection {
+    padding-top: calc(79px + 3px);
+    padding-bottom: 3px;
+}
+
+@media screen and (min-width: 651px) {
     nav {
         display: flex;
         justify-content: center;
         align-items: center;
+    }
+
+    .firstSection {
+        padding-top: calc(90px + 3px);
+        padding-bottom: 3px;
+    }
+
+}
+
+@media screen and (max-width: 650px) {
+
+    .logoWSC {
+        background-size: 120% auto !important;
+    }
+
+    nav p {
+        font-size: 12px;
+        padding-right: 35px;
+        margin-top: -14px;
     }
 }

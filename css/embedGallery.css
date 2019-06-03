@@ -61,3 +61,16 @@
     left: 0px !important;
     background-image: none !important;
 }
+
+
+.firstSection {
+    padding-top: calc(74px + 3px);
+}
+
+.firstSectionGallery {
+    padding-bottom: 0;
+}
+
+.t20 {
+    padding-bottom: 3px;
+}

@@ -17,7 +17,8 @@ a {
 }
 
 a:hover {
-  color: #493545;
+  color: #ff9323;
+  /* color: #493545; */
 }
 
 #menuToggle {
@@ -36,10 +37,10 @@ a:hover {
 #menuToggle input {
   display: block;
   width: 40px;
-  height: 32px;
+  height: 40px;
   position: absolute;
-  top: -7px;
-  left: -5px;
+  top: -15px;
+  left: -13px;
   cursor: pointer;
   opacity: 0;
   z-index: 2;
@@ -107,4 +108,33 @@ a:hover {
 
 #menuToggle input:checked~ul {
   transform: none;
+}
+
+#menuOne {
+  display: flex;
+  justify-content: center;
+  flex-flow: column;
+}
+
+#menuTwo {
+  display: none;
+}
+
+#menuGalerie {
+  background: transparent;
+  border: transparent;
+  box-shadow: 0 1px 6px rgba(60, 64, 67, 0.0);
+  color: #3e3d77;
+}
+
+#menuGalerieClose {
+  display: none;
+  position: absolute;
+  z-index: 3;
+  top: -12px;
+  opacity: 0;
+  right: 2px;
+  height: 40px;
+  width: 40px;
+  padding: 0;
 }

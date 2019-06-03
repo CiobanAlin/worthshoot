@@ -80,54 +80,77 @@
     <header>
         <div>
             <a href="/">
-                <div class="logoWSC logo">
-                </div>
+                <div class="logoWSC logo"></div>
                 <p>We make history</p>
             </a>
         </div>
         <nav role="navigation">
             <div id="menuToggle">
+                <button id="menuGalerieClose"></button>
                 <input type="checkbox" />
                 <span></span>
                 <span></span>
                 <span></span>
                 <ul id="menu">
-                    <a href="/contact">
-                        <li>Contact</li>
-                    </a>
-                    <!--       <span>Galerie</span>
-            <a href="#"><li>Toate</li></a> -->
-                    <!--       <a href="#"><li>Nunta</li></a>
-            <a href="#"><li>Botez</li></a>
-            <a href="#"><li>Portret</li></a>
-            <a href="#"><li>Cuplu</li></a>
-            <a href="#"><li>Petrecere</li></a>
-            <a href="#"><li>Business</li></a>
-            <a href="#"><li>Produs</li></a>
-            <a href="#"><li>Peisaj</li></a> -->
-                    <!--       <a href="#"><li>Video</li></a> -->
-                    <a href="/testimoniale">
-                        <li>Testimoniale</li>
-                    </a>
-                    <a href="/date-cu-caracter-personal">
-                        <li>FAQ</li>
-                    </a>
-                    <a href="/despre">
-                        <li>Despre</li>
-                    </a>
-                    <a href="/echipa">
-                        <li>Echipa</li>
-                    </a>
-                    <a href="https://www.facebook.com/worthshoot/">
-                        <li>Facebook</li>
-                    </a>
-                    <a href="https://www.instagram.com/worthshoot/">
-                        <li>Instagram</li>
-                    </a>
+                    <div id="menuOne">
+                        <a href="/contact">
+                            <li>Contact</li>
+                        </a>
+                        <button id="menuGalerie">
+                            <li>Galerie</li>
+                        </button>
+                        <!--       <a href="#"><li>Video</li></a> -->
+                        <a href="/testimoniale">
+                            <li>Testimoniale</li>
+                        </a>
+                        <a href="/date-cu-caracter-personal">
+                            <li>FAQ</li>
+                        </a>
+                        <a href="/despre">
+                            <li>Despre</li>
+                        </a>
+                        <a href="/echipa">
+                            <li>Echipa</li>
+                        </a>
+                        <a href="https://www.facebook.com/worthshoot/">
+                            <li>Facebook</li>
+                        </a>
+                        <a href="https://www.instagram.com/worthshoot/">
+                            <li>Instagram</li>
+                        </a>
+                    </div>
+                    <div id="menuTwo">
+                        <a href="/galerie-foto/toate">
+                            <li>Toate</li>
+                        </a>
+                        <a href="/galerie-foto/nunta">
+                            <li>Nunta</li>
+                        </a>
+                        <a href="/galerie-foto/botez">
+                            <li>Botez</li>
+                        </a>
+                        <a href="/galerie-foto/portret">
+                            <li>Portret</li>
+                        </a>
+                        <a href="/galerie-foto/cuplu">
+                            <li>Cuplu</li>
+                        </a>
+                        <a href="/galerie-foto/petrecere">
+                            <li>Petrecere</li>
+                        </a>
+                        <a href="/galerie-foto/business">
+                            <li>Business</li>
+                        </a>
+                        <a href="/galerie-foto/produs">
+                            <li>Produs</li>
+                        </a>
+                        <a href="/galerie-foto/peisaj">
+                            <li>Peisaj</li>
+                        </a>
+                    </div>
                 </ul>
             </div>
         </nav>
-        <!-- <div>Menu</div> -->
     </header>
     <section class="copertaMov scrollToFormGroupTarget firstSection">
         <!-- Hi!
@@ -226,6 +249,7 @@
 <script src="js/scroll.js" type="text/javascript"></script>
 <script data-cfasync="false" type="text/javascript" src="js/form.js"></script>
 <script src="sections/contact/contactOptiuni.js"></script>
+<script src="js/hamburgerFoldOutMenu.js"></script>
 <!-- gdpr -->
 <div class="ws-GDPR" style="display: block; padding-bottom: 30px;">
     <div>

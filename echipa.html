@@ -72,6 +72,7 @@
     <link rel="stylesheet" type="text/css" href="css/nav.css" />
     <link rel="stylesheet" type="text/css" href="css/hamburgerFoldOutMenu.css" />
     <link rel="stylesheet" type="text/css" href="GDPR/gdpr.css" />
+    <link rel="stylesheet" type="text/css" href="css/echipa.css" />
     <!-- embd -->
 </head>
 
@@ -128,8 +129,38 @@
         </nav>
         <!-- <div>Menu</div> -->
     </header>
-    <section class="copertaGri scrollToFormGroupTarget firstSection">
-
+    <section class="copertaMov scrollToFormGroupTarget firstSection">
+        <div class="w600">
+            <div class="introducere cardPocketBotez">
+                <h1>Echipa</h1>
+                <h2>voastră!</h2>
+            </div>
+            <div class="galerieCaruselParinte cardPocketBotez" style="padding-top: 62.46%">
+                <div class="galerieCarusel" style="background: none">
+                    <div id="flickrembed_63"></div>
+                    <script
+                        src='https://flickrembed.com/embed_v2.js.rand.php?container=flickrembed_63&source=flickr&layout=responsive&input=72157708902782461&sort=5&by=album&theme=tiles_justified&scale=fit&speed=3000&limit=1&skin=default-light&autoplay=false'>
+                    </script>
+                    <script type="text/javascript">
+                        function showpics() {
+                            var a = $("#box").val();
+                            $.getJSON("http://api.flickr.com/services/feeds/photos_public.gne?tags=" + a +
+                                "&tagmode=any&format=json&jsoncallback=?",
+                                function (a) {
+                                    $("#images").hide().html(a).fadeIn("fast"), $.each(a.items, function (a, e) {
+                                        $("<img/>").attr("src", e.media.m).appendTo("#images")
+                                    })
+                                })
+                        }
+                    </script>
+                </div>
+            </div>
+            <div class="testimonial echipa">
+                <h3>Coso</h3>
+                <h4>-- Prietenos și dinamic!</h4>
+            </div>
+        </div>
+        </div>
     </section>
 
 </body>

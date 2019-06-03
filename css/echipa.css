@@ -2,9 +2,30 @@
 
     #flickrembed_63 .ug-thumb-image.ug-trans-enabled,
     #flickrembed_63 .ug-thumb-overlay,
-    #flickrembed_63 .ug-thumb-wrapper.ug-tile.ug-tile-clickable {
+    #flickrembed_63 .ug-thumb-wrapper.ug-tile.ug-tile-clickable,
+    #flickrembed_10 .ug-thumb-image.ug-trans-enabled,
+    #flickrembed_10 .ug-thumb-overlay,
+    #flickrembed_10 .ug-thumb-wrapper.ug-tile.ug-tile-clickable,
+    #flickrembed_52 .ug-thumb-image.ug-trans-enabled,
+    #flickrembed_52 .ug-thumb-overlay,
+    #flickrembed_52 .ug-thumb-wrapper.ug-tile.ug-tile-clickable {
         border-radius: 6px;
     }
+
+    .galerieEchipa:nth-of-type(2),
+    .galerieEchipa:nth-of-type(3) {
+        width: calc(50% - 10px);
+        margin: 0 3px;
+        display: inline-block;
+    }
+}
+
+.galerieEchipa {
+    padding-top: 0;
+}
+
+.wEchipa {
+    margin-top: 33px;
 }
 
 .testimonial.echipa {

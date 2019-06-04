@@ -124,7 +124,7 @@
                         </a>
                     </div>
                     <div id="menuTwo">
-                        
+
                         <a href="/galerie-foto/nunta">
                             <li>Nunta</li>
                         </a>
@@ -171,6 +171,28 @@
                 </h2>
             </div>
             <div class="galerieCaruselParinte galerieParteneri">
+                <!-- iulian -->
+                <div id="flickrembed_19"></div>
+                <script
+                    src='https://flickrembed.com/embed_v2.js.rand.php?container=flickrembed_19&source=flickr&layout=responsive&input=72157708927811418&sort=2&by=album&theme=tiles_justified&scale=fit&speed=1000&limit=2&skin=default-light&autoplay=false'>
+                </script>
+                <script type="text/javascript">
+                    function showpics() {
+                        var a = $("#box").val();
+                        $.getJSON("http://api.flickr.com/services/feeds/photos_public.gne?tags=" + a +
+                            "&tagmode=any&format=json&jsoncallback=?",
+                            function (a) {
+                                $("#images").hide().html(a).fadeIn("fast"), $.each(a.items, function (a, e) {
+                                    $("<img/>").attr("src", e.media.m).appendTo("#images")
+                                })
+                            })
+                    }
+                </script>
+                <div class="testimonial echipa parteneri">
+                    <h3>Iulian</h3>
+                    <h4>-- Convingător și gandește măreț!</h4>
+                </div>
+                <!-- ovidiu -->
                 <div id="flickrembed_38"></div>
                 <script
                     src='https://flickrembed.com/embed_v2.js.rand.php?container=flickrembed_38&source=flickr&layout=responsive&input=72157708926709621&sort=2&by=album&theme=tiles_justified&scale=fit&speed=1000&limit=2&skin=default-light&autoplay=false'>
